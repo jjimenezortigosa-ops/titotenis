@@ -2133,8 +2133,8 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       b.addEventListener('click',function(){var n=ni.value.trim(),p=pi.value.trim();
         if(n.length<3){toast('El apodo necesita 3 letras como mínimo.');return}if(!/^\d{4}$/.test(p)){toast('El PIN son 4 números.');return}
         b.disabled=true;sha('tt1:'+n.toLowerCase()+':'+p).then(function(key){
-          return acctPull(key).then(function(sn){var got=sn?acctMerge(sn):0;a={key:key,nick:n};LS.set('tt_acct',JSON.stringify(a));return acctPush().then(function(){toast(sn?'Cuenta recuperada ('+got+' datos nuevos).':'Cuenta creada y progreso guardado.');mineUI()})})
-        }).catch(function(){b.disabled=false;toast('No se pudo conectar. Inténtalo otra vez.')})});
+          return acctPull(key).then(function(sn){var got=sn?acctMerge(sn):0;var na={key:key,nick:n};LS.set('tt_acct',JSON.stringify(na));a=na;return acctPush().then(function(){toast(sn?'Cuenta recuperada ('+got+' datos nuevos).':'Cuenta creada y progreso guardado.');mineUI()}).catch(function(e){LS.set('tt_acct','null');localStorage.removeItem('tt_acct');a=null;throw e})})
+        }).catch(function(){b.disabled=false;toast('Las cuentas aún no están activadas en el servidor. Tus rachas siguen guardándose en este dispositivo.')})});
       f.appendChild(ni);f.appendChild(pi);f.appendChild(b);box.appendChild(f)}
     draw()}
   function mineUI(){
