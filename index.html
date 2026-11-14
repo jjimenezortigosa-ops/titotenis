@@ -331,6 +331,11 @@ dialog .row{display:flex;gap:8px;flex-wrap:wrap}
 footer{padding:28px 0;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
 footer a{color:var(--ball)}
 
+.gmine{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.lifefx{position:fixed;inset:0;z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(10,20,18,.55);pointer-events:none;animation:lfin .2s ease}
+.lifefx.out{opacity:0;transition:opacity .4s}.lfh{font-size:96px;animation:lfbeat .9s ease both}.lft{font-weight:800;font-size:22px;color:#fff}.lfs{color:#cfe;font-size:14px;margin-top:4px;text-align:center;padding:0 20px}
+@keyframes lfin{from{opacity:0}to{opacity:1}}@keyframes lfbeat{0%{transform:scale(.4)}30%{transform:scale(1.25)}50%{transform:scale(1) rotate(-6deg)}70%{transform:scale(1.1) rotate(6deg)}100%{transform:scale(.8);filter:grayscale(1);opacity:.6}}
+@media(prefers-reduced-motion:reduce){.lfh{animation:none}}
 .gcols{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px;align-items:start}
 @media(max-width:860px){.gcols{grid-template-columns:minmax(0,1fr)}}
 .gcols>*,.gfin{min-width:0}.gfin .field{flex:1 1 150px;min-width:0}.tbl.mys td,.tbl.mys th{padding:6px 5px;font-size:12.5px;white-space:nowrap}
@@ -718,6 +723,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       <p>Siete retos nuevos cada día, igual para todo el mundo, en tres dificultades. Se renuevan a medianoche (hora de Madrid). Juega, compara tu resultado y comparte.</p></div>
       <span class="srcline" id="gDay"></span></div>
     <div class="gtiles" id="gTiles"></div>
+    <div class="panel" id="gMine"></div>
     <div class="gdif" id="gDif" role="group" aria-label="Dificultad"><span>Dificultad:</span><button type="button" class="d1" data-d="1">Fácil</button><button type="button" class="d2" data-d="2">Media</button><button type="button" class="d3" data-d="3">Difícil</button></div>
     <div id="gPlay" hidden><p><a href="#juegos" class="btn" id="gBack">← Todos los juegos</a></p>
     <div class="gcols">
@@ -1957,7 +1963,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
   function lsj(k){try{return JSON.parse(LS.get(k))}catch(e){return null}}
   function clr(n){n.textContent=''}
-  function fam(c){return c.id.indexOf('pais')===0?'pais':c.id.indexOf('gana')===0?'gana':c.id.indexOf('camp')===0?'camp':c.id}
+  function fam(c){var d=c.id;return /^(pais|nordico|sudam|balcan|hispano|anglo)/.test(d)?'geo':d.indexOf('gana')===0?'gana':/^(camp|tit|gsHist|exNum1|sinTitulo|finalista)/.test(d)?'camp':/^top/.test(d)?'top':/^(joven|vet)$/.test(d)?'edad':/^(alto|bajo)$/.test(d)?'alt':d}
   function rankTxt(i){return G.p[i][5]?'n.º '+G.p[i][5]:'sin top 150'}
 
   /* buscador de jugadores en ventana */
@@ -2008,6 +2014,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   var DIFN=['','Fácil','Media','Difícil'];
   var gInGame=false,gCur=LS.get('tt_gcur')||'grid',gDif=+(LS.get('tt_gdif')||1),gLbMode='day';
   if(!GAMES.some(function(g){return g.id===gCur}))gCur='grid';if(!(gDif>=1&&gDif<=3))gDif=1;
+  var NOLB={lista:1,conn:1};
   function gid(){return gCur+gDif}
   function gname(){return GAMES.filter(function(g){return g.id===gCur})[0].n}
   function stKey(){return 'tt_g_'+gid()+'_'+dayStr()}
@@ -2019,6 +2026,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   function intro(box,title,txt){box.appendChild(el('h3',null,title+' · '+DIFN[gDif]));box.appendChild(el('p','srcline',txt))}
   function finishUI(box,score,max,share,extra){
     var day=dayStr(),w=el('div','gfin');
+    var noLb=NOLB[gCur];
     w.appendChild(el('h3',null,'Resultado: '+score+' de '+max+' · '+secsOf(loadSt({}))+' s'));
     if(extra)w.appendChild(extra);
     var row=el('div','row');
@@ -2026,7 +2034,8 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     var cp=el('button','btn','Copiar');cp.type='button';cp.addEventListener('click',function(){try{navigator.clipboard.writeText(share);toast('Copiado')}catch(e){}});row.appendChild(cp);
     w.appendChild(row);
     var sk='tt_sent_'+gid()+day,game=gid(),dif=gDif,secs=secsOf(loadSt({}));
-    if(LS.get(sk))w.appendChild(el('p','srcline','Tu resultado ya está en la clasificación de hoy. Vuelve mañana para un reto nuevo, o prueba otra dificultad.'));
+    if(noLb){}
+    else if(LS.get(sk))w.appendChild(el('p','srcline','Tu resultado ya está en la clasificación de hoy. Vuelve mañana para un reto nuevo, o prueba otra dificultad.'));
     else{var f=el('div','row'),inp=el('input','field');inp.placeholder='Tu apodo para la clasificación';inp.maxLength=20;inp.value=LS.get('tt_name')||'';inp.setAttribute('aria-label','Tu apodo');
       var b=el('button','btn','Enviar a la clasificación');b.type='button';
       b.addEventListener('click',function(){var n=inp.value.trim();if(!n){inp.focus();return}LS.set('tt_name',n);b.disabled=true;
@@ -2053,6 +2062,16 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       agg.slice(0,15).forEach(function(a){ol.appendChild(el('li',a.uid===myUid?'me':'',String(a.name).slice(0,20)+' — '+a.score+(wk?' pts':(a.max?'/'+a.max:'')+' · '+a.secs+' s')))});
     }).catch(function(){clr(ol);ol.style.listStyle='none';ol.appendChild(el('li',null,'No se ha podido cargar la clasificación.'))});
   }
+  function mineUI(){
+    var m=$('#gMine');clr(m);var first=LS.get('tt_first');if(!first){first=dayStr();LS.set('tt_first',first)}
+    var d0=new Date(first+'T12:00:00'),n=Math.max(1,Math.round((new Date(dayStr()+'T12:00:00')-d0)/864e5)+1);
+    m.appendChild(el('h3',null,'Mi progreso'));
+    m.appendChild(el('p','srcline','Días completados de los '+n+' días que llevas jugando (cualquier dificultad cuenta una vez al día).'));
+    var ul=el('ul','gmine');
+    GAMES.forEach(function(g){var c=0;for(var k=0;k<n;k++){var dt=new Date(d0.getTime()+k*864e5),ds=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid'}).format(dt),ok=false;
+      for(var d=1;d<=3;d++){var s=lsj('tt_g_'+g.id+d+'_'+ds);if(s&&s.e)ok=true}if(ok)c++}
+      ul.appendChild(el('li',null,g.i+' '+g.n+': '+c+' de '+n+' · '+Math.round(100*c/n)+'%'))});
+    m.appendChild(ul)}
   function renderGames(){
     var dd=$('#gDay');if(dd)dd.textContent='Retos del '+dayEs(dayStr());
     var day=dayStr(),T=$('#gTiles');clr(T);
@@ -2061,7 +2080,8 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       var s=lsj('tt_g_'+g.id+gDif+'_'+day);if(s&&s.e)b.appendChild(el('span','gck','✓'));
       b.addEventListener('click',function(){gCur=g.id;LS.set('tt_gcur',gCur);location.hash='#juegos/'+g.id});T.appendChild(b)});
     $$('#gDif button').forEach(function(b){b.classList.toggle('on',+b.dataset.d===gDif)});
-    T.style.display=gInGame?'none':'';$('#gPlay').hidden=!gInGame;
+    T.style.display=gInGame?'none':'';$('#gPlay').hidden=!gInGame;$('#gMine').style.display=gInGame?'none':'';if(!gInGame)mineUI();
+    var lbp=$('#gLbT').parentNode;lbp.style.display=NOLB[gCur]?'none':'';$('.gcols').style.gridTemplateColumns=NOLB[gCur]?'minmax(0,1fr)':'';
     if(!gInGame){$('#gBox').textContent='';return}
     var box=$('#gBox');clr(box);
     Promise.all([GP,ESP,TOP,PISP].concat(gCur==='trof'?[loadCamp()]:[])).then(function(){
@@ -2074,6 +2094,10 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   $('#gDif').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;gDif=+b.dataset.d;LS.set('tt_gdif',String(gDif));renderGames()});
   $('#gLbSeg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;gLbMode=b.dataset.m;renderLb()});
   setInterval(function(){if(!document.hidden&&location.hash.indexOf('#juegos/')===0)renderLb()},30000);
+
+  function lifeFx(msg){
+    var o=el('div','lifefx');o.setAttribute('role','status');o.appendChild(el('div','lfh','💔'));o.appendChild(el('div','lft','Pierdes una vida'));o.appendChild(el('div','lfs',msg||''));
+    document.body.appendChild(o);setTimeout(function(){o.classList.add('out')},1100);setTimeout(function(){if(o.parentNode)o.parentNode.removeChild(o)},1500)}
 
   /* --- Set Cruzado (3x3) --- */
   var GRD={1:[6,60,1],2:[3,25,0],3:[1,6,0]};
@@ -2094,8 +2118,8 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   function gridUI(box){
     var day=dayStr(),gr=gridFor(day);
     if(!gr){box.appendChild(el('p','empty','Hoy no se ha podido preparar la cuadrícula.'));return}
-    var st=loadSt({c:[],u:[],s:0,e:0});
-    intro(box,'Set Cruzado',gDif===3?'Pulsa una casilla y escribe un jugador que cumpla fila y columna. Sin sugerencias: tienes que saberte el nombre. Un intento por casilla.':'Pulsa una casilla y elige un jugador que cumpla las dos condiciones (fila y columna). Un intento por casilla y sin repetir jugador.');
+    var st=loadSt({c:[],u:[],w:[],x:0,s:0,e:0}),SCX={1:6,2:5,3:4}[gDif];st.w=st.w||[];st.x=st.x||0;
+    intro(box,'Set Cruzado',gDif===3?'Pulsa una casilla y escribe un jugador que cumpla fila y columna. Sin sugerencias: tienes que saberte el nombre. Si fallas, la casilla sigue libre.':'Pulsa una casilla y elige un jugador que cumpla las dos condiciones (fila y columna). Si fallas, la casilla sigue libre, pero pierdes una vida. Sin repetir jugador.');
     var tb=el('div','ggrid');tb.appendChild(el('div'));
     gr.cols.forEach(function(c){tb.appendChild(el('div','gh',c.t))});
     var done=0;
@@ -2105,13 +2129,18 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
         else{b.textContent='+';b.setAttribute('aria-label','Elegir jugador para esta casilla');b.addEventListener('click',function(){
           if(!st.s){st.s=Date.now();saveSt(st)}
           openGuess(gr.rows[Math.floor(i/3)].t+' · '+gr.cols[i%3].t,function(p){
-            var ok=gr.cells[i].indexOf(p)>=0;st.c[i]={g:p,ok:ok};if(ok)st.u.push(p);
-            if(Object.keys(st.c).length>=9)st.e=Date.now();saveSt(st);renderGames()},st.u,gDif===3)})}
+            var ok=gr.cells[i].indexOf(p)>=0;
+            if(ok){st.c[i]={g:p,ok:true};st.u.push(p);toast('¡Correcto!')}
+            else{st.x++;st.w.push(p);lifeFx(G.p[p][0]+' no cumple las dos condiciones')}
+            if(Object.keys(st.c).length>=9||st.x>=SCX)st.e=Date.now();saveSt(st);renderGames()},st.u.concat(st.w),gDif===3)})}
         tb.appendChild(b)})(r*3+c)}
     box.appendChild(tb);
-    if(done>=9){
-      var sc=0,em='';for(var i=0;i<9;i++){var v=st.c[i];sc+=v.ok?1:0;em+=(v.ok?'🟩':'🟥')+(i%3===2?'\n':'')}
-      var ex=el('div'),miss=[];for(var j=0;j<9;j++)if(!st.c[j].ok){var s=gr.cells[j].slice().sort(byRank).slice(0,3).map(function(p){return G.p[p][0]});miss.push('Casilla '+(j+1)+': '+s.join(', '))}
+    box.appendChild(el('p',null,'Fallos: '+st.x+' de '+SCX+' · '+'❤️'.repeat(Math.max(0,SCX-st.x))+'🖤'.repeat(Math.min(SCX,st.x))));
+    if(done<9&&!st.e){var gv=el('button','btn ghost','Me rindo');gv.type='button';gv.addEventListener('click',function(){st.e=Date.now();saveSt(st);renderGames()});box.appendChild(gv)}
+    if(done>=9||st.e){
+      if(!st.e){st.e=Date.now();saveSt(st)}
+      var sc=0,em='';for(var i=0;i<9;i++){var v=st.c[i];sc+=(v&&v.ok)?1:0;em+=((v&&v.ok)?'🟩':'⬛')+(i%3===2?'\n':'')}
+      var ex=el('div'),miss=[];for(var j=0;j<9;j++)if(!(st.c[j]&&st.c[j].ok)){var s=gr.cells[j].slice().sort(byRank).slice(0,3).map(function(p){return G.p[p][0]});miss.push('Casilla '+(j+1)+': '+s.join(', '))}
       if(miss.length)ex.appendChild(el('p','srcline','Posibles respuestas en las casillas falladas — '+miss.join(' · ')));
       finishUI(box,sc,9,'TitoTenis · Set Cruzado ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/9\n'+em+location.origin+location.pathname,ex)}
   }
@@ -2135,7 +2164,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     if(!over){
       var row=el('div','row'),b=el('button','btn','Nombrar jugador');b.type='button';
       b.addEventListener('click',function(){if(!st.s){st.s=Date.now();saveSt(st)}
-        openGuess(c.t,function(p){if(c.p.indexOf(p)>=0){st.f.push(p);toast('¡Correcto!')}else{st.l--;toast('No cumple la condición. Pierdes una vida.')}
+        openGuess(c.t,function(p){if(c.p.indexOf(p)>=0){st.f.push(p);toast('¡Correcto!')}else{st.l--;lifeFx('No cumple la condición')}
           if(st.l<=0||st.f.length>=total)st.e=Date.now();saveSt(st);renderGames()},st.f,gDif===3)});
       var g=el('button','btn ghost','Me rindo');g.type='button';g.addEventListener('click',function(){if(!st.s)st.s=Date.now();st.e=Date.now();saveSt(st);renderGames()});
       row.appendChild(b);row.appendChild(g);box.appendChild(row)}
@@ -2153,6 +2182,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     var R=seedRng('conn'+gDif+day),pool=G.c.filter(function(c){return c.p.length>=6&&c.p.length<=60});
     for(var t=0;t<4000;t++){
       var cs=[];while(cs.length<4){var c=pool[Math.floor(R()*pool.length)];if(cs.indexOf(c)<0)cs.push(c)}
+      if(new Set(cs.map(fam)).size<4)continue;
       var ng=cs.filter(function(c){return c.id.indexOf('gana')===0}).length;
       if(gDif===1&&ng>0)continue;if(gDif===2&&(ng<1||ng>2))continue;if(gDif===3&&ng<3)continue;
       var groups=cs.map(function(c){var o=cs.filter(function(x){return x!==c});return c.p.filter(function(i){return o.every(function(z){return z.p.indexOf(i)<0})})});

@@ -65,6 +65,26 @@ add('campTierra','Campeón en tierra batida (2025-26)',[cname(x['cam']) for x in
 add('campHierba','Campeón en hierba (2025-26)',[cname(x['cam']) for x in tor if x['s']=='hierba' and x['cam'] and cname(x['cam'])])
 add('campDura','Campeón en pista dura (2025-26)',[cname(x['cam']) for x in tor if x['s']=='dura' and x['cam'] and cname(x['cam'])])
 add('finalista','Finalista de un Masters 1000 o Grand Slam (2025-26)',[cname(x['fin']) for x in tor if x['nv'] in ('GS','1000') and x['fin'] and cname(x['fin'])])
+# campeones 2023-26 (campeones.json) y listas variadas
+import collections as _cc
+try: _camp = L('campeones.json')['t']
+except Exception: _camp = []
+_tit = _cc.Counter(cname(x['cam']) for x in _camp if x.get('cam') and cname(x['cam']))
+add('tit3','Ha ganado 3 torneos ATP o más (2023-26)',[n for n,c in _tit.items() if c>=3])
+add('tit6','Ha ganado más de 5 torneos ATP (2023-26)',[n for n,c in _tit.items() if c>5])
+add('campGS23','Campeón de un Grand Slam (2023-26)',[cname(x['cam']) for x in _camp if x.get('nv')=='GS' and x.get('cam') and cname(x['cam'])])
+add('camp100023','Campeón de un Masters 1000 (2023-26)',[cname(x['cam']) for x in _camp if x.get('nv')=='1000' and x.get('cam') and cname(x['cam'])])
+add('camp500b','Campeón de un ATP 500 (2023-26)',[cname(x['cam']) for x in _camp if x.get('nv')=='500' and x.get('cam') and cname(x['cam'])])
+add('sinTitulo','Sin ningún título ATP desde 2023',[p[0] for p in pool if p[0] not in _tit and p[5] and p[5]<=60])
+def _g(*ns): return [cname(n) for n in ns if cname(n)]
+add('gsHist','Ha ganado un Grand Slam (en toda su carrera)',_g('Novak Djokovic','Carlos Alcaraz','Jannik Sinner','Daniil Medvedev','Stan Wawrinka','Dominic Thiem','Marin Cilic','Andy Murray','Rafael Nadal','Roger Federer','Juan Martin Del Potro','Andy Roddick','Marat Safin','Gaston Gaudio','Albert Costa','Juan Carlos Ferrero','Carlos Moya','Thomas Johansson','Lleyton Hewitt','Gustavo Kuerten','Andre Agassi','Pete Sampras'))
+add('exNum1','Ha sido número 1 del mundo',_g('Novak Djokovic','Carlos Alcaraz','Jannik Sinner','Daniil Medvedev','Andy Murray','Rafael Nadal','Roger Federer','Juan Carlos Ferrero','Carlos Moya','Lleyton Hewitt','Marat Safin','Andy Roddick','Andre Agassi','Pete Sampras'))
+add('reves1','Revés a una mano',_g('Stan Wawrinka','Lorenzo Musetti','Stefanos Tsitsipas','Denis Shapovalov','Grigor Dimitrov','Dominic Thiem','Roger Federer','Richard Gasquet','Gael Monfils','Alexei Popyrin','Cameron Norrie','Alejandro Davidovich Fokina','Jiri Lehecka','Flavio Cobolli','Nuno Borges','Daniel Altmaier','Federico Coria'))
+add('nordico','Nórdico (Suecia, Noruega, Dinamarca o Finlandia)',[p[0] for p in pool if p[1] in ('SWE','NOR','DEN','FIN')])
+add('sudam','Sudamericano',[p[0] for p in pool if p[1] in ('ARG','CHI','BRA','COL','PER','BOL','ECU','URU','PAR')])
+add('balcan','De los Balcanes',[p[0] for p in pool if p[1] in ('SRB','CRO','BIH','MNE','SLO','MKD','BUL')])
+add('hispano','Habla español',[p[0] for p in pool if p[1] in ('ESP','ARG','CHI','COL','PER','MEX','ECU','BOL','URU','DOM','VEN','PAR')])
+add('anglo','Anglosajón (EE. UU., Reino Unido, Australia, Canadá)',[p[0] for p in pool if p[1] in ('USA','GBR','AUS','CAN')])
 # ganó a ... (2023-26)
 J = base['j']; surfname = {'d':'en pista dura','t':'en tierra','h':'en hierba'}
 wins = {}  # (perdedor) -> {None:set, surf:set}
