@@ -550,8 +550,17 @@ footer a{color:var(--ball)}
 </dialog>
 <div id="toast" role="status" hidden></div>
 
+<!-- ===== CREDITOS ===== -->
+<section class="view" id="v-creditos" hidden>
+  <div class="wrap">
+    <div class="sec-head"><div><h1>Créditos de fotos</h1>
+      <p>Las fotos de jugadores proceden de Wikimedia Commons u otras fuentes con licencia libre. Aquí tienes el autor y la licencia de cada una.</p></div></div>
+    <div class="panel"><ul id="credList" class="srcline" style="list-style:none;padding:0"></ul></div>
+  </div>
+</section>
+
 <footer>
-  <div class="wrap">TitoTenis</div>
+  <div class="wrap">TitoTenis · <a href="#creditos" style="color:inherit">Créditos de fotos</a></div>
 </footer>
 
 <script>
@@ -565,7 +574,7 @@ footer a{color:var(--ball)}
 
   /* ---------- Pestañas ---------- */
   var topic=null;
-  var views=['noticias','en-vivo','foro','guiones','charlas','mis-debates','sugerencias'];
+  var views=['noticias','en-vivo','foro','guiones','charlas','mis-debates','sugerencias','creditos'];
   function route(){
     var parts=(location.hash||'').replace('#','').split('/');
     var h=parts[0];topic=parts[1]?decodeURIComponent(parts[1]):null;
@@ -576,8 +585,15 @@ footer a{color:var(--ball)}
     });
     if(h==='foro'){cancelReply();renderForum();var w=$('#waShare');if(w)w.href='https://wa.me/?text='+encodeURIComponent('Debate en TitoTenis: '+location.href)}
     if(h==='sugerencias')renderSugs();
+    if(h==='creditos')renderCreds();
     if(h==='mis-debates'){seenTs=Date.now();LS.set('tt_seen',String(seenTs));renderDms();renderBadge()}
     window.scrollTo(0,0);
+  }
+  function renderCreds(){
+    var ul=$('#credList');if(!ul)return;ul.textContent='';
+    var ks=Object.keys(PHOTOS||{}).filter(function(k){return PHOTOS[k]&&PHOTOS[k].src});
+    if(!ks.length){ul.appendChild(el('li',null,'Todavía no hay fotos con crédito.'));return}
+    ks.sort().forEach(function(k){ul.appendChild(el('li',null,k+': '+(PHOTOS[k].credit||'sin crédito')))});
   }
   window.addEventListener('hashchange',route);
 
@@ -1039,7 +1055,7 @@ footer a{color:var(--ball)}
   });
   var FEAT=[];
   fetch('destacados.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){FEAT=(j&&j.destacados)||[];if(typeof renderMatches==='function')renderMatches()}).catch(function(){});
-  fetch('fotos.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){PHOTOS=j||{};if(typeof renderMatches==='function')renderMatches()}).catch(function(){});
+  fetch('fotos.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){PHOTOS=j||{};if(typeof renderMatches==='function')renderMatches();if(location.hash==='#creditos')renderCreds()}).catch(function(){});
   function renderDetail(){
     var m=curMatch();
     if(!m){$('#mTitle').textContent='';$('#mSub').textContent='';$('#stats').textContent='';$('#ctx').textContent='';return}
