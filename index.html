@@ -393,6 +393,7 @@ nav a{padding:10px 11px;font-size:14px}
 .gchips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}.gchip{background:rgba(66,184,95,.28);border:1px solid #42b85f;border-radius:999px;padding:4px 10px;font-size:13px}
 .cbtns{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:10px 0}
 .cbtn{min-height:62px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.08);color:var(--chalk);font:inherit;font-size:13px;cursor:pointer;padding:4px}
+.trr{margin:10px 0}.trr h4{margin:0 0 6px;font-size:14px}.trr summary{cursor:pointer;font-weight:600;font-size:14px;padding:4px 0}.trl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:4px 14px}.trl li{font-size:13px;padding:3px 0;border-bottom:1px solid var(--line)}.trlos{opacity:.65}
 .gpis{background:rgba(214,232,75,.08);border:1px solid rgba(214,232,75,.35);border-radius:12px;padding:10px 14px;margin:10px 0}.gpis h4{margin:0 0 6px;font-size:14px}.gpis p{margin:4px 0;font-size:14px;line-height:1.35}
 .cbtn,.gcell{overflow-wrap:anywhere;word-break:break-word;hyphens:auto;line-height:1.15}
 @media(max-width:480px){.cbtn{font-size:11px;padding:2px}.gcell{font-size:11.5px;padding:3px}}
@@ -711,7 +712,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
 <section class="view" id="v-juegos" hidden>
   <div class="wrap">
     <div class="sec-head"><div><h1>Juegos de tenis</h1>
-      <p>Seis retos nuevos cada día, igual para todo el mundo, en tres dificultades. Se renuevan a medianoche (hora de Madrid). Juega, compara tu resultado y comparte.</p></div>
+      <p>Siete retos nuevos cada día, igual para todo el mundo, en tres dificultades. Se renuevan a medianoche (hora de Madrid). Juega, compara tu resultado y comparte.</p></div>
       <span class="srcline" id="gDay"></span></div>
     <div class="gtiles" id="gTiles"></div>
     <div class="gdif" id="gDif" role="group" aria-label="Dificultad"><span>Dificultad:</span><button type="button" class="d1" data-d="1">Fácil</button><button type="button" class="d2" data-d="2">Media</button><button type="button" class="d3" data-d="3">Difícil</button></div>
@@ -1957,15 +1958,20 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   function rankTxt(i){return G.p[i][5]?'n.º '+G.p[i][5]:'sin top 150'}
 
   /* buscador de jugadores en ventana */
-  var gDlg=$('#gDlg'),gIn=$('#gIn'),gList=$('#gList'),gCb=null,gEx=[],gHard=false;
+  var gDlg=$('#gDlg'),gIn=$('#gIn'),gList=$('#gList'),gCb=null,gEx=[],gHard=false,gAlt=null;
   function resolveName(q){q=norm(q.trim());if(!q)return -1;var ex=-1,cnt=0,last=-1;
     G.p.forEach(function(p,i){var n=G.n[i],w=n.split(' ');if(n===q)ex=i;else if(w[w.length-1]===q){cnt++;last=i}});
     return ex>=0?ex:(cnt===1?last:-1)}
-  function openGuess(title,cb,exclude,hard){gCb=cb;gEx=exclude||[];gHard=!!hard;$('#gT').textContent=title;gIn.value='';clr(gList);
+  function openGuess(title,cb,exclude,hard,alt){gAlt=alt||null;gCb=cb;gEx=exclude||[];gHard=!!hard;$('#gT').textContent=title;gIn.value='';clr(gList);
     gIn.placeholder=hard?'Escribe nombre y apellido':'Escribe un apellido…';
     $('#gHint').textContent=hard?'Modo difícil: no hay sugerencias. Escribe el nombre completo y pulsa Enviar.':'';
     gDlg.showModal();gIn.focus()}
+  function suggestAlt(q){var out=[];gAlt.forEach(function(nm,i){if(gEx.indexOf(nm)>=0)return;var n=norm(nm);if(n.indexOf(q)===0||n.split(' ').some(function(w){return w.indexOf(q)===0})||(q.length>=3&&n.indexOf(q)>=0))out.push(nm)});
+    if(q.length>=3&&!out.length)gAlt.forEach(function(nm){if(gEx.indexOf(nm)>=0)return;if(norm(nm).split(' ').some(function(w){var x=w.slice(0,q.length);if(x.length!==q.length)return false;var d=0;for(var k=0;k<q.length;k++)if(x[k]!==q[k])d++;return d<=1}))out.push(nm)});
+    out.slice(0,8).forEach(function(nm){var li=el('li');var b=el('button',null,nm);b.type='button';b.addEventListener('click',function(){var cb=gCb;gCb=null;gDlg.close();if(cb)cb(nm)});li.appendChild(b);gList.appendChild(li)});
+    if(!out.length)gList.appendChild(el('li','srcline','Ningún jugador de este cuadro encaja con ese nombre.'))}
   function suggest(){clr(gList);if(gHard)return;var q=norm(gIn.value.trim());if(q.length<2)return;var out=[];
+    if(gAlt)return suggestAlt(q);
     G.p.forEach(function(p,i){if(gEx.indexOf(i)>=0)return;var n=G.n[i];if(n.indexOf(q)===0||n.split(' ').some(function(w){return w.indexOf(q)===0})||(q.length>=3&&n.indexOf(q)>=0))out.push(i)});
     if(q.length>=3&&!out.length)G.p.forEach(function(p,i){if(gEx.indexOf(i)>=0||out.indexOf(i)>=0)return;if(G.n[i].split(' ').some(function(w){var x=w.slice(0,q.length);if(x.length!==q.length)return false;var d=0;for(var k=0;k<q.length;k++)if(x[k]!==q[k])d++;return d<=1}))out.push(i)});
     out.sort(function(a,b){return (G.p[a][5]||999)-(G.p[b][5]||999)});
@@ -1973,6 +1979,11 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     if(!out.length)gList.appendChild(el('li','srcline','No hay ningún jugador con ese nombre.'))}
   function submitGuess(){var i;
     if(!gHard){var b=gList.querySelector('button');if(b){b.click();return}}
+    if(gAlt){var q=norm(gIn.value.trim()),ex=null,cn=0,la=null;if(!q)return;
+      gAlt.forEach(function(nm){var n=norm(nm),w=n.split(' ');if(n===q)ex=nm;else if(w[w.length-1]===q){cn++;la=nm}});
+      var pick=ex||(cn===1?la:null);if(!pick){toast('No encuentro a ese jugador en este cuadro. Prueba con nombre y apellido.');return}
+      if(gEx.indexOf(pick)>=0){toast('Ese jugador ya está usado.');return}
+      var cb2=gCb;gCb=null;gDlg.close();if(cb2)cb2(pick);return}
     i=resolveName(gIn.value);
     if(i<0){toast('No encuentro a ese jugador. Prueba con nombre y apellido.');return}
     if(gEx.indexOf(i)>=0){toast('Ese jugador ya está usado.');return}
@@ -1989,7 +2000,8 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     {id:'conn',n:'Dobles Locos',i:'🧩',d:'Reparte 16 jugadores en 4 grupos'},
     {id:'final',n:'Bola de Partido',i:'🏆',d:'Adivina quién ganó cada final'},
     {id:'hl',n:'Duelo en la Red',i:'⚔️',d:'¿Quién tiene la cifra más alta?'},
-    {id:'mys',n:'La Wildcard',i:'🕵️',d:'Adivina al jugador secreto'}];
+    {id:'mys',n:'La Wildcard',i:'🕵️',d:'Adivina al jugador secreto'},
+    {id:'trof',n:'Rumbo al Trofeo',i:'🧭',d:'Adivina quién ganó el torneo viendo el cuadro ronda a ronda'}];
   var DIFN=['','Fácil','Media','Difícil'];
   var gInGame=false,gCur=LS.get('tt_gcur')||'grid',gDif=+(LS.get('tt_gdif')||1),gLbMode='day';
   if(!GAMES.some(function(g){return g.id===gCur}))gCur='grid';if(!(gDif>=1&&gDif<=3))gDif=1;
@@ -2049,10 +2061,10 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     T.style.display=gInGame?'none':'';$('#gPlay').hidden=!gInGame;
     if(!gInGame){$('#gBox').textContent='';return}
     var box=$('#gBox');clr(box);
-    Promise.all([GP,ESP,TOP,PISP]).then(function(){
+    Promise.all([GP,ESP,TOP,PISP].concat(gCur==='trof'?[loadCamp()]:[])).then(function(){
       clr(box);
       if(!G){box.appendChild(el('p','empty','No se han podido cargar los datos de los juegos.'));return}
-      ({grid:gridUI,lista:listaUI,conn:connUI,final:finalUI,hl:hlUI,mys:mysUI})[gCur](box);
+      ({grid:gridUI,lista:listaUI,conn:connUI,final:finalUI,hl:hlUI,mys:mysUI,trof:trofUI})[gCur](box);
       renderLb();
     });
   }
@@ -2297,6 +2309,59 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       box.appendChild(el('p',null,won?'¡Lo has adivinado en '+st.g.length+' intentos! Era '+tp[0]+'.':'No ha podido ser. Era '+tp[0]+'.'));
       var em=st.g.map(function(gi){var q=G.p[gi];return (q[1]===tp[1]?'🟩':'⬛')+(q[2]===tp[2]?'🟩':'⬛')+(q[3]===tp[3]?'🟩':'⬛')+(q[4]===tp[4]?'🟩':'⬛')+((q[5]||999)===(tp[5]||999)?'🟩':'⬛')}).join('\n');
       finishUI(box,sc,MA,'TitoTenis · La Wildcard ('+DIFN[gDif]+') '+dayEs(day)+' · '+(won?st.g.length+'/'+MA:'X/'+MA)+'\n'+em+'\n'+location.origin+location.pathname)}
+  }
+
+
+  /* --- Rumbo al Trofeo: adivina el campeón viendo el cuadro ronda a ronda --- */
+  var CAMP=null,CAMPP=null;
+  function loadCamp(){if(!CAMPP)CAMPP=fetch('campeones.json').then(function(r){return r.ok?r.json():null}).then(function(j){CAMP=j}).catch(function(){});return CAMPP}
+  var TRN={1:['GS','1000'],2:['GS','1000','500'],3:['GS','1000','500','250']},RORD=['R128','R64','R32','R16','QF','SF','F'];
+  var NVT={GS:'Grand Slam','1000':'Masters 1000','500':'ATP 500','250':'ATP 250'};
+  function trofUI(box){
+    if(!CAMP||!CAMP.t){box.appendChild(el('p','empty','No se han podido cargar los torneos.'));return}
+    var day=dayStr(),R=seedRng('trof'+gDif+day),L=CAMP.t.filter(function(t){return TRN[gDif].indexOf(t.nv)>=0});
+    var t=L[Math.floor(R()*L.length)],st=loadSt({k:0,g:[],log:'',s:0,e:0,w:0});
+    var rds=RORD.filter(function(r){return t.m.some(function(m){return m[0]===r})}),S=rds.length-1,k=Math.min(st.k,S-1);
+    var by={};rds.forEach(function(r){by[r]=t.m.filter(function(m){return m[0]===r})});
+    var surf=t.s==='tierra'?'tierra batida':t.s==='hierba'?'hierba':'pista dura';
+    intro(box,'Rumbo al Trofeo','Te enseñamos el cuadro ronda a ronda. Adivina quién ganó el torneo: cuanto antes aciertes, más puntos. Fallar o pasar te enseña la ronda siguiente.');
+    box.appendChild(el('div','gq',gDif===1?t.n+' '+t.a+' · '+NVT[t.nv]+' · '+surf:gDif===2?t.n+' · '+NVT[t.nv]+' · '+surf:'Torneo misterioso · '+NVT[t.nv]+' · '+surf));
+    var over=!!st.e;
+    /* resultados de las rondas 0..k (la final nunca se enseña) */
+    var upto=Math.min(k,S-1);
+    for(var i=upto;i>=0;i--){
+      var rd=rds[i],cont=el(i===upto?'div':'details','trr');
+      if(i!==upto){cont.appendChild(el('summary',null,RDN[rd]||rd))}else cont.appendChild(el('h4',null,(RDN[rd]||rd)+' · resultados'));
+      var ul=el('ul','trl');by[rd].forEach(function(m){var li=el('li');li.appendChild(el('b',null,m[1]));li.appendChild(document.createTextNode(' '+m[3]+' '));li.appendChild(el('span','trlos',m[2]));ul.appendChild(li)});
+      cont.appendChild(ul);box.appendChild(cont);
+      if(i===0&&rds.length>1){var inR0={};by[rds[0]].forEach(function(m){inR0[m[1]]=1;inR0[m[2]]=1});
+        var byes=[];by[rds[1]].forEach(function(m){[m[1],m[2]].forEach(function(n){if(!inR0[n]&&byes.indexOf(n)<0)byes.push(n)})});
+        if(byes.length)cont.appendChild(el('p','srcline','Entran directamente en la ronda siguiente (cabezas de serie): '+byes.join(', ')+'.'))}
+    }
+    var cand=[];by[rds[upto]].forEach(function(m){if(cand.indexOf(m[1])<0)cand.push(m[1])});
+    if(upto===0&&rds.length>1){var in0={};by[rds[0]].forEach(function(m){in0[m[1]]=1;in0[m[2]]=1});by[rds[1]].forEach(function(m){[m[1],m[2]].forEach(function(n){if(!in0[n]&&cand.indexOf(n)<0)cand.push(n)})})}
+    if(upto===S-1&&rds[S]==='F'){cand=[];by.F.forEach(function(m){cand.push(m[1],m[2])})} /* en la última ronda vista: los dos finalistas */
+    var all=[];t.m.forEach(function(m){[m[1],m[2]].forEach(function(n){if(all.indexOf(n)<0)all.push(n)})});
+    var left=S-k;
+    if(!over){
+      box.appendChild(el('p',null,'Quedan '+cand.length+' candidatos · Si aciertas ahora: '+left+' '+(left===1?'punto':'puntos')+'.'));
+      var row=el('div','row'),b=el('button','btn','¿Quién ganó el torneo?');b.type='button';
+      b.addEventListener('click',function(){if(!st.s){st.s=Date.now();saveSt(st)}
+        openGuess('¿Quién ganó '+(gDif===3?'este torneo':t.n)+'?',function(nm){
+          if(cand.indexOf(nm)<0){var lost=t.m.filter(function(m){return m[2]===nm})[0];toast(lost?nm+' ya estaba eliminado ('+(RDN[lost[0]]||lost[0])+').':'Ese jugador no pasó de ahí.');return}
+          st.g.push(nm);
+          if(nm===t.cam){st.w=1;st.e=Date.now();st.log+='🟩'}
+          else{st.log+='🟥';if(k>=S-1)st.e=Date.now();else st.k=k+1;toast('No ha sido '+nm+'.')}
+          saveSt(st);renderGames()},st.g,gDif===3,gDif===3?all:cand)});
+      row.appendChild(b);
+      if(k<S-1){var sk=el('button','btn ghost','Ver la siguiente ronda (gasto el intento)');sk.type='button';sk.addEventListener('click',function(){if(!st.s)st.s=Date.now();st.log+='⏭';st.k=k+1;saveSt(st);renderGames()});row.appendChild(sk)}
+      var g2=el('button','btn ghost','Me rindo');g2.type='button';g2.addEventListener('click',function(){if(!st.s)st.s=Date.now();st.e=Date.now();saveSt(st);renderGames()});row.appendChild(g2);
+      box.appendChild(row)}
+    else{
+      var sc=st.w?left:0,ex=el('div');
+      ex.appendChild(el('p',null,(st.w?'¡Campeón acertado! ':'No ha podido ser. ')+'El campeón fue '+t.cam+' en '+t.n+' '+t.a+'.'));
+      var fin=by.F&&by.F[0];if(fin)ex.appendChild(el('p','srcline','Final: '+fin[1]+' '+fin[3]+' '+fin[2]+'.'));
+      finishUI(box,sc,S,'TitoTenis · Rumbo al Trofeo ('+DIFN[gDif]+') '+dayEs(day)+' · '+(st.w?sc+'/'+S:'0/'+S)+'\n'+st.log+'\n'+location.origin+location.pathname,ex)}
   }
 
   /* --- Ranking y evolucion --- */

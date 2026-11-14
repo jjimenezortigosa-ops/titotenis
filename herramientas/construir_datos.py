@@ -20,13 +20,15 @@ rows, seen = [], set()
 perfile_dates = {}
 for arg in sys.argv[3:]:
     season, path = arg.split(':',1)
-    season = int(season)
+    extra = season.startswith('+')   # +2023:archivo -> solo para campeones.json (juego), no para el resto de datos
+    season = int(season.lstrip('+'))
     for r in csv.DictReader(open(path,encoding='utf-8')):
         if r['tourney_name'].startswith('Davis Cup') or r['tourney_level']=='D': continue
         if r['surface'] not in SURF: continue
         k = (season, r['tourney_id'], r['match_num'] or (r['winner_name'], r['loser_name'], r['round']))
         if k in seen: continue
-        seen.add(k); r['_s'] = season; rows.append(r)
+        seen.add(k); r['_s'] = season; r['_x'] = extra; rows.append(r)
+rows_all = rows; rows = [r for r in rows_all if not r['_x']]
 def iso(d): return d[:4]+'-'+d[4:6]+'-'+d[6:]
 # ---------- torneos ----------
 T = {}
@@ -103,3 +105,22 @@ for r in rows:
             p['bo'] += g(qx,'bpFaced'); p['bc'] += g(qx,'bpFaced') - g(qx,'bpSaved')
 json.dump({'temporada':cur,'j':S}, open(os.path.join(out,'estadisticas.json'),'w',encoding='utf-8'), ensure_ascii=False, separators=(',',':'))
 print('torneos',len(tor),'evolucion',len(E),'estadisticas',len(S),'temporada',cur)
+
+# ---------- campeones.json (juego "Rumbo al Trofeo": desde 2023, todos los torneos individuales) ----------
+G = {}
+for r in rows_all:
+    G.setdefault((r['_s'], r['tourney_id']), []).append(r)
+camp = []
+for (season, tid), rs in G.items():
+    r0 = rs[0]; lv = LEVEL.get(r0['tourney_level'])
+    if lv not in ('GS','1000','500','250') or r0['tourney_name'] in NO_TITLE or 'vs' in r0['tourney_name']: continue
+    fin = [r for r in rs if r['round']=='F']
+    if not fin or any(r['round']=='RR' for r in rs): continue
+    ms = [r for r in rs if r['round'] in ORD and r['round']!='RR' and r['round']!='BR' ]
+    ms.sort(key=lambda r:(ORD[r['round']], int(r['match_num'] or 0)))
+    d1 = min(r['tourney_date'] for r in rs)
+    camp.append({'k':str(season)+'-'+tid,'a':season,'n':r0['tourney_name'],'nv':lv,'s':SURF[r0['surface']],'d':iso(d1),'cam':fin[0]['winner_name'],
+                 'm':[[r['round'], r['winner_name'], r['loser_name'], r['score'] or 'W/O'] for r in ms]})
+camp.sort(key=lambda t:(t['d'], t['n']))
+json.dump({'t':camp}, open(os.path.join(out,'campeones.json'),'w',encoding='utf-8'), ensure_ascii=False, separators=(',',':'))
+print('campeones.json:', len(camp), 'torneos')
