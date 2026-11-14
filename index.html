@@ -393,6 +393,7 @@ nav a{padding:10px 11px;font-size:14px}
 .gchips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}.gchip{background:rgba(66,184,95,.28);border:1px solid #42b85f;border-radius:999px;padding:4px 10px;font-size:13px}
 .cbtns{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:10px 0}
 .cbtn{min-height:62px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.08);color:var(--chalk);font:inherit;font-size:13px;cursor:pointer;padding:4px}
+.gpis{background:rgba(214,232,75,.08);border:1px solid rgba(214,232,75,.35);border-radius:12px;padding:10px 14px;margin:10px 0}.gpis h4{margin:0 0 6px;font-size:14px}.gpis p{margin:4px 0;font-size:14px;line-height:1.35}
 .cbtn,.gcell{overflow-wrap:anywhere;word-break:break-word;hyphens:auto;line-height:1.15}
 @media(max-width:480px){.cbtn{font-size:11px;padding:2px}.gcell{font-size:11.5px;padding:3px}}
 .cbtn.sel{background:#D6E84B;color:#0C1F1D;font-weight:700;border-color:#D6E84B}
@@ -1938,6 +1939,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   loadData().then(function(){route()});
   /* ---------- Juegos, ranking, torneos y estadisticas ---------- */
   var G=null,GP=fetch('juegos.json').then(function(r){return r.ok?r.json():null}).then(function(j){if(j){G=j;G.n=j.p.map(function(p){return norm(p[0])});G.k={};j.p.forEach(function(p,i){G.k[pk(p[0])]=i})}}).catch(function(){});
+  var PIS={},PISP=fetch('pistas.json').then(function(r){return r.ok?r.json():{}}).then(function(j){PIS=j||{}}).catch(function(){});
   var ES=null,ESP=fetch('estadisticas.json').then(function(r){return r.ok?r.json():null}).then(function(j){ES=j}).catch(function(){});
   var RK=null,RKP=fetch('ranking.json').then(function(r){return r.ok?r.json():null}).then(function(j){RK=j}).catch(function(){});
   var EV=null,EVP=fetch('evolucion.json').then(function(r){return r.ok?r.json():null}).then(function(j){EV=j}).catch(function(){});
@@ -1982,12 +1984,12 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
 
   /* juegos: catalogo, dificultad, estado y clasificacion */
   var GAMES=[
-    {id:'grid',n:'Cuadro Cruzado',i:'🎾',d:'Rellena la cuadrícula 3×3'},
-    {id:'lista',n:'Lista Relámpago',i:'📋',d:'Nombra a todos los que cumplan una condición'},
-    {id:'conn',n:'Grupos de cuatro',i:'🧩',d:'Reparte 16 jugadores en 4 grupos'},
-    {id:'final',n:'Final a ciegas',i:'🏆',d:'Adivina quién ganó cada final'},
-    {id:'hl',n:'Cara a Cara',i:'⚔️',d:'¿Quién tiene la cifra más alta?'},
-    {id:'mys',n:'Incógnito',i:'🕵️',d:'Adivina al jugador secreto'}];
+    {id:'grid',n:'Set Cruzado',i:'🎾',d:'Rellena la cuadrícula 3×3'},
+    {id:'lista',n:'Lluvia de Aces',i:'📋',d:'Nombra a todos los que cumplan una condición'},
+    {id:'conn',n:'Dobles Locos',i:'🧩',d:'Reparte 16 jugadores en 4 grupos'},
+    {id:'final',n:'Bola de Partido',i:'🏆',d:'Adivina quién ganó cada final'},
+    {id:'hl',n:'Duelo en la Red',i:'⚔️',d:'¿Quién tiene la cifra más alta?'},
+    {id:'mys',n:'La Wildcard',i:'🕵️',d:'Adivina al jugador secreto'}];
   var DIFN=['','Fácil','Media','Difícil'];
   var gInGame=false,gCur=LS.get('tt_gcur')||'grid',gDif=+(LS.get('tt_gdif')||1),gLbMode='day';
   if(!GAMES.some(function(g){return g.id===gCur}))gCur='grid';if(!(gDif>=1&&gDif<=3))gDif=1;
@@ -2047,7 +2049,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     T.style.display=gInGame?'none':'';$('#gPlay').hidden=!gInGame;
     if(!gInGame){$('#gBox').textContent='';return}
     var box=$('#gBox');clr(box);
-    Promise.all([GP,ESP,TOP]).then(function(){
+    Promise.all([GP,ESP,TOP,PISP]).then(function(){
       clr(box);
       if(!G){box.appendChild(el('p','empty','No se han podido cargar los datos de los juegos.'));return}
       ({grid:gridUI,lista:listaUI,conn:connUI,final:finalUI,hl:hlUI,mys:mysUI})[gCur](box);
@@ -2058,7 +2060,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   $('#gLbSeg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;gLbMode=b.dataset.m;renderLb()});
   setInterval(function(){if(!document.hidden&&location.hash.indexOf('#juegos/')===0)renderLb()},30000);
 
-  /* --- Cuadro Cruzado (3x3) --- */
+  /* --- Set Cruzado (3x3) --- */
   var GRD={1:[6,60,1],2:[3,25,0],3:[1,6,0]};
   function gridFor(day){
     var P=GRD[gDif],C=G.c.filter(function(c){return !P[2]||c.id.indexOf('gana')!==0});
@@ -2078,7 +2080,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     var day=dayStr(),gr=gridFor(day);
     if(!gr){box.appendChild(el('p','empty','Hoy no se ha podido preparar la cuadrícula.'));return}
     var st=loadSt({c:[],u:[],s:0,e:0});
-    intro(box,'Cuadro Cruzado',gDif===3?'Pulsa una casilla y escribe un jugador que cumpla fila y columna. Sin sugerencias: tienes que saberte el nombre. Un intento por casilla.':'Pulsa una casilla y elige un jugador que cumpla las dos condiciones (fila y columna). Un intento por casilla y sin repetir jugador.');
+    intro(box,'Set Cruzado',gDif===3?'Pulsa una casilla y escribe un jugador que cumpla fila y columna. Sin sugerencias: tienes que saberte el nombre. Un intento por casilla.':'Pulsa una casilla y elige un jugador que cumpla las dos condiciones (fila y columna). Un intento por casilla y sin repetir jugador.');
     var tb=el('div','ggrid');tb.appendChild(el('div'));
     gr.cols.forEach(function(c){tb.appendChild(el('div','gh',c.t))});
     var done=0;
@@ -2096,7 +2098,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       var sc=0,em='';for(var i=0;i<9;i++){var v=st.c[i];sc+=v.ok?1:0;em+=(v.ok?'🟩':'🟥')+(i%3===2?'\n':'')}
       var ex=el('div'),miss=[];for(var j=0;j<9;j++)if(!st.c[j].ok){var s=gr.cells[j].slice().sort(byRank).slice(0,3).map(function(p){return G.p[p][0]});miss.push('Casilla '+(j+1)+': '+s.join(', '))}
       if(miss.length)ex.appendChild(el('p','srcline','Posibles respuestas en las casillas falladas — '+miss.join(' · ')));
-      finishUI(box,sc,9,'TitoTenis · Cuadro Cruzado ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/9\n'+em+location.origin+location.pathname,ex)}
+      finishUI(box,sc,9,'TitoTenis · Set Cruzado ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/9\n'+em+location.origin+location.pathname,ex)}
   }
 
   /* --- Lista Relampago --- */
@@ -2110,7 +2112,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     var day=dayStr(),c=listaPick(day);
     if(!c){box.appendChild(el('p','empty','Hoy no hay lista disponible.'));return}
     var st=loadSt({f:[],l:LV[gDif],s:0,e:0}),total=c.p.length;
-    intro(box,'Lista Relámpago','Nombra a todos los jugadores que cumplan la condición. Cada fallo te quita una vida.');
+    intro(box,'Lluvia de Aces','Nombra a todos los jugadores que cumplan la condición. Cada fallo te quita una vida.');
     var q=el('div','gq',c.t);box.appendChild(q);
     box.appendChild(el('p',null,'Encontrados: '+st.f.length+' de '+total+' · Vidas: '+'❤️'.repeat(Math.max(0,st.l))+'🖤'.repeat(Math.max(0,LV[gDif]-st.l))));
     var chips=el('div','gchips');st.f.forEach(function(i){chips.appendChild(el('span','gchip',G.p[i][0]))});box.appendChild(chips);
@@ -2126,10 +2128,10 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       if(!st.e){st.e=Date.now();saveSt(st)}
       var ex=el('div'),miss=c.p.filter(function(i){return st.f.indexOf(i)<0}).sort(byRank).map(function(i){return G.p[i][0]});
       if(miss.length){ex.appendChild(el('p','srcline','Te faltaban ('+miss.length+'):'));var mc=el('div','gchips');miss.forEach(function(n){mc.appendChild(el('span','gchip',n))});ex.appendChild(mc)}
-      finishUI(box,st.f.length,total,'TitoTenis · Lista Relámpago ('+DIFN[gDif]+') '+dayEs(day)+'\n'+c.t+': '+st.f.length+'/'+total+'\n'+location.origin+location.pathname,ex)}
+      finishUI(box,st.f.length,total,'TitoTenis · Lluvia de Aces ('+DIFN[gDif]+') '+dayEs(day)+'\n'+c.t+': '+st.f.length+'/'+total+'\n'+location.origin+location.pathname,ex)}
   }
 
-  /* --- Grupos de cuatro --- */
+  /* --- Dobles Locos --- */
   var cSel=[],cKey='';
   var CCOL=['#FFD76B','#7BE0AD','#4FC3F7','#C792EA'];
   function connPick(day){
@@ -2149,7 +2151,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     if(!cp){box.appendChild(el('p','empty','Hoy no se ha podido preparar el juego.'));return}
     var key=gid()+day;if(cKey!==key){cKey=key;cSel=[]}
     var st=loadSt({f:[],m:0,s:0,e:0});
-    intro(box,'Grupos de cuatro','Hay 16 jugadores y 4 grupos de 4 que comparten algo. Selecciona 4 y pulsa Comprobar. Puedes fallar 4 veces.');
+    intro(box,'Dobles Locos','Hay 16 jugadores y 4 grupos de 4 que comparten algo. Selecciona 4 y pulsa Comprobar. Puedes fallar 4 veces.');
     var inner=el('div');box.appendChild(inner);
     function draw(){
       clr(inner);var over=st.f.length>=4||st.m>=4;
@@ -2172,12 +2174,12 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
         row.appendChild(ck);row.appendChild(cl);inner.appendChild(row)}
       else{
         if(!st.e){st.e=Date.now();saveSt(st)}
-        finishUI(inner,st.f.length,4,'TitoTenis · Grupos de cuatro ('+DIFN[gDif]+') '+dayEs(day)+' · '+st.f.length+'/4 grupos, '+st.m+' fallos\n'+location.origin+location.pathname)}
+        finishUI(inner,st.f.length,4,'TitoTenis · Dobles Locos ('+DIFN[gDif]+') '+dayEs(day)+' · '+st.f.length+'/4 grupos, '+st.m+' fallos\n'+location.origin+location.pathname)}
     }
     draw();
   }
 
-  /* --- Final a ciegas --- */
+  /* --- Bola de Partido --- */
   var FLV={1:['GS','1000','Finales'],2:['GS','1000','Finales','500'],3:['GS','1000','Finales','500','250']};
   function finalPick(day){
     if(!TO)return null;var R=seedRng('final'+gDif+day);
@@ -2191,12 +2193,12 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     var day=dayStr(),rs=finalPick(day);
     if(!rs||rs.length<6){box.appendChild(el('p','empty','Hoy no se ha podido preparar el juego.'));return}
     var st=loadSt({a:[],p:0,s:0,e:0});
-    intro(box,'Final a ciegas',gDif===1?'Te damos una final y dos nombres: ¿quién la ganó?':gDif===2?'Te damos una final y cuatro nombres: ¿quién la ganó?':'Te damos una final y tienes que escribir el nombre del campeón. Sin sugerencias.');
+    intro(box,'Bola de Partido',gDif===1?'Te damos una final y dos nombres: ¿quién la ganó?':gDif===2?'Te damos una final y cuatro nombres: ¿quién la ganó?':'Te damos una final y tienes que escribir el nombre del campeón. Sin sugerencias.');
     var i=st.p?st.a.length-1:st.a.length;
     if(i>=rs.length||(st.a.length>=rs.length&&!st.p)){
       var sc=st.a.filter(function(x){return x.ok}).length,em=st.a.map(function(x){return x.ok?'🟩':'🟥'}).join('');
       box.appendChild(el('p',null,'Has terminado las 6 finales.'));
-      finishUI(box,sc,6,'TitoTenis · Final a ciegas ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/6\n'+em+'\n'+location.origin+location.pathname);return}
+      finishUI(box,sc,6,'TitoTenis · Bola de Partido ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/6\n'+em+'\n'+location.origin+location.pathname);return}
     var r=rs[i],t=r.t;
     box.appendChild(el('p',null,'Final '+(i+1)+' de '+rs.length));
     var q=el('div','gq',t.n+' '+t.a+' · '+(t.s==='tierra'?'tierra':t.s==='hierba'?'hierba':'pista dura')+' · '+({GS:'Grand Slam','1000':'Masters 1000','500':'ATP 500','250':'ATP 250',Finales:'Finales'}[t.nv]||''));box.appendChild(q);
@@ -2208,7 +2210,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     else{var row=el('div','hlrow');r.opts.forEach(function(o){var b=el('button','hlb',G.p[o][0]);b.type='button';b.addEventListener('click',function(){answer(o===r.w)});row.appendChild(b)});box.appendChild(row)}
   }
 
-  /* --- Cara a Cara --- */
+  /* --- Duelo en la Red --- */
   var HLS=[
     {q:'¿Quién ha sacado más aces en 2026?',f:function(i,s){return s?s.ac:null},u:' aces'},
     {q:'¿Quién ha ganado más partidos en 2026?',f:function(i,s){return s?s.g:null},u:' victorias'},
@@ -2239,13 +2241,13 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     return out}
   function hlUI(box){
     var day=dayStr(),rs=hlRounds(day),st=loadSt({a:[],p:0,s:0,e:0});
-    intro(box,'Cara a Cara','10 duelos. Elige quién tiene la cifra más alta (o, en el ranking, el mejor puesto).'+(gDif===1?' Fácil: grandes diferencias.':gDif===3?' Difícil: cifras muy parejas y cualquier jugador.':''));
+    intro(box,'Duelo en la Red','10 duelos. Elige quién tiene la cifra más alta (o, en el ranking, el mejor puesto).'+(gDif===1?' Fácil: grandes diferencias.':gDif===3?' Difícil: cifras muy parejas y cualquier jugador.':''));
     if(rs.length<10){box.appendChild(el('p','empty','Hoy no se ha podido preparar el juego.'));return}
     var n=st.p?st.a.length-1:st.a.length;
     if(n>=rs.length&&!st.p){
       var sc=0,em='';rs.forEach(function(r,i){var win=(r.h.low?r.va<r.vb:r.va>r.vb)?0:1,ok=st.a[i]===win;sc+=ok?1:0;em+=ok?'🟩':'🟥'});
       box.appendChild(el('p',null,'Has terminado los 10 duelos.'));
-      finishUI(box,sc,10,'TitoTenis · Cara a Cara ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/10\n'+em+'\n'+location.origin+location.pathname);return}
+      finishUI(box,sc,10,'TitoTenis · Duelo en la Red ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/10\n'+em+'\n'+location.origin+location.pathname);return}
     var i=st.p?st.a.length-1:st.a.length,r=rs[i];
     box.appendChild(el('p',null,'Duelo '+(i+1)+' de '+rs.length));
     box.appendChild(el('div','gq',r.h.q));
@@ -2264,9 +2266,16 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   function mysUI(box){
     var day=dayStr(),R=seedRng('mys'+gDif+day),cand=[];
     G.p.forEach(function(p,i){if(p[5]&&p[5]<=MYR[gDif])cand.push(i)});
+    if(gDif<3){var cc=cand.filter(function(i){return PIS[G.p[i][0]]});if(cc.length>=5)cand=cc}
     var t=cand[Math.floor(R()*cand.length)],tp=G.p[t],MA=MYA[gDif],st=loadSt({g:[],s:0,e:0});
-    intro(box,'Incógnito','Adivina al jugador de hoy (está entre los '+MYR[gDif]+' primeros del ranking). Tienes '+MA+' intentos. Verde = coincide; la flecha indica si el secreto tiene un valor mayor (↑) o menor (↓).'+(gDif===3?' Sin sugerencias: escribe el nombre.':''));
+    intro(box,'La Wildcard','Adivina al jugador de hoy (está entre los '+MYR[gDif]+' primeros del ranking). Tienes '+MA+' intentos.'+(gDif<3?' Te damos pistas sacadas de las noticias de la temporada.':'')+' Verde = coincide; la flecha indica si el secreto tiene un valor mayor (↑) o menor (↓).'+(gDif===3?' Sin sugerencias: escribe el nombre.':''));
     var won=st.g.indexOf(t)>=0,over=won||st.g.length>=MA;
+    var pis=PIS[tp[0]]||[];
+    if(pis.length){var shown=over?pis.length:Math.min(pis.length,1+st.g.length),pb=el('div','gpis');
+      pb.appendChild(el('h4',null,'🗞️ Pistas de última hora'));
+      for(var pi=0;pi<shown;pi++)pb.appendChild(el('p',null,(pi+1)+'. '+pis[pi]));
+      if(!over&&shown<pis.length)pb.appendChild(el('p','srcline','Cada fallo destapa una pista nueva ('+(pis.length-shown)+' más).'));
+      box.appendChild(pb)}
     if(st.g.length){
       var tw=el('div');tw.style.overflowX='auto';var tbl=el('table','tbl mys'),hd=el('tr');
       ['Jugador','País','Mano','Altura','Edad','Ranking'].forEach(function(h){hd.appendChild(el('th',null,h))});tbl.appendChild(hd);
@@ -2280,14 +2289,14 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     if(!over){
       box.appendChild(el('p',null,'Intento '+(st.g.length+1)+' de '+MA));
       var b=el('button','btn','Elegir jugador');b.type='button';
-      b.addEventListener('click',function(){if(!st.s){st.s=Date.now();saveSt(st)}openGuess('Incógnito',function(p){st.g.push(p);if(p===t||st.g.length>=MA)st.e=Date.now();saveSt(st);renderGames()},st.g,gDif===3)});
+      b.addEventListener('click',function(){if(!st.s){st.s=Date.now();saveSt(st)}openGuess('La Wildcard',function(p){st.g.push(p);if(p===t||st.g.length>=MA)st.e=Date.now();saveSt(st);renderGames()},st.g,gDif===3)});
       box.appendChild(b)}
     else{
       if(!st.e){st.e=Date.now();saveSt(st)}
       var sc=won?MA+1-st.g.length:0;
       box.appendChild(el('p',null,won?'¡Lo has adivinado en '+st.g.length+' intentos! Era '+tp[0]+'.':'No ha podido ser. Era '+tp[0]+'.'));
       var em=st.g.map(function(gi){var q=G.p[gi];return (q[1]===tp[1]?'🟩':'⬛')+(q[2]===tp[2]?'🟩':'⬛')+(q[3]===tp[3]?'🟩':'⬛')+(q[4]===tp[4]?'🟩':'⬛')+((q[5]||999)===(tp[5]||999)?'🟩':'⬛')}).join('\n');
-      finishUI(box,sc,MA,'TitoTenis · Incógnito ('+DIFN[gDif]+') '+dayEs(day)+' · '+(won?st.g.length+'/'+MA:'X/'+MA)+'\n'+em+'\n'+location.origin+location.pathname)}
+      finishUI(box,sc,MA,'TitoTenis · La Wildcard ('+DIFN[gDif]+') '+dayEs(day)+' · '+(won?st.g.length+'/'+MA:'X/'+MA)+'\n'+em+'\n'+location.origin+location.pathname)}
   }
 
   /* --- Ranking y evolucion --- */
