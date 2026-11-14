@@ -1,0 +1,13 @@
+Aquí van las fotos de los jugadores (archivos .jpg o .webp, mejor menos de 300 KB).
+Después se apuntan en fotos.json, en la raíz del repositorio, así:
+
+{
+  "Taylor Fritz": {
+    "src": "fotos/taylor-fritz.jpg",
+    "credit": "Foto: AUTOR, CC BY-SA 2.0"
+  }
+}
+
+El nombre debe ser exactamente el que aparece en data.json (por ejemplo "Taylor Fritz").
+El crédito (autor y licencia) es obligatorio para fotos de Wikimedia Commons.
+Si un jugador no tiene foto, la web muestra un círculo con sus iniciales.
