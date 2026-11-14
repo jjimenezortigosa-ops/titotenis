@@ -1,667 +1,490 @@
 {
- "updated": "14 nov 2026, 18:12 (Madrid)",
- "matches": [],
- "results": [
-  {
-   "id": "sr:76430186",
-   "cat": "atp",
-   "tour": "ATP 250 Estocolmo",
-   "text": "Taylor Fritz gana a Lorenzo Musetti",
-   "score": "6-4 6-2",
-   "det": "Semifinal · pista dura cubierta · 7 aces a 3 · Fritz convirtió 3 de 4 bolas de rotura y Musetti no tuvo ninguna",
-   "stats": {
-    "names": [
-     "Fritz",
-     "Musetti"
-    ],
-    "src": "tennis.com, partido del 13 nov 2026",
-    "rows": [
-     [
-      "Aces",
-      "7",
-      "3",
-      7,
-      3
-     ],
-     [
-      "Primeros saques dentro",
-      "76 %",
-      "69 %",
-      76,
-      69
-     ],
-     [
-      "Puntos ganados con 1.º saque",
-      "81 %",
-      "68 %",
-      81,
-      68
-     ],
-     [
-      "Puntos ganados con 2.º saque",
-      "78 %",
-      "36 %",
-      78,
-      36
-     ],
-     [
-      "Bolas de rotura convertidas",
-      "3 de 4",
-      "0",
-      3,
-      0
-     ]
-    ]
-   },
-   "juegos": "baaababababaaaaaba",
-   "juegosSrc": "crónica en directo de Virgilio.it. El juego 6 del segundo set no sale en la crónica y se deduce del marcador (5-1)."
-  },
-  {
-   "cat": "atp",
-   "tour": "ATP 250 Estocolmo",
-   "text": "Thiago Agustín Tirante gana a Alejandro Tabilo",
-   "score": "7-5 7-6",
-   "id": "res-thiago-agust-n-tirante-gana-a-alejandro-",
-   "det": "Cuartos de final de Estocolmo · dos sets, el segundo en tie-break"
-  }
- ],
- "news": [
-  {
-   "id": "atp-ranking-9-nov-fritz-vuelve-al-top-10",
-   "cat": "atp",
-   "tag": "Ranking",
-   "cls": "res",
-   "t": "Ranking ATP: Fritz vuelve al top 10 y Ruud sube cinco puestos",
-   "d": "Tras el Masters 1000 de París, Fritz sube dos puestos hasta el 10.º (3.285 puntos) gracias a sus cuartos de final, donde tuvo dos bolas de partido contra Alcaraz. Ruud es quien más sube del top 20: cinco puestos hasta el 18.º (2.435 puntos) por llegar a semifinales. Jódar baja al 11.º y Djokovic al 12.º. Zverev sigue 1.º con 9.550 y Sinner 2.º con 9.450; sin cambios en la cima.",
-   "s": "Tennis Majors",
-   "u": "https://www.tennismajors.com/?p=866483",
-   "w": "Ranking del 9 de noviembre",
-   "full": [
-    "El Masters 1000 de París movió el ranking ATP publicado el 9 de noviembre. Zverev sigue primero con 9.550 puntos y Sinner segundo con 9.450, así que la cima no cambia.",
-    "Fritz vuelve al top 10: sube dos puestos hasta el 10.º con 3.285 puntos. Llegó a los cuartos de final de París, donde cayó contra Alcaraz después de tener dos bolas de partido. Esa derrota le deja como suplente para las Finals de Turín.",
-    "Ruud es quien más sube de los veinte primeros: cinco puestos hasta el 18.º, con 2.435 puntos, por llegar a semifinales, su segundo mejor resultado en un Masters 1000 esta temporada.",
-    "En el otro lado, Jódar baja del 10.º al 11.º y Djokovic del 11.º al 12.º. Tommy Paul sube un puesto hasta el 13.º, y Auger-Aliassime y Nakashima bajan uno. El top 10 queda con De Minaur noveno (3.370) y Tiafoe octavo (3.390), sin cambios."
-   ]
-  },
-  {
-   "id": "wta-ranking-9-nov-claire-liu-y-linette-escalan",
-   "cat": "wta",
-   "tag": "Ranking",
-   "cls": "res",
-   "t": "Ranking WTA: Liu entra en el top 70 y Linette escala 25 puestos",
-   "d": "Claire Liu sube 33 puestos hasta el 69.º tras ganar el torneo de Hong Kong sin ceder un set. Magda Linette sube 25 hasta el 43.º con su título en Chennai. Alexandra Eala sube dos hasta el 15.º, su mejor puesto, tras la final de Hong Kong, y Andreescu vuelve al top 100 (puesto 100) tras ser finalista en Cali.",
-   "s": "WTA Tennis",
-   "u": "https://www.wtatennis.com/news/4606924/rankings-watch-liu-andreescu-back-in-top-100-eala-up-to-new-career-high",
-   "w": "Ranking del 9 de noviembre",
-   "full": [
-    "Los últimos torneos WTA 250 de la temporada, Hong Kong y Chennai, dejaron el ranking del 9 de noviembre con movimientos más fuertes fuera del top 10, que no cambió.",
-    "Claire Liu es la protagonista: ganó el título de Hong Kong sin ceder un set y sube 33 puestos, del 102.º al 69.º. Magda Linette gana Chennai y sube 25, del 68.º al 43.º.",
-    "Alexandra Eala sube dos puestos hasta el 15.º, el mejor de su carrera, tras ser finalista en Hong Kong. Janice Tjen sube 15 hasta el 60.º por su final en Chennai, y Leyre Romero Gormaz sube 20 hasta el 111.º con su título en el WTA 125 de Cali.",
-    "Bianca Andreescu recupera el top 100: sube nueve puestos hasta el 100.º después de ser finalista en Cali."
-   ]
-  },
-  {
-   "cat": "atp",
-   "tag": "Estocolmo",
-   "cls": "est",
-   "t": "Fritz derrota a Musetti y jugará la final de Estocolmo",
-   "d": "Fritz ganó 6-4 y 6-2 en la semifinal. Sacó siete aces, convirtió tres de sus cuatro bolas de rotura y Musetti no tuvo ni una. Es el cabeza de serie 1 del torneo.",
-   "s": "Datos del proveedor deportivo",
-   "u": "",
-   "w": "Hoy",
-   "live": false,
-   "id": "atp-fritz-y-musetti-juegan-hoy-la-semifinal-de-estocolmo"
-  },
-  {
-   "cat": "atp",
-   "tag": "Estocolmo",
-   "cls": "est",
-   "t": "Musetti llegó a cuartos en Estocolmo sin ceder terreno",
-   "d": "Musetti ganó 6-1 y 6-4 al británico Toby Samuel y llegaba al torneo con un 8-2 en pista dura cubierta esta temporada, título de Lyon incluido.",
-   "s": "Tennis Majors",
-   "u": "https://www.tennismajors.com/?p=866628",
-   "w": "10 nov",
-   "id": "atp-musetti-lleg-a-cuartos-en-estocolmo-sin-ceder-terreno"
-  },
-  {
-   "cat": "atp",
-   "tag": "ATP Finals",
-   "cls": "",
-   "t": "Turín abre las Nitto ATP Finals el domingo 15 de noviembre",
-   "d": "El torneo de maestros se juega del 15 al 22 en el Inalpi Arena, en pista dura cubierta. Los ocho clasificados se reparten en dos grupos, el Grupo John McEnroe y el Grupo Ivan Lendl, y pasan a semifinales los dos primeros de cada uno.",
-   "s": "ATP Tour",
-   "u": "https://www.atptour.com/es/news/nitto-atp-finals-2026-history-draw-schedule",
-   "w": "9 nov",
-   "id": "atp-tur-n-abre-las-nitto-atp-finals-el-domingo-15-de-noviemb"
-  },
-  {
-   "cat": "atp",
-   "tag": "ATP Finals",
-   "cls": "",
-   "t": "Jódar completa el cuadro de Turín",
-   "d": "Rafael Jódar fue el último en clasificarse, el 6 de noviembre. Zverev y Medvedev son los dos excampeones del torneo que juegan este año, y por cuarto año seguido hay un italiano en el cuadro de individuales.",
-   "s": "ATP Tour",
-   "u": "https://www.atptour.com/es/news/nitto-atp-finals-2026-field-is-set",
-   "w": "6 nov",
-   "id": "atp-j-dar-completa-el-cuadro-de-tur-n"
-  },
-  {
-   "cat": "atp",
-   "tag": "Resultados",
-   "cls": "res",
-   "t": "Tirante deja fuera a Tabilo en Estocolmo",
-   "d": "El argentino Thiago Agustín Tirante ganó a Alejandro Tabilo por 7-5 y 7-6 en el torneo sueco.",
-   "s": "Datos deportivos en directo",
-   "u": "",
-   "w": "Hoy",
-   "id": "atp-tirante-deja-fuera-a-tabilo-en-estocolmo"
-  },
-  {
-   "cat": "atp",
-   "tag": "Circuito",
-   "cls": "cir",
-   "t": "Sinner da por cerrada su temporada 2026",
-   "d": "Según Flashscore, el italiano no volverá a competir este año y asegura que necesita pensar en su carrera. Su ausencia deja a Turín sin el último campeón.",
-   "s": "Flashscore",
-   "u": "https://www.flashscore.com.br/noticias/finais-turim-atp-simples/MeRVE9s8CdnS0XT8/",
-   "w": "Reciente",
-   "id": "atp-sinner-da-por-cerrada-su-temporada-2026"
-  },
-  {
-   "cat": "atp",
-   "tag": "Circuito",
-   "cls": "cir",
-   "t": "Turín seguirá acogiendo las ATP Finals también en 2027",
-   "d": "La ATP y la federación italiana anunciaron la ampliación en julio. Aún no se ha decidido dónde se jugará a partir de 2027.",
-   "s": "ATP Tour",
-   "u": "https://www.atptour.com/es/news/nitto-atp-finals-2027-turin-extension",
-   "w": "16 jul",
-   "id": "atp-tur-n-seguir-acogiendo-las-atp-finals-tambi-n-en-2027"
-  },
-  {
-   "cat": "wta",
-   "tag": "WTA Finals",
-   "cls": "",
-   "t": "Las WTA Finals de Indian Wells ya tienen grupos, y sin Rybakina",
-   "d": "Con la baja de Elena Rybakina, Coco Gauff y Aryna Sabalenka encabezan cada grupo. En el primero están también Pegula, Noskova y Kostyuk; en el segundo, Andreeva, Svitolina y Muchova.",
-   "s": "WTA",
-   "u": "https://www.wtatennis.com/news/4603196/2026-wta-finals-group-breakdown-who-will-rybakina-and-sabalenka-face",
-   "w": "Esta semana",
-   "id": "wta-las-wta-finals-de-indian-wells-ya-tienen-grupos-y-sin-ry"
-  },
-  {
-   "cat": "wta",
-   "tag": "WTA Finals",
-   "cls": "",
-   "t": "El torneo de maestras vuelve a jugarse al aire libre",
-   "d": "ESPN recuerda que es la primera vez desde 2023, en Cancún, que las Finales se disputan en exterior. Las ocho mejores se dividen en dos grupos y las dos primeras de cada uno pasan a semifinales.",
-   "s": "ESPN",
-   "u": "https://www.espn.com/tennis/story/_/id/50373806/rybakina-sabalenka-lead-season-ending-wta-finals-groups",
-   "w": "3 nov",
-   "id": "wta-el-torneo-de-maestras-vuelve-a-jugarse-al-aire-libre"
-  },
-  {
-   "id": "wta-svitolina-tumba-a-sabalenka-en-tres-sets-y-se-mete",
-   "cat": "wta",
-   "tag": "WTA Finals",
-   "cls": "res",
-   "t": "Svitolina tumba a Sabalenka en tres sets y se mete en semifinales en Indian Wells",
-   "d": "Elina Svitolina remontó el partido decisivo del Grupo 2 ante Sabalenka con un 6-3, 3-6, 6-1 y cerró en su cuarta bola de partido. Sabalenka acabó con 35 errores no forzados.",
-   "s": "ESPN",
-   "u": "https://www.espn.com/tennis/story/_/id/50475470/elina-svitolina-beats-aryna-sabalenka-3-sets-reach-semifinals-wta-finals",
-   "w": "13 nov",
-   "full": [
-    "El viernes 13 de noviembre, en Indian Wells, Svitolina superó a Sabalenka por 6-3, 3-6, 6-1 y aseguró el segundo billete del Grupo 2 hacia las semifinales. Necesitó cuatro bolas de partido para cerrar.",
-    "Sabalenka igualó al ganar el segundo set y se adelantó con una rotura al inicio del tercero, pero se vino abajo: 35 errores no forzados. Svitolina hizo 21 golpes ganadores con 24 errores y aprovechó seis de sus ocho bolas de rotura.",
-    "Fue su primera victoria sobre la bielorrusa en seis años y la segunda en ocho enfrentamientos. Ganó este torneo en 2018 y fue finalista en 2019, y en semifinales se medirá a Noskova."
-   ]
-  },
-  {
-   "id": "wta-andreeva-termina-invicta-el-grupo-2-y-espera-a-peg",
-   "cat": "wta",
-   "tag": "WTA Finals",
-   "cls": "res",
-   "t": "Andreeva termina invicta el Grupo 2 y espera a Pegula",
-   "d": "Andreeva ganó 6-2, 6-1 a Shnaider, sustituta de última hora de Muchova, y cerró el grupo con tres victorias. El sábado juega la semifinal contra Pegula.",
-   "s": "ESPN / AP",
-   "u": "https://www.espn.com/tennis/story/_/id/50475470/elina-svitolina-beats-aryna-sabalenka-3-sets-reach-semifinals-wta-finals",
-   "w": "13 nov",
-   "full": [
-    "Mirra Andreeva completó un pleno en el Grupo 2 al ganar 6-2, 6-1 a Diana Shnaider. Solo cedió 11 juegos en ese partido.",
-    "Shnaider jugó porque Karolina Muchova se retiró por una enfermedad gastrointestinal; era segunda suplente y debutó así en individuales del torneo.",
-    "Andreeva calificó el partido de caótico por el fuerte viento. En semifinales se cruzará con Pegula, a quien nunca ha enfrentado."
-   ]
-  },
-  {
-   "id": "wta-noskova-gana-a-gauff-y-es-la-primera-semifinalista",
-   "cat": "wta",
-   "tag": "WTA Finals",
-   "cls": "res",
-   "t": "Noskova gana a Gauff y es la primera semifinalista de las WTA Finals",
-   "d": "Noskova ganó 6-3, 6-3 a Gauff con cinco roturas y selló su pase en su debut. Es la más joven en lograrlo desde Kvitova en 2011.",
-   "s": "Tennis Majors",
-   "u": "https://www.tennismajors.com/?p=866650",
-   "w": "11 nov",
-   "full": [
-    "Linda Noskova derrotó el 11 de noviembre a Coco Gauff por 6-3, 6-3 y fue la primera en asegurar semifinales, con dos victorias en dos partidos.",
-    "La checa, campeona de Wimbledon, es la jugadora más joven en alcanzar semifinales en su debut en estas Finales desde Petra Kvitova en 2011.",
-    "Rompió cinco veces el saque de Gauff y convirtió 5 de 9 bolas de rotura, con nueve aces. Gauff tuvo más ganadores (11 a 5) pero 18 errores no forzados y 8 dobles faltas."
-   ]
-  },
-  {
-   "id": "wta-semifinales-de-las-wta-finals-andreeva-pegula-y-sv",
-   "cat": "wta",
-   "tag": "WTA Finals",
-   "cls": "est",
-   "t": "Semifinales de las WTA Finals: Andreeva-Pegula y Svitolina-Noskova",
-   "d": "El cuadro de semifinales de Indian Wells está cerrado y se juega este sábado. Faltan Rybakina y Muchova, ambas por enfermedad.",
-   "s": "WTA",
-   "u": "https://www.wtatennis.com/news/4608823/wta-finals-2026-semifinals-jessica-pegula-mirra-andreeva-set-for-first-matchup-as-elina-svitolina-meets-linda-noskova",
-   "w": "14 nov",
-   "full": [
-    "Las WTA Finals llegan a su fase decisiva con dos semifinales el sábado: Andreeva contra Pegula, primer duelo entre ellas, y Svitolina contra Noskova.",
-    "El torneo ha estado marcado por las bajas: Rybakina se retiró el 7 de noviembre por una enfermedad viral y Muchova por una enfermedad gastrointestinal, sustituida por Shnaider.",
-    "Entre las semifinalistas hay dos campeonas de Grand Slam de 2026: Noskova en Wimbledon y Andreeva en Roland Garros."
-   ]
-  },
-  {
-   "id": "atp-sorteo-de-tur-n-zverev-y-alcaraz-encabezan-los-dos",
-   "cat": "atp",
-   "tag": "ATP Finals",
-   "cls": "est",
-   "t": "Sorteo de Turín: Zverev y Alcaraz encabezan los dos grupos",
-   "d": "El Grupo John McEnroe lo forman Zverev, Shelton, Fils y Jódar; el Ivan Lendl, Alcaraz, Medvedev, Cobolli y Tiafoe. El lunes debutan Alcaraz-Tiafoe y Medvedev-Cobolli.",
-   "s": "TennisNerd",
-   "u": "https://www.tennisnerd.net/news/atp-finals-2026-preview-predictions-odds-my-pick-to-win-in-turin/70638",
-   "w": "12 nov",
-   "full": [
-    "El Nitto ATP Finals se juega en el Inalpi Arena del 15 al 22 de noviembre, en pista dura cubierta. Pasan a semifinales los dos primeros de cada grupo.",
-    "Grupo John McEnroe: Zverev (1), Shelton (3), Fils (6) y Jódar (8). Grupo Ivan Lendl: Alcaraz (2), Medvedev (4), Cobolli (5) y Tiafoe (7).",
-    "Solo Zverev (2018 y 2021) y Medvedev (2020) han ganado antes el torneo. Fils, Cobolli, Tiafoe y Jódar debutan.",
-    "El domingo 15 juegan Zverev-Jódar y Shelton-Fils, y el lunes 16 Alcaraz-Tiafoe y Medvedev-Cobolli. La final es el domingo 22."
-   ]
-  },
-  {
-   "id": "atp-alcaraz-llega-a-tur-n-como-favorito-tras-ganar-el-",
-   "cat": "atp",
-   "tag": "ATP Finals",
-   "cls": "est",
-   "t": "Alcaraz llega a Turín como favorito tras ganar el Masters de París",
-   "d": "Alcaraz regresó de una lesión de muñeca y llega con una racha de victorias y el título de París. Busca su primer ATP Finals y debuta el lunes ante Tiafoe.",
-   "s": "ESPN",
-   "u": "https://www.espn.com/tennis/story/_/id/50473425/atp-finals-alcaraz-zverev-shelton-tiafoe-jodar-medvedev",
-   "w": "12 nov",
-   "full": [
-    "Carlos Alcaraz afronta el torneo en plena racha, tras volver de una lesión de muñeca y ganar el Masters 1000 de París. ESPN lo sitúa como favorito de las casas de apuestas.",
-    "Todavía no ha ganado este torneo: su única final fue la de 2025, que perdió contra Sinner por 7-6(4), 7-5.",
-    "Debuta el lunes 16 contra Frances Tiafoe, que ganó Halle este año y alcanzó las semifinales del US Open."
-   ]
-  },
-  {
-   "id": "atp-shelton-busca-ser-el-primer-estadounidense-campe-n",
-   "cat": "atp",
-   "tag": "ATP Finals",
-   "cls": "cir",
-   "t": "Shelton busca ser el primer estadounidense campeón de las Finals desde Sampras",
-   "d": "Shelton llega tras ser finalista del US Open y ganar el Canadian Open. Un título sería el primero para EE. UU. desde Pete Sampras en 1999. Debuta el domingo ante Fils.",
-   "s": "ESPN",
-   "u": "https://www.espn.com/tennis/story/_/id/50473425/atp-finals-alcaraz-zverev-shelton-tiafoe-jodar-medvedev",
-   "w": "12 nov",
-   "full": [
-    "Ben Shelton, de 24 años, llega a Turín en el mejor momento de su carrera tras jugar su primera final de Grand Slam en el US Open y ganar el Canadian Open, según ESPN.",
-    "Si ganara el torneo sería el primer estadounidense campeón desde Pete Sampras en 1999. Es su segunda participación.",
-    "Abre el torneo el domingo 15, en la sesión nocturna, contra Arthur Fils."
-   ]
-  }
- ],
- "guiones": [
-  {
-   "id": "g-wta-semis",
-   "title": "Semifinales de las WTA Finals",
-   "hook": "Cuatro semifinalistas y una sorpresa: Svitolina echó a Sabalenka.",
-   "body": "Svitolina ganó 6-3, 3-6, 6-1 a Sabalenka y hoy se mide a Noskova. Andreeva, invicta en su grupo, juega contra Pegula, y es su primer duelo. Dos campeonas de Grand Slam de 2026 siguen vivas.",
-   "cta": "¿Quién llega a la final? Dilo en TitoTenis.",
-   "tags": "#tenis #WTAFinals #Svitolina #Andreeva"
-  },
-  {
-   "id": "g-nitto-finals",
-   "title": "Las Nitto ATP Finals empiezan mañana",
-   "hook": "Turín abre mañana y Alcaraz es el favorito.",
-   "body": "Zverev-Jódar y Shelton-Fils abren el domingo; Alcaraz-Tiafoe y Medvedev-Cobolli, el lunes. Cuatro debutantes: Fils, Cobolli, Tiafoe y Jódar.",
-   "cta": "¿Quién gana en Turín? Debátelo en TitoTenis.",
-   "tags": "#tenis #ATPFinals #Turin #Alcaraz #Zverev"
-  },
-  {
-   "id": "g-fritz-tirante",
-   "title": "Fritz contra Tirante, final de Estocolmo",
-   "hook": "Fritz perdió contra Tirante en agosto. ¿Venganza en Estocolmo?",
-   "body": "Tirante ganó 7-5, 6-3 a Fritz en Montreal y juega su primera final ATP. Fritz llega con 3 roturas de 4 y ningún punto de presión en semifinales.",
-   "cta": "¿Quién se lleva el título? Dilo en TitoTenis.",
-   "tags": "#tenis #ATP #Estocolmo #Fritz #Tirante"
-  }
- ],
- "scheduled": [
-  {
-   "id": "atpf-zverev-jodar",
-   "cat": "atp",
-   "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
-   "names": [
-    "Alexander Zverev",
-    "Rafael Jódar"
-   ],
-   "time": "no antes de las 14:00",
-   "day": "2026-11-15",
-   "prev": {
-    "pista": [
-     "Inalpi Arena (Turín), pista dura cubierta. Al ser cubierta no hay viento, sol ni cambios de luz.",
-     "Ritmo: una de las fuentes consultadas la describe como pista dura de velocidad media. No he encontrado un dato oficial de velocidad (CPI) ni de la bola.",
-     "Altitud: Turín está a unos 240 m sobre el nivel del mar, es decir, prácticamente a nivel del mar, así que la bola no vuela más rápido por la altura. Es un dato geográfico de la ciudad, no del torneo.",
-     "Sesión de día: los partidos de individuales empiezan no antes de las 14:00 (hora de Turín y de Madrid)."
-    ],
-    "h2h": [
-     "Zverev gana 1-0. El único precedente es de cuartos de final de Roland Garros 2026: Zverev ganó en tres sets (la fuente no da el parcial de cada set). Ese torneo lo acabó ganando, su primer Grand Slam."
-    ],
-    "forma": [
-     "Zverev: n.º 1 del mundo y cabeza de serie 1. Campeón de Roland Garros y del US Open 2026, dos títulos esta temporada con un balance de 65 victorias y 18 derrotas. Ya ganó este torneo en 2018 y 2021 y es su novena participación.",
-     "Jódar: debutante en las Finals, entró en la última plaza en París. Está en su primera temporada completa en el circuito y es el n.º 11 del ranking ATP del 9 de noviembre."
-    ],
-    "saque": [
-     "Faltan datos de saque y resto de 2026 de ambos en pista dura cubierta (% de primeros saques, puntos ganados al saque y al resto). No los he podido sacar de fuentes abiertas."
-    ],
-    "claves": [
-     "Lectura de TitoTenis, no son datos medidos: en pista cubierta de ritmo medio el saque da ventaja, pero deja tiempo para restar y construir desde el fondo. El debutante tiene que salir a por el partido desde el primer juego; el que ya ha ganado aquí suele controlar mejor los puntos importantes."
-    ],
-    "faltan": [
-     "Estadísticas de saque y resto por superficie, y forma en las últimas semanas. La actualización automática las añadirá cuando las encuentre en una fuente citable."
-    ],
-    "h2hScore": [
-     1,
-     0
-    ]
-   }
-  },
-  {
-   "id": "atpf-shelton-fils",
-   "cat": "atp",
-   "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
-   "names": [
-    "Ben Shelton",
-    "Arthur Fils"
-   ],
-   "time": "no antes de las 20:30",
-   "day": "2026-11-15",
-   "prev": {
-    "pista": [
-     "Inalpi Arena (Turín), pista dura cubierta. Sin viento ni sol, bola siempre igual de rápida de noche que de día.",
-     "Ritmo: una fuente la describe como pista dura de velocidad media; no hay dato oficial de velocidad.",
-     "Altitud: unos 240 m (nivel del mar a efectos prácticos).",
-     "Sesión de noche: no antes de las 20:30 (hora de Turín y de Madrid). Sigue al partido Zverev–Jódar, así que la hora real depende de cuánto dure."
-    ],
-    "h2h": [
-     "Shelton gana 2-1. Las dos victorias de Shelton fueron en pista dura cubierta, la misma superficie de este partido. No se han enfrentado desde 2024. La fuente no da la superficie de la victoria de Fils."
-    ],
-    "forma": [
-     "Shelton: n.º 3 del torneo, zurdo. Llega de ser finalista en el Masters 1000 de París, donde perdió con Alcaraz. Fue finalista del US Open, que perdió contra Zverev por 6-3, 7-6(2), 5-7, 6-2.",
-     "Fils: n.º 6 del torneo y debutante en las Finals. Ganó su primer Masters 1000 en Cincinnati este año, tras estar unos ocho meses parado por una lesión crónica de espalda."
-    ],
-    "saque": [
-     "Faltan datos de saque y resto de 2026 en pista dura cubierta de los dos. Se añadirán en cuanto haya una fuente citable."
-    ],
-    "claves": [
-     "Lectura de TitoTenis, no son datos medidos: Shelton ya ganó dos veces aquí al francés en esta misma superficie, y su saque zurdo es el arma que más cambia el partido. Fils tiene que devolver profundo y mover a Shelton con el golpe de derecha para que no mande desde el primer saque."
-    ],
-    "faltan": [
-     "Estadísticas de saque y resto por superficie y rendimiento en pista cubierta esta temporada."
-    ],
-    "h2hScore": [
-     2,
-     1
-    ]
-   }
-  },
-  {
-   "id": "atp-estocolmo-final-2026",
-   "cat": "atp",
-   "tour": "ATP 250 Estocolmo · final",
-   "names": [
-    "Taylor Fritz",
-    "Thiago Agustín Tirante"
-   ],
-   "time": "13:00 (hora de Madrid)",
-   "day": "2026-11-14",
-   "prev": {
-    "pista": [
-     "Kungliga Tennishallen, Estocolmo, pista dura cubierta (Centre Court)."
-    ],
-    "h2h": [
-     "Tirante gana 1-0: ganó a Fritz en Montreal (Masters 1000) el 6 de agosto de 2026 por 7-5, 6-3, con 25 de 26 puntos ganados con el primer saque (ATP Tour)."
-    ],
-    "h2hScore": [
-     0,
-     1
-    ],
-    "forma": [
-     "Fritz (n.º 10, cabeza de serie 1): 45-22 en 2026, un título (Washington), 1-4 en finales este año, última derrota ante Musetti en Lyon. Es su sexta final de 2026 y suma 15 victorias en pista cubierta, líder del circuito (tennistourtalk). En semifinales ganó a Musetti 6-4, 6-2 sin afrontar bolas de rotura.",
-     "Tirante (n.º 51): primera final ATP, 31 victorias en el circuito (récord personal) y mejor ranking. Ganó a Tabilo 7-5, 7-6(1) con 14 aces (tennistourtalk)."
-    ],
-    "claves": [
-     "Lectura de TitoTenis: en pista cubierta rápida el saque de Fritz le da ventaja; Tirante ya le superó en Montreal con el primer saque y necesita repetir ese plan sin la presión añadida de su primera final."
-    ],
-    "faltan": [
-     "Estadísticas de saque y resto de 2026 de ambos: dato no disponible."
-    ]
-   }
-  },
-  {
-   "id": "wta-finals-semis-2026",
-   "cat": "wta",
-   "tour": "WTA Finals · Indian Wells · semifinal",
-   "names": [
-    "Mirra Andreeva",
-    "Jessica Pegula"
-   ],
-   "time": "21:00",
-   "day": "2026-11-14",
-   "prev": {
-    "pista": [
-     "Indian Wells Tennis Garden (California), pista dura exterior. Primer partido a las 12:00 hora local (21:00 en Madrid). En la fase de grupos el viento afectó a algún partido (Andreeva lo describió como caótico, ESPN)."
-    ],
-    "h2h": [
-     "Será su primer enfrentamiento (WTA)."
-    ],
-    "h2hScore": [
-     0,
-     0
-    ],
-    "forma": [
-     "Andreeva (cabeza 3, campeona de Roland Garros): ganó el Grupo 2 con tres victorias y solo 11 juegos cedidos en el último partido; ganó 6-2, 6-1 a Shnaider (sustituta de Muchova) (ESPN/AP).",
-     "Pegula (cabeza 5): segunda del Grupo 1. Perdió con Gauff 6-4, 6-7(5), 6-2, ganó a Kostyuk 6-2, 7-5 y a Noskova 7-6(2), 4-6, 7-5 salvando un punto de partido, con 16 aces (récord personal) (WTA)."
-    ],
-    "claves": [
-     "Lectura de TitoTenis: Andreeva llega con ritmo y confianza tras un grupo sin ceder partido; Pegula llega con partidos más largos en las piernas. La clave será quién controle el centro de la pista con el viento."
-    ],
-    "faltan": [
-     "Estadísticas de saque y resto del torneo, ranking individual actual y clima del día: dato no disponible en las fuentes consultadas."
-    ]
-   }
-  },
-  {
-   "id": "wta-finals-semis-svitolina-noskova",
-   "cat": "wta",
-   "tour": "WTA Finals · Indian Wells · semifinal",
-   "names": [
-    "Elina Svitolina",
-    "Linda Noskova"
-   ],
-   "time": "a continuación del primero",
-   "day": "2026-11-14",
-   "prev": {
-    "pista": [
-     "Indian Wells Tennis Garden (California), pista dura exterior. Primer partido a las 12:00 hora local (21:00 en Madrid). En la fase de grupos el viento afectó a algún partido (Andreeva lo describió como caótico, ESPN)."
-    ],
-    "h2h": [
-     "Noskova gana 2-1: ganó los dos duelos de 2024 en pista dura y Svitolina ganó el último, en cuartos de Stuttgart en abril (WTA)."
-    ],
-    "h2hScore": [
-     1,
-     2
-    ],
-    "forma": [
-     "Svitolina (cabeza 6, campeona de estas Finales en 2018): pasó como segunda del Grupo 2 tras ganar a Sabalenka 6-3, 3-6, 6-1 el viernes, cerrando en su cuarta bola de partido; antes ganó a Muchova 3-6, 6-2, 6-2 (ESPN, Tennis Majors).",
-     "Noskova (cabeza 8, campeona de Wimbledon): ganó el Grupo 1 con victorias sobre Kostyuk 6-2, 6-4 y Gauff 6-3, 6-3; perdió con Pegula en tres sets (Tennis Majors, WTA)."
-    ],
-    "claves": [
-     "Lectura de TitoTenis: Noskova tiene el saque y el golpe plano para acortar puntos; Svitolina viene de una remontada y suele sostenerse en intercambios largos. El primer set marcará si manda el ritmo de la checa o la paciencia de la ucraniana."
-    ],
-    "faltan": [
-     "Estadísticas de saque y resto del torneo, ranking individual actual y clima del día: dato no disponible en las fuentes consultadas."
-    ]
-   }
-  },
-  {
-   "id": "wta-finals-final-2026",
-   "cat": "wta",
-   "tour": "WTA Finals · Indian Wells · final",
-   "text": "Final de las WTA Finals (ganadoras de las semifinales)",
-   "time": "domingo, tras las semifinales",
-   "day": "2026-11-15"
-  },
-  {
-   "id": "atpf-alcaraz-tiafoe",
-   "cat": "atp",
-   "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
-   "names": [
-    "Carlos Alcaraz",
-    "Frances Tiafoe"
-   ],
-   "time": "no antes de las 14:00",
-   "day": "2026-11-16",
-   "prev": {
-    "pista": [
-     "Inalpi Arena (Turín), pista dura cubierta, sin viento ni sol. Turín está a unos 240 m sobre el nivel del mar (dato geográfico de la ciudad, no del torneo).",
-     "Sesión: no antes de las 14:00 (hora de Turín, igual que Madrid), según el programa oficial del torneo."
-    ],
-    "h2h": [
-     "Alcaraz gana 2-1: Tiafoe ganó en 2021; Alcaraz ganó en cinco sets en el US Open 2022 y en Wimbledon 2024 (ATP Tour). Marcadores exactos: dato no disponible."
-    ],
-    "h2hScore": [
-     2,
-     1
-    ],
-    "forma": [
-     "Alcaraz (cabeza 2): 42-5 en 2026, ganó Masters 1000 de París y viene de una racha de partidos ganados de nueve o diez según la fuente (ATP Tour, TennisNerd). Nunca ha ganado este torneo; perdió la final de 2025 ante Sinner.",
-     "Tiafoe (cabeza 7, debutante): su mejor temporada, con título en Halle, final de Cincinnati y semifinales del US Open; llega con cuatro derrotas seguidas según crushrushnews."
-    ],
-    "saque": [
-     "Datos de saque y resto de 2026 en pista cubierta: dato no disponible en fuentes abiertas consultadas."
-    ],
-    "claves": [
-     "Lectura de TitoTenis: el contraste de momentos (racha ganadora frente a bache) favorece a Alcaraz, pero Tiafoe es un jugador de saque y derecha que puede subir el nivel en el debut."
-    ],
-    "faltan": [
-     "Ranking actual de Alcaraz y Tiafoe y saque/resto por superficie: dato no disponible."
-    ]
-   }
-  },
-  {
-   "id": "atpf-medvedev-cobolli",
-   "cat": "atp",
-   "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
-   "names": [
-    "Daniil Medvedev",
-    "Flavio Cobolli"
-   ],
-   "time": "no antes de las 20:30",
-   "day": "2026-11-16",
-   "prev": {
-    "pista": [
-     "Inalpi Arena (Turín), pista dura cubierta, sin viento ni sol. Turín está a unos 240 m sobre el nivel del mar (dato geográfico de la ciudad, no del torneo).",
-     "Sesión: no antes de las 20:30 (hora de Turín, igual que Madrid), según el programa oficial del torneo."
-    ],
-    "h2h": [
-     "Medvedev gana 2-1: ganó los dos de 2024 y Cobolli el último, en Madrid 2026, en tierra batida (ATP Tour). Marcadores: dato no disponible."
-    ],
-    "h2hScore": [
-     2,
-     1
-    ],
-    "forma": [
-     "Medvedev (cabeza 4): campeón de las Finales de 2020, 30 años, el mayor del cuadro; semifinalista en Viena (perdió ante Alcaraz) según TennisNerd.",
-     "Cobolli (cabeza 5, debutante): ganó Acapulco 2026 y fue finalista de Roland Garros; se retiró ante Berrettini en Viena con una molestia en la pierna (crushrushnews)."
-    ],
-    "saque": [
-     "Datos de saque y resto de 2026 en pista cubierta: dato no disponible en fuentes abiertas consultadas."
-    ],
-    "claves": [
-     "Lectura de TitoTenis: la incógnita es el estado físico de Cobolli; Medvedev tiene más experiencia en este formato, pero Cobolli juega con el público a favor en Turín."
-    ],
-    "faltan": [
-     "Estado físico confirmado de Cobolli, saque/resto por superficie: dato no disponible."
-    ]
-   }
-  }
- ],
- "analisis": [
-  {
-   "id": "sr:76430186",
-   "title": "Fritz 6-4 6-2 Musetti",
-   "tour": "ATP 250 Estocolmo · semifinal",
-   "surf": "Pista dura cubierta (rápida)",
-   "score": "6-4 6-2",
-   "resumen": [
-    "El partido se decidió en el segundo saque de Musetti: ganó solo 5 de 14 puntos con él (36 %), mientras Fritz mantuvo el 78 % con el suyo.",
-    "Fritz metió el 76 % de primeros saques y ganó el 81 % de esos puntos; Musetti, 69 % y 68 %. No hubo juegos de saque cómodos para el italiano.",
-    "Fritz rompió 3 veces con 4 bolas de rotura y no tuvo que defender ninguna. Musetti no tuvo ni una oportunidad de rotura.",
-    "7 aces a 3: una victoria de dominio, que además le deja el cara a cara en 4-5 tras perder la final de Lyon."
-   ],
-   "claves": [
-    "Patrón: en pista cubierta rápida, un segundo saque que se queda corto se castiga de inmediato. Musetti necesita ganar más puntos tras el primer golpe para no vivir de ese segundo saque.",
-    "Ajuste entre sets: tras el 6-4, el segundo set fue 6-2. Los números sugieren que Musetti no encontró un plan distinto, por ejemplo cambiar alturas y direcciones para sacar a Fritz de su derecha.",
-    "Momento clave: sin bolas de rotura a favor, el partido no tuvo un solo punto de presión sobre el servicio de Fritz, y eso es lo que más pesa en lo mental.",
-    "Lo que mira un analista antes de la final: Fritz llega con el saque funcionando y confianza en su servicio; lo que decida será si su rival le obliga a jugar puntos largos."
-   ],
-   "cmp": [
-    "Primer partido de pista dura cubierta en nuestro archivo, así que todavía no hay base para comparar. Cada día que se juegue en esta superficie, TitoTenis lo irá sumando y aquí aparecerá la comparación con otros partidos reales de ATP y WTA."
-   ]
-  }
- ],
- "archivo": [
-  {
-   "id": "sr:76430186",
-   "date": "2026-11-13",
-   "surf": "dura cubierta",
-   "tour": "ATP 250 Estocolmo",
-   "names": [
-    "Fritz",
-    "Musetti"
-   ],
-   "winner": 0,
-   "p1saque": [
-    82,
-    69
-   ],
-   "p2saque": [
-    80,
-    36
-   ],
-   "aces": [
-    7,
-    3
-   ],
-   "df": [
-    1,
-    1
-   ],
-   "bp": [
-    "3/4",
-    "0/0"
-   ],
-   "pts": [
-    57,
-    38
-   ]
-  }
- ],
- "today": "2026-11-14",
- "whatsapp": "https://chat.whatsapp.com/B5FhCmECMzB2bAZQ2f7koi?s=cl&p=a&iam=2"
+  "updated": "14 nov 2026, 18:15 (Madrid)",
+  "matches": [],
+  "results": [
+    {
+      "id": "sr:76430186",
+      "cat": "atp",
+      "tour": "ATP 250 Estocolmo",
+      "text": "Taylor Fritz gana a Lorenzo Musetti",
+      "score": "6-4 6-2",
+      "det": "Semifinal · pista dura cubierta · 7 aces a 3 · Fritz convirtió 3 de 4 bolas de rotura y Musetti no tuvo ninguna",
+      "stats": {
+        "names": [
+          "Fritz",
+          "Musetti"
+        ],
+        "src": "tennis.com, partido del 13 nov 2026",
+        "rows": [
+          [
+            "Aces",
+            "7",
+            "3",
+            7,
+            3
+          ],
+          [
+            "Primeros saques dentro",
+            "76 %",
+            "69 %",
+            76,
+            69
+          ],
+          [
+            "Puntos ganados con 1.º saque",
+            "81 %",
+            "68 %",
+            81,
+            68
+          ],
+          [
+            "Puntos ganados con 2.º saque",
+            "78 %",
+            "36 %",
+            78,
+            36
+          ],
+          [
+            "Bolas de rotura convertidas",
+            "3 de 4",
+            "0",
+            3,
+            0
+          ]
+        ]
+      },
+      "juegos": "baaababababaaaaaba",
+      "juegosSrc": "crónica en directo de Virgilio.it. El juego 6 del segundo set no sale en la crónica y se deduce del marcador (5-1)."
+    },
+    {
+      "cat": "atp",
+      "tour": "ATP 250 Estocolmo",
+      "text": "Thiago Agustín Tirante gana a Alejandro Tabilo",
+      "score": "7-5 7-6",
+      "id": "res-thiago-agust-n-tirante-gana-a-alejandro-",
+      "det": "Cuartos de final de Estocolmo · dos sets, el segundo en tie-break"
+    }
+  ],
+  "news": [
+    {
+      "id": "atp-ranking-9-nov-fritz-vuelve-al-top-10",
+      "cat": "atp",
+      "tag": "Ranking",
+      "cls": "res",
+      "t": "Ranking ATP: Fritz vuelve al top 10 y Ruud sube cinco puestos",
+      "d": "Tras el Masters 1000 de París, Fritz sube dos puestos hasta el 10.º (3.285 puntos) gracias a sus cuartos de final, donde tuvo dos bolas de partido contra Alcaraz. Ruud es quien más sube del top 20: cinco puestos hasta el 18.º (2.435 puntos) por llegar a semifinales. Jódar baja al 11.º y Djokovic al 12.º. Zverev sigue 1.º con 9.550 y Sinner 2.º con 9.450; sin cambios en la cima.",
+      "s": "Tennis Majors",
+      "u": "https://www.tennismajors.com/?p=866483",
+      "w": "Ranking del 9 de noviembre",
+      "full": [
+        "El Masters 1000 de París movió el ranking ATP publicado el 9 de noviembre. Zverev sigue primero con 9.550 puntos y Sinner segundo con 9.450, así que la cima no cambia.",
+        "Fritz vuelve al top 10: sube dos puestos hasta el 10.º con 3.285 puntos. Llegó a los cuartos de final de París, donde cayó contra Alcaraz después de tener dos bolas de partido. Esa derrota le deja como suplente para las Finals de Turín.",
+        "Ruud es quien más sube de los veinte primeros: cinco puestos hasta el 18.º, con 2.435 puntos, por llegar a semifinales, su segundo mejor resultado en un Masters 1000 esta temporada.",
+        "En el otro lado, Jódar baja del 10.º al 11.º y Djokovic del 11.º al 12.º. Tommy Paul sube un puesto hasta el 13.º, y Auger-Aliassime y Nakashima bajan uno. El top 10 queda con De Minaur noveno (3.370) y Tiafoe octavo (3.390), sin cambios."
+      ]
+    },
+    {
+      "cat": "atp",
+      "tag": "Estocolmo",
+      "cls": "est",
+      "t": "Fritz derrota a Musetti y jugará la final de Estocolmo",
+      "d": "Fritz ganó 6-4 y 6-2 en la semifinal. Sacó siete aces, convirtió tres de sus cuatro bolas de rotura y Musetti no tuvo ni una. Es el cabeza de serie 1 del torneo.",
+      "s": "Datos del proveedor deportivo",
+      "u": "",
+      "w": "Hoy",
+      "live": false,
+      "id": "atp-fritz-y-musetti-juegan-hoy-la-semifinal-de-estocolmo"
+    },
+    {
+      "cat": "atp",
+      "tag": "Estocolmo",
+      "cls": "est",
+      "t": "Musetti llegó a cuartos en Estocolmo sin ceder terreno",
+      "d": "Musetti ganó 6-1 y 6-4 al británico Toby Samuel y llegaba al torneo con un 8-2 en pista dura cubierta esta temporada, título de Lyon incluido.",
+      "s": "Tennis Majors",
+      "u": "https://www.tennismajors.com/?p=866628",
+      "w": "10 nov",
+      "id": "atp-musetti-lleg-a-cuartos-en-estocolmo-sin-ceder-terreno"
+    },
+    {
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "",
+      "t": "Turín abre las Nitto ATP Finals el domingo 15 de noviembre",
+      "d": "El torneo de maestros se juega del 15 al 22 en el Inalpi Arena, en pista dura cubierta. Los ocho clasificados se reparten en dos grupos, el Grupo John McEnroe y el Grupo Ivan Lendl, y pasan a semifinales los dos primeros de cada uno.",
+      "s": "ATP Tour",
+      "u": "https://www.atptour.com/es/news/nitto-atp-finals-2026-history-draw-schedule",
+      "w": "9 nov",
+      "id": "atp-tur-n-abre-las-nitto-atp-finals-el-domingo-15-de-noviemb"
+    },
+    {
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "",
+      "t": "Jódar completa el cuadro de Turín",
+      "d": "Rafael Jódar fue el último en clasificarse, el 6 de noviembre. Zverev y Medvedev son los dos excampeones del torneo que juegan este año, y por cuarto año seguido hay un italiano en el cuadro de individuales.",
+      "s": "ATP Tour",
+      "u": "https://www.atptour.com/es/news/nitto-atp-finals-2026-field-is-set",
+      "w": "6 nov",
+      "id": "atp-j-dar-completa-el-cuadro-de-tur-n"
+    },
+    {
+      "cat": "atp",
+      "tag": "Resultados",
+      "cls": "res",
+      "t": "Tirante deja fuera a Tabilo en Estocolmo",
+      "d": "El argentino Thiago Agustín Tirante ganó a Alejandro Tabilo por 7-5 y 7-6 en el torneo sueco.",
+      "s": "Datos deportivos en directo",
+      "u": "",
+      "w": "Hoy",
+      "id": "atp-tirante-deja-fuera-a-tabilo-en-estocolmo"
+    },
+    {
+      "cat": "atp",
+      "tag": "Circuito",
+      "cls": "cir",
+      "t": "Sinner da por cerrada su temporada 2026",
+      "d": "Según Flashscore, el italiano no volverá a competir este año y asegura que necesita pensar en su carrera. Su ausencia deja a Turín sin el último campeón.",
+      "s": "Flashscore",
+      "u": "https://www.flashscore.com.br/noticias/finais-turim-atp-simples/MeRVE9s8CdnS0XT8/",
+      "w": "Reciente",
+      "id": "atp-sinner-da-por-cerrada-su-temporada-2026"
+    },
+    {
+      "cat": "atp",
+      "tag": "Circuito",
+      "cls": "cir",
+      "t": "Turín seguirá acogiendo las ATP Finals también en 2027",
+      "d": "La ATP y la federación italiana anunciaron la ampliación en julio. Aún no se ha decidido dónde se jugará a partir de 2027.",
+      "s": "ATP Tour",
+      "u": "https://www.atptour.com/es/news/nitto-atp-finals-2027-turin-extension",
+      "w": "16 jul",
+      "id": "atp-tur-n-seguir-acogiendo-las-atp-finals-tambi-n-en-2027"
+    },
+    {
+      "id": "atp-sorteo-de-tur-n-zverev-y-alcaraz-encabezan-los-dos",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "est",
+      "t": "Sorteo de Turín: Zverev y Alcaraz encabezan los dos grupos",
+      "d": "El Grupo John McEnroe lo forman Zverev, Shelton, Fils y Jódar; el Ivan Lendl, Alcaraz, Medvedev, Cobolli y Tiafoe. El lunes debutan Alcaraz-Tiafoe y Medvedev-Cobolli.",
+      "s": "TennisNerd",
+      "u": "https://www.tennisnerd.net/news/atp-finals-2026-preview-predictions-odds-my-pick-to-win-in-turin/70638",
+      "w": "12 nov",
+      "full": [
+        "El Nitto ATP Finals se juega en el Inalpi Arena del 15 al 22 de noviembre, en pista dura cubierta. Pasan a semifinales los dos primeros de cada grupo.",
+        "Grupo John McEnroe: Zverev (1), Shelton (3), Fils (6) y Jódar (8). Grupo Ivan Lendl: Alcaraz (2), Medvedev (4), Cobolli (5) y Tiafoe (7).",
+        "Solo Zverev (2018 y 2021) y Medvedev (2020) han ganado antes el torneo. Fils, Cobolli, Tiafoe y Jódar debutan.",
+        "El domingo 15 juegan Zverev-Jódar y Shelton-Fils, y el lunes 16 Alcaraz-Tiafoe y Medvedev-Cobolli. La final es el domingo 22."
+      ]
+    },
+    {
+      "id": "atp-alcaraz-llega-a-tur-n-como-favorito-tras-ganar-el-",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "est",
+      "t": "Alcaraz llega a Turín como favorito tras ganar el Masters de París",
+      "d": "Alcaraz regresó de una lesión de muñeca y llega con una racha de victorias y el título de París. Busca su primer ATP Finals y debuta el lunes ante Tiafoe.",
+      "s": "ESPN",
+      "u": "https://www.espn.com/tennis/story/_/id/50473425/atp-finals-alcaraz-zverev-shelton-tiafoe-jodar-medvedev",
+      "w": "12 nov",
+      "full": [
+        "Carlos Alcaraz afronta el torneo en plena racha, tras volver de una lesión de muñeca y ganar el Masters 1000 de París. ESPN lo sitúa como favorito de las casas de apuestas.",
+        "Todavía no ha ganado este torneo: su única final fue la de 2025, que perdió contra Sinner por 7-6(4), 7-5.",
+        "Debuta el lunes 16 contra Frances Tiafoe, que ganó Halle este año y alcanzó las semifinales del US Open."
+      ]
+    },
+    {
+      "id": "atp-shelton-busca-ser-el-primer-estadounidense-campe-n",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "cir",
+      "t": "Shelton busca ser el primer estadounidense campeón de las Finals desde Sampras",
+      "d": "Shelton llega tras ser finalista del US Open y ganar el Canadian Open. Un título sería el primero para EE. UU. desde Pete Sampras en 1999. Debuta el domingo ante Fils.",
+      "s": "ESPN",
+      "u": "https://www.espn.com/tennis/story/_/id/50473425/atp-finals-alcaraz-zverev-shelton-tiafoe-jodar-medvedev",
+      "w": "12 nov",
+      "full": [
+        "Ben Shelton, de 24 años, llega a Turín en el mejor momento de su carrera tras jugar su primera final de Grand Slam en el US Open y ganar el Canadian Open, según ESPN.",
+        "Si ganara el torneo sería el primer estadounidense campeón desde Pete Sampras en 1999. Es su segunda participación.",
+        "Abre el torneo el domingo 15, en la sesión nocturna, contra Arthur Fils."
+      ]
+    }
+  ],
+  "guiones": [
+    {
+      "id": "g-nitto-finals",
+      "title": "Las Nitto ATP Finals empiezan mañana",
+      "hook": "Turín abre mañana y Alcaraz es el favorito.",
+      "body": "Zverev-Jódar y Shelton-Fils abren el domingo; Alcaraz-Tiafoe y Medvedev-Cobolli, el lunes. Cuatro debutantes: Fils, Cobolli, Tiafoe y Jódar.",
+      "cta": "¿Quién gana en Turín? Debátelo en TitoTenis.",
+      "tags": "#tenis #ATPFinals #Turin #Alcaraz #Zverev"
+    },
+    {
+      "id": "g-fritz-tirante",
+      "title": "Fritz contra Tirante, final de Estocolmo",
+      "hook": "Fritz perdió contra Tirante en agosto. ¿Venganza en Estocolmo?",
+      "body": "Tirante ganó 7-5, 6-3 a Fritz en Montreal y juega su primera final ATP. Fritz llega con 3 roturas de 4 y ningún punto de presión en semifinales.",
+      "cta": "¿Quién se lleva el título? Dilo en TitoTenis.",
+      "tags": "#tenis #ATP #Estocolmo #Fritz #Tirante"
+    },
+    {
+      "id": "g-atpf-domingo",
+      "title": "Arrancan las Nitto ATP Finals",
+      "hook": "Zverev, número 1, debuta contra Jódar, el último clasificado.",
+      "body": "El domingo en Turín, Zverev (campeón de Roland Garros y del US Open 2026) abre contra Rafael Jódar, debutante en las Finals. Por la noche, Shelton se mide a Fils. Zverev ganó el único duelo previo con Jódar, en Roland Garros.",
+      "cta": "¿Quién sorprende en Turín? Dilo en TitoTenis.",
+      "tags": "#tenis #ATPFinals #Zverev #Jodar"
+    }
+  ],
+  "scheduled": [
+    {
+      "id": "atpf-zverev-jodar",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
+      "names": [
+        "Alexander Zverev",
+        "Rafael Jódar"
+      ],
+      "time": "no antes de las 14:00",
+      "day": "2026-11-15",
+      "prev": {
+        "pista": [
+          "Inalpi Arena (Turín), pista dura cubierta. Al ser cubierta no hay viento, sol ni cambios de luz.",
+          "Ritmo: una de las fuentes consultadas la describe como pista dura de velocidad media. No he encontrado un dato oficial de velocidad (CPI) ni de la bola.",
+          "Altitud: Turín está a unos 240 m sobre el nivel del mar, es decir, prácticamente a nivel del mar, así que la bola no vuela más rápido por la altura. Es un dato geográfico de la ciudad, no del torneo.",
+          "Sesión de día: los partidos de individuales empiezan no antes de las 14:00 (hora de Turín y de Madrid)."
+        ],
+        "h2h": [
+          "Zverev gana 1-0. El único precedente es de cuartos de final de Roland Garros 2026: Zverev ganó en tres sets (la fuente no da el parcial de cada set). Ese torneo lo acabó ganando, su primer Grand Slam."
+        ],
+        "forma": [
+          "Zverev: n.º 1 del mundo y cabeza de serie 1. Campeón de Roland Garros y del US Open 2026, dos títulos esta temporada con un balance de 65 victorias y 18 derrotas. Ya ganó este torneo en 2018 y 2021 y es su novena participación.",
+          "Jódar: debutante en las Finals, entró en la última plaza en París. Está en su primera temporada completa en el circuito y es el n.º 11 del ranking ATP del 9 de noviembre."
+        ],
+        "saque": [
+          "Faltan datos de saque y resto de 2026 de ambos en pista dura cubierta (% de primeros saques, puntos ganados al saque y al resto). No los he podido sacar de fuentes abiertas."
+        ],
+        "claves": [
+          "Lectura de TitoTenis, no son datos medidos: en pista cubierta de ritmo medio el saque da ventaja, pero deja tiempo para restar y construir desde el fondo. El debutante tiene que salir a por el partido desde el primer juego; el que ya ha ganado aquí suele controlar mejor los puntos importantes."
+        ],
+        "faltan": [
+          "Estadísticas de saque y resto por superficie, y forma en las últimas semanas. La actualización automática las añadirá cuando las encuentre en una fuente citable."
+        ],
+        "h2hScore": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "id": "atpf-shelton-fils",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
+      "names": [
+        "Ben Shelton",
+        "Arthur Fils"
+      ],
+      "time": "no antes de las 20:30",
+      "day": "2026-11-15",
+      "prev": {
+        "pista": [
+          "Inalpi Arena (Turín), pista dura cubierta. Sin viento ni sol, bola siempre igual de rápida de noche que de día.",
+          "Ritmo: una fuente la describe como pista dura de velocidad media; no hay dato oficial de velocidad.",
+          "Altitud: unos 240 m (nivel del mar a efectos prácticos).",
+          "Sesión de noche: no antes de las 20:30 (hora de Turín y de Madrid). Sigue al partido Zverev–Jódar, así que la hora real depende de cuánto dure."
+        ],
+        "h2h": [
+          "Shelton gana 2-1. Las dos victorias de Shelton fueron en pista dura cubierta, la misma superficie de este partido. No se han enfrentado desde 2024. La fuente no da la superficie de la victoria de Fils."
+        ],
+        "forma": [
+          "Shelton: n.º 3 del torneo, zurdo. Llega de ser finalista en el Masters 1000 de París, donde perdió con Alcaraz. Fue finalista del US Open, que perdió contra Zverev por 6-3, 7-6(2), 5-7, 6-2.",
+          "Fils: n.º 6 del torneo y debutante en las Finals. Ganó su primer Masters 1000 en Cincinnati este año, tras estar unos ocho meses parado por una lesión crónica de espalda."
+        ],
+        "saque": [
+          "Faltan datos de saque y resto de 2026 en pista dura cubierta de los dos. Se añadirán en cuanto haya una fuente citable."
+        ],
+        "claves": [
+          "Lectura de TitoTenis, no son datos medidos: Shelton ya ganó dos veces aquí al francés en esta misma superficie, y su saque zurdo es el arma que más cambia el partido. Fils tiene que devolver profundo y mover a Shelton con el golpe de derecha para que no mande desde el primer saque."
+        ],
+        "faltan": [
+          "Estadísticas de saque y resto por superficie y rendimiento en pista cubierta esta temporada."
+        ],
+        "h2hScore": [
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "id": "atp-estocolmo-final-2026",
+      "cat": "atp",
+      "tour": "ATP 250 Estocolmo · final",
+      "names": [
+        "Taylor Fritz",
+        "Thiago Agustín Tirante"
+      ],
+      "time": "13:00 (hora de Madrid)",
+      "day": "2026-11-14",
+      "prev": {
+        "pista": [
+          "Kungliga Tennishallen, Estocolmo, pista dura cubierta (Centre Court)."
+        ],
+        "h2h": [
+          "Tirante gana 1-0: ganó a Fritz en Montreal (Masters 1000) el 6 de agosto de 2026 por 7-5, 6-3, con 25 de 26 puntos ganados con el primer saque (ATP Tour)."
+        ],
+        "h2hScore": [
+          0,
+          1
+        ],
+        "forma": [
+          "Fritz (n.º 10, cabeza de serie 1): 45-22 en 2026, un título (Washington), 1-4 en finales este año, última derrota ante Musetti en Lyon. Es su sexta final de 2026 y suma 15 victorias en pista cubierta, líder del circuito (tennistourtalk). En semifinales ganó a Musetti 6-4, 6-2 sin afrontar bolas de rotura.",
+          "Tirante (n.º 51): primera final ATP, 31 victorias en el circuito (récord personal) y mejor ranking. Ganó a Tabilo 7-5, 7-6(1) con 14 aces (tennistourtalk)."
+        ],
+        "claves": [
+          "Lectura de TitoTenis: en pista cubierta rápida el saque de Fritz le da ventaja; Tirante ya le superó en Montreal con el primer saque y necesita repetir ese plan sin la presión añadida de su primera final."
+        ],
+        "faltan": [
+          "Estadísticas de saque y resto de 2026 de ambos: dato no disponible."
+        ]
+      }
+    },
+    {
+      "id": "atpf-alcaraz-tiafoe",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
+      "names": [
+        "Carlos Alcaraz",
+        "Frances Tiafoe"
+      ],
+      "time": "no antes de las 14:00",
+      "day": "2026-11-16",
+      "prev": {
+        "pista": [
+          "Inalpi Arena (Turín), pista dura cubierta, sin viento ni sol. Turín está a unos 240 m sobre el nivel del mar (dato geográfico de la ciudad, no del torneo).",
+          "Sesión: no antes de las 14:00 (hora de Turín, igual que Madrid), según el programa oficial del torneo."
+        ],
+        "h2h": [
+          "Alcaraz gana 2-1: Tiafoe ganó en 2021; Alcaraz ganó en cinco sets en el US Open 2022 y en Wimbledon 2024 (ATP Tour). Marcadores exactos: dato no disponible."
+        ],
+        "h2hScore": [
+          2,
+          1
+        ],
+        "forma": [
+          "Alcaraz (cabeza 2): 42-5 en 2026, ganó Masters 1000 de París y viene de una racha de partidos ganados de nueve o diez según la fuente (ATP Tour, TennisNerd). Nunca ha ganado este torneo; perdió la final de 2025 ante Sinner.",
+          "Tiafoe (cabeza 7, debutante): su mejor temporada, con título en Halle, final de Cincinnati y semifinales del US Open; llega con cuatro derrotas seguidas según crushrushnews."
+        ],
+        "saque": [
+          "Datos de saque y resto de 2026 en pista cubierta: dato no disponible en fuentes abiertas consultadas."
+        ],
+        "claves": [
+          "Lectura de TitoTenis: el contraste de momentos (racha ganadora frente a bache) favorece a Alcaraz, pero Tiafoe es un jugador de saque y derecha que puede subir el nivel en el debut."
+        ],
+        "faltan": [
+          "Ranking actual de Alcaraz y Tiafoe y saque/resto por superficie: dato no disponible."
+        ]
+      }
+    },
+    {
+      "id": "atpf-medvedev-cobolli",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
+      "names": [
+        "Daniil Medvedev",
+        "Flavio Cobolli"
+      ],
+      "time": "no antes de las 20:30",
+      "day": "2026-11-16",
+      "prev": {
+        "pista": [
+          "Inalpi Arena (Turín), pista dura cubierta, sin viento ni sol. Turín está a unos 240 m sobre el nivel del mar (dato geográfico de la ciudad, no del torneo).",
+          "Sesión: no antes de las 20:30 (hora de Turín, igual que Madrid), según el programa oficial del torneo."
+        ],
+        "h2h": [
+          "Medvedev gana 2-1: ganó los dos de 2024 y Cobolli el último, en Madrid 2026, en tierra batida (ATP Tour). Marcadores: dato no disponible."
+        ],
+        "h2hScore": [
+          2,
+          1
+        ],
+        "forma": [
+          "Medvedev (cabeza 4): campeón de las Finales de 2020, 30 años, el mayor del cuadro; semifinalista en Viena (perdió ante Alcaraz) según TennisNerd.",
+          "Cobolli (cabeza 5, debutante): ganó Acapulco 2026 y fue finalista de Roland Garros; se retiró ante Berrettini en Viena con una molestia en la pierna (crushrushnews)."
+        ],
+        "saque": [
+          "Datos de saque y resto de 2026 en pista cubierta: dato no disponible en fuentes abiertas consultadas."
+        ],
+        "claves": [
+          "Lectura de TitoTenis: la incógnita es el estado físico de Cobolli; Medvedev tiene más experiencia en este formato, pero Cobolli juega con el público a favor en Turín."
+        ],
+        "faltan": [
+          "Estado físico confirmado de Cobolli, saque/resto por superficie: dato no disponible."
+        ]
+      }
+    }
+  ],
+  "analisis": [
+    {
+      "id": "sr:76430186",
+      "title": "Fritz 6-4 6-2 Musetti",
+      "tour": "ATP 250 Estocolmo · semifinal",
+      "surf": "Pista dura cubierta (rápida)",
+      "score": "6-4 6-2",
+      "resumen": [
+        "El partido se decidió en el segundo saque de Musetti: ganó solo 5 de 14 puntos con él (36 %), mientras Fritz mantuvo el 78 % con el suyo.",
+        "Fritz metió el 76 % de primeros saques y ganó el 81 % de esos puntos; Musetti, 69 % y 68 %. No hubo juegos de saque cómodos para el italiano.",
+        "Fritz rompió 3 veces con 4 bolas de rotura y no tuvo que defender ninguna. Musetti no tuvo ni una oportunidad de rotura.",
+        "7 aces a 3: una victoria de dominio, que además le deja el cara a cara en 4-5 tras perder la final de Lyon."
+      ],
+      "claves": [
+        "Patrón: en pista cubierta rápida, un segundo saque que se queda corto se castiga de inmediato. Musetti necesita ganar más puntos tras el primer golpe para no vivir de ese segundo saque.",
+        "Ajuste entre sets: tras el 6-4, el segundo set fue 6-2. Los números sugieren que Musetti no encontró un plan distinto, por ejemplo cambiar alturas y direcciones para sacar a Fritz de su derecha.",
+        "Momento clave: sin bolas de rotura a favor, el partido no tuvo un solo punto de presión sobre el servicio de Fritz, y eso es lo que más pesa en lo mental.",
+        "Lo que mira un analista antes de la final: Fritz llega con el saque funcionando y confianza en su servicio; lo que decida será si su rival le obliga a jugar puntos largos."
+      ],
+      "cmp": [
+        "Primer partido de pista dura cubierta en nuestro archivo, así que todavía no hay base para comparar. Cada día que se juegue en esta superficie, TitoTenis lo irá sumando y aquí aparecerá la comparación con otros partidos reales de ATP y WTA."
+      ]
+    }
+  ],
+  "archivo": [
+    {
+      "id": "sr:76430186",
+      "date": "2026-11-13",
+      "surf": "dura cubierta",
+      "tour": "ATP 250 Estocolmo",
+      "names": [
+        "Fritz",
+        "Musetti"
+      ],
+      "winner": 0,
+      "p1saque": [
+        82,
+        69
+      ],
+      "p2saque": [
+        80,
+        36
+      ],
+      "aces": [
+        7,
+        3
+      ],
+      "df": [
+        1,
+        1
+      ],
+      "bp": [
+        "3/4",
+        "0/0"
+      ],
+      "pts": [
+        57,
+        38
+      ]
+    }
+  ],
+  "today": "2026-11-14",
+  "whatsapp": "https://chat.whatsapp.com/B5FhCmECMzB2bAZQ2f7koi?s=cl&p=a&iam=2"
 }
