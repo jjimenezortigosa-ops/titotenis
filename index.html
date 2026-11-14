@@ -363,7 +363,16 @@ footer a{color:var(--ball)}
 .stbar{display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid var(--line)}
 .stbar .nm{flex:0 0 190px;max-width:42%}.stbar .bb{flex:1;background:rgba(255,255,255,.07);border-radius:4px;height:10px}.stbar .bb i{display:block;height:10px;border-radius:4px;background:#D6E84B}
 .stbar .vv{flex:0 0 64px;text-align:right;font-variant-numeric:tabular-nums}
-#tabs{flex-wrap:wrap}
+.stsec{font-size:20px;margin:22px 0 10px}.stsec .live{font-size:13px;font-weight:400;margin-left:8px}
+.stall{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+.stile{display:flex;flex-direction:column;gap:6px;text-align:left;border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:linear-gradient(150deg,#1c4a43,#12302c);color:var(--chalk);font:inherit;cursor:pointer}
+.stile.on,.stile:hover{border-color:#D6E84B}.stile small{opacity:.8;font-size:12px;min-height:30px}
+.stl{display:flex;align-items:center;gap:8px}.stl b{display:block;font-size:14px}.stl em{font-style:normal;color:#D6E84B;font-size:13px}
+.leadc{display:flex;align-items:center;gap:14px;padding:12px 14px;margin-bottom:10px;border-radius:14px;background:rgba(214,232,75,.12);border-left:4px solid #D6E84B}
+.leadc small{display:block;opacity:.85}.leadc b{font-size:20px;display:block}
+#featHead{display:none!important}
+#tabs{flex-wrap:nowrap}
+nav a{padding:10px 11px;font-size:14px}
 #v-juegos{background:radial-gradient(900px 380px at 8% -8%,rgba(226,100,45,.30),transparent 70%),radial-gradient(800px 380px at 100% 0,rgba(214,232,75,.16),transparent 70%),repeating-linear-gradient(90deg,transparent 0 118px,rgba(244,241,232,.035) 118px 120px)}
 .gtiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:6px 0 12px}
 @media(max-width:720px){.gtiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -485,13 +494,11 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     <nav aria-label="Secciones" id="tabs">
       <a href="#juegos">Juegos</a>
       <a href="#noticias">Noticias</a>
-      <a href="#en-vivo"><span class="mini" aria-hidden="true"></span>Partidos</a>
       <a href="#ranking">Ranking</a>
       <a href="#torneos">Torneos</a>
       <a href="#estadisticas">Estadísticas</a>
       <a href="#foro">La grada</a>
       <a href="#mis-debates" hidden>Mis debates <span class="badge" id="badge" hidden>0</span></a>
-      <a href="#sugerencias" class="sug">Sugerencias</a>
     </nav>
   </div>
 </header>
@@ -506,7 +513,6 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
         <h1>Noticias</h1>
       </div>
     </div>
-    <div id="hero"></div>
     <div class="chips circ" role="group" aria-label="Circuitos a mostrar">
       <button class="chip cx cx-atp" type="button" data-cx="atp" aria-pressed="true" title="Pulsa para ver solo ATP o todo el circuito masculino"><span class="ball" aria-hidden="true"></span>ATP</button>
     </div>
@@ -517,44 +523,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
 </section>
 
 <!-- ===== EN VIVO ===== -->
-<section class="view" id="v-en-vivo" hidden>
-  <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <h1>Partidos</h1>
-        <p>Partidos ATP de hoy, mañana y pasado mañana. Los que ya han terminado tienen análisis tenístico; los que vienen, una previa con pista, cara a cara, forma y claves. Datos actualizados: <span class="upd">cargando…</span></p>
-      </div>
-      <span class="live"><span class="dot" aria-hidden="true"></span> <span id="liveCount"></span></span>
-    </div>
-    <div class="chips circ" role="group" aria-label="Circuitos a mostrar">
-      <button class="chip cx cx-atp" type="button" data-cx="atp" aria-pressed="true" title="Pulsa para ver solo ATP o todo el circuito masculino"><span class="ball" aria-hidden="true"></span>ATP</button>
-    </div>
-    <div class="chips" id="dayChips" role="group" aria-label="Día"></div>
-    <div class="matches" id="matches"></div>
 
-    <div class="detail-head">
-      <h2 id="mTitle"></h2>
-      <span class="tagtxt" id="mSub"></span>
-    </div>
-    <div class="ana-grid">
-      <div class="panel">
-        <h3>Cómo va el partido</h3>
-        <div id="stats"></div>
-        <h3 style="margin-top:22px">Contexto</h3>
-        <div class="ctx" id="ctx"></div>
-      </div>
-    </div>
-
-    <div class="panel" style="margin-top:20px">
-      <h3>Partidos programados</h3>
-      <div class="results" id="sched"></div>
-      <h3 style="margin-top:22px" id="resHead">Resultados de hoy</h3>
-      <div class="results" id="results"></div>
-      <h3 style="margin-top:26px" id="featHead" hidden>Partido destacado: análisis completo</h3>
-      <div class="results" id="feat" hidden></div>
-    </div>
-  </div>
-</section>
 
 <section class="view" id="v-sugerencias" hidden>
   <div class="wrap">
@@ -812,9 +781,46 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   <div class="wrap">
     <div class="sec-head"><div><h1>Estadísticas</h1>
       <p id="stSub">Los mejores del año en cada apartado.</p></div></div>
+    <h2 class="stsec">Quién domina en cada apartado</h2>
+    <div class="stall" id="stAll"></div>
+    <h2 class="stsec">Clasificación por apartado</h2>
     <div class="row"><select class="field" id="stSel" aria-label="Estadística" style="max-width:340px"></select></div>
-    <div class="panel" style="margin-top:12px"><div id="stList"></div>
+    <div class="panel" style="margin-top:12px"><div id="stLead" class="lead"></div><div id="stList"></div>
       <p class="srcline">Datos de los partidos del año (TML-Database). Las estadísticas en porcentaje piden al menos 20 partidos jugados.</p></div>
+    <h2 class="stsec">Partido analizado del mes</h2>
+    <div class="panel"><p class="srcline">Cada mes analizamos a fondo un partido: qué lo decidió, estadísticas y claves.</p>
+      <h3 style="margin-top:26px" id="featHead" hidden>Partido analizado del mes</h3>
+      <div class="results" id="feat" hidden></div>
+    </div>
+
+    <h2 class="stsec">Partidos de los grandes torneos <span class="live"><span class="dot" aria-hidden="true"></span> <span id="liveCount"></span></span></h2>
+    <p class="srcline">Solo Grand Slam, Masters 1000 y ATP Finals: próximos partidos con previa y resultados con análisis.</p>
+    <div class="chips circ" role="group" aria-label="Circuitos a mostrar">
+      <button class="chip cx cx-atp" type="button" data-cx="atp" aria-pressed="true" title="Pulsa para ver solo ATP o todo el circuito masculino"><span class="ball" aria-hidden="true"></span>ATP</button>
+    </div>
+    <div class="chips" id="dayChips" role="group" aria-label="Día"></div>
+    <div class="matches" id="matches"></div>
+
+    <div class="detail-head">
+      <h2 id="mTitle"></h2>
+      <span class="tagtxt" id="mSub"></span>
+    </div>
+    <div class="ana-grid">
+      <div class="panel">
+        <h3>Cómo va el partido</h3>
+        <div id="stats"></div>
+        <h3 style="margin-top:22px">Contexto</h3>
+        <div class="ctx" id="ctx"></div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:20px">
+      <h3>Partidos programados</h3>
+      <div class="results" id="sched"></div>
+      <h3 style="margin-top:22px" id="resHead">Resultados de hoy</h3>
+      <div class="results" id="results"></div>
+    </div>
+
   </div>
 </section>
 
@@ -845,10 +851,10 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   var topic=null;
   var LINKS={wa:'https://chat.whatsapp.com/B5FhCmECMzB2bAZQ2f7koi?s=cl&p=a&iam=2',ig:'https://www.instagram.com/tito_tenis_/',tt:'https://www.tiktok.com/@tito_tenis'}; /* rellena ig y tt con tus enlaces */
   (function(){var m={socWa:'wa',socIg:'ig',socTt:'tt'};Object.keys(m).forEach(function(id){var a=document.getElementById(id),u=LINKS[m[id]];if(a&&u){a.href=u;a.hidden=false}});var j=document.getElementById('waJoin');if(j&&LINKS.wa){j.href=LINKS.wa;j.hidden=false}})();
-  var views=['juegos','ranking','torneos','estadisticas','noticias','en-vivo','foro','guiones','charlas','mis-debates','sugerencias','creditos'];
+  var views=['juegos','ranking','torneos','estadisticas','noticias','foro','guiones','charlas','mis-debates','sugerencias','creditos'];
   function route(){
     var parts=(location.hash||'').replace('#','').split('/');
-    var h=parts[0];topic=parts[1]?decodeURIComponent(parts[1]):null;
+    var h=parts[0];if(h==='en-vivo')h='estadisticas';topic=parts[1]?decodeURIComponent(parts[1]):null;
     if(views.indexOf(h)<0)h='juegos';
     views.forEach(function(v){$('#v-'+v).hidden=(v!==h)});
     $$('#tabs a').forEach(function(a){
@@ -1002,7 +1008,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       var h=x.prev&&x.prev.h2hScore,line=x.tour+' · '+fmtDay(x.day)+(x.time?' · '+x.time:'');
       if(h){var i=pm(x.names[0],name)?0:1;line+=' · Cara a cara '+h[i]+'–'+h[1-i]}
       b.appendChild(el('small',null,line));
-      b.addEventListener('click',function(){dlg.close();location.hash='#en-vivo'});
+      b.addEventListener('click',function(){dlg.close();location.hash='#estadisticas'});
       s1.appendChild(b);
     });
     /* últimos 5 resultados */
@@ -1098,7 +1104,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     c.appendChild(el('p','hsub',kind==='prox'?pick.tour+' · '+fmtDay(pick.day||t)+(pick.time?' · '+pick.time:''):pick.tour));
     var h2=kind==='prox'&&pick.prev&&pick.prev.h2h&&pick.prev.h2h[0];
     if(h2)c.appendChild(el('p','hh','Cara a cara: '+(h2.length>200?h2.slice(0,199)+'…':h2)));
-    var row=el('div','row'),go=el('button','btn primary',kind==='prox'?'Ver previa y análisis':'Ver análisis completo');go.type='button';go.addEventListener('click',function(){location.hash='#en-vivo'});
+    var row=el('div','row'),go=el('button','btn primary',kind==='prox'?'Ver previa y análisis':'Ver análisis completo');go.type='button';go.addEventListener('click',function(){location.hash='#estadisticas'});
     var yt=el('a','btn','Buscar resúmenes en vídeo');yt.href=ytUrl(n.a+' '+n.b);yt.target='_blank';yt.rel='noopener';
     row.appendChild(go);row.appendChild(yt);c.appendChild(row);box.appendChild(c);
   }
@@ -2385,19 +2391,26 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   ];
   var stI=+(LS.get('tt_sti')||0);
   (function(){var s=$('#stSel');SC.forEach(function(c,i){var o=el('option',null,c.t);o.value=i;s.appendChild(o)});s.value=stI;s.addEventListener('change',function(){stI=+s.value;LS.set('tt_sti',String(stI));renderStats()})})();
+  function statRows(c){var L=[];Object.keys(ES.j).forEach(function(n){var s=ES.j[n];if(c.min&&s.pj<c.min)return;var v=c.f(s);if(v==null||isNaN(v))return;L.push([n,v])});L.sort(function(a,b){return b[1]-a[1]});return L}
+  function fmtV(c,v){return (c.d?v.toFixed(1):String(v))+(c.p?' %':'')}
   function renderStats(){
     ESP.then(function(){
-      var box=$('#stList');clr(box);
+      var box=$('#stList'),lead=$('#stLead'),all=$('#stAll');clr(box);clr(lead);clr(all);
       if(!ES||!ES.j){box.appendChild(el('p','empty','No se han podido cargar las estadísticas.'));return}
       $('#stSub').textContent='Los mejores de la temporada '+ES.temporada+' en cada apartado.';
-      var c=SC[stI],L=[];
-      Object.keys(ES.j).forEach(function(n){var s=ES.j[n];if(c.min&&s.pj<c.min)return;var v=c.f(s);if(v==null||isNaN(v))return;L.push([n,v])});
-      L.sort(function(a,b){return b[1]-a[1]});L=L.slice(0,15);
+      SC.forEach(function(c,i){var L=statRows(c);if(!L.length)return;
+        var t=el('button','stile'+(i===stI?' on':''));t.type='button';t.appendChild(el('small',null,c.t));
+        var r=el('div','stl');r.appendChild(faceEl(L[0][0],34));var w=el('span');w.appendChild(el('b',null,L[0][0]));w.appendChild(el('em',null,' '+fmtV(c,L[0][1])));r.appendChild(w);t.appendChild(r);
+        t.addEventListener('click',function(){stI=i;LS.set('tt_sti',String(i));$('#stSel').value=i;renderStats();$('#stSel').scrollIntoView({behavior:'smooth',block:'center'})});all.appendChild(t)});
+      var c=SC[stI],L=statRows(c).slice(0,15);
       if(!L.length){box.appendChild(el('p','empty','Sin datos suficientes.'));return}
+      var ld=el('div','leadc');ld.appendChild(faceEl(L[0][0],64));var tx=el('div');tx.appendChild(el('small',null,'Domina en: '+c.t));
+      var nm=el('b',null,L[0][0]);tx.appendChild(nm);
+      tx.appendChild(el('span',null,fmtV(c,L[0][1])+(L[1]?' · '+L[1][0]+' es 2.º con '+fmtV(c,L[1][1]):'')));ld.appendChild(tx);lead.appendChild(ld);
       var mx=L[0][1]||1;
       L.forEach(function(x,i){var r=el('div','stbar'),n=el('div','nm'),b=el('button','lk',(i+1)+'. '+x[0]);b.type='button';b.addEventListener('click',function(){openPlayer(x[0])});n.appendChild(b);r.appendChild(n);
         var bb=el('div','bb'),f=el('i');f.style.width=Math.max(3,x[1]/mx*100)+'%';bb.appendChild(f);r.appendChild(bb);
-        r.appendChild(el('div','vv',(c.d?x[1].toFixed(1):String(x[1]))+(c.p?' %':'')));box.appendChild(r)})});
+        r.appendChild(el('div','vv',fmtV(c,x[1])));box.appendChild(r)})});
   }
   route();
   setInterval(loadData,60000);
