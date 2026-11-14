@@ -287,11 +287,11 @@ footer a{color:var(--ball)}
 .news .card.nw .pill{background:#FFD21F;color:#111;border-radius:4px;padding:5px 9px;font-size:12px}
 .news .card.nw .avw{margin-bottom:auto;display:flex;align-items:center;gap:8px}
 .news .card.nw .av{width:84px;height:84px;border-radius:50%;border:3px solid #FFD21F;background-color:var(--ink);background-repeat:no-repeat;flex:none}
-.news .card.nw .avc{font-size:9px;color:#fff;opacity:.5}
+.news .card.nw .avc{font-size:9px;color:#fff;opacity:.2}
 #ndAv{display:flex;align-items:center;gap:8px;margin-bottom:10px}
 #ndAv[hidden]{display:none}
 #ndAv .av{width:64px;height:64px;border-radius:50%;border:3px solid #FFD21F;background-repeat:no-repeat;flex:none}
-#ndAv .avc{font-size:10px;opacity:.55}
+#ndAv .avc{font-size:10px;opacity:.25}
 @media(max-width:700px){.news .card.nw{flex-basis:82%}}
 .dtab{margin:16px 0}.dtab h4{margin:0 0 8px}.dr{display:grid;grid-template-columns:1fr 90px 90px;gap:8px;padding:7px 0;border-bottom:1px solid rgba(244,241,232,.1);font-size:14px}.dr b{text-align:right;font-weight:600}.dr.dh{color:var(--mute);font-size:13px}.keyl{padding-left:20px;margin:6px 0}.keyl li{margin:6px 0;font-size:14px;line-height:1.45}
 .gbody{margin:10px 0;line-height:1.55}.gq{margin-top:14px;padding:12px 14px;border-left:4px solid var(--ball);background:rgba(214,232,75,.08);font-weight:700}
@@ -848,7 +848,7 @@ footer a{color:var(--ball)}
       var ring=sv('circle',{cx:cx,cy:72,r:R+5,fill:col});g.appendChild(ring);mine.push(ring);
       var im=sv('image',{href:ph.src,x:cx-R,y:72-R,width:R*2,height:R*2,'clip-path':'url(#'+id+')',preserveAspectRatio:'xMidYMin slice'});g.appendChild(im);mine.push(im);
       var cr=null;
-      if(ph.credit){cr=sv('text',{x:cx,y:150,'text-anchor':'middle','font-size':7,fill:'var(--mute)','fill-opacity':.4},short(ph.credit,60));g.appendChild(cr);mine.push(cr)}
+      if(ph.credit){cr=sv('text',{x:cx,y:150,'text-anchor':'middle','font-size':7,fill:'#fff','fill-opacity':.13},short(ph.credit,60));g.appendChild(cr);mine.push(cr)}
       if(SZ[ph.src]&&SZ[ph.src].ok)placeImg(im,cx,ph,SZ[ph.src]);
       else{
         var t=new Image();

@@ -2,16 +2,16 @@
   "Taylor Fritz": {
     "src": "fotos/Taylor_Fritz_-_Delray_Beach_Open_Final_Round.jpg",
     "credit": "Foto: Rickmunroe01, CC BY-SA 4.0 (Wikimedia Commons, recortada)",
-    "fx": 0.39,
-    "fy": 0.17,
-    "zoom": 2.6
+    "fx": 0.43,
+    "fy": 0.175,
+    "zoom": 2.1
   },
   "Alexander Zverev": {
     "src": "fotos/Alexander_Zverev_in_Miami.jpg",
     "credit": "Foto: Rick Munroe, CC BY-SA 4.0 (Wikimedia Commons)",
-    "fx": 0.36,
-    "fy": 0.27,
-    "zoom": 1.7
+    "fx": 0.405,
+    "fy": 0.26,
+    "zoom": 1.25
   },
   "Carlos Alcaraz": {
     "src": "fotos/Carlos_Alcaraz_2026_US_Open_-_08.jpg",
@@ -23,9 +23,9 @@
   "Ben Shelton": {
     "src": "fotos/Ben_Shelton_in_action_at_Swiss_Indoors_Basel_on_29_October_2026_DSC06182.jpg",
     "credit": "Foto: Rascacielos2010, CC BY-SA 4.0 (Wikimedia Commons)",
-    "fx": 0.72,
-    "fy": 0.25,
-    "zoom": 2.4
+    "fx": 0.67,
+    "fy": 0.22,
+    "zoom": 2.2
   },
   "Arthur Fils": {
     "src": "fotos/Arthur_Fils_at_EFG_Swiss_Open_Gstaad_2023_Pic_Gordon_Simmonds.jpg",
