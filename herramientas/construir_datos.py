@@ -44,11 +44,14 @@ for t in tor:
     if t['d2'] == t['d1']: t['d2'] = ''
 json.dump({'torneos':tor}, open(os.path.join(out,'torneos.json'),'w',encoding='utf-8'), ensure_ascii=False, separators=(',',':'))
 # ---------- cuadros (partidos de cada torneo) ----------
+def _sd(v):
+    v=(v or '').strip()
+    return int(v) if v.isdigit() else 0
 ORD = {'R128':0,'R64':1,'R32':2,'R16':3,'RR':3,'QF':4,'SF':5,'BR':5,'F':6}
 C = {}
 for r in rows:
     if r['score'] in ('', 'W/O') or 'W/O' in r['score'] or r['round'] not in ORD: continue
-    C.setdefault(str(r['_s'])+'-'+r['tourney_id'], []).append([r['round'], r['winner_name'], r['loser_name'], r['score'], int(r['match_num'] or 0)])
+    C.setdefault(str(r['_s'])+'-'+r['tourney_id'], []).append([r['round'], r['winner_name'], r['loser_name'], r['score'], int(r['match_num'] or 0), _sd(r.get('winner_seed')), _sd(r.get('loser_seed'))])
 for k in C: C[k].sort(key=lambda m:(ORD[m[0]], m[4]))
 json.dump(C, open(os.path.join(out,'cuadros.json'),'w',encoding='utf-8'), ensure_ascii=False, separators=(',',':'))
 # ---------- evolución del ranking ----------
