@@ -383,6 +383,7 @@ footer a{color:var(--ball)}
 #featHead{display:none!important}
 #tabs{flex-wrap:nowrap}
 nav a{padding:10px 11px;font-size:14px}
+nav a[href="#mis-debates"]{display:none!important}
 #v-juegos{background:radial-gradient(900px 380px at 8% -8%,rgba(226,100,45,.30),transparent 70%),radial-gradient(800px 380px at 100% 0,rgba(214,232,75,.16),transparent 70%),repeating-linear-gradient(90deg,transparent 0 118px,rgba(244,241,232,.035) 118px 120px)}
 .gtiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:6px 0 12px}
 @media(max-width:720px){.gtiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -719,8 +720,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
 <!-- ===== JUEGOS ===== -->
 <section class="view" id="v-juegos" hidden>
   <div class="wrap">
-    <div class="sec-head"><div><h1>Juegos de tenis</h1>
-      <p>Siete retos nuevos cada día, igual para todo el mundo, en tres dificultades. Se renuevan a medianoche (hora de Madrid). Juega, compara tu resultado y comparte.</p></div>
+    <div class="sec-head"><div><h1>Survive Games</h1></div>
       <span class="srcline" id="gDay"></span></div>
     <div class="gtiles" id="gTiles"></div>
     <div class="panel" id="gMine"></div>
@@ -1027,7 +1027,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     /* últimos 5 resultados */
     var ms=allMatches(name).filter(function(m){return isP(m.w,name,m)||isP(m.l,name,m)});
     var s2=pSection(body,'Resultados recientes');
-    if(!ms.length)s2.appendChild(el('p','pdempty','Todavía no tenemos resultados guardados de este jugador.'));
+    if(!ms.length)s2.appendChild(el('p','pdempty','No hay partidos ATP de este jugador en nuestra base desde 2023.'));
     ms.slice(0,5).forEach(function(m){s2.appendChild(resRow(m,name))});
     /* noticias */
     var nw=(DATA.news||[]).filter(function(n){return shown(n.cat)&&pm((n.t||'')+' '+(n.d||''),name)});
@@ -1041,11 +1041,11 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     sel.setAttribute('aria-label','Superficie');
     var lst=el('div','pdl');pan.appendChild(sel);pan.appendChild(lst);
     function fill(){lst.textContent='';var v=sel.value,f=ms.filter(function(m){return !v||m.surf===v}).slice(0,50);
-      if(!f.length)lst.appendChild(el('p','pdempty','Todavía no tenemos resultados guardados'+(v?' en esa superficie':'')+' de este jugador. La lista crece con cada actualización.'));
+      if(!f.length)lst.appendChild(el('p','pdempty',(v?'No hay partidos de este jugador en esa superficie.':'No hay partidos ATP de este jugador en nuestra base desde 2023.')));
       f.forEach(function(m){lst.appendChild(resRow(m,name))})}
     sel.addEventListener('change',fill);
     tb.addEventListener('click',function(){var o=pan.hidden;pan.hidden=!o;tb.setAttribute('aria-expanded',String(o));tb.textContent=o?'Ocultar últimos resultados':'Ver últimos resultados';if(o)fill()});
-    if(BASE)body.appendChild(el('p','pdempty','Resultados anteriores: base pública TML (Tennismylife) hasta el '+fmtShort(BASE.hasta)+'. Lo posterior se añade con las actualizaciones.'));
+    if(BASE)body.appendChild(el('p','pdempty','Resultados hasta el '+fmtShort(BASE.hasta)+'.'));
     $('#plVid').href=ytUrl(name);
     show();
   }
