@@ -797,18 +797,43 @@ footer a{color:var(--ball)}
   var SV='http://www.w3.org/2000/svg';
   function sv(tag,at,txt){var e=document.createElementNS(SV,tag);for(var k in at)e.setAttribute(k,at[k]);if(txt!=null)e.textContent=txt;return e}
   var PHOTOS={},pid=0;
+  var SZ={};
+  function photoFor(name){
+    if(PHOTOS[name])return PHOTOS[name];
+    var last=String(name||'').trim().split(/\s+/).pop().toLowerCase();if(!last)return null;
+    var hit=null;Object.keys(PHOTOS).forEach(function(k){if(k.trim().split(/\s+/).pop().toLowerCase()===last)hit=PHOTOS[k]});
+    return hit;
+  }
+  function placeImg(im,cx,ph,sz){
+    var R=58,z=+ph.zoom||1.2,fx=ph.fx!=null?+ph.fx:.5,fy=ph.fy!=null?+ph.fy:.3;
+    var s=(2*R*z)/Math.min(sz.w,sz.h);
+    im.setAttribute('preserveAspectRatio','none');
+    im.setAttribute('width',sz.w*s);im.setAttribute('height',sz.h*s);
+    im.setAttribute('x',cx-fx*sz.w*s);im.setAttribute('y',72-fy*sz.h*s);
+  }
+  function initials(g,cx,col,label,win){
+    g.appendChild(sv('circle',{cx:cx,cy:72,r:58,fill:'var(--ink)',stroke:col,'stroke-width':win?7:4}));
+    g.appendChild(sv('text',{x:cx,y:87,'text-anchor':'middle','font-size':42,'font-weight':800,fill:'var(--chalk)'},label));
+  }
   function circ(g,cx,col,label,win,name){
-    var ph=PHOTOS[name],R=58;
+    var ph=photoFor(name),R=58;
     if(ph&&ph.src){
-      var id='cp'+(++pid);
-      var df=sv('defs',{});var cp=sv('clipPath',{id:id});cp.appendChild(sv('circle',{cx:cx,cy:72,r:R}));df.appendChild(cp);g.appendChild(df);
-      g.appendChild(sv('circle',{cx:cx,cy:72,r:R+5,fill:col}));
-      var im=sv('image',{href:ph.src,x:cx-R,y:72-R,width:R*2,height:R*2,'clip-path':'url(#'+id+')',preserveAspectRatio:'xMidYMin slice'});g.appendChild(im);
-      if(ph.credit)g.appendChild(sv('text',{x:cx,y:150,'text-anchor':'middle','font-size':7,fill:'var(--mute)','fill-opacity':.4},short(ph.credit,60)));
+      var id='cp'+(++pid),mine=[];
+      var df=sv('defs',{});var cp=sv('clipPath',{id:id});cp.appendChild(sv('circle',{cx:cx,cy:72,r:R}));df.appendChild(cp);g.appendChild(df);mine.push(df);
+      var ring=sv('circle',{cx:cx,cy:72,r:R+5,fill:col});g.appendChild(ring);mine.push(ring);
+      var im=sv('image',{href:ph.src,x:cx-R,y:72-R,width:R*2,height:R*2,'clip-path':'url(#'+id+')',preserveAspectRatio:'xMidYMin slice'});g.appendChild(im);mine.push(im);
+      var cr=null;
+      if(ph.credit){cr=sv('text',{x:cx,y:150,'text-anchor':'middle','font-size':7,fill:'var(--mute)','fill-opacity':.4},short(ph.credit,60));g.appendChild(cr);mine.push(cr)}
+      if(SZ[ph.src]&&SZ[ph.src].ok)placeImg(im,cx,ph,SZ[ph.src]);
+      else{
+        var t=new Image();
+        t.onload=function(){SZ[ph.src]={ok:1,w:t.naturalWidth,h:t.naturalHeight};placeImg(im,cx,ph,SZ[ph.src])};
+        t.onerror=function(){mine.forEach(function(e){if(e.parentNode)e.parentNode.removeChild(e)});initials(g,cx,col,label,win)};
+        t.src=ph.src;
+      }
       return;
     }
-    g.appendChild(sv('circle',{cx:cx,cy:72,r:R,fill:'var(--ink)',stroke:col,'stroke-width':win?7:4}));
-    g.appendChild(sv('text',{x:cx,y:87,'text-anchor':'middle','font-size':42,'font-weight':800,fill:'var(--chalk)'},label));
+    initials(g,cx,col,label,win);
   }
   var SCN=[
     ['#0B2A4A','#1E5C8F','#F4F1E8'],   /* pista dura cubierta, noche */
