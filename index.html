@@ -331,6 +331,7 @@ dialog .row{display:flex;gap:8px;flex-wrap:wrap}
 footer{padding:28px 0;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
 footer a{color:var(--ball)}
 
+.subnav{margin-bottom:14px}.subnav a{text-decoration:none;color:var(--mute);padding:10px 16px;border-radius:999px;font-weight:600;min-height:44px;display:inline-flex;align-items:center}.subnav a.on{background:var(--chalk);color:var(--ink)}
 .gmine{list-style:none;padding:0;margin:0;display:grid;gap:6px}
 .lifefx{position:fixed;inset:0;z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(10,20,18,.55);pointer-events:none;animation:lfin .2s ease}
 .lifefx.out{opacity:0;transition:opacity .4s}.lfh{font-size:96px;animation:lfbeat .9s ease both}.lft{font-weight:800;font-size:22px;color:#fff}.lfs{color:#cfe;font-size:14px;margin-top:4px;text-align:center;padding:0 20px}
@@ -507,9 +508,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     <nav aria-label="Secciones" id="tabs">
       <a href="#juegos">Juegos</a>
       <a href="#noticias">Noticias</a>
-      <a href="#ranking">Ranking</a>
-      <a href="#torneos">Torneos</a>
-      <a href="#estadisticas">Estadísticas</a>
+      <a href="#ranking" id="navDatos">Datos</a>
       <a href="#foro">La grada</a>
       <a href="#mis-debates" hidden>Mis debates <span class="badge" id="badge" hidden>0</span></a>
     </nav>
@@ -748,22 +747,14 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
 <!-- ===== RANKING ===== -->
 <section class="view" id="v-ranking" hidden>
   <div class="wrap">
+    <div class="seg subnav" role="navigation" aria-label="Datos"><a href="#ranking">Ranking</a><a href="#torneos">Torneos</a><a href="#estadisticas">Estadísticas</a></div>
     <div class="sec-head"><div><h1>Ranking</h1>
-      <p>Ranking ATP de los 150 primeros, con la valoración Elo de cada jugador (mide el nivel real, también por superficie).</p></div>
+      <p>Ranking ATP de los 150 primeros, con puntos y la valoración Elo de cada jugador (mide el nivel real, también por superficie).</p></div>
       <span class="srcline" id="rkUpd"></span></div>
     <div class="panel">
-      <h3>Evolución durante el año</h3>
-      <div class="seg" id="evSeg"><button type="button" data-m="r">Puesto</button><button type="button" data-m="p">Puntos</button></div>
-      <div class="evch" id="evChips"></div>
-      <form class="row" id="evF"><input class="field" id="evQ" list="evDl" placeholder="Añadir jugador a la comparación" autocomplete="off" maxlength="40"><datalist id="evDl"></datalist><button class="btn" type="submit">Añadir</button></form>
-      <div id="evChart"></div>
-      <p class="srcline">Se mide en cada torneo que juega (ranking al empezar el torneo). Fuente: partidos de TML-Database.</p>
-    </div>
-    <div class="panel" style="margin-top:18px">
       <h3>Clasificación</h3>
       <div class="seg" id="rkSeg"><button type="button" data-s="r">ATP</button><button type="button" data-s="e">Elo</button><button type="button" data-s="h">Dura</button><button type="button" data-s="c">Tierra</button><button type="button" data-s="g">Hierba</button></div>
       <div style="overflow-x:auto"><table class="tbl" id="rkTbl"></table></div>
-      <p class="srcline">Ranking ATP y Elo: Tennis Abstract. Elo de pista dura, tierra y hierba por separado.</p>
     </div>
   </div>
 </section>
@@ -771,6 +762,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
 <!-- ===== TORNEOS ===== -->
 <section class="view" id="v-torneos" hidden>
   <div class="wrap">
+    <div class="seg subnav" role="navigation" aria-label="Datos"><a href="#ranking">Ranking</a><a href="#torneos">Torneos</a><a href="#estadisticas">Estadísticas</a></div>
     <div class="sec-head"><div><h1>Torneos</h1>
       <p>El calendario del año: dónde se juega, en qué superficie y quién ganó.</p></div></div>
     <div class="seg" id="tYs"><button type="button" data-y="2026">2026</button><button type="button" data-y="2025">2025</button></div>
@@ -794,6 +786,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
 <!-- ===== ESTADISTICAS ===== -->
 <section class="view" id="v-estadisticas" hidden>
   <div class="wrap">
+    <div class="seg subnav" role="navigation" aria-label="Datos"><a href="#ranking">Ranking</a><a href="#torneos">Torneos</a><a href="#estadisticas">Estadísticas</a></div>
     <div class="sec-head"><div><h1>Estadísticas</h1>
       <p id="stSub">Los mejores del año en cada apartado.</p></div></div>
     <h2 class="stsec">Quién domina en cada apartado</h2>
@@ -801,7 +794,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     <h2 class="stsec">Clasificación por apartado</h2>
     <div class="row"><select class="field" id="stSel" aria-label="Estadística" style="max-width:340px"></select></div>
     <div class="panel" style="margin-top:12px"><div id="stLead" class="lead"></div><div id="stList"></div>
-      <p class="srcline">Datos de los partidos del año (TML-Database). Las estadísticas en porcentaje piden al menos 20 partidos jugados.</p></div>
+      <p class="srcline">Las estadísticas en porcentaje piden al menos 20 partidos jugados.</p></div>
     <h2 class="stsec">Partido analizado del mes</h2>
     <div class="panel"><p class="srcline">Cada mes analizamos a fondo un partido: qué lo decidió, estadísticas y claves.</p>
       <h3 style="margin-top:26px" id="featHead" hidden>Partido analizado del mes</h3>
@@ -872,9 +865,12 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     var h=parts[0];if(h==='en-vivo')h='estadisticas';topic=parts[1]?decodeURIComponent(parts[1]):null;
     if(views.indexOf(h)<0)h='juegos';
     views.forEach(function(v){$('#v-'+v).hidden=(v!==h)});
+    var DG=['ranking','torneos','estadisticas'];
     $$('#tabs a').forEach(function(a){
-      if(a.getAttribute('href')==='#'+h)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+      var on=a.getAttribute('href')==='#'+h||(a.id==='navDatos'&&DG.indexOf(h)>=0);
+      if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
     });
+    $$('.subnav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+h)});
     if(h==='foro'){cancelReply();renderForum();var w=$('#waShare');if(w)w.href='https://wa.me/?text='+encodeURIComponent('Debate en TitoTenis: '+location.href)}
     if(h==='sugerencias')renderSugs();
     if(h==='juegos'){var gp=parts[1]||'';if(gp&&GAMES.some(function(g){return g.id===gp}))gCur=gp;else gp='';gInGame=!!gp;renderGames()}
@@ -1147,8 +1143,8 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   function fb(t){t=t||'';if(/^a continuaci[oó]n del? (primero|anterior)/i.test(t))return 'Followed by';if(/\d{1,2}:\d{2}/.test(t)){t=t.replace(/\s*\((hora de )?Madrid\)/i,'').replace(/\s*\(hora de Turín y de Madrid\)/i,'');return t+' · hora de Madrid ('+TZL+')'}return t}
   function nid(n){return n.id||((n.cat+'-'+n.t).toLowerCase().replace(/[^a-z0-9]+/g,'-').slice(0,60))}
   var GEN=[
-    {id:'g-atpfinals',t:'ATP Finals: pronósticos y cómo llega cada jugador a Turín',q:'¿Quién gana las Finals, y quién se queda fuera en la fase de grupos?',d:'Repaso a los ocho clasificados, sus grupos, sus cruces directos y lo que dicen las previas. Después, chatea tu pronóstico.',body:["Las Nitto ATP Finals se juegan del 15 al 22 de noviembre en el Inalpi Arena de Turín, en pista dura cubierta. Faltan Sinner, fuera por una lesión de rodilla, y Djokovic. Ocho jugadores en dos grupos de cuatro; pasan a semifinales los dos primeros de cada grupo. Mitad del cuadro debuta: Cobolli, Fils, Tiafoe y Jódar.", "Grupo John McEnroe. Zverev (1), número uno del mundo y campeón de Roland Garros y del US Open 2026, es el mejor sacador del cuadro en pista dura: según RG.org mantiene el 92,1 % de sus juegos de saque, aunque ese medio mantiene que no llega en su mejor forma. Gana 6-0 a Shelton, 5-2 a Fils y 1-0 a Jódar, según Tennisnerd, y ya ganó este torneo en 2018 y 2021. Shelton (3) llega con dos finales grandes desde septiembre, la del US Open y la de París, y cuatro títulos este año, entre ellos el Masters de Canadá. Fils (6) ganó en Cincinnati su primer Masters 1000 y tiene un 0-2 contra Shelton en pista cubierta. Jódar (8) debuta tras jugar su primera final de Masters 1000 en Shanghái y ha ganado los dos últimos duelos a Fils, ambos en pista dura.", "Grupo Ivan Lendl. Alcaraz (2) llega como el jugador en mejor forma del otoño, con el título del Masters de París, y es el favorito de las casas de apuestas. Le favorece el cara a cara con Medvedev (7-3), Tiafoe (2-1) y Cobolli (1-0), pero esta temporada perdió contra Medvedev en Indian Wells y contra Shelton en el US Open, y las Finals nunca se le han dado bien: su única final fue la de 2025, perdida con Sinner. Medvedev (4), campeón en 2020, conoce bien Turín y trae experiencia. Cobolli (5), finalista en Roland Garros y campeón en Acapulco, juega con el público italiano y ha ganado esta temporada a Zverev y a Medvedev. Tiafoe (7), campeón en Halle, llega con 44 victorias y 21 derrotas y un 83,4 % de juegos de saque ganados en pista dura.", "Los pronósticos de las previas coinciden en poco: varios sitúan a Alcaraz como campeón (Tennisnerd lo ve ganando a Shelton en la final; 365Scores, ganando a Zverev; Tenngrand, ganando a Medvedev), y las semifinales que más se repiten son Alcaraz contra Zverev y Shelton o Medvedev por el otro lado. Los debutantes parten con menos opciones, pero en un grupo de cuatro con partidos a tres sets cualquier sorpresa cambia el cuadro.", "Los dos primeros partidos son el domingo 15: Zverev contra Jódar por la tarde y Shelton contra Fils por la noche. Alcaraz debuta el lunes 16 contra Tiafoe y, por la noche, Medvedev contra Cobolli."]},
-    {id:'g-tensiones',t:'Tensión del cordaje: ¿para qué sirve y cuál usas tú?',q:'¿A cuántos kilos encuerdas tu raqueta, con qué cuerda y por qué?',d:'Qué cambia al subir o bajar la tensión y qué usan los profesionales.',body:["La tensión es la fuerza, en kilos, con la que se estiran las cuerdas al encordar. Lo habitual va de unos 18 a 32 kg, aunque la mayoría de los profesionales se mueve entre 20 y 27 kg.", "Para qué sirve: con una tensión más baja la cuerda se hunde más y devuelve más energía, así que la bola sale con más potencia, más altura y más comodidad para el brazo, pero con menos control. Con una tensión más alta el plano de cuerdas es más rígido, la bola sale más plana y más corta y se controla mejor la dirección, a costa de potencia y de más impacto en codo y hombro. En cuerdas de poliéster se suele bajar la tensión para ganar efecto sin perder control.", "Curiosidades. Tras el Open de Australia 2026 se publicaron las tensiones de todos los jugadores, según Punto de Break: Mannarino jugó con unos 10 kg, la más baja, y Eikeri con 31 kg, la más alta. Sinner encordó a unos 29 kg y Alcaraz, que ganó el torneo, a 25 kg. Otras fuentes sitúan a Sinner en 28 kg con la Head Hawk Touch, una tensión muy alta para una cuerda de poliéster completa.", "Tiafoe, según Tennisnerd (agosto de 2026), anda por unos 19 kg con Yonex PolyTour Pro, lejos de los 28 kg de Sinner y de Djokovic. Alcaraz usa Babolat RPM Blast, la misma cuerda que Nadal, con los verticales algo más tensos (unos 25 kg) que los horizontales (unos 24 kg) para que las cuerdas se muevan y den más efecto.", "Otra curiosidad: la tensión con la que encuerdas no es la tensión con la que juegas. Las cuerdas pierden tensión nada más encordar, entre un 10 % y casi un 20 % en las primeras 24 horas según la fuente, y siguen perdiéndola al jugar. El poliéster pierde bastante y por eso 'se muere' pronto; la tripa natural pierde menos.", "Y la regla de oro: no hay un número mágico. Si Tiafoe está a gusto con 19 kg y Sinner con 28, lo importante es probar, subir o bajar un kilo cada vez y fijarse en cómo cae la bola, no en cuánto corre."]}
+    {id:'g-atpfinals',t:'ATP Finals: pronósticos y cómo llega cada jugador a Turín',q:'¿Quién gana las Finals, y quién se queda fuera en la fase de grupos?',d:'Repaso a los ocho clasificados, sus grupos, sus cruces directos y lo que dicen las previas. Después, chatea tu pronóstico.',body:["Las Nitto ATP Finals se juegan del 15 al 22 de noviembre en el Inalpi Arena de Turín, en pista dura cubierta. Faltan Sinner, fuera por una lesión de rodilla, y Djokovic. Ocho jugadores en dos grupos de cuatro; pasan a semifinales los dos primeros de cada grupo. Mitad del cuadro debuta: Cobolli, Fils, Tiafoe y Jódar.", "Grupo John McEnroe. Zverev (1), número uno del mundo y campeón de Roland Garros y del US Open 2026, es el mejor sacador del cuadro en pista dura: mantiene el 92,1 % de sus juegos de saque. Gana 6-0 a Shelton, 5-2 a Fils y 1-0 a Jódar, y ya ganó este torneo en 2018 y 2021. Shelton (3) llega con dos finales grandes desde septiembre, la del US Open y la de París, y cuatro títulos este año, entre ellos el Masters de Canadá. Fils (6) ganó en Cincinnati su primer Masters 1000 y tiene un 0-2 contra Shelton en pista cubierta. Jódar (8) debuta tras jugar su primera final de Masters 1000 en Shanghái y ha ganado los dos últimos duelos a Fils, ambos en pista dura.", "Grupo Ivan Lendl. Alcaraz (2) llega como el jugador en mejor forma del otoño, con el título del Masters de París, y es el favorito de las casas de apuestas. Le favorece el cara a cara con Medvedev (7-3), Tiafoe (2-1) y Cobolli (1-0), pero esta temporada perdió contra Medvedev en Indian Wells y contra Shelton en el US Open, y las Finals nunca se le han dado bien: su única final fue la de 2025, perdida con Sinner. Medvedev (4), campeón en 2020, conoce bien Turín y trae experiencia. Cobolli (5), finalista en Roland Garros y campeón en Acapulco, juega con el público italiano y ha ganado esta temporada a Zverev y a Medvedev. Tiafoe (7), campeón en Halle, llega con 44 victorias y 21 derrotas y un 83,4 % de juegos de saque ganados en pista dura.", "Los pronósticos de las previas coinciden en poco: varios sitúan a Alcaraz como campeón (unos lo ven ganando a Shelton en la final, otros a Zverev y otros a Medvedev), y las semifinales que más se repiten son Alcaraz contra Zverev y Shelton o Medvedev por el otro lado. Los debutantes parten con menos opciones, pero en un grupo de cuatro con partidos a tres sets cualquier sorpresa cambia el cuadro.", "Los dos primeros partidos son el domingo 15: Zverev contra Jódar por la tarde y Shelton contra Fils por la noche. Alcaraz debuta el lunes 16 contra Tiafoe y, por la noche, Medvedev contra Cobolli."]},
+    {id:'g-tensiones',t:'Tensión del cordaje: ¿para qué sirve y cuál usas tú?',q:'¿A cuántos kilos encuerdas tu raqueta, con qué cuerda y por qué?',d:'Qué cambia al subir o bajar la tensión y qué usan los profesionales.',body:["La tensión es la fuerza, en kilos, con la que se estiran las cuerdas al encordar. Lo habitual va de unos 18 a 32 kg, aunque la mayoría de los profesionales se mueve entre 20 y 27 kg.", "Para qué sirve: con una tensión más baja la cuerda se hunde más y devuelve más energía, así que la bola sale con más potencia, más altura y más comodidad para el brazo, pero con menos control. Con una tensión más alta el plano de cuerdas es más rígido, la bola sale más plana y más corta y se controla mejor la dirección, a costa de potencia y de más impacto en codo y hombro. En cuerdas de poliéster se suele bajar la tensión para ganar efecto sin perder control.", "Curiosidades. Tras el Open de Australia 2026 se publicaron las tensiones de todos los jugadores: Mannarino jugó con unos 10 kg, la más baja, y Eikeri con 31 kg, la más alta. Sinner encordó a unos 29 kg y Alcaraz, que ganó el torneo, a 25 kg. Se dice que Sinner usa 28 kg con la Head Hawk Touch, una tensión muy alta para una cuerda de poliéster completa.", "Tiafoe anda por unos 19 kg con Yonex PolyTour Pro, lejos de los 28 kg de Sinner y de Djokovic. Alcaraz usa Babolat RPM Blast, la misma cuerda que Nadal, con los verticales algo más tensos (unos 25 kg) que los horizontales (unos 24 kg) para que las cuerdas se muevan y den más efecto.", "Otra curiosidad: la tensión con la que encuerdas no es la tensión con la que juegas. Las cuerdas pierden tensión nada más encordar, entre un 10 % y casi un 20 % en las primeras 24 horas, y siguen perdiéndola al jugar. El poliéster pierde bastante y por eso 'se muere' pronto; la tripa natural pierde menos.", "Y la regla de oro: no hay un número mágico. Si Tiafoe está a gusto con 19 kg y Sinner con 28, lo importante es probar, subir o bajar un kilo cada vez y fijarse en cómo cae la bola, no en cuánto corre."]}
   ];
   function genOf(id){var g=GEN.filter(function(x){return x.id===id})[0];return g?{cat:'atp',tag:'Tema general',cls:'est',t:g.t,d:g.d,s:'TitoTenis',u:'',w:'Siempre abierto',gen:1,q:g.q,body:g.body}:null}
   function userOf(id){
@@ -2404,23 +2400,15 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     Promise.all([RKP,EVP]).then(function(){
       var u=$('#rkUpd');if(u)u.textContent=RK?'Actualizado: '+RK.actualizado:'';
       $$('#rkSeg button').forEach(function(b){b.classList.toggle('on',b.dataset.s===rkSort)});
-      $$('#evSeg button').forEach(function(b){b.classList.toggle('on',b.dataset.m===evMode)});
       var tb=$('#rkTbl');clr(tb);
       if(!RK){tb.appendChild(el('caption',null,'No se ha podido cargar el ranking.'));return}
-      var hd=el('tr');['#','Jugador','ATP','Edad','Elo','Dura','Tierra','Hierba',''].forEach(function(h,i){hd.appendChild(el('th',i>1&&i<8?'num':'',h))});tb.appendChild(hd);
+      var hd=el('tr');['#','Jugador','ATP','Puntos','Edad','Elo','Dura','Tierra','Hierba'].forEach(function(h,i){hd.appendChild(el('th',i>1?'num':'',h))});tb.appendChild(hd);
       var list=RK.j.slice().sort(function(a,b){return rkSort==='r'?a.r-b.r:b[rkSort]-a[rkSort]});
       list.forEach(function(x,i){var tr=el('tr');tr.appendChild(el('td','num',String(i+1)));
         var td=el('td'),b=el('button','lk',x.n);b.type='button';b.addEventListener('click',function(){openPlayer(x.n)});td.appendChild(b);tr.appendChild(td);
-        [x.r,Math.round(x.a),Math.round(x.e),Math.round(x.h),Math.round(x.c),Math.round(x.g)].forEach(function(v){tr.appendChild(el('td','num',String(v)))});
-        var ta=el('td'),ab=el('button','chip','Evolución');ab.type='button';ab.style.minHeight='30px';ab.style.padding='2px 10px';ab.addEventListener('click',function(){addEv(x.n);$('#evChips').scrollIntoView({behavior:'smooth',block:'center'})});ta.appendChild(ab);tr.appendChild(ta);tb.appendChild(tr)});
-      var dl=$('#evDl');clr(dl);if(EV)Object.keys(EV.j).sort().forEach(function(n){var o=el('option');o.value=n;dl.appendChild(o)});
-      drawEv()});
+        [x.r,x.pt?x.pt.toLocaleString('es-ES'):'—',Math.round(x.a),Math.round(x.e),Math.round(x.h),Math.round(x.c),Math.round(x.g)].forEach(function(v){tr.appendChild(el('td','num',String(v)))});
+        tb.appendChild(tr)})});
   }
-  function addEv(n){var m=null;if(EV){var q=norm(n);Object.keys(EV.j).forEach(function(k){if(norm(k)===q||(!m&&norm(k).indexOf(q)>=0))m=k})}
-    if(!m){toast('No hay datos de evolución de ese jugador.');return}
-    if(evSel.indexOf(m)<0){if(evSel.length>=6)evSel.shift();evSel.push(m)}drawEv()}
-  $('#evF').addEventListener('submit',function(e){e.preventDefault();var v=$('#evQ').value.trim();if(v){addEv(v);$('#evQ').value=''}});
-  $('#evSeg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;evMode=b.dataset.m;renderRanking()});
   $('#rkSeg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;rkSort=b.dataset.s;LS.set('tt_rks',rkSort);renderRanking()});
   function drawEv(){
     var ch=$('#evChips'),box=$('#evChart');clr(ch);clr(box);if(!EV)return;
