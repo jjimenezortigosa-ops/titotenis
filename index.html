@@ -788,7 +788,7 @@ footer a{color:var(--ball)}
       var df=sv('defs',{});var cp=sv('clipPath',{id:id});cp.appendChild(sv('circle',{cx:cx,cy:72,r:R}));df.appendChild(cp);g.appendChild(df);
       g.appendChild(sv('circle',{cx:cx,cy:72,r:R+5,fill:col}));
       var im=sv('image',{href:ph.src,x:cx-R,y:72-R,width:R*2,height:R*2,'clip-path':'url(#'+id+')',preserveAspectRatio:'xMidYMin slice'});g.appendChild(im);
-      if(ph.credit)g.appendChild(sv('text',{x:cx,y:152,'text-anchor':'middle','font-size':10,fill:'var(--mute)'},ph.credit));
+      if(ph.credit)g.appendChild(sv('text',{x:cx,y:150,'text-anchor':'middle','font-size':7,fill:'var(--mute)','fill-opacity':.4},short(ph.credit,60)));
       return;
     }
     g.appendChild(sv('circle',{cx:cx,cy:72,r:R,fill:'var(--ink)',stroke:col,'stroke-width':win?7:4}));
