@@ -474,6 +474,9 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
 #feat .rwrap::before{content:'★ ANÁLISIS COMPLETO · PARTIDO DESTACADO';position:absolute;top:0;left:0;right:0;padding:5px 14px;background:linear-gradient(90deg,#D6E84B,#FFD76B);color:#0C1F1D;font-weight:800;font-size:12px;letter-spacing:.08em}
 #feat .rrow b{font-size:21px;color:#FFD76B}
 @media (prefers-reduced-motion:reduce){#feat .rwrap{animation:none}}
+.gstreak{display:flex;align-items:baseline;gap:8px;margin:6px 0 10px}.gstreak b{font-size:2rem;color:#D6E84B}.gstreak small{margin-left:auto;opacity:.7}
+.gmed{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;margin:0 0 12px}.gm{display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px;padding:8px 4px;border-radius:12px;background:rgba(255,255,255,.04);opacity:.45}.gm.on{opacity:1;background:rgba(214,232,75,.12);box-shadow:inset 0 0 0 1px rgba(214,232,75,.4)}.gm i{font-style:normal;font-size:1.6rem}.gm small{font-size:.7rem;line-height:1.15}
+.gacct{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.1)}.gacct h4{margin:0 0 4px}.gacct input{max-width:150px}
 </style>
 </head>
 <body>
@@ -2051,7 +2054,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   function histKey(){return 'tt_hist_'+gCur}
   function endPopup(score,max,share){
     var day=dayStr(),secs=secsOf(loadSt({})),H=lsj(histKey())||[],ex=H.filter(function(h){return h.day===day&&h.dif===gDif})[0];
-    if(!ex){H.push({day:day,dif:gDif,score:score,max:max,secs:secs});H=H.slice(-60);LS.set(histKey(),JSON.stringify(H))}
+    if(!ex){H.push({day:day,dif:gDif,score:score,max:max,secs:secs});H=H.slice(-60);LS.set(histKey(),JSON.stringify(H));setTimeout(function(){acctPush().catch(function(){})},400)}
     var pk2='tt_pop_'+gid()+'_'+day;if(LS.get(pk2))return;LS.set(pk2,'1');
     var d=$('#gEnd'),B=$('#geB');clr(B);
     var pct=max?Math.round(100*score/max):0;
@@ -2088,16 +2091,64 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       agg.slice(0,15).forEach(function(a){ol.appendChild(el('li',a.uid===myUid?'me':'',String(a.name).slice(0,20)+' — '+a.score+(wk?' pts':(a.max?'/'+a.max:'')+' · '+a.secs+' s')))});
     }).catch(function(){clr(ol);ol.style.listStyle='none';ol.appendChild(el('li',null,'No se ha podido cargar la clasificación.'))});
   }
+  function daysBack(n){var o=[],t=Date.now();for(var k=0;k<n;k++)o.push(new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid'}).format(new Date(t-k*864e5)));return o}
+  function dayInfo(ds){var g=[],hard=0;GAMES.forEach(function(x){var ok=false;for(var d=1;d<=3;d++){var s=lsj('tt_g_'+x.id+d+'_'+ds);if(s&&s.e){ok=true;if(d===3)hard=1}}if(ok)g.push(x.id)});return{n:g.length,hard:hard}}
+  function progStats(){
+    var ds=daysBack(400),inf=ds.map(dayInfo),streak=0,i=0;
+    if(!inf[0].n)i=1;while(i<inf.length&&inf[i].n){streak++;i++}
+    var best=0,cur=0;for(var k=inf.length-1;k>=0;k--){if(inf[k].n){cur++;if(cur>best)best=cur}else cur=0}
+    var total=0,all7=0,hard=0,perfect=0,seen={};
+    inf.forEach(function(x,j){total+=x.n;if(x.n>=GAMES.length)all7=1;if(x.hard)hard=1});
+    GAMES.forEach(function(g){var H=lsj('tt_hist_'+g.id)||[];if(H.length)seen[g.id]=1;H.forEach(function(h){if(h.max&&h.score>=h.max)perfect=1})});
+    return{streak:streak,best:Math.max(best,streak),total:total,all7:all7,hard:hard,perfect:perfect,tried:Object.keys(seen).length}}
+  function medals(S){return[
+    ['🔥','Racha de 3 días',S.best>=3],['🔥','Racha de 7 días',S.best>=7],['🌋','Racha de 30 días',S.best>=30],
+    ['🎾','10 retos completados',S.total>=10],['🏅','50 retos completados',S.total>=50],['🏆','150 retos completados',S.total>=150],
+    ['🧭','Has probado los 7 juegos',S.tried>=GAMES.length],['⭐','Los 7 juegos en un día',!!S.all7],
+    ['💯','Un reto perfecto',!!S.perfect],['🧠','Has acabado uno en difícil',!!S.hard]]}
+  function sha(t){return crypto.subtle.digest('SHA-256',new TextEncoder().encode(t)).then(function(b){return Array.prototype.map.call(new Uint8Array(b),function(x){return('0'+x.toString(16)).slice(-2)}).join('')})}
+  function snap(){var o={},cut=daysBack(60)[59];for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i),m=k.match(/^tt_g_.*_(\d{4}-\d\d-\d\d)$/);
+      if((m&&m[1]>=cut)||k.indexOf('tt_hist_')===0||k==='tt_first')o[k]=localStorage.getItem(k)}return o}
+  function acctPush(){var a=lsj('tt_acct');if(!a)return Promise.resolve();
+    return sbInsert('acct',newId(),{key:a.key,nick:a.nick,snap:snap(),ts:Date.now()})}
+  function acctPull(key){return fetch(SB_URL+'/rest/v1/docs?select=data&coll=eq.acct&data->>key=eq.'+key+'&order=ts.desc&limit=1',{headers:SBH}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(r){return r[0]&&r[0].data&&r[0].data.snap||null})}
+  function acctMerge(sn){var n=0;Object.keys(sn).forEach(function(k){var cur=LS.get(k),v=sn[k];
+      if(k==='tt_first'){if(!cur||v<cur){LS.set(k,v);n++}return}
+      if(k.indexOf('tt_hist_')===0){var A=[],B=[];try{A=JSON.parse(cur||'[]');B=JSON.parse(v)}catch(e){}var seen={};A.concat(B).forEach(function(h){seen[h.day+'|'+h.dif]=h});LS.set(k,JSON.stringify(Object.keys(seen).map(function(x){return seen[x]}).sort(function(a,b){return a.day<b.day?-1:1}).slice(-60)));return}
+      var c;try{c=JSON.parse(cur||'null')}catch(e){c=null}var w;try{w=JSON.parse(v)}catch(e){w=null}
+      if(!c||(w&&w.e&&!c.e)){LS.set(k,v);n++}});return n}
+  function acctUI(m){
+    var box=el('div','gacct'),a=lsj('tt_acct');m.appendChild(box);
+    function draw(){clr(box);
+      if(a){box.appendChild(el('h4',null,'☁️ Progreso guardado como «'+a.nick+'»'));
+        box.appendChild(el('p','srcline','Se guarda solo al acabar cada juego. En otro móvil u ordenador, entra con el mismo apodo y PIN.'));
+        var r=el('div','row'),b1=el('button','btn ghost','Guardar ahora'),b2=el('button','btn ghost','Salir de la cuenta');b1.type=b2.type='button';
+        b1.addEventListener('click',function(){acctPush().then(function(){toast('Progreso guardado.')}).catch(function(){toast('No se pudo guardar.')})});
+        b2.addEventListener('click',function(){LS.del?LS.del('tt_acct'):localStorage.removeItem('tt_acct');a=null;draw()});
+        r.appendChild(b1);r.appendChild(b2);box.appendChild(r);return}
+      box.appendChild(el('h4',null,'☁️ Guarda tu progreso'));
+      box.appendChild(el('p','srcline','Elige un apodo y un PIN de 4 números. Sin email ni contraseñas. Así tus rachas y medallas pasan a otro dispositivo. Si el apodo y PIN ya existen, recuperas ese progreso.'));
+      var f=el('div','row'),ni=el('input'),pi=el('input'),b=el('button','btn','Guardar / Entrar');
+      ni.placeholder='Apodo';ni.maxLength=16;pi.placeholder='PIN (4 números)';pi.maxLength=4;pi.inputMode='numeric';pi.type='password';b.type='button';
+      b.addEventListener('click',function(){var n=ni.value.trim(),p=pi.value.trim();
+        if(n.length<3){toast('El apodo necesita 3 letras como mínimo.');return}if(!/^\d{4}$/.test(p)){toast('El PIN son 4 números.');return}
+        b.disabled=true;sha('tt1:'+n.toLowerCase()+':'+p).then(function(key){
+          return acctPull(key).then(function(sn){var got=sn?acctMerge(sn):0;a={key:key,nick:n};LS.set('tt_acct',JSON.stringify(a));return acctPush().then(function(){toast(sn?'Cuenta recuperada ('+got+' datos nuevos).':'Cuenta creada y progreso guardado.');mineUI()})})
+        }).catch(function(){b.disabled=false;toast('No se pudo conectar. Inténtalo otra vez.')})});
+      f.appendChild(ni);f.appendChild(pi);f.appendChild(b);box.appendChild(f)}
+    draw()}
   function mineUI(){
     var m=$('#gMine');clr(m);var first=LS.get('tt_first');if(!first){first=dayStr();LS.set('tt_first',first)}
-    var d0=new Date(first+'T12:00:00'),n=Math.max(1,Math.round((new Date(dayStr()+'T12:00:00')-d0)/864e5)+1);
+    var d0=new Date(first+'T12:00:00'),n=Math.max(1,Math.round((new Date(dayStr()+'T12:00:00')-d0)/864e5)+1),S=progStats();
     m.appendChild(el('h3',null,'Mi progreso'));
+    var sr=el('div','gstreak');sr.appendChild(el('b',null,'🔥 '+S.streak));sr.appendChild(el('span',null,S.streak===1?'día seguido':'días seguidos'));sr.appendChild(el('small',null,'Mejor racha: '+S.best));m.appendChild(sr);
+    var mg=el('div','gmed');medals(S).forEach(function(x){var c=el('span','gm'+(x[2]?' on':''));c.title=x[1];c.appendChild(el('i',null,x[2]?x[0]:'🔒'));c.appendChild(el('small',null,x[1]));mg.appendChild(c)});m.appendChild(mg);
     m.appendChild(el('p','srcline','Días completados de los '+n+' días que llevas jugando (cualquier dificultad cuenta una vez al día).'));
     var ul=el('ul','gmine');
     GAMES.forEach(function(g){var c=0;for(var k=0;k<n;k++){var dt=new Date(d0.getTime()+k*864e5),ds=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid'}).format(dt),ok=false;
       for(var d=1;d<=3;d++){var s=lsj('tt_g_'+g.id+d+'_'+ds);if(s&&s.e)ok=true}if(ok)c++}
       ul.appendChild(el('li',null,g.i+' '+g.n+': '+c+' de '+n+' · '+Math.round(100*c/n)+'%'))});
-    m.appendChild(ul)}
+    m.appendChild(ul);acctUI(m)}
   function renderGames(){
     var dd=$('#gDay');if(dd)dd.textContent='Retos del '+dayEs(dayStr());
     var day=dayStr(),T=$('#gTiles');clr(T);
