@@ -51,6 +51,41 @@ header{position:sticky;top:0;z-index:10;background:rgba(12,31,29,.94);backdrop-f
 .brand b{font-family:var(--display);font-size:28px;font-weight:800;letter-spacing:-.03em}
 .brand b span{color:var(--ball)}
 nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:thin}
+.ps{order:2;margin:0}
+.ps input{width:150px;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:999px;color:var(--chalk);padding:7px 14px;font:inherit;font-size:14px}
+.ps input::placeholder{color:var(--mute)}
+.ps input:focus{outline:2px solid #D6E84B;outline-offset:1px}
+.seg{display:inline-flex;gap:4px;margin:6px 0 10px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{background:none;border:0;color:var(--chalk);padding:7px 14px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:#D6E84B;color:#0C1F1D;font-weight:800}
+#nSub{margin-bottom:12px}
+#nSub[hidden]{display:none}
+.hero{border:2px solid transparent;border-radius:18px;padding:18px 20px;margin:4px 0 18px;background:linear-gradient(var(--ink-2),var(--ink-2)) padding-box,linear-gradient(120deg,#D6E84B,#E2642D,#FFD76B) border-box;display:flex;flex-direction:column;gap:6px}
+.hero .hk{font-weight:800;font-size:12px;letter-spacing:.1em;color:#FFD76B}
+.hero .hv{display:flex;align-items:center;justify-content:center;gap:22px;margin:8px 0}
+.hero .hm{display:flex;flex-direction:column;align-items:center}
+.hero .hm b{font-size:34px;color:var(--clay);line-height:1}
+.hero .hm span{font-size:22px;font-weight:800;color:#D6E84B}
+.hero h2{font-size:clamp(20px,2.6vw,28px);text-align:center;margin:0}
+.hero .hsub{color:var(--mute);text-align:center;margin:0}
+.hero .hh{color:var(--chalk);font-size:14px;margin:4px 0}
+.hero .row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+.fav{border-radius:50%;border:3px solid #FFD21F;background-color:var(--ink);background-repeat:no-repeat;flex:none;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--chalk)}
+.facew{display:inline-flex}
+#plDlg{max-width:560px}
+#plDlg .plhead{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+#plDlg .pht h3{margin:0 0 4px}
+#plDlg .pdsub{margin:0;color:#D6E84B;font-weight:700}
+#plDlg .plbody{max-height:52vh;overflow:auto}
+#plDlg .pdh{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:14px 0 6px}
+#plDlg .pdr{display:flex;flex-direction:column;gap:2px;padding:8px 0;border-top:1px solid var(--line)}
+#plDlg .pdr small{color:var(--mute)}
+#plDlg .pdn{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);color:var(--chalk);padding:9px 0;font:inherit;cursor:pointer}
+#plDlg .pdn:hover{color:#D6E84B}
+.news .card.nw.wacard{background:linear-gradient(160deg,#128C7E,#075E54);border-width:0}
+.news .card.nw.wacard h3{color:#fff}
+.news .card.nw .wak{font-size:12px;font-weight:800;letter-spacing:.1em;color:#d9fdd3;margin-bottom:auto}
+
 .howto{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 22px}
 .howto>div{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
 .howto b{font-size:26px;color:#D6E84B;line-height:1}
@@ -281,8 +316,11 @@ footer a{color:var(--ball)}
 }
 @media (max-width:620px){
   .bar{flex-wrap:wrap}
-  .soc{order:1;margin-left:auto}
+  .ps{order:1;flex:1}
+  .ps input{width:100%}
+  .soc{order:1;margin-left:0}
   nav{order:2}
+  .hero .hv{gap:12px}
   nav{margin-left:0;width:100%}
   .matches,.news,.road,.form-grid{grid-template-columns:1fr}
   .view{padding:28px 0 48px}
@@ -355,6 +393,7 @@ footer a{color:var(--ball)}
       </svg>
       <b><span>T</span>ito<span>T</span>enis</b>
     </a>
+    <form class="ps" id="psF" role="search"><input id="psQ" list="plist" placeholder="Buscar jugador" aria-label="Buscar jugador" autocomplete="off" maxlength="40"><datalist id="plist"></datalist></form>
     <div class="soc" id="soc" aria-label="Redes de TitoTenis">
       <a id="socWa" target="_blank" rel="noopener" aria-label="WhatsApp" title="Grupo de WhatsApp" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2zm0 18.1a8.1 8.1 0 0 1-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.1 8.1 0 1 1 12 20.100zm4.5-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.200-.3.200-.5.100a6.600 6.600 0 0 1-3.300-2.900c-.2-.4.2-.4.700-1.300.1-.2 0-.3 0-.5l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.300 3 3 0 0 0-.9 2.200c0 1.300.9 2.500 1 2.700.1.200 1.800 2.800 4.400 3.900 1.600.7 2.200.7 3 .6.500-.1 1.500-.6 1.700-1.200.2-.6.2-1.100.2-1.200-.1-.1-.3-.2-.5-.3z"/></svg></a>
       <a id="socIg" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.500A4.500 4.500 0 1 1 7.500 12 4.500 4.500 0 0 1 12 7.500zm0 2A2.500 2.500 0 1 0 14.500 12 2.500 2.500 0 0 0 12 9.500zM17.300 5.800a1.100 1.100 0 1 1-1.100 1.100 1.100 1.100 0 0 1 1.100-1.100z"/></svg></a>
@@ -381,9 +420,12 @@ footer a{color:var(--ball)}
         <p>Noticias reales del circuito, con un resumen corto escrito por TitoTenis y el enlace a la fuente original. Actualizado: <span class="upd">cargando…</span></p>
       </div>
     </div>
+    <div id="hero"></div>
     <div class="chips circ" role="group" aria-label="Circuitos a mostrar">
       <button class="chip cx cx-atp" type="button" data-cx="atp" aria-pressed="true" title="Pulsa para ver solo ATP o todo el circuito masculino"><span class="ball" aria-hidden="true"></span>ATP</button>
     </div>
+    <div class="seg" id="nSeg" role="group" aria-label="Filtrar noticias"><button type="button" data-seg="" aria-pressed="true">Todo</button><button type="button" data-seg="torneo" aria-pressed="false">Por torneo</button><button type="button" data-seg="jugador" aria-pressed="false">Por jugador</button></div>
+    <div class="chips" id="nSub" hidden></div>
     <div class="news" id="news"></div>
   </div>
 </section>
@@ -576,6 +618,14 @@ footer a{color:var(--ball)}
 
 </main>
 
+<dialog id="plDlg" aria-labelledby="plTitle">
+  <div class="plhead" id="plHead"></div>
+  <div class="plbody" id="plBody"></div>
+  <div class="row" style="margin-top:14px">
+    <a class="btn" id="plVid" target="_blank" rel="noopener">Buscar resúmenes en vídeo</a>
+    <button class="btn" type="button" id="plClose">Cerrar</button>
+  </div>
+</dialog>
 <dialog id="newsDlg" aria-labelledby="ndTitle">
   <div id="ndAv" hidden></div>
   <h3 id="ndTitle"></h3>
@@ -665,6 +715,151 @@ footer a{color:var(--ball)}
 
   $$('#sugIdeas [data-ph]').forEach(function(b){b.addEventListener('click',function(){var t=$('#sugText');t.value=b.getAttribute('data-ph');t.focus();t.setSelectionRange(t.value.length,t.value.length)})});
 
+
+  /* ---------- fichas de jugador, buscador, partido destacado, filtros ---------- */
+  var nseg='',nsel='';
+  function sname(n){return norm(n).replace(/[^a-z\s-]/g,'').trim().split(/\s+/).pop()||''}
+  function mentions(text,key){if(!key)return false;return new RegExp('(^|[^a-z])'+key+'([^a-z]|$)').test(norm(text))}
+  function playerPool(){
+    var P={};
+    function add(n){if(!n)return;n=String(n).trim();var k=sname(n);if(!k)return;if(!P[k]||n.length>P[k].length)P[k]=n}
+    Object.keys(PHOTOS||{}).forEach(add);
+    (DATA.scheduled||[]).forEach(function(x){(x.names||[]).forEach(add)});
+    (DATA.results||[]).concat(FEAT||[]).forEach(function(x){var n=parseNames(x);if(n){add(n.a);add(n.b)}});
+    return P;
+  }
+  function resolvePlayer(q){
+    var P=playerPool(),nq=norm(q).trim();if(!nq)return null;
+    var ks=Object.keys(P);
+    var k=sname(q);if(P[k])return P[k];
+    var hit=ks.filter(function(x){return x.indexOf(nq)===0})[0]||ks.filter(function(x){return norm(P[x]).indexOf(nq)>=0})[0];
+    return hit?P[hit]:null;
+  }
+  function refreshPlist(){
+    var dl=$('#plist');if(!dl)return;var P=playerPool();dl.textContent='';
+    Object.keys(P).sort().forEach(function(k){var o=document.createElement('option');o.value=P[k];dl.appendChild(o)});
+  }
+  function faceEl(name,d){
+    var box=el('span','facew'),ph=photoFor(name),a;
+    if(ph&&ph.src){a=avatar(box,ph,d,'fav')}
+    else{a=el('div','fav',ini(name));box.appendChild(a)}
+    if(a){a.style.width=d+'px';a.style.height=d+'px';a.style.fontSize=Math.round(d*.38)+'px'}
+    return box;
+  }
+  function ytUrl(q){return 'https://www.youtube.com/results?search_query='+encodeURIComponent(q+' resumen partido')}
+  function rankOf(key){
+    var out=null;
+    (DATA.news||[]).forEach(function(n){
+      if(out||n.cat!=='atp'||n.tag!=='Ranking')return;
+      String(n.d||'').split(/(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚ])/).forEach(function(s){
+        if(out)return;var m=new RegExp('(^|[^a-zA-Z])'+key,'i').exec(norm(s));
+        if(m){var r=/(\d{1,3})\.º/.exec(s.slice(m.index));if(r)out={n:r[1],src:n.t,u:n.u}}
+      });
+    });
+    return out;
+  }
+  function pSection(box,title){var h=el('h4','pdh',title);box.appendChild(h);var d=el('div','pdl');box.appendChild(d);return d}
+  function fmtDay(iso){if(!iso)return '';var d=new Date(iso+'T12:00:00Z');return d.toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long',timeZone:'UTC'})}
+  function openPlayer(q){
+    var name=resolvePlayer(q),dlg=$('#plDlg'),body=$('#plBody');body.textContent='';
+    if(!name){
+      $('#plHead').textContent='';
+      body.appendChild(el('p',null,'No encontramos a «'+q+'» entre los jugadores de TitoTenis ahora mismo. Prueba con el apellido, por ejemplo «Alcaraz».'));
+      if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','');return;
+    }
+    var key=sname(name),head=$('#plHead');head.textContent='';
+    head.appendChild(faceEl(name,96));
+    var ht=el('div','pht');ht.appendChild(el('h3',null,name));
+    var rk=rankOf(key);
+    ht.appendChild(el('p','pdsub',rk?'Ranking ATP: n.º '+rk.n:'Circuito ATP'));
+    head.appendChild(ht);
+    var any=false;
+    /* próximo partido */
+    var nx=(DATA.scheduled||[]).filter(function(x){return (x.names||[]).some(function(m){return sname(m)===key})});
+    if(nx.length){any=true;var s1=pSection(body,'Próximo partido');
+      nx.slice(0,2).forEach(function(x){var opp=x.names.filter(function(m){return sname(m)!==key})[0]||'';
+        var r=el('div','pdr');r.appendChild(el('b',null,'contra '+opp));
+        r.appendChild(el('small',null,x.tour+' · '+fmtDay(x.day)+(x.time?' · '+x.time:'')));
+        var h=x.prev&&x.prev.h2hScore;if(h){var i=(x.names[0]&&sname(x.names[0])===key)?0:1;r.appendChild(el('small',null,'Cara a cara: '+h[i]+' – '+h[1-i]))}
+        s1.appendChild(r)})}
+    /* resultados recientes */
+    var rs=(DATA.results||[]).concat(FEAT||[]).filter(function(x){return mentions((x.text||'')+' '+((x.names||[]).join(' ')),key)});
+    if(rs.length){any=true;var s2=pSection(body,'Resultados recientes');
+      rs.slice(0,4).forEach(function(x){var r=el('div','pdr');r.appendChild(el('b',null,x.text+' · '+x.score));r.appendChild(el('small',null,x.tour));s2.appendChild(r)})}
+    /* estadísticas del último partido registrado */
+    var ar=(DATA.archivo||[]).filter(function(x){return (x.names||[]).some(function(m){return sname(m)===key})}).slice(-1)[0];
+    if(ar){any=true;var i=sname(ar.names[0])===key?0:1,s3=pSection(body,'Su último partido registrado');
+      var r3=el('div','pdr');
+      r3.appendChild(el('b',null,(ar.names[i]+' contra '+ar.names[1-i])+' · '+ar.tour));
+      r3.appendChild(el('small',null,'Primer saque: '+ar.p1saque[i]+' % · Puntos con segundo saque: '+ar.p2saque[i]+' % · Aces: '+ar.aces[i]+' · Dobles faltas: '+ar.df[i]));
+      s3.appendChild(r3)}
+    /* noticias */
+    var nw=(DATA.news||[]).filter(function(n){return shown(n.cat)&&mentions((n.t||'')+' '+(n.d||''),key)});
+    if(nw.length){any=true;var s4=pSection(body,'Noticias');
+      nw.slice(0,5).forEach(function(n){var a=el('button','pdn',n.t);a.type='button';a.addEventListener('click',function(){dlg.close();openNews(n)});s4.appendChild(a)})}
+    if(!any)body.appendChild(el('p',null,'Todavía no tenemos datos de este jugador. Las fichas se llenan con los partidos y noticias de cada actualización.'));
+    var vd=$('#plVid');vd.href=ytUrl(name);
+    if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','');
+  }
+  $('#plClose').addEventListener('click',function(){$('#plDlg').close()});
+  $('#psF').addEventListener('submit',function(e){e.preventDefault();var q=$('#psQ').value;if(q.trim()){openPlayer(q);$('#psQ').value=''}});
+  function clickNames(svg,list){
+    svg.style.cursor='pointer';
+    svg.addEventListener('click',function(e){
+      var r=svg.getBoundingClientRect(),xr=(e.clientX-r.left)/r.width*640,nm=null;
+      if(list.length===1)nm=list[0];else if(xr<250)nm=list[0];else if(xr>390)nm=list[1];
+      if(nm){e.stopPropagation();openPlayer(nm)}
+    });
+  }
+  /* filtros por torneo / jugador en Noticias */
+  function buildSub(){
+    var seg=$('#nSeg'),sub=$('#nSub');if(!seg||!sub)return;
+    $$('#nSeg [data-seg]').forEach(function(b){b.setAttribute('aria-pressed',String((b.getAttribute('data-seg')||'')===nseg))});
+    sub.textContent='';sub.hidden=!nseg;if(!nseg)return;
+    var vals=[];
+    var NS=(DATA.news||[]).filter(function(n){return shown(n.cat)});
+    if(nseg==='torneo'){NS.forEach(function(n){if(n.tag&&vals.indexOf(n.tag)<0)vals.push(n.tag)});vals=vals.map(function(v){return {v:v,l:v}})}
+    else{var P=playerPool();vals=Object.keys(P).filter(function(k){return NS.some(function(n){return mentions((n.t||'')+' '+(n.d||''),k)})}).sort().map(function(k){return {v:k,l:P[k]}})}
+    var all=el('button','chip','Todos');all.type='button';all.setAttribute('aria-pressed',String(!nsel));all.addEventListener('click',function(){nsel='';renderNews()});sub.appendChild(all);
+    vals.forEach(function(o){var b=el('button','chip',o.l);b.type='button';b.setAttribute('aria-pressed',String(nsel===o.v));b.addEventListener('click',function(){nsel=o.v;renderNews()});sub.appendChild(b)});
+    if(!vals.length)sub.appendChild(el('span','srcline','No hay nada que filtrar ahora mismo.'));
+  }
+  $$('#nSeg [data-seg]').forEach(function(b){b.addEventListener('click',function(){nseg=b.getAttribute('data-seg')||'';nsel='';renderNews()})});
+  /* tarjeta de WhatsApp entre noticias */
+  function waCard(){
+    var a=el('article','card nw wacard');
+    a.appendChild(el('div','wak','COMUNIDAD'));
+    a.appendChild(el('h3',null,'Comenta el tenis con otros aficionados en el grupo de WhatsApp'));
+    var r=el('div','row'),l=el('a','btn wa','Unirme al grupo');l.href=LINKS.wa;l.target='_blank';l.rel='noopener';r.appendChild(l);a.appendChild(r);
+    return a;
+  }
+  /* partido destacado en portada */
+  function renderHero(){
+    var box=$('#hero');if(!box)return;box.textContent='';
+    var t=DATA.today||'',S=(DATA.scheduled||[]).filter(function(x){return shown(x.cat)&&parseNames(x)});
+    var up=S.filter(function(x){return (x.day||t)>=t}).sort(function(a,b){return String(a.day||t)<String(b.day||t)?-1:1});
+    var pick=up.filter(function(x){return x.prev&&x.prev.h2hScore})[0]||up[0],kind='prox';
+    if(!pick&&FEAT&&FEAT[0]){pick=FEAT[0];kind='feat'}
+    if(!pick)return;
+    var n=parseNames(pick);if(!n)return;
+    var c=el('div','hero');
+    c.appendChild(el('div','hk','★ PARTIDO DESTACADO'));
+    var hv=el('div','hv'),mid=el('div','hm');
+    var fa=faceEl(n.a,84),fb=faceEl(n.b,84);
+    [[fa,n.a],[fb,n.b]].forEach(function(p){p[0].style.cursor='pointer';p[0].title='Ver ficha de '+p[1];p[0].addEventListener('click',function(){openPlayer(p[1])})});
+    mid.appendChild(el('b',null,'VS'));
+    var sc=kind==='prox'?(pick.prev&&pick.prev.h2hScore?pick.prev.h2hScore[0]+' – '+pick.prev.h2hScore[1]:''):pick.score;
+    if(sc)mid.appendChild(el('span',null,sc));
+    hv.appendChild(fa);hv.appendChild(mid);hv.appendChild(fb);c.appendChild(hv);
+    c.appendChild(el('h2',null,n.a+' contra '+n.b));
+    c.appendChild(el('p','hsub',kind==='prox'?pick.tour+' · '+fmtDay(pick.day||t)+(pick.time?' · '+pick.time:''):pick.tour));
+    var h2=kind==='prox'&&pick.prev&&pick.prev.h2h&&pick.prev.h2h[0];
+    if(h2)c.appendChild(el('p','hh','Cara a cara: '+(h2.length>200?h2.slice(0,199)+'…':h2)));
+    var row=el('div','row'),go=el('button','btn primary',kind==='prox'?'Ver previa y análisis':'Ver análisis completo');go.type='button';go.addEventListener('click',function(){location.hash='#en-vivo'});
+    var yt=el('a','btn','Buscar resúmenes en vídeo');yt.href=ytUrl(n.a+' '+n.b);yt.target='_blank';yt.rel='noopener';
+    row.appendChild(go);row.appendChild(yt);c.appendChild(row);box.appendChild(c);
+  }
+
   /* filtro por circuito (compartido entre Noticias y En vivo) */
   var onlyAtp=true; /* activado: solo ATP; desactivado: todo el circuito masculino. La WTA no se muestra en TitoTenis */
   function shown(c){if(c==='wta'||c==='chw')return false;return !onlyAtp||c==='atp'}
@@ -710,11 +905,12 @@ footer a{color:var(--ball)}
     if(!box.children.length)box.appendChild(el('p','empty','Todavía no hay guiones.'));
   }
   function norm(t){return String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
-  function photoIn(n){
+  function keyIn(n){
     var ks=Object.keys(PHOTOS||{}).filter(function(k){return PHOTOS[k]&&PHOTOS[k].src});if(!ks.length)return null;
-    function find(txt){var T=norm(txt),best=null,pos=1e9;ks.forEach(function(k){var last=norm(k).trim().split(/\s+/).pop();var m=new RegExp('(^|[^a-z])'+last+'([^a-z]|$)').exec(T);if(m&&m.index<pos){pos=m.index;best=PHOTOS[k]}});return best}
+    function find(txt){var T=norm(txt),best=null,pos=1e9;ks.forEach(function(k){var last=norm(k).trim().split(/\s+/).pop();var m=new RegExp('(^|[^a-z])'+last+'([^a-z]|$)').exec(T);if(m&&m.index<pos){pos=m.index;best=k}});return best}
     return find(n.t)||find(n.d);
   }
+  function photoIn(n){var k=keyIn(n);return k?PHOTOS[k]:null}
   function avatar(box,ph,d,cls){
     var a=el('div',cls||'av');a.title=ph.credit||'';a.setAttribute('role','img');a.setAttribute('aria-label','Foto del jugador');box.appendChild(a);
     function put(sz){var z=+ph.zoom||1.2,fx=ph.fx!=null?+ph.fx:.5,fy=ph.fy!=null?+ph.fy:.3;var s=(d*z)/Math.min(sz.w,sz.h),W=sz.w*s,H=sz.h*s;
@@ -726,18 +922,23 @@ footer a{color:var(--ball)}
   function authorOf(ph){return String(ph.credit||'').replace(/^Foto:\s*/,'').split(',')[0]}
   /* noticias */
   function renderNews(){
+    renderHero();buildSub();refreshPlist();
     var box=$('#news');box.textContent='';var n0=0;
     DATA.news.forEach(function(n){
-      if(!shown(n.cat))return;n0++;
+      if(!shown(n.cat))return;
+      if(nseg==='torneo'&&nsel&&n.tag!==nsel)return;
+      if(nseg==='jugador'&&nsel&&!mentions((n.t||'')+' '+(n.d||''),nsel))return;
+      n0++;
       var a=el('article','card nw b'+(n0%3)+' cat-'+n.cat);
       var meta=el('div','meta');meta.appendChild(el('span','pill '+n.cls,n.tag));meta.appendChild(el('span','pill',CATN[n.cat]));
-      var ph=photoIn(n);if(ph){var w=el('div','avw');avatar(w,ph,84);a.appendChild(w)}
+      var ph=photoIn(n);if(ph){var w=el('div','avw');var av0=avatar(w,ph,84),pk=keyIn(n);if(pk){av0.style.cursor='pointer';av0.title='Ver ficha de '+pk;av0.addEventListener('click',function(ev){ev.stopPropagation();openPlayer(pk)})}a.appendChild(w)}
       a.appendChild(meta);a.appendChild(el('h3',null,n.t));a.appendChild(el('p',null,n.d));
       var row=el('div','row');
       var v=el('button','btn small primary','Ver noticia');v.type='button';v.addEventListener('click',function(){openNews(n)});row.appendChild(v)
       var b=el('button','btn small clay','Debatir en La grada');b.type='button';
       b.addEventListener('click',function(){location.hash='#foro/'+nid(n)});
       row.appendChild(b);a.appendChild(row);box.appendChild(a);
+      if(n0===3&&LINKS.wa)box.appendChild(waCard());
     });
     if(!n0)box.appendChild(el('p','empty','No hay noticias de este circuito ahora mismo.'));
   }
@@ -933,6 +1134,7 @@ footer a{color:var(--ball)}
     if(pr&&pr.h2hScore)svg.appendChild(sv('text',{x:320,y:122,'text-anchor':'middle','font-size':30,'font-weight':800,fill:'var(--ball)'},pr.h2hScore[0]+' – '+pr.h2hScore[1]));
     svg.appendChild(sv('text',{x:105,y:172,'text-anchor':'middle','font-size':17,'font-weight':700,fill:'var(--chalk)'},short(n.a,20)));
     svg.appendChild(sv('text',{x:535,y:172,'text-anchor':'middle','font-size':17,'font-weight':700,fill:'var(--chalk)'},short(n.b,20)));
+    clickNames(svg,[n.a,n.b]);
     var d=el('div','vs');d.appendChild(svg);return d;
   }
   function winCard(x){
@@ -944,6 +1146,7 @@ footer a{color:var(--ball)}
     svg.appendChild(sv('text',{x:175,y:52,'font-size':15,'font-weight':800,fill:'var(--ball)','letter-spacing':3},'GANADOR'));
     svg.appendChild(sv('text',{x:175,y:96,'font-size':36,'font-weight':800,fill:'var(--chalk)'},short(n.w,22)));
     svg.appendChild(sv('text',{x:175,y:128,'font-size':24,'font-weight':700,fill:'var(--ball)'},x.score));
+    clickNames(svg,[n.w]);
     var d=el('div','vs');d.appendChild(svg);return d;
   }
   function lineChart(T){
