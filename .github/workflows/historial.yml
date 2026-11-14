@@ -20,11 +20,17 @@ jobs:
           curl -fsSL -o /tmp/csv/ongoing.csv https://stats.tennismylife.org/data/ongoing_tourneys.csv
       - name: Construir historial_base.json
         run: python3 -I herramientas/construir_historial.py jugadores.json /tmp/historial_base.json /tmp/csv/2023.csv /tmp/csv/2024.csv /tmp/csv/2025.csv /tmp/csv/2026.csv /tmp/csv/ongoing.csv
+      - name: Construir torneos, evolución, estadísticas y datos de juegos
+        run: |
+          cp /tmp/historial_base.json historial_base.json
+          python3 -I herramientas/construir_datos.py jugadores.json . 2025:/tmp/csv/2025.csv 2026:/tmp/csv/2026.csv 2026:/tmp/csv/ongoing.csv
+          python3 -I herramientas/construir_juegos.py . /tmp/juegos.json /tmp/csv/2023.csv /tmp/csv/2024.csv /tmp/csv/2025.csv /tmp/csv/2026.csv /tmp/csv/ongoing.csv
+          python3 -c "import json;j=json.load(open('/tmp/juegos.json'));assert len(j['p'])>200 and len(j['c'])>30"
+          cp /tmp/juegos.json juegos.json
       - name: Publicar si hay cambios
         run: |
           python3 -c "import json;j=json.load(open('/tmp/historial_base.json'));assert len(j['m'])>5000"
-          cp /tmp/historial_base.json historial_base.json
           git config user.name "titotenis-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add historial_base.json
+          git add historial_base.json torneos.json evolucion.json estadisticas.json juegos.json
           git diff --cached --quiet || (git commit -m "Actualizar historial de partidos" && git push)
