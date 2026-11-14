@@ -1119,7 +1119,7 @@ footer a{color:var(--ball)}
   uid=myUid;
   function sbInsert(coll,id,obj){
     var d={};for(var k in obj)if(k!=='_id')d[k]=obj[k];d._id=id;
-    return fetch(SB_URL+'/rest/v1/docs',{method:'POST',headers:SBH,body:JSON.stringify({coll:coll,data:d,ts:obj.ts||Date.now()})}).then(function(r){if(!r.ok)throw new Error('sb '+r.status)});
+    return fetch(SB_URL+'/rest/v1/docs',{method:'POST',headers:SBH,body:JSON.stringify({coll:coll,data:d,ts:new Date(obj.ts||Date.now()).toISOString()})}).then(function(r){if(!r.ok)throw new Error('sb '+r.status)});
   }
   function newId(){return 'd'+Math.random().toString(36).slice(2)+Date.now().toString(36)}
   DB={collection:function(c){return{
@@ -1135,7 +1135,7 @@ footer a{color:var(--ball)}
     return Promise.all(COLL.map(function(c){
       return fetch(SB_URL+'/rest/v1/docs?select=id,data,ts&coll=eq.'+c+'&order=ts.asc&limit=500',{headers:SBH}).then(function(r){if(!r.ok)throw new Error('sb '+r.status);return r.json()}).then(function(rows){
         var by={},order=[];
-        rows.forEach(function(r){var o=r.data||{};var id=o._id||('r'+r.id);if(!(id in by))order.push(id);by[id]=o;o._id=id;if(!o.ts)o.ts=r.ts});
+        rows.forEach(function(r){var o=r.data||{};var id=o._id||('r'+r.id);if(!(id in by))order.push(id);by[id]=o;o._id=id;if(!o.ts)o.ts=Date.parse(r.ts)||0});
         var arr=[];order.forEach(function(id){if(!by[id]._del)arr.push(by[id])});
         arr.sort(byTs);return{c:c,arr:arr};
       });
