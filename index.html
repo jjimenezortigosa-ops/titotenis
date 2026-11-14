@@ -2004,7 +2004,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     {id:'final',n:'Bola de Partido',i:'🏆',d:'Adivina quién ganó cada final'},
     {id:'hl',n:'Duelo en la Red',i:'⚔️',d:'¿Quién tiene la cifra más alta?'},
     {id:'mys',n:'La Wildcard',i:'🕵️',d:'Adivina al jugador secreto'},
-    {id:'trof',n:'Rumbo al Trofeo',i:'🧭',d:'Adivina quién ganó el torneo viendo el cuadro ronda a ronda'}];
+    {id:'trof',n:'Road to Glory',i:'🧭',d:'Adivina quién ganó el torneo viendo el cuadro ronda a ronda'}];
   var DIFN=['','Fácil','Media','Difícil'];
   var gInGame=false,gCur=LS.get('tt_gcur')||'grid',gDif=+(LS.get('tt_gdif')||1),gLbMode='day';
   if(!GAMES.some(function(g){return g.id===gCur}))gCur='grid';if(!(gDif>=1&&gDif<=3))gDif=1;
@@ -2315,7 +2315,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   }
 
 
-  /* --- Rumbo al Trofeo: adivina el campeón viendo el cuadro ronda a ronda --- */
+  /* --- Road to Glory: adivina el campeón viendo el cuadro ronda a ronda --- */
   var CAMP=null,CAMPP=null;
   function loadCamp(){if(!CAMPP)CAMPP=fetch('campeones.json').then(function(r){return r.ok?r.json():null}).then(function(j){CAMP=j}).catch(function(){});return CAMPP}
   var TRN={1:['GS','1000'],2:['GS','1000','500'],3:['GS','1000','500','250']},RORD=['R128','R64','R32','R16','QF','SF','F'];
@@ -2327,7 +2327,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     var rds=RORD.filter(function(r){return t.m.some(function(m){return m[0]===r})}),S=rds.length-1,k=Math.min(st.k,S-1);
     var by={};rds.forEach(function(r){by[r]=t.m.filter(function(m){return m[0]===r})});
     var surf=t.s==='tierra'?'tierra batida':t.s==='hierba'?'hierba':'pista dura';
-    intro(box,'Rumbo al Trofeo','Te enseñamos el cuadro ronda a ronda. Adivina quién ganó el torneo: cuanto antes aciertes, más puntos. Fallar o pasar te enseña la ronda siguiente.');
+    intro(box,'Road to Glory','Te enseñamos el cuadro ronda a ronda. Adivina quién ganó el torneo: cuanto antes aciertes, más puntos. Fallar o pasar te enseña la ronda siguiente.');
     box.appendChild(el('div','gq',gDif===1?t.n+' '+t.a+' · '+NVT[t.nv]+' · '+surf:gDif===2?t.n+' · '+NVT[t.nv]+' · '+surf:'Torneo misterioso · '+NVT[t.nv]+' · '+surf));
     var over=!!st.e;
     /* resultados de las rondas 0..k (la final nunca se enseña) */
@@ -2364,7 +2364,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       var sc=st.w?left:0,ex=el('div');
       ex.appendChild(el('p',null,(st.w?'¡Campeón acertado! ':'No ha podido ser. ')+'El campeón fue '+t.cam+' en '+t.n+' '+t.a+'.'));
       var fin=by.F&&by.F[0];if(fin)ex.appendChild(el('p','srcline','Final: '+fin[1]+' '+fin[3]+' '+fin[2]+'.'));
-      finishUI(box,sc,S,'TitoTenis · Rumbo al Trofeo ('+DIFN[gDif]+') '+dayEs(day)+' · '+(st.w?sc+'/'+S:'0/'+S)+'\n'+st.log+'\n'+location.origin+location.pathname,ex)}
+      finishUI(box,sc,S,'TitoTenis · Road to Glory ('+DIFN[gDif]+') '+dayEs(day)+' · '+(st.w?sc+'/'+S:'0/'+S)+'\n'+st.log+'\n'+location.origin+location.pathname,ex)}
   }
 
   /* --- Ranking y evolucion --- */

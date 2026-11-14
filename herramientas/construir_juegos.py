@@ -29,6 +29,10 @@ for path in sys.argv[3:]:
                 info[k] = (d, r[side+'_ioc'] or (old[1] if old else ''), r[side+'_hand'] or (old[2] if old else ''),
                            ht or (old[3] if old else ''), age or (old[4] if old else ''))
 rank = {canon.get(pk(x['n']), x['n']): x['r'] for x in rk if pk(x['n']) in canon}
+try:
+    for _n, _r in L('excepciones_ranking.json')['r'].items():
+        if pk(_n) in canon and canon[pk(_n)] not in rank: rank[canon[pk(_n)]] = _r
+except FileNotFoundError: pass
 pool, idx = [], {}
 for k, n in canon.items():
     if k not in info: continue
