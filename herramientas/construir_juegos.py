@@ -40,7 +40,7 @@ for k, n in canon.items():
     if not ioc: continue
     idx[n] = len(pool)
     d0 = datetime.date(int(_d[:4]), int(_d[4:6]), int(_d[6:8]))
-    edad = round(float(age) + (datetime.date.today() - d0).days / 365.25) if age else 0
+    edad = int(float(age) + (datetime.date.today() - d0).days / 365.25) if age else 0
     pool.append([n, ioc, hand if hand in ('L','R') else '', int(float(ht)) if ht else 0, edad, rank.get(n, 0)])
 crit = []
 def add(cid, txt, names):
