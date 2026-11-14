@@ -1,0 +1,30 @@
+name: Actualizar historial de partidos
+on:
+  schedule:
+    - cron: '25 6,14,22 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  historial:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar partidos ATP (TML, uso no comercial)
+        run: |
+          mkdir -p /tmp/csv
+          for y in 2023 2024 2025; do
+            curl -fsSL -o /tmp/csv/$y.csv https://raw.githubusercontent.com/Tennismylife/TML-Database/master/$y.csv
+          done
+          curl -fsSL -o /tmp/csv/2026.csv https://stats.tennismylife.org/data/2026.csv
+          curl -fsSL -o /tmp/csv/ongoing.csv https://stats.tennismylife.org/data/ongoing_tourneys.csv
+      - name: Construir historial_base.json
+        run: python3 -I herramientas/construir_historial.py jugadores.json /tmp/historial_base.json /tmp/csv/2023.csv /tmp/csv/2024.csv /tmp/csv/2025.csv /tmp/csv/2026.csv /tmp/csv/ongoing.csv
+      - name: Publicar si hay cambios
+        run: |
+          python3 -c "import json;j=json.load(open('/tmp/historial_base.json'));assert len(j['m'])>5000"
+          cp /tmp/historial_base.json historial_base.json
+          git config user.name "titotenis-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add historial_base.json
+          git diff --cached --quiet || (git commit -m "Actualizar historial de partidos" && git push)

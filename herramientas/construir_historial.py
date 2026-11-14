@@ -13,6 +13,7 @@ rows, seen = [], set()
 for f in sys.argv[3:]:
     for r in csv.DictReader(open(f,encoding='utf-8')):
         t = r['tourney_name']
+        if r['tourney_date'] < '20230101': continue
         if t.startswith('Davis Cup') or 'W/O' in r['score'] or 'Walkover' in r['score'] or not r['score'].strip(): continue
         if pk(r['winner_name']) not in mine and pk(r['loser_name']) not in mine: continue
         if r['surface'] not in SURF: continue
