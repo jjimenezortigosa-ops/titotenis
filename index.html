@@ -51,6 +51,12 @@ header{position:sticky;top:0;z-index:10;background:rgba(12,31,29,.94);backdrop-f
 .brand b{font-family:var(--display);font-size:28px;font-weight:800;letter-spacing:-.03em}
 .brand b span{color:var(--ball)}
 nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:thin}
+.howto{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 22px}
+.howto>div{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.howto b{font-size:26px;color:#D6E84B;line-height:1}
+.howto h3{font-size:16px;margin:0}
+.howto p{color:var(--chalk);opacity:.85;font-size:14px;margin:0 0 6px}
+@media(max-width:700px){.howto{grid-template-columns:1fr}}
 .soc{display:flex;gap:6px;order:3}
 .soc a{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--chalk);background:rgba(255,255,255,.07);transition:.15s}
 .soc a[hidden]{display:none}
@@ -132,7 +138,9 @@ label.lbl{display:block;font-size:13px;color:var(--mute);margin-bottom:4px}
 .frow .cnt small{display:block;font-family:var(--body);font-weight:400;font-size:12px}
 .inc{margin:8px 0 0;font-size:13px;color:var(--ball)}
 h2.sub{grid-column:1/-1;margin:18px 0 0;font-size:18px}
-.chip.cx-atp{border-color:var(--atp)}.chip.cx-wta{border-color:var(--wta)}.chip.cx-chm{border-color:var(--chm)}.chip.cx-chw{border-color:var(--chw)}
+.chip.cx-atp{border-color:var(--atp);display:inline-flex;align-items:center;gap:8px}
+.chip .ball{width:14px;height:14px;border-radius:50%;background:#D6E84B;border:2px solid #0C1F1D;box-shadow:inset -3px -2px 0 rgba(255,255,255,.35)}
+.chip.cx-atp[aria-pressed="false"]{opacity:.6}.chip.cx-wta{border-color:var(--wta)}.chip.cx-chm{border-color:var(--chm)}.chip.cx-chw{border-color:var(--chw)}
 .chip.cx-atp[aria-pressed="true"]{background:var(--atp);color:#06101f}
 .chip.cx-wta[aria-pressed="true"]{background:var(--wta);color:#2a0618}
 .chip.cx-chm[aria-pressed="true"]{background:var(--chm);color:#0b1214}
@@ -374,8 +382,7 @@ footer a{color:var(--ball)}
       </div>
     </div>
     <div class="chips circ" role="group" aria-label="Circuitos a mostrar">
-      <button class="chip cx cx-atp" type="button" data-cx="atp" aria-pressed="true">ATP</button>
-      <button class="chip cx cx-wta" type="button" data-cx="wta" aria-pressed="false">WTA</button>
+      <button class="chip cx cx-atp" type="button" data-cx="atp" aria-pressed="true" title="Pulsa para ver solo ATP o todo el circuito masculino"><span class="ball" aria-hidden="true"></span>ATP</button>
     </div>
     <div class="news" id="news"></div>
   </div>
@@ -387,13 +394,12 @@ footer a{color:var(--ball)}
     <div class="sec-head">
       <div>
         <h1>Partidos</h1>
-        <p>Partidos ATP y WTA de hoy, mañana y pasado mañana. Los que ya han terminado tienen análisis tenístico; los que vienen, una previa con pista, cara a cara, forma y claves. Datos actualizados: <span class="upd">cargando…</span></p>
+        <p>Partidos ATP de hoy, mañana y pasado mañana. Los que ya han terminado tienen análisis tenístico; los que vienen, una previa con pista, cara a cara, forma y claves. Datos actualizados: <span class="upd">cargando…</span></p>
       </div>
       <span class="live"><span class="dot" aria-hidden="true"></span> <span id="liveCount"></span></span>
     </div>
     <div class="chips circ" role="group" aria-label="Circuitos a mostrar">
-      <button class="chip cx cx-atp" type="button" data-cx="atp" aria-pressed="true">ATP</button>
-      <button class="chip cx cx-wta" type="button" data-cx="wta" aria-pressed="false">WTA</button>
+      <button class="chip cx cx-atp" type="button" data-cx="atp" aria-pressed="true" title="Pulsa para ver solo ATP o todo el circuito masculino"><span class="ball" aria-hidden="true"></span>ATP</button>
     </div>
     <div class="chips" id="dayChips" role="group" aria-label="Día"></div>
     <div class="matches" id="matches"></div>
@@ -426,6 +432,15 @@ footer a{color:var(--ball)}
   <div class="wrap">
     <div class="sec-head"><div><h1>Sugerencias</h1><p>Dinos qué te gustaría ver en TitoTenis: estadísticas, torneos, funciones, lo que quieras. Cualquiera puede escribir y leer.</p></div></div>
     <span class="dbnote" data-dbnote></span>
+    <p class="lbl" style="margin:6px 0 8px">Ideas rápidas (pulsa una y complétala)</p>
+    <div class="chips" id="sugIdeas" role="group" aria-label="Ideas rápidas">
+      <button class="chip" type="button" data-ph="Me gustaría ver más estadísticas de: ">Más estadísticas</button>
+      <button class="chip" type="button" data-ph="Me gustaría una ficha del jugador: ">Ficha de jugador</button>
+      <button class="chip" type="button" data-ph="Me gustaría la previa o el cuadro del torneo: ">Torneos y cuadros</button>
+      <button class="chip" type="button" data-ph="He visto un error en la web: ">Avisar de un error</button>
+      <button class="chip" type="button" data-ph="Una idea para La grada: ">Idea para La grada</button>
+      <button class="chip" type="button" data-ph="Otra idea: ">Otra idea</button>
+    </div>
     <form class="panel" id="sugForm">
       <div class="form-grid">
         <div class="full"><label class="lbl" for="sugText">Tu sugerencia</label><textarea class="field" id="sugText" style="width:100%" rows="3" maxlength="600" required></textarea></div>
@@ -433,6 +448,7 @@ footer a{color:var(--ball)}
       </div>
       <div style="margin-top:14px"><button class="btn clay" type="submit">Enviar sugerencia</button></div>
     </form>
+    <h2 class="sub" style="margin-top:22px">Sugerencias de la comunidad</h2>
     <div class="sgl" id="sugList"></div>
   </div>
 </section>
@@ -533,7 +549,11 @@ footer a{color:var(--ball)}
       </div>
     </div>
     <span class="dbnote" data-dbnote></span>
-    <p class="srcline" style="margin-bottom:16px">Los debates 1 a 1 de esta versión no son privados a nivel técnico: la interfaz solo los muestra a las dos personas. Para chats realmente privados hace falta un servidor propio.</p>
+    <div class="howto">
+      <div><b>1</b><h3>Participa en La grada</h3><p>Abre un tema o responde a otros. Tu nombre es el que escribas, no hace falta registrarse.</p><a class="btn small clay" href="#foro">Ir a La grada</a></div>
+      <div><b>2</b><h3>Recibe avisos</h3><p>Cuando alguien responda a tu mensaje, aparecerá aquí en «Avisos» con un punto naranja en la pestaña.</p></div>
+      <div><b>3</b><h3>Debate 1 a 1</h3><p>Pulsa el nombre de alguien en La grada para proponerle un debate a dos. Las conversaciones aparecen en esta lista.</p></div>
+    </div>
     <div class="forum">
       <div>
         <h2 class="sub">Avisos</h2>
@@ -550,6 +570,7 @@ footer a{color:var(--ball)}
         </form>
       </div>
     </div>
+    <p class="srcline" style="margin-top:18px">Ojo: los debates 1 a 1 no son privados a nivel técnico. No escribas aquí datos personales ni contraseñas.</p>
   </div>
 </section>
 
@@ -642,12 +663,14 @@ footer a{color:var(--ball)}
     });
   }
 
+  $$('#sugIdeas [data-ph]').forEach(function(b){b.addEventListener('click',function(){var t=$('#sugText');t.value=b.getAttribute('data-ph');t.focus();t.setSelectionRange(t.value.length,t.value.length)})});
+
   /* filtro por circuito (compartido entre Noticias y En vivo) */
-  var only='atp'; /* siempre hay un circuito elegido: ATP o WTA */
-  function shown(c){return only===c}
-  function syncChips(){$$('[data-cx]').forEach(function(x){x.setAttribute('aria-pressed',String(x.getAttribute('data-cx')===only))})}
+  var onlyAtp=true; /* activado: solo ATP; desactivado: todo el circuito masculino. La WTA no se muestra en TitoTenis */
+  function shown(c){if(c==='wta'||c==='chw')return false;return !onlyAtp||c==='atp'}
+  function syncChips(){$$('[data-cx]').forEach(function(x){x.setAttribute('aria-pressed',String(onlyAtp))})}
   $$('[data-cx]').forEach(function(b){b.addEventListener('click',function(){
-    only=b.getAttribute('data-cx');
+    onlyAtp=!onlyAtp;
     syncChips();renderNews();renderMatches();
   })});
 
@@ -826,12 +849,12 @@ footer a{color:var(--ball)}
     R.forEach(function(r){rBox.appendChild(row(r,r.score,'res'))});
     var fB=$('#feat'),FD=FEAT;fB.textContent='';FD.forEach(function(r){fB.appendChild(row(r,r.score,'res'))});fB.hidden=!FD.length;$('#featHead').hidden=!FD.length;
     $('#resHead').hidden=!today;rBox.hidden=!today;
-    if(today&&!R.length)rBox.appendChild(el('p','empty','Todavía no hay resultados ATP/WTA hoy.'));
+    if(today&&!R.length)rBox.appendChild(el('p','empty','Todavía no hay resultados ATP hoy.'));
     var sBox=$('#sched');sBox.textContent='';
     var iso=dayIso(dayN);
     var S=(DATA.scheduled||[]).filter(function(r){return shown(r.cat)&&((r.day||dayIso(0))===iso)});
     S.forEach(function(r){sBox.appendChild(row(r,fb(r.time),'sch'))});
-    if(!S.length)sBox.appendChild(el('p','empty',today?'No hay más partidos ATP/WTA programados hoy.':'Todavía no hay partidos ATP/WTA confirmados para este día. Se añaden cuando se publica el orden de juego.'));
+    if(!S.length)sBox.appendChild(el('p','empty',today?'No hay más partidos ATP programados hoy.':'Todavía no hay partidos ATP confirmados para este día. Se añaden cuando se publica el orden de juego.'));
     renderDetail();
   }
   function parseNames(x){
@@ -1166,7 +1189,8 @@ footer a{color:var(--ball)}
   function setNote(){
     $$('[data-dbnote]').forEach(function(n){
       n.className='dbnote'+(mode==='shared'?' ok':'');
-      n.textContent=mode==='shared'?'Conectado: lo que escribes lo ve todo el que tenga acceso a la página.':
+      n.hidden=(mode==='shared');
+      n.textContent=mode==='shared'?'':
         mode==='readonly'?'Estás en modo lectura: puedes ver los mensajes, pero para escribir necesitas permiso de colaborador.':
         'Sin conexión compartida en esta vista: lo que escribas solo se verá en tu pantalla.';
     });
@@ -1467,7 +1491,7 @@ footer a{color:var(--ball)}
     <p><b>Qué se guarda en tu dispositivo:</b> el nombre que escribes en el foro y la última vez que viste tus debates. Es almacenamiento técnico necesario; no hay analítica, publicidad ni cookies de terceros.</p>
     <p><b>Qué es público:</b> los mensajes y sugerencias que envíes, con el nombre que elijas. Escribe un apodo y no pongas datos personales (teléfono, dirección, correo).</p>
     <p><b>Grupo de WhatsApp:</b> si te unes, tu número lo ven los demás miembros del grupo, según las normas de WhatsApp.</p>
-    <p><b>Datos de los partidos y noticias:</b> proceden de fuentes de tenis citadas y se resumen con palabras propias. TitoTenis no está afiliada a la ATP, la WTA ni a ningún torneo.</p>
+    <p><b>Datos de los partidos y noticias:</b> proceden de fuentes de tenis citadas y se resumen con palabras propias. TitoTenis no está afiliada a la ATP ni a ningún torneo.</p>
     <p class="srcline">Antes de abrir la página al público habrá que añadir aviso legal con el titular, política de privacidad completa y, si se piden correos, consentimiento expreso.</p>
   </div>
   <div class="row"><button class="btn" type="button" id="privClose">Cerrar</button></div>
