@@ -711,6 +711,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       <span class="srcline" id="gDay"></span></div>
     <div class="gtiles" id="gTiles"></div>
     <div class="gdif" id="gDif" role="group" aria-label="Dificultad"><span>Dificultad:</span><button type="button" class="d1" data-d="1">Fácil</button><button type="button" class="d2" data-d="2">Media</button><button type="button" class="d3" data-d="3">Difícil</button></div>
+    <div id="gPlay" hidden><p><a href="#juegos" class="btn" id="gBack">← Todos los juegos</a></p>
     <div class="gcols">
       <div class="panel" id="gBox"></div>
       <div class="panel">
@@ -719,7 +720,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
         <ol id="gLb" class="glb"></ol>
         <p class="srcline">Escribe un apodo, no tus datos personales. Los resultados los envía cada jugador desde su dispositivo.</p>
       </div>
-    </div>
+    </div></div>
   </div>
 </section>
 <dialog id="gDlg" aria-labelledby="gT">
@@ -862,7 +863,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     });
     if(h==='foro'){cancelReply();renderForum();var w=$('#waShare');if(w)w.href='https://wa.me/?text='+encodeURIComponent('Debate en TitoTenis: '+location.href)}
     if(h==='sugerencias')renderSugs();
-    if(h==='juegos')renderGames();
+    if(h==='juegos'){var gp=parts[1]||'';if(gp&&GAMES.some(function(g){return g.id===gp}))gCur=gp;else gp='';gInGame=!!gp;renderGames()}
     if(h==='ranking')renderRanking();
     if(h==='torneos')renderTorneos();
     if(h==='estadisticas')renderStats();
@@ -1984,7 +1985,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     {id:'hl',n:'Cara a Cara',i:'⚔️',d:'¿Quién tiene la cifra más alta?'},
     {id:'mys',n:'Incógnito',i:'🕵️',d:'Adivina al jugador secreto'}];
   var DIFN=['','Fácil','Media','Difícil'];
-  var gCur=LS.get('tt_gcur')||'grid',gDif=+(LS.get('tt_gdif')||1),gLbMode='day';
+  var gInGame=false,gCur=LS.get('tt_gcur')||'grid',gDif=+(LS.get('tt_gdif')||1),gLbMode='day';
   if(!GAMES.some(function(g){return g.id===gCur}))gCur='grid';if(!(gDif>=1&&gDif<=3))gDif=1;
   function gid(){return gCur+gDif}
   function gname(){return GAMES.filter(function(g){return g.id===gCur})[0].n}
@@ -2037,8 +2038,10 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     GAMES.forEach(function(g){var b=el('button','gtile'+(g.id===gCur?' on':''));b.type='button';b.appendChild(el('span','gti',g.i));
       var t=el('span','gtt');t.appendChild(el('b',null,g.n));t.appendChild(el('small',null,g.d));b.appendChild(t);
       var s=lsj('tt_g_'+g.id+gDif+'_'+day);if(s&&s.e)b.appendChild(el('span','gck','✓'));
-      b.addEventListener('click',function(){gCur=g.id;LS.set('tt_gcur',gCur);renderGames()});T.appendChild(b)});
+      b.addEventListener('click',function(){gCur=g.id;LS.set('tt_gcur',gCur);location.hash='#juegos/'+g.id});T.appendChild(b)});
     $$('#gDif button').forEach(function(b){b.classList.toggle('on',+b.dataset.d===gDif)});
+    T.style.display=gInGame?'none':'';$('#gPlay').hidden=!gInGame;
+    if(!gInGame){$('#gBox').textContent='';return}
     var box=$('#gBox');clr(box);
     Promise.all([GP,ESP,TOP]).then(function(){
       clr(box);
@@ -2049,7 +2052,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   }
   $('#gDif').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;gDif=+b.dataset.d;LS.set('tt_gdif',String(gDif));renderGames()});
   $('#gLbSeg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;gLbMode=b.dataset.m;renderLb()});
-  setInterval(function(){if(!document.hidden&&location.hash==='#juegos')renderLb()},30000);
+  setInterval(function(){if(!document.hidden&&location.hash.indexOf('#juegos/')===0)renderLb()},30000);
 
   /* --- Cuadro Cruzado (3x3) --- */
   var GRD={1:[6,60,1],2:[3,25,0],3:[1,6,0]};
