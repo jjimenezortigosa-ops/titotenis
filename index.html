@@ -333,6 +333,7 @@ footer a{color:var(--ball)}
 
 .subnav{margin-bottom:14px}.subnav a{text-decoration:none;color:var(--mute);padding:10px 16px;border-radius:999px;font-weight:600;min-height:44px;display:inline-flex;align-items:center}.subnav a.on{background:var(--chalk);color:var(--ink)}
 .gfb{display:flex;align-items:center;gap:10px;margin:10px 0;font-weight:600}.gtk{flex:none;width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:#fff;animation:gpop .35s ease}.gfb.ok .gtk{background:#1F9D55}.gfb.no .gtk{background:#D64545}@keyframes gpop{0%{transform:scale(.3)}70%{transform:scale(1.2)}100%{transform:scale(1)}}
+.geRing{margin:10px auto 14px;width:132px;height:132px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;border:7px solid #D6E84B;animation:gpop .45s ease}.geRing.mid{border-color:#F5B83D}.geRing.lo{border-color:#D64545}.geRing b{font-size:30px}.geRing small{color:var(--mute)}.geEm{text-align:center;font-size:22px;letter-spacing:2px;white-space:pre-wrap}#gEnd h4{margin:6px 0}.geStats{display:flex;gap:8px;margin-bottom:8px}.geStats>div{flex:1;background:rgba(255,255,255,.06);border-radius:10px;padding:8px;text-align:center;display:flex;flex-direction:column}.geStats b{font-size:20px}.geStats small{color:var(--mute)}.geList{list-style:none;padding:0;margin:0 0 14px;color:var(--mute);font-size:13px;display:grid;gap:4px}
 .gmine{list-style:none;padding:0;margin:0;display:grid;gap:6px}
 .lifefx{position:fixed;inset:0;z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(10,20,18,.55);pointer-events:none;animation:lfin .2s ease}
 .lifefx.out{opacity:0;transition:opacity .4s}.lfh{font-size:96px;animation:lfbeat .9s ease both}.lft{font-weight:800;font-size:22px;color:#fff}.lfs{color:#cfe;font-size:14px;margin-top:4px;text-align:center;padding:0 20px}
@@ -737,6 +738,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     </div></div>
   </div>
 </section>
+<dialog id="gEnd" aria-labelledby="geT"><div id="geB"></div></dialog>
 <dialog id="gDlg" aria-labelledby="gT">
   <h3 id="gT">Elige un jugador</h3>
   <input class="field" id="gIn" placeholder="Escribe un apellido…" autocomplete="off" maxlength="40" aria-label="Buscar jugador">
@@ -2038,7 +2040,28 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       b.addEventListener('click',function(){var n=inp.value.trim();if(!n){inp.focus();return}LS.set('tt_name',n);b.disabled=true;
         sbInsert('score',newId(),{game:game,day:day,name:n,uid:myUid,score:score,max:max,dif:dif,secs:secs,ts:Date.now()}).then(function(){LS.set(sk,'1');toast('Enviado. Ya estás en la clasificación.');renderGames()}).catch(function(){b.disabled=false;toast('No se pudo enviar. Inténtalo otra vez.')})});
       f.appendChild(inp);f.appendChild(b);w.appendChild(f)}
-    box.appendChild(w)}
+    box.appendChild(w);
+    endPopup(score,max,share)}
+  function histKey(){return 'tt_hist_'+gCur}
+  function endPopup(score,max,share){
+    var day=dayStr(),secs=secsOf(loadSt({})),H=lsj(histKey())||[],ex=H.filter(function(h){return h.day===day&&h.dif===gDif})[0];
+    if(!ex){H.push({day:day,dif:gDif,score:score,max:max,secs:secs});H=H.slice(-60);LS.set(histKey(),JSON.stringify(H))}
+    var pk2='tt_pop_'+gid()+'_'+day;if(LS.get(pk2))return;LS.set(pk2,'1');
+    var d=$('#gEnd'),B=$('#geB');clr(B);
+    var pct=max?Math.round(100*score/max):0;
+    B.appendChild(el('h3',null,gname()+' · '+DIFN[gDif]));
+    var ring=el('div','geRing'+(pct>=70?' hi':pct>=40?' mid':' lo'));ring.appendChild(el('b',null,score+'/'+max));ring.appendChild(el('small',null,pct+'% · '+secs+' s'));B.appendChild(ring);
+    var em=(share.match(/[🟩🟥⬛🟨⬜🟦✅❌]+/gu)||[]).join('');
+    if(em)B.appendChild(el('p','geEm',em));
+    var mine=H.filter(function(h){return true}),n=mine.length,avg=n?Math.round(mine.reduce(function(s,h){return s+(h.max?100*h.score/h.max:0)},0)/n):0,best=mine.reduce(function(m,h){return Math.max(m,h.max?Math.round(100*h.score/h.max):0)},0);
+    B.appendChild(el('h4',null,'Tu historial en este juego'));
+    var st=el('div','geStats');[[n,'partidas'],[avg+'%','media'],[best+'%','mejor']].forEach(function(x){var c=el('div');c.appendChild(el('b',null,String(x[0])));c.appendChild(el('small',null,x[1]));st.appendChild(c)});B.appendChild(st);
+    var ul=el('ul','geList');mine.slice(-5).reverse().forEach(function(h){ul.appendChild(el('li',null,dayEs(h.day)+' · '+DIFN[h.dif]+' · '+h.score+'/'+h.max+' · '+h.secs+' s'))});B.appendChild(ul);
+    var row=el('div','row');
+    var wa=el('a','btn','Compartir');wa.target='_blank';wa.rel='noopener';wa.href='https://wa.me/?text='+encodeURIComponent(share);row.appendChild(wa);
+    var nx=el('button','btn ghost','Siguiente juego');nx.type='button';nx.addEventListener('click',function(){d.close();var i=GAMES.map(function(g){return g.id}).indexOf(gCur);location.hash='#juegos/'+GAMES[(i+1)%GAMES.length].id});row.appendChild(nx);
+    var cl=el('button','btn ghost','Cerrar');cl.type='button';cl.addEventListener('click',function(){d.close()});row.appendChild(cl);B.appendChild(row);
+    try{d.showModal()}catch(e){}}
   function renderLb(){
     var ol=$('#gLb');if(!ol)return;var day=dayStr(),wk=gLbMode==='wk';
     $$('#gLbSeg button').forEach(function(b){b.classList.toggle('on',b.dataset.m===gLbMode)});
