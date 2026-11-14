@@ -673,12 +673,13 @@ footer a{color:var(--ball)}
   <div class="wrap">
     <div class="sec-head"><div><h1>Créditos de fotos</h1>
       <p>Las fotos de jugadores proceden de Wikimedia Commons u otras fuentes con licencia libre. Aquí tienes el autor y la licencia de cada una.</p></div></div>
+    <p class="srcline">Resultados históricos de partidos: base pública <a href="https://stats.tennismylife.org/tennis-match-database" target="_blank" rel="noopener">TML-Database (Tennismylife)</a>, usada sin ánimo de lucro. Lista de jugadores: Tennis Abstract.</p>
     <div class="panel"><ul id="credList" class="srcline" style="list-style:none;padding:0"></ul></div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">TitoTenis · <a href="#creditos" style="color:inherit">Créditos de fotos</a></div>
+  <div class="wrap">TitoTenis · <a href="#creditos" style="color:inherit">Créditos</a></div>
 </footer>
 
 <script>
@@ -740,7 +741,8 @@ footer a{color:var(--ball)}
   var nseg='',nsel='';
   function sname(n){return norm(n).replace(/[^a-z\s-]/g,'').trim().split(/\s+/).pop()||''}
   function mentions(text,key){if(!key)return false;return new RegExp('(^|[^a-z])'+key+'([^a-z]|$)').test(norm(text))}
-  var POOL=null,JUG=[],HIST=[];
+  var POOL=null,JUG=[],HIST=[],BASE=null,BIDX={},BASE_P=null;
+  function isP(x,name,m){return m&&m.b?pk(x)===pk(name):pm(x,name)}
   function pk(n){var w=norm(n).replace(/[^a-z\s-]/g,' ').trim().split(/\s+/);return w[w.length-1]+'|'+w[0].charAt(0)}
   function playerPool(){
     if(POOL)return POOL;
@@ -800,25 +802,28 @@ footer a{color:var(--ball)}
     var s=norm(m.surf||'');if(/dura/.test(s))return 'dura';if(/tierra|arcilla/.test(s))return 'tierra';if(/hierba|cesped/.test(s))return 'hierba';
     var t=(m.tour||'')+' '+(m.det||'');if(/pista dura/i.test(t))return 'dura';if(GRASS.test(t))return 'hierba';if(CLAY.test(t))return 'tierra';return 'dura';
   }
-  function allMatches(){
+  function allMatches(name){
     var out=[],seen={};
     function push(m){var k=norm(sname(m.w)+sname(m.l)+(m.score||''));if(seen[k])return;seen[k]=1;m.surf=surfOf(m);out.push(m)}
     HIST.forEach(function(h){push({date:h.date||'',surf:h.surf,tour:h.tour||'',w:h.w,l:h.l,score:h.score||''})});
     (DATA.results||[]).concat(FEAT||[]).forEach(function(x){if(!shown(x.cat||'atp'))return;var n=parseNames(x);if(!n)return;
       var w=n.w!=null&&typeof n.w==='string'?n.w:(typeof n.w==='number'?(n.w?n.b:n.a):n.a),l=w===n.a?n.b:n.a;
       push({date:x.date||'',tour:x.tour||'',det:x.det||'',w:w,l:l,score:x.score||''})});
+    if(BASE&&name){var set=BIDX[pk(name)]||{},SN={d:'dura',t:'tierra',h:'hierba'};
+      BASE.m.forEach(function(r){if(set[r[4]]||set[r[5]])out.push({b:1,date:r[0],surf:SN[r[1]],tour:BASE.t[r[2]]+' · '+r[3],w:BASE.j[r[4]],l:BASE.j[r[5]],score:r[6]})})}
     out.sort(function(a,b){return (b.date||'0')<(a.date||'0')?-1:(b.date||'0')>(a.date||'0')?1:0});
     return out;
   }
   function resRow(m,name){
-    var won=pm(m.w,name),opp=won?m.l:m.w;
+    var won=isP(m.w,name,m),opp=won?m.l:m.w;
     var r=el('div','pdr res');var b=el('span','wl '+(won?'w':'l'),won?'V':'D');b.title=won?'Victoria':'Derrota';r.appendChild(b);
     var t=el('div','rt');t.appendChild(el('b',null,'VS '+opp+' · '+m.score));
-    t.appendChild(el('small',null,(m.tour||'ATP')+(m.date?' · '+fmtShort(m.date):'')+' · '+({dura:'pista dura',tierra:'tierra batida',hierba:'hierba'}[m.surf]||'')));
+    t.appendChild(el('small',null,(m.tour||'ATP')+(m.date?' · '+(m.b?new Date(m.date+'T12:00:00Z').toLocaleDateString('es-ES',{month:'short',year:'numeric',timeZone:'UTC'}):fmtShort(m.date)):'')+' · '+({dura:'pista dura',tierra:'tierra batida',hierba:'hierba'}[m.surf]||'')));
     r.appendChild(t);return r;
   }
   function pSection(box,title){var h=el('h4','pdh',title);box.appendChild(h);var d=el('div','pdl');box.appendChild(d);return d}
-  function openPlayer(q){
+  function openPlayer(q){(BASE_P||Promise.resolve()).then(function(){openPlayer0(q)})}
+  function openPlayer0(q){
     var name=resolvePlayer(q),dlg=$('#plDlg'),body=$('#plBody');body.textContent='';
     var head=$('#plHead');head.textContent='';
     function show(){if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','')}
@@ -847,7 +852,7 @@ footer a{color:var(--ball)}
       s1.appendChild(b);
     });
     /* últimos 5 resultados */
-    var ms=allMatches().filter(function(m){return pm(m.w,name)||pm(m.l,name)});
+    var ms=allMatches(name).filter(function(m){return isP(m.w,name,m)||isP(m.l,name,m)});
     var s2=pSection(body,'Resultados recientes');
     if(!ms.length)s2.appendChild(el('p','pdempty','Todavía no tenemos resultados guardados de este jugador.'));
     ms.slice(0,5).forEach(function(m){s2.appendChild(resRow(m,name))});
@@ -867,6 +872,7 @@ footer a{color:var(--ball)}
       f.forEach(function(m){lst.appendChild(resRow(m,name))})}
     sel.addEventListener('change',fill);
     tb.addEventListener('click',function(){var o=pan.hidden;pan.hidden=!o;tb.setAttribute('aria-expanded',String(o));tb.textContent=o?'Ocultar últimos resultados':'Ver últimos resultados';if(o)fill()});
+    if(BASE)body.appendChild(el('p','pdempty','Resultados anteriores: base pública TML (Tennismylife) hasta el '+fmtShort(BASE.hasta)+'. Lo posterior se añade con las actualizaciones.'));
     $('#plVid').href=ytUrl(name);
     show();
   }
@@ -1433,6 +1439,7 @@ footer a{color:var(--ball)}
   var FEAT=[];
   fetch('destacados.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){FEAT=(j&&j.destacados)||[];if(typeof renderMatches==='function')renderMatches()}).catch(function(){});
   fetch('jugadores.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){JUG=(j&&j.jugadores)||[];POOL=null;buildSub()}).catch(function(){});
+  BASE_P=fetch('historial_base.json').then(function(r){return r.ok?r.json():null}).then(function(j){if(!j||!j.m)return;BASE=j;BIDX={};j.j.forEach(function(n,i){var k=pk(n);(BIDX[k]=BIDX[k]||{})[i]=1})}).catch(function(){});
   fetch('historial.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){HIST=(j&&j.partidos)||[];POOL=null}).catch(function(){});
   fetch('fotos.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){PHOTOS=j||{};POOL=null;if(typeof renderMatches==='function')renderMatches();if(typeof renderNews==='function'&&DATA.news.length)renderNews();if(location.hash==='#creditos')renderCreds()}).catch(function(){});
   function renderDetail(){
