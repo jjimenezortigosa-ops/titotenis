@@ -27,7 +27,7 @@ def iso(d): return d[:4]+'-'+d[4:6]+'-'+d[6:]
 T = {}
 for r in rows:
     k = (r['_s'], r['tourney_id'])
-    t = T.setdefault(k, {'a':r['_s'],'n':r['tourney_name'],'nv':LEVEL.get(r['tourney_level'],'Otros'),'s':SURF[r['surface']],'c':r['indoor']=='I','d1':r['tourney_date'],'d2':r['tourney_date'],'dr':r['draw_size'],'cam':'','fin':'','mar':'','np':0})
+    t = T.setdefault(k, {'k':str(r['_s'])+'-'+r['tourney_id'],'a':r['_s'],'n':r['tourney_name'],'nv':LEVEL.get(r['tourney_level'],'Otros'),'s':SURF[r['surface']],'c':r['indoor']=='I','d1':r['tourney_date'],'d2':r['tourney_date'],'dr':r['draw_size'],'cam':'','fin':'','mar':'','np':0})
     t['d1'] = min(t['d1'], r['tourney_date']); t['d2'] = max(t['d2'], r['tourney_date']); t['np'] += 1
     if r['round']=='F' and r['tourney_name'] not in NO_TITLE and 'vs' not in r['tourney_name']:
         t['cam'], t['fin'], t['mar'] = r['winner_name'], r['loser_name'], r['score']
@@ -36,6 +36,14 @@ for t in tor:
     t['d1'] = iso(t['d1']); t['d2'] = iso(t['d2'])
     if t['d2'] == t['d1']: t['d2'] = ''
 json.dump({'torneos':tor}, open(os.path.join(out,'torneos.json'),'w',encoding='utf-8'), ensure_ascii=False, separators=(',',':'))
+# ---------- cuadros (partidos de cada torneo) ----------
+ORD = {'R128':0,'R64':1,'R32':2,'R16':3,'RR':3,'QF':4,'SF':5,'BR':5,'F':6}
+C = {}
+for r in rows:
+    if r['score'] in ('', 'W/O') or 'W/O' in r['score'] or r['round'] not in ORD: continue
+    C.setdefault(str(r['_s'])+'-'+r['tourney_id'], []).append([r['round'], r['winner_name'], r['loser_name'], r['score'], int(r['match_num'] or 0)])
+for k in C: C[k].sort(key=lambda m:(ORD[m[0]], m[4]))
+json.dump(C, open(os.path.join(out,'cuadros.json'),'w',encoding='utf-8'), ensure_ascii=False, separators=(',',':'))
 # ---------- evolución del ranking ----------
 E = {}
 first = {}

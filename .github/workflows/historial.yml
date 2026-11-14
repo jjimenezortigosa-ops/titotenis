@@ -32,5 +32,5 @@ jobs:
           python3 -c "import json;j=json.load(open('/tmp/historial_base.json'));assert len(j['m'])>5000"
           git config user.name "titotenis-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add historial_base.json torneos.json evolucion.json estadisticas.json juegos.json
+          git add historial_base.json cuadros.json torneos.json evolucion.json estadisticas.json juegos.json
           git diff --cached --quiet || (git commit -m "Actualizar historial de partidos" && git push)
