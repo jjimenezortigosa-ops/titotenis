@@ -1,70 +1,7 @@
 {
-  "updated": "14 nov 2026, 18:15 (Madrid)",
+  "updated": "14 nov 2026, 19:50 (Madrid)",
   "matches": [],
-  "results": [
-    {
-      "id": "sr:76430186",
-      "cat": "atp",
-      "tour": "ATP 250 Estocolmo",
-      "text": "Taylor Fritz gana a Lorenzo Musetti",
-      "score": "6-4 6-2",
-      "det": "Semifinal · pista dura cubierta · 7 aces a 3 · Fritz convirtió 3 de 4 bolas de rotura y Musetti no tuvo ninguna",
-      "stats": {
-        "names": [
-          "Fritz",
-          "Musetti"
-        ],
-        "src": "tennis.com, partido del 13 nov 2026",
-        "rows": [
-          [
-            "Aces",
-            "7",
-            "3",
-            7,
-            3
-          ],
-          [
-            "Primeros saques dentro",
-            "76 %",
-            "69 %",
-            76,
-            69
-          ],
-          [
-            "Puntos ganados con 1.º saque",
-            "81 %",
-            "68 %",
-            81,
-            68
-          ],
-          [
-            "Puntos ganados con 2.º saque",
-            "78 %",
-            "36 %",
-            78,
-            36
-          ],
-          [
-            "Bolas de rotura convertidas",
-            "3 de 4",
-            "0",
-            3,
-            0
-          ]
-        ]
-      },
-      "juegos": "baaababababaaaaaba",
-      "juegosSrc": "crónica en directo de Virgilio.it. El juego 6 del segundo set no sale en la crónica y se deduce del marcador (5-1)."
-    },
-    {
-      "cat": "atp",
-      "tour": "ATP 250 Estocolmo",
-      "text": "Thiago Agustín Tirante gana a Alejandro Tabilo",
-      "score": "7-5 7-6",
-      "id": "res-thiago-agust-n-tirante-gana-a-alejandro-",
-      "det": "Cuartos de final de Estocolmo · dos sets, el segundo en tie-break"
-    }
-  ],
+  "results": [],
   "news": [
     {
       "id": "atp-ranking-9-nov-fritz-vuelve-al-top-10",
@@ -82,29 +19,6 @@
         "Ruud es quien más sube de los veinte primeros: cinco puestos hasta el 18.º, con 2.435 puntos, por llegar a semifinales, su segundo mejor resultado en un Masters 1000 esta temporada.",
         "En el otro lado, Jódar baja del 10.º al 11.º y Djokovic del 11.º al 12.º. Tommy Paul sube un puesto hasta el 13.º, y Auger-Aliassime y Nakashima bajan uno. El top 10 queda con De Minaur noveno (3.370) y Tiafoe octavo (3.390), sin cambios."
       ]
-    },
-    {
-      "cat": "atp",
-      "tag": "Estocolmo",
-      "cls": "est",
-      "t": "Fritz derrota a Musetti y jugará la final de Estocolmo",
-      "d": "Fritz ganó 6-4 y 6-2 en la semifinal. Sacó siete aces, convirtió tres de sus cuatro bolas de rotura y Musetti no tuvo ni una. Es el cabeza de serie 1 del torneo.",
-      "s": "Datos del proveedor deportivo",
-      "u": "",
-      "w": "Hoy",
-      "live": false,
-      "id": "atp-fritz-y-musetti-juegan-hoy-la-semifinal-de-estocolmo"
-    },
-    {
-      "cat": "atp",
-      "tag": "Estocolmo",
-      "cls": "est",
-      "t": "Musetti llegó a cuartos en Estocolmo sin ceder terreno",
-      "d": "Musetti ganó 6-1 y 6-4 al británico Toby Samuel y llegaba al torneo con un 8-2 en pista dura cubierta esta temporada, título de Lyon incluido.",
-      "s": "Tennis Majors",
-      "u": "https://www.tennismajors.com/?p=866628",
-      "w": "10 nov",
-      "id": "atp-musetti-lleg-a-cuartos-en-estocolmo-sin-ceder-terreno"
     },
     {
       "cat": "atp",
@@ -127,17 +41,6 @@
       "u": "https://www.atptour.com/es/news/nitto-atp-finals-2026-field-is-set",
       "w": "6 nov",
       "id": "atp-j-dar-completa-el-cuadro-de-tur-n"
-    },
-    {
-      "cat": "atp",
-      "tag": "Resultados",
-      "cls": "res",
-      "t": "Tirante deja fuera a Tabilo en Estocolmo",
-      "d": "El argentino Thiago Agustín Tirante ganó a Alejandro Tabilo por 7-5 y 7-6 en el torneo sueco.",
-      "s": "Datos deportivos en directo",
-      "u": "",
-      "w": "Hoy",
-      "id": "atp-tirante-deja-fuera-a-tabilo-en-estocolmo"
     },
     {
       "cat": "atp",
@@ -317,39 +220,6 @@
       }
     },
     {
-      "id": "atp-estocolmo-final-2026",
-      "cat": "atp",
-      "tour": "ATP 250 Estocolmo · final",
-      "names": [
-        "Taylor Fritz",
-        "Thiago Agustín Tirante"
-      ],
-      "time": "13:00 (hora de Madrid)",
-      "day": "2026-11-14",
-      "prev": {
-        "pista": [
-          "Kungliga Tennishallen, Estocolmo, pista dura cubierta (Centre Court)."
-        ],
-        "h2h": [
-          "Tirante gana 1-0: ganó a Fritz en Montreal (Masters 1000) el 6 de agosto de 2026 por 7-5, 6-3, con 25 de 26 puntos ganados con el primer saque (ATP Tour)."
-        ],
-        "h2hScore": [
-          0,
-          1
-        ],
-        "forma": [
-          "Fritz (n.º 10, cabeza de serie 1): 45-22 en 2026, un título (Washington), 1-4 en finales este año, última derrota ante Musetti en Lyon. Es su sexta final de 2026 y suma 15 victorias en pista cubierta, líder del circuito (tennistourtalk). En semifinales ganó a Musetti 6-4, 6-2 sin afrontar bolas de rotura.",
-          "Tirante (n.º 51): primera final ATP, 31 victorias en el circuito (récord personal) y mejor ranking. Ganó a Tabilo 7-5, 7-6(1) con 14 aces (tennistourtalk)."
-        ],
-        "claves": [
-          "Lectura de TitoTenis: en pista cubierta rápida el saque de Fritz le da ventaja; Tirante ya le superó en Montreal con el primer saque y necesita repetir ese plan sin la presión añadida de su primera final."
-        ],
-        "faltan": [
-          "Estadísticas de saque y resto de 2026 de ambos: dato no disponible."
-        ]
-      }
-    },
-    {
       "id": "atpf-alcaraz-tiafoe",
       "cat": "atp",
       "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
@@ -424,30 +294,7 @@
       }
     }
   ],
-  "analisis": [
-    {
-      "id": "sr:76430186",
-      "title": "Fritz 6-4 6-2 Musetti",
-      "tour": "ATP 250 Estocolmo · semifinal",
-      "surf": "Pista dura cubierta (rápida)",
-      "score": "6-4 6-2",
-      "resumen": [
-        "El partido se decidió en el segundo saque de Musetti: ganó solo 5 de 14 puntos con él (36 %), mientras Fritz mantuvo el 78 % con el suyo.",
-        "Fritz metió el 76 % de primeros saques y ganó el 81 % de esos puntos; Musetti, 69 % y 68 %. No hubo juegos de saque cómodos para el italiano.",
-        "Fritz rompió 3 veces con 4 bolas de rotura y no tuvo que defender ninguna. Musetti no tuvo ni una oportunidad de rotura.",
-        "7 aces a 3: una victoria de dominio, que además le deja el cara a cara en 4-5 tras perder la final de Lyon."
-      ],
-      "claves": [
-        "Patrón: en pista cubierta rápida, un segundo saque que se queda corto se castiga de inmediato. Musetti necesita ganar más puntos tras el primer golpe para no vivir de ese segundo saque.",
-        "Ajuste entre sets: tras el 6-4, el segundo set fue 6-2. Los números sugieren que Musetti no encontró un plan distinto, por ejemplo cambiar alturas y direcciones para sacar a Fritz de su derecha.",
-        "Momento clave: sin bolas de rotura a favor, el partido no tuvo un solo punto de presión sobre el servicio de Fritz, y eso es lo que más pesa en lo mental.",
-        "Lo que mira un analista antes de la final: Fritz llega con el saque funcionando y confianza en su servicio; lo que decida será si su rival le obliga a jugar puntos largos."
-      ],
-      "cmp": [
-        "Primer partido de pista dura cubierta en nuestro archivo, así que todavía no hay base para comparar. Cada día que se juegue en esta superficie, TitoTenis lo irá sumando y aquí aparecerá la comparación con otros partidos reales de ATP y WTA."
-      ]
-    }
-  ],
+  "analisis": [],
   "archivo": [
     {
       "id": "sr:76430186",
