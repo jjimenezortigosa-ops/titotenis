@@ -86,6 +86,27 @@ nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:thin}
 .news .card.nw.wacard h3{color:#fff}
 .news .card.nw .wak{font-size:12px;font-weight:800;letter-spacing:.1em;color:#d9fdd3;margin-bottom:auto}
 
+.ps{position:relative}
+.psl{position:absolute;top:calc(100% + 6px);left:0;min-width:250px;max-height:340px;overflow:auto;margin:0;padding:6px;list-style:none;background:var(--ink-2);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.45);z-index:60}
+.psl[hidden]{display:none}
+.psl button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--chalk);padding:8px 10px;border-radius:8px;font:inherit;cursor:pointer}
+.psl button:hover,.psl button:focus{background:rgba(214,232,75,.15);color:#D6E84B}
+.psl .none{padding:8px 10px;color:var(--mute)}
+#plDlg .pdempty{color:var(--mute);margin:4px 0;font-size:14px}
+#plDlg .pdm{display:flex;flex-direction:column;gap:2px;width:100%;text-align:left;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:12px;color:var(--chalk);padding:10px 14px;margin:6px 0;font:inherit;cursor:pointer}
+#plDlg .pdm:hover{border-color:#D6E84B}
+#plDlg .pdm b{font-size:16px}
+#plDlg .pdm small{color:var(--mute)}
+#plDlg .pdr.res{flex-direction:row;align-items:center;gap:12px}
+#plDlg .wl{flex:none;width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff}
+#plDlg .wl.w{background:#1F9D55}
+#plDlg .wl.l{background:#D6383B}
+#plDlg .rt{display:flex;flex-direction:column;gap:2px}
+#plDlg .pdtog{margin-top:14px}
+#plDlg .pdpan{margin-top:10px}
+#plDlg .pdpan[hidden]{display:none}
+#plDlg .pdsel{width:100%;background:var(--ink);color:var(--chalk);border:1px solid var(--line);border-radius:10px;padding:9px 12px;font:inherit;margin-bottom:6px}
+
 .howto{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 22px}
 .howto>div{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
 .howto b{font-size:26px;color:#D6E84B;line-height:1}
@@ -393,7 +414,7 @@ footer a{color:var(--ball)}
       </svg>
       <b><span>T</span>ito<span>T</span>enis</b>
     </a>
-    <form class="ps" id="psF" role="search"><input id="psQ" list="plist" placeholder="Buscar jugador" aria-label="Buscar jugador" autocomplete="off" maxlength="40"><datalist id="plist"></datalist></form>
+    <form class="ps" id="psF" role="search"><input id="psQ" placeholder="Buscar jugador" aria-label="Buscar jugador" autocomplete="off" maxlength="40"><ul class="psl" id="psL" hidden></ul></form>
     <div class="soc" id="soc" aria-label="Redes de TitoTenis">
       <a id="socWa" target="_blank" rel="noopener" aria-label="WhatsApp" title="Grupo de WhatsApp" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2zm0 18.1a8.1 8.1 0 0 1-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.1 8.1 0 1 1 12 20.100zm4.5-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.200-.3.200-.5.100a6.600 6.600 0 0 1-3.300-2.900c-.2-.4.2-.4.700-1.300.1-.2 0-.3 0-.5l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.300 3 3 0 0 0-.9 2.200c0 1.300.9 2.500 1 2.700.1.200 1.800 2.800 4.400 3.900 1.600.7 2.200.7 3 .6.500-.1 1.500-.6 1.700-1.200.2-.6.2-1.100.2-1.200-.1-.1-.3-.2-.5-.3z"/></svg></a>
       <a id="socIg" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.500A4.500 4.500 0 1 1 7.500 12 4.500 4.500 0 0 1 12 7.500zm0 2A2.500 2.500 0 1 0 14.500 12 2.500 2.500 0 0 0 12 9.500zM17.300 5.800a1.100 1.100 0 1 1-1.100 1.100 1.100 1.100 0 0 1 1.100-1.100z"/></svg></a>
@@ -417,7 +438,6 @@ footer a{color:var(--ball)}
     <div class="sec-head">
       <div>
         <h1>Noticias</h1>
-        <p>Noticias reales del circuito, con un resumen corto escrito por TitoTenis y el enlace a la fuente original. Actualizado: <span class="upd">cargando…</span></p>
       </div>
     </div>
     <div id="hero"></div>
@@ -720,25 +740,39 @@ footer a{color:var(--ball)}
   var nseg='',nsel='';
   function sname(n){return norm(n).replace(/[^a-z\s-]/g,'').trim().split(/\s+/).pop()||''}
   function mentions(text,key){if(!key)return false;return new RegExp('(^|[^a-z])'+key+'([^a-z]|$)').test(norm(text))}
+  var POOL=null,JUG=[],HIST=[];
+  function pk(n){var w=norm(n).replace(/[^a-z\s-]/g,' ').trim().split(/\s+/);return w[w.length-1]+'|'+w[0].charAt(0)}
   function playerPool(){
+    if(POOL)return POOL;
     var P={};
-    function add(n){if(!n)return;n=String(n).trim();var k=sname(n);if(!k)return;if(!P[k]||n.length>P[k].length)P[k]=n}
+    function add(n){if(!n)return;n=String(n).trim();if(n.split(/\s+/).length<2)return;var k=pk(n);if(!P[k])P[k]=n}
     Object.keys(PHOTOS||{}).forEach(add);
     (DATA.scheduled||[]).forEach(function(x){(x.names||[]).forEach(add)});
     (DATA.results||[]).concat(FEAT||[]).forEach(function(x){var n=parseNames(x);if(n){add(n.a);add(n.b)}});
-    return P;
+    HIST.forEach(function(m){add(m.w);add(m.l)});
+    JUG.forEach(add);
+    POOL=P;return P;
   }
-  function resolvePlayer(q){
-    var P=playerPool(),nq=norm(q).trim();if(!nq)return null;
-    var ks=Object.keys(P);
-    var k=sname(q);if(P[k])return P[k];
-    var hit=ks.filter(function(x){return x.indexOf(nq)===0})[0]||ks.filter(function(x){return norm(P[x]).indexOf(nq)>=0})[0];
-    return hit?P[hit]:null;
+  function surnameCount(last){var c=0,P=playerPool();Object.keys(P).forEach(function(k){if(sname(P[k])===last)c++});return c}
+  function pm(text,name){
+    var nt=norm(text),full=norm(name);if(nt.indexOf(full)>=0)return true;
+    var last=sname(name);if(surnameCount(last)>1)return false;return mentions(text,last);
   }
-  function refreshPlist(){
-    var dl=$('#plist');if(!dl)return;var P=playerPool();dl.textContent='';
-    Object.keys(P).sort().forEach(function(k){var o=document.createElement('option');o.value=P[k];dl.appendChild(o)});
+  function searchPlayers(q){
+    var nq=norm(q).trim();if(!nq)return [];var P=playerPool(),out=[];
+    Object.keys(P).forEach(function(k){
+      var n=P[k],w=norm(n).split(/\s+/),r=-1;
+      if(norm(n).indexOf(nq)===0)r=0;
+      else if(w[w.length-1].indexOf(nq)===0||w.slice(1).join(' ').indexOf(nq)===0)r=1;
+      else if(w.some(function(x){return x.indexOf(nq)===0}))r=2;
+      else if(nq.length>2&&norm(n).indexOf(nq)>=0)r=3;
+      if(r>=0)out.push({n:n,r:r})});
+    out.sort(function(a,b){return a.r-b.r||(norm(a.n)<norm(b.n)?-1:1)});
+    return out.map(function(o){return o.n});
   }
+  function resolvePlayer(q){var P=playerPool(),nq=norm(q).trim();if(!nq)return null;var r=searchPlayers(q);
+    var ex=r.filter(function(n){return norm(n)===nq})[0];return ex||r[0]||null}
+  function refreshPlist(){POOL=null;playerPool()}
   function faceEl(name,d){
     var box=el('span','facew'),ph=photoFor(name),a;
     if(ph&&ph.src){a=avatar(box,ph,d,'fav')}
@@ -747,8 +781,8 @@ footer a{color:var(--ball)}
     return box;
   }
   function ytUrl(q){return 'https://www.youtube.com/results?search_query='+encodeURIComponent(q+' resumen partido')}
-  function rankOf(key){
-    var out=null;
+  function rankOf(name){
+    var out=null,key=sname(name);if(surnameCount(key)>1)return null;
     (DATA.news||[]).forEach(function(n){
       if(out||n.cat!=='atp'||n.tag!=='Ranking')return;
       String(n.d||'').split(/(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚ])/).forEach(function(s){
@@ -758,51 +792,100 @@ footer a{color:var(--ball)}
     });
     return out;
   }
-  function pSection(box,title){var h=el('h4','pdh',title);box.appendChild(h);var d=el('div','pdl');box.appendChild(d);return d}
   function fmtDay(iso){if(!iso)return '';var d=new Date(iso+'T12:00:00Z');return d.toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long',timeZone:'UTC'})}
+  function fmtShort(iso){if(!iso||iso.length<10)return '';var d=new Date(iso+'T12:00:00Z');return d.toLocaleDateString('es-ES',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'})}
+  var CLAY=/roland|madrid|roma|monte.?carlo|montecarlo|barcelona|hamburg|m[uú]nich|estoril|ginebra|geneva|lyon|marrakech|houston|bucarest|kitzb|gstaad|umag|b[aå]stad|buenos aires|r[ií]o|santiago|c[oó]rdoba|belgrado|parma|cerde|tierra|arcilla/i;
+  var GRASS=/wimbledon|queen|halle|hertogenbosch|stuttgart|mallorca|eastbourne|newport|berl[ií]n|hierba|c[eé]sped/i;
+  function surfOf(m){
+    var s=norm(m.surf||'');if(/dura/.test(s))return 'dura';if(/tierra|arcilla/.test(s))return 'tierra';if(/hierba|cesped/.test(s))return 'hierba';
+    var t=(m.tour||'')+' '+(m.det||'');if(/pista dura/i.test(t))return 'dura';if(GRASS.test(t))return 'hierba';if(CLAY.test(t))return 'tierra';return 'dura';
+  }
+  function allMatches(){
+    var out=[],seen={};
+    function push(m){var k=norm(sname(m.w)+sname(m.l)+(m.score||''));if(seen[k])return;seen[k]=1;m.surf=surfOf(m);out.push(m)}
+    HIST.forEach(function(h){push({date:h.date||'',surf:h.surf,tour:h.tour||'',w:h.w,l:h.l,score:h.score||''})});
+    (DATA.results||[]).concat(FEAT||[]).forEach(function(x){if(!shown(x.cat||'atp'))return;var n=parseNames(x);if(!n)return;
+      var w=n.w!=null&&typeof n.w==='string'?n.w:(typeof n.w==='number'?(n.w?n.b:n.a):n.a),l=w===n.a?n.b:n.a;
+      push({date:x.date||'',tour:x.tour||'',det:x.det||'',w:w,l:l,score:x.score||''})});
+    out.sort(function(a,b){return (b.date||'0')<(a.date||'0')?-1:(b.date||'0')>(a.date||'0')?1:0});
+    return out;
+  }
+  function resRow(m,name){
+    var won=pm(m.w,name),opp=won?m.l:m.w;
+    var r=el('div','pdr res');var b=el('span','wl '+(won?'w':'l'),won?'V':'D');b.title=won?'Victoria':'Derrota';r.appendChild(b);
+    var t=el('div','rt');t.appendChild(el('b',null,'VS '+opp+' · '+m.score));
+    t.appendChild(el('small',null,(m.tour||'ATP')+(m.date?' · '+fmtShort(m.date):'')+' · '+({dura:'pista dura',tierra:'tierra batida',hierba:'hierba'}[m.surf]||'')));
+    r.appendChild(t);return r;
+  }
+  function pSection(box,title){var h=el('h4','pdh',title);box.appendChild(h);var d=el('div','pdl');box.appendChild(d);return d}
   function openPlayer(q){
     var name=resolvePlayer(q),dlg=$('#plDlg'),body=$('#plBody');body.textContent='';
+    var head=$('#plHead');head.textContent='';
+    function show(){if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','')}
     if(!name){
-      $('#plHead').textContent='';
-      body.appendChild(el('p',null,'No encontramos a «'+q+'» entre los jugadores de TitoTenis ahora mismo. Prueba con el apellido, por ejemplo «Alcaraz».'));
-      if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','');return;
+      body.appendChild(el('p',null,'No encontramos a «'+q+'» entre los jugadores de TitoTenis. Prueba con el apellido, por ejemplo «Alcaraz».'));
+      $('#plVid').hidden=true;show();return;
     }
-    var key=sname(name),head=$('#plHead');head.textContent='';
+    $('#plVid').hidden=false;
     head.appendChild(faceEl(name,96));
     var ht=el('div','pht');ht.appendChild(el('h3',null,name));
-    var rk=rankOf(key);
+    var rk=rankOf(name);
     ht.appendChild(el('p','pdsub',rk?'Ranking ATP: n.º '+rk.n:'Circuito ATP'));
     head.appendChild(ht);
-    var any=false;
-    /* próximo partido */
-    var nx=(DATA.scheduled||[]).filter(function(x){return (x.names||[]).some(function(m){return sname(m)===key})});
-    if(nx.length){any=true;var s1=pSection(body,'Próximo partido');
-      nx.slice(0,2).forEach(function(x){var opp=x.names.filter(function(m){return sname(m)!==key})[0]||'';
-        var r=el('div','pdr');r.appendChild(el('b',null,'contra '+opp));
-        r.appendChild(el('small',null,x.tour+' · '+fmtDay(x.day)+(x.time?' · '+x.time:'')));
-        var h=x.prev&&x.prev.h2hScore;if(h){var i=(x.names[0]&&sname(x.names[0])===key)?0:1;r.appendChild(el('small',null,'Cara a cara: '+h[i]+' – '+h[1-i]))}
-        s1.appendChild(r)})}
-    /* resultados recientes */
-    var rs=(DATA.results||[]).concat(FEAT||[]).filter(function(x){return mentions((x.text||'')+' '+((x.names||[]).join(' ')),key)});
-    if(rs.length){any=true;var s2=pSection(body,'Resultados recientes');
-      rs.slice(0,4).forEach(function(x){var r=el('div','pdr');r.appendChild(el('b',null,x.text+' · '+x.score));r.appendChild(el('small',null,x.tour));s2.appendChild(r)})}
-    /* estadísticas del último partido registrado */
-    var ar=(DATA.archivo||[]).filter(function(x){return (x.names||[]).some(function(m){return sname(m)===key})}).slice(-1)[0];
-    if(ar){any=true;var i=sname(ar.names[0])===key?0:1,s3=pSection(body,'Su último partido registrado');
-      var r3=el('div','pdr');
-      r3.appendChild(el('b',null,(ar.names[i]+' contra '+ar.names[1-i])+' · '+ar.tour));
-      r3.appendChild(el('small',null,'Primer saque: '+ar.p1saque[i]+' % · Puntos con segundo saque: '+ar.p2saque[i]+' % · Aces: '+ar.aces[i]+' · Dobles faltas: '+ar.df[i]));
-      s3.appendChild(r3)}
+    /* próximos partidos */
+    var nx=(DATA.scheduled||[]).filter(function(x){return shown(x.cat)&&(x.names||[]).some(function(m){return pm(m,name)})});
+    var s1=pSection(body,'Próximos partidos');
+    if(!nx.length)s1.appendChild(el('p','pdempty','No tiene partidos programados ahora mismo.'));
+    nx.forEach(function(x){
+      var opp=x.names.filter(function(m){return !pm(m,name)})[0]||'';
+      var b=el('button','pdm');b.type='button';
+      b.appendChild(el('b',null,'VS '+opp));
+      var h=x.prev&&x.prev.h2hScore,line=x.tour+' · '+fmtDay(x.day)+(x.time?' · '+x.time:'');
+      if(h){var i=pm(x.names[0],name)?0:1;line+=' · Cara a cara '+h[i]+'–'+h[1-i]}
+      b.appendChild(el('small',null,line));
+      b.addEventListener('click',function(){dlg.close();location.hash='#en-vivo'});
+      s1.appendChild(b);
+    });
+    /* últimos 5 resultados */
+    var ms=allMatches().filter(function(m){return pm(m.w,name)||pm(m.l,name)});
+    var s2=pSection(body,'Resultados recientes');
+    if(!ms.length)s2.appendChild(el('p','pdempty','Todavía no tenemos resultados guardados de este jugador.'));
+    ms.slice(0,5).forEach(function(m){s2.appendChild(resRow(m,name))});
     /* noticias */
-    var nw=(DATA.news||[]).filter(function(n){return shown(n.cat)&&mentions((n.t||'')+' '+(n.d||''),key)});
-    if(nw.length){any=true;var s4=pSection(body,'Noticias');
-      nw.slice(0,5).forEach(function(n){var a=el('button','pdn',n.t);a.type='button';a.addEventListener('click',function(){dlg.close();openNews(n)});s4.appendChild(a)})}
-    if(!any)body.appendChild(el('p',null,'Todavía no tenemos datos de este jugador. Las fichas se llenan con los partidos y noticias de cada actualización.'));
-    var vd=$('#plVid');vd.href=ytUrl(name);
-    if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','');
+    var nw=(DATA.news||[]).filter(function(n){return shown(n.cat)&&pm((n.t||'')+' '+(n.d||''),name)});
+    var s4=pSection(body,'Noticias destacadas');
+    if(!nw.length)s4.appendChild(el('p','pdempty','No hay noticias suyas en esta actualización.'));
+    nw.slice(0,5).forEach(function(n){var a=el('button','pdn',n.t);a.type='button';a.addEventListener('click',function(){dlg.close();openNews(n)});s4.appendChild(a)});
+    /* últimos resultados con filtro de superficie */
+    var tb=el('button','btn pdtog','Ver últimos resultados');tb.type='button';tb.setAttribute('aria-expanded','false');body.appendChild(tb);
+    var pan=el('div','pdpan');pan.hidden=true;body.appendChild(pan);
+    var sel=el('select','pdsel');[['','Todas las superficies'],['dura','Pista dura'],['tierra','Tierra batida'],['hierba','Hierba']].forEach(function(o){var op=el('option',null,o[1]);op.value=o[0];sel.appendChild(op)});
+    sel.setAttribute('aria-label','Superficie');
+    var lst=el('div','pdl');pan.appendChild(sel);pan.appendChild(lst);
+    function fill(){lst.textContent='';var v=sel.value,f=ms.filter(function(m){return !v||m.surf===v}).slice(0,50);
+      if(!f.length)lst.appendChild(el('p','pdempty','Todavía no tenemos resultados guardados'+(v?' en esa superficie':'')+' de este jugador. La lista crece con cada actualización.'));
+      f.forEach(function(m){lst.appendChild(resRow(m,name))})}
+    sel.addEventListener('change',fill);
+    tb.addEventListener('click',function(){var o=pan.hidden;pan.hidden=!o;tb.setAttribute('aria-expanded',String(o));tb.textContent=o?'Ocultar últimos resultados':'Ver últimos resultados';if(o)fill()});
+    $('#plVid').href=ytUrl(name);
+    show();
   }
   $('#plClose').addEventListener('click',function(){$('#plDlg').close()});
-  $('#psF').addEventListener('submit',function(e){e.preventDefault();var q=$('#psQ').value;if(q.trim()){openPlayer(q);$('#psQ').value=''}});
+  (function(){
+    var inp=$('#psQ'),ul=$('#psL');
+    function hide(){ul.hidden=true;ul.textContent=''}
+    function upd(){
+      var q=inp.value.trim();ul.textContent='';if(!q){ul.hidden=true;return}
+      var r=searchPlayers(q).slice(0,10);
+      if(!r.length){var li=el('li','none','Sin resultados');ul.appendChild(li);ul.hidden=false;return}
+      r.forEach(function(n){var li=el('li');var b=el('button',null,n);b.type='button';
+        b.addEventListener('mousedown',function(e){e.preventDefault()});
+        b.addEventListener('click',function(){inp.value='';hide();openPlayer(n)});li.appendChild(b);ul.appendChild(li)});
+      ul.hidden=false;
+    }
+    inp.addEventListener('input',upd);inp.addEventListener('focus',upd);inp.addEventListener('blur',function(){setTimeout(hide,150)});
+    $('#psF').addEventListener('submit',function(e){e.preventDefault();var q=inp.value;if(q.trim()){inp.value='';hide();openPlayer(q)}});
+  })();
   function clickNames(svg,list){
     svg.style.cursor='pointer';
     svg.addEventListener('click',function(e){
@@ -851,7 +934,7 @@ footer a{color:var(--ball)}
     var sc=kind==='prox'?(pick.prev&&pick.prev.h2hScore?pick.prev.h2hScore[0]+' – '+pick.prev.h2hScore[1]:''):pick.score;
     if(sc)mid.appendChild(el('span',null,sc));
     hv.appendChild(fa);hv.appendChild(mid);hv.appendChild(fb);c.appendChild(hv);
-    c.appendChild(el('h2',null,n.a+' contra '+n.b));
+    c.appendChild(el('h2',null,n.a+' VS '+n.b));
     c.appendChild(el('p','hsub',kind==='prox'?pick.tour+' · '+fmtDay(pick.day||t)+(pick.time?' · '+pick.time:''):pick.tour));
     var h2=kind==='prox'&&pick.prev&&pick.prev.h2h&&pick.prev.h2h[0];
     if(h2)c.appendChild(el('p','hh','Cara a cara: '+(h2.length>200?h2.slice(0,199)+'…':h2)));
@@ -1069,8 +1152,8 @@ footer a{color:var(--ball)}
   var SZ={};
   function photoFor(name){
     if(PHOTOS[name])return PHOTOS[name];
-    var last=String(name||'').trim().split(/\s+/).pop().toLowerCase();if(!last)return null;
-    var hit=null;Object.keys(PHOTOS).forEach(function(k){if(k.trim().split(/\s+/).pop().toLowerCase()===last)hit=PHOTOS[k]});
+    var last=norm(String(name||'').trim().split(/\s+/).pop());if(!last)return null;
+    var hit=null;Object.keys(PHOTOS).forEach(function(k){if(norm(k.trim().split(/\s+/).pop())===last)hit=PHOTOS[k]});
     return hit;
   }
   function placeImg(im,cx,ph,sz){
@@ -1349,7 +1432,9 @@ footer a{color:var(--ball)}
   });
   var FEAT=[];
   fetch('destacados.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){FEAT=(j&&j.destacados)||[];if(typeof renderMatches==='function')renderMatches()}).catch(function(){});
-  fetch('fotos.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){PHOTOS=j||{};if(typeof renderMatches==='function')renderMatches();if(typeof renderNews==='function'&&DATA.news.length)renderNews();if(location.hash==='#creditos')renderCreds()}).catch(function(){});
+  fetch('jugadores.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){JUG=(j&&j.jugadores)||[];POOL=null;buildSub()}).catch(function(){});
+  fetch('historial.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){HIST=(j&&j.partidos)||[];POOL=null}).catch(function(){});
+  fetch('fotos.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){PHOTOS=j||{};POOL=null;if(typeof renderMatches==='function')renderMatches();if(typeof renderNews==='function'&&DATA.news.length)renderNews();if(location.hash==='#creditos')renderCreds()}).catch(function(){});
   function renderDetail(){
     var m=curMatch();
     if(!m){$('#mTitle').textContent='';$('#mSub').textContent='';$('#stats').textContent='';$('#ctx').textContent='';return}
