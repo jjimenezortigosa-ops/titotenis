@@ -1961,7 +1961,8 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     $('#gHint').textContent=hard?'Modo difícil: no hay sugerencias. Escribe el nombre completo y pulsa Enviar.':'';
     gDlg.showModal();gIn.focus()}
   function suggest(){clr(gList);if(gHard)return;var q=norm(gIn.value.trim());if(q.length<2)return;var out=[];
-    G.p.forEach(function(p,i){if(gEx.indexOf(i)>=0)return;var n=G.n[i];if(n.indexOf(q)===0||n.split(' ').some(function(w){return w.indexOf(q)===0})||(q.length>3&&n.indexOf(q)>=0))out.push(i)});
+    G.p.forEach(function(p,i){if(gEx.indexOf(i)>=0)return;var n=G.n[i];if(n.indexOf(q)===0||n.split(' ').some(function(w){return w.indexOf(q)===0})||(q.length>=3&&n.indexOf(q)>=0))out.push(i)});
+    if(q.length>=3&&!out.length)G.p.forEach(function(p,i){if(gEx.indexOf(i)>=0||out.indexOf(i)>=0)return;if(G.n[i].split(' ').some(function(w){var x=w.slice(0,q.length);if(x.length!==q.length)return false;var d=0;for(var k=0;k<q.length;k++)if(x[k]!==q[k])d++;return d<=1}))out.push(i)});
     out.sort(function(a,b){return (G.p[a][5]||999)-(G.p[b][5]||999)});
     out.slice(0,8).forEach(function(i){var li=el('li');var b=el('button',null,G.p[i][0]);b.type='button';b.addEventListener('click',function(){var cb=gCb;gCb=null;gDlg.close();if(cb)cb(i)});li.appendChild(b);gList.appendChild(li)});
     if(!out.length)gList.appendChild(el('li','srcline','No hay ningún jugador con ese nombre.'))}
@@ -2120,8 +2121,8 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       row.appendChild(b);row.appendChild(g);box.appendChild(row)}
     else{
       if(!st.e){st.e=Date.now();saveSt(st)}
-      var ex=el('div'),miss=c.p.filter(function(i){return st.f.indexOf(i)<0}).sort(byRank).slice(0,6).map(function(i){return G.p[i][0]});
-      if(miss.length)ex.appendChild(el('p','srcline','Te faltaban, por ejemplo: '+miss.join(', ')));
+      var ex=el('div'),miss=c.p.filter(function(i){return st.f.indexOf(i)<0}).sort(byRank).map(function(i){return G.p[i][0]});
+      if(miss.length){ex.appendChild(el('p','srcline','Te faltaban ('+miss.length+'):'));var mc=el('div','gchips');miss.forEach(function(n){mc.appendChild(el('span','gchip',n))});ex.appendChild(mc)}
       finishUI(box,st.f.length,total,'TitoTenis · Lista Relámpago ('+DIFN[gDif]+') '+dayEs(day)+'\n'+c.t+': '+st.f.length+'/'+total+'\n'+location.origin+location.pathname,ex)}
   }
 
