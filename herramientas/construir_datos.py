@@ -2,11 +2,16 @@
 # Uso: python3 -I construir_datos.py jugadores.json carpeta_salida 2025:a.csv 2026:b.csv 2026:ongoing.csv
 import csv, json, sys, unicodedata, re, os
 def norm(s): return unicodedata.normalize('NFKD', s).encode('ascii','ignore').decode().lower()
+ALIAS = {'yunchaokete bu':'bu yunchaokete','daniel merida':'daniel merida aguilar'}
 def pk(n):
-    w = re.sub(r'[^a-z\s-]',' ',norm(n)).split()
+    s = re.sub(r'\s+',' ',norm(n).replace("'",'').replace('-',' ')).strip(); s = ALIAS.get(s,s)
+    w = re.sub(r'[^a-z\s]',' ',s).split()
     return w[-1]+'|'+w[0][0] if w else ''
 jug = json.load(open(sys.argv[1],encoding='utf-8'))['jugadores']
-mine = {pk(n) for n in jug}
+import collections as _c
+_cnt = _c.Counter(pk(n) for n in jug)
+AMB = {k for k,v in _cnt.items() if v>1}  # mismo apellido e inicial: se excluyen para no mezclar jugadores
+mine = {pk(n) for n in jug} - AMB
 out = sys.argv[2]
 SURF = {'Hard':'dura','Carpet':'dura','Clay':'tierra','Grass':'hierba'}
 LEVEL = {'G':'GS','M':'1000','500':'500','250':'250','F':'Finales'}
@@ -19,7 +24,7 @@ for arg in sys.argv[3:]:
     for r in csv.DictReader(open(path,encoding='utf-8')):
         if r['tourney_name'].startswith('Davis Cup') or r['tourney_level']=='D': continue
         if r['surface'] not in SURF: continue
-        k = (season, r['tourney_id'], r['match_num'])
+        k = (season, r['tourney_id'], r['match_num'] or (r['winner_name'], r['loser_name'], r['round']))
         if k in seen: continue
         seen.add(k); r['_s'] = season; rows.append(r)
 def iso(d): return d[:4]+'-'+d[4:6]+'-'+d[6:]

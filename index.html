@@ -903,7 +903,8 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   function mentions(text,key){if(!key)return false;return new RegExp('(^|[^a-z])'+key+'([^a-z]|$)').test(norm(text))}
   var POOL=null,JUG=[],HIST=[],BASE=null,BIDX={},BASE_P=null;
   function isP(x,name,m){return m&&m.b?pk(x)===pk(name):pm(x,name)}
-  function pk(n){var w=norm(n).replace(/[^a-z\s-]/g,' ').trim().split(/\s+/);return w[w.length-1]+'|'+w[0].charAt(0)}
+  var PKA={'yunchaokete bu':'bu yunchaokete','daniel merida':'daniel merida aguilar'};
+  function pk(n){var s=norm(n).replace(/'/g,'').replace(/-/g,' ').replace(/\s+/g,' ').trim();s=PKA[s]||s;var w=s.replace(/[^a-z\s]/g,' ').trim().split(/\s+/);return w[w.length-1]+'|'+w[0].charAt(0)}
   function playerPool(){
     if(POOL)return POOL;
     var P={};
@@ -2367,7 +2368,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
         var sf=el('div','srcline');var dot=el('span','tsf');dot.style.background=t.s==='tierra'?'#E2642D':t.s==='hierba'?'#42b85f':'#4FC3F7';sf.appendChild(dot);
         sf.appendChild(document.createTextNode((t.s==='tierra'?'Tierra':t.s==='hierba'?'Hierba':'Pista dura')+(t.c?' cubierta':'')+' · '+dr(t.d1,t.d2)+(t.dr?' · cuadro de '+t.dr:'')));r.appendChild(sf);
         if(t.cam){var w=el('div');w.appendChild(document.createTextNode('Campeón: '));var b=el('span','lk',t.cam);w.appendChild(b);w.appendChild(document.createTextNode(' · final contra '+t.fin+(t.mar?' ('+t.mar+')':'')));r.appendChild(w)}
-        else r.appendChild(el('div','srcline','Sin final jugada todavía o sin datos.'));r.appendChild(el('div','srcline','Pulsa para ver todos los partidos del cuadro →'));
+        else r.appendChild(el('div','srcline',(t.n==='United Cup'||t.n==='Laver Cup')?'Torneo por equipos: no hay campeón individual.':'Sin final jugada todavía o sin datos.'));r.appendChild(el('div','srcline','Pulsa para ver todos los partidos del cuadro →'));
         c.appendChild(r);box.appendChild(c)})});
   }
   $('#tYs').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;tY=+b.dataset.y;renderTorneos()});
@@ -2391,10 +2392,10 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   ];
   var stI=+(LS.get('tt_sti')||0);
   (function(){var s=$('#stSel');SC.forEach(function(c,i){var o=el('option',null,c.t);o.value=i;s.appendChild(o)});s.value=stI;s.addEventListener('change',function(){stI=+s.value;LS.set('tt_sti',String(stI));renderStats()})})();
-  function statRows(c){var L=[];Object.keys(ES.j).forEach(function(n){var s=ES.j[n];if(c.min&&s.pj<c.min)return;var v=c.f(s);if(v==null||isNaN(v))return;L.push([n,v])});L.sort(function(a,b){return b[1]-a[1]});return L}
+  function statRows(c){var L=[];Object.keys(ES.j).forEach(function(n){var s=ES.j[n];if(c.min&&s.pj<c.min)return;var v=c.f(s);if(v==null||isNaN(v))return;var gi=G&&G.k[pk(n)];L.push([gi!=null?G.p[gi][0]:n,v])});L.sort(function(a,b){return b[1]-a[1]});return L}
   function fmtV(c,v){return (c.d?v.toFixed(1):String(v))+(c.p?' %':'')}
   function renderStats(){
-    ESP.then(function(){
+    Promise.all([ESP,GP]).then(function(){
       var box=$('#stList'),lead=$('#stLead'),all=$('#stAll');clr(box);clr(lead);clr(all);
       if(!ES||!ES.j){box.appendChild(el('p','empty','No se han podido cargar las estadísticas.'));return}
       $('#stSub').textContent='Los mejores de la temporada '+ES.temporada+' en cada apartado.';

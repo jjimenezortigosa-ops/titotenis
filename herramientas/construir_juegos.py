@@ -1,16 +1,21 @@
 # Construye juegos.json (datos para los juegos de TitoTenis) a partir de CSV de partidos ATP, jugadores.json,
 # ranking.json, torneos.json e historial_base.json.
 # Uso: python3 -I construir_juegos.py carpeta_repo salida.json a.csv b.csv ...
-import csv, json, sys, unicodedata, re, os
+import csv, json, sys, unicodedata, re, os, datetime
 def norm(s): return unicodedata.normalize('NFKD', s).encode('ascii','ignore').decode().lower()
+ALIAS = {'yunchaokete bu':'bu yunchaokete','daniel merida':'daniel merida aguilar'}
 def pk(n):
-    w = re.sub(r'[^a-z\s-]',' ',norm(n)).split()
+    s = re.sub(r'\s+',' ',norm(n).replace("'",'').replace('-',' ')).strip(); s = ALIAS.get(s,s)
+    w = re.sub(r'[^a-z\s]',' ',s).split()
     return w[-1]+'|'+w[0][0] if w else ''
 repo, out = sys.argv[1], sys.argv[2]
 L = lambda f: json.load(open(os.path.join(repo,f),encoding='utf-8'))
 jug = L('jugadores.json')['jugadores']; rk = L('ranking.json')['j']; tor = L('torneos.json')['torneos']; base = L('historial_base.json')
+import collections as _c
+_cnt = _c.Counter(pk(n) for n in jug)
 canon = {}
-for n in jug: canon.setdefault(pk(n), n)
+for n in jug:
+    if _cnt[pk(n)] == 1: canon[pk(n)] = n  # se excluyen apellido+inicial repetidos
 info = {}  # pk -> (fecha, ioc, hand, ht, age)
 for path in sys.argv[3:]:
     for r in csv.DictReader(open(path,encoding='utf-8')):
@@ -27,10 +32,12 @@ rank = {canon.get(pk(x['n']), x['n']): x['r'] for x in rk if pk(x['n']) in canon
 pool, idx = [], {}
 for k, n in canon.items():
     if k not in info: continue
-    _, ioc, hand, ht, age = info[k]
+    _d, ioc, hand, ht, age = info[k]
     if not ioc: continue
     idx[n] = len(pool)
-    pool.append([n, ioc, hand if hand in ('L','R') else '', int(float(ht)) if ht else 0, round(float(age)) if age else 0, rank.get(n, 0)])
+    d0 = datetime.date(int(_d[:4]), int(_d[4:6]), int(_d[6:8]))
+    edad = round(float(age) + (datetime.date.today() - d0).days / 365.25) if age else 0
+    pool.append([n, ioc, hand if hand in ('L','R') else '', int(float(ht)) if ht else 0, edad, rank.get(n, 0)])
 crit = []
 def add(cid, txt, names):
     ps = sorted({idx[n] for n in names if n in idx})
