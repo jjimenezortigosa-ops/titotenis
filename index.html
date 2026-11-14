@@ -285,6 +285,13 @@ footer a{color:var(--ball)}
 .news .card.nw p{display:none}
 .news .card.nw .meta{gap:8px}
 .news .card.nw .pill{background:#FFD21F;color:#111;border-radius:4px;padding:5px 9px;font-size:12px}
+.news .card.nw .avw{margin-bottom:auto;display:flex;align-items:center;gap:8px}
+.news .card.nw .av{width:84px;height:84px;border-radius:50%;border:3px solid #FFD21F;background-color:var(--ink);background-repeat:no-repeat;flex:none}
+.news .card.nw .avc{font-size:9px;color:#fff;opacity:.5}
+#ndAv{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+#ndAv[hidden]{display:none}
+#ndAv .av{width:64px;height:64px;border-radius:50%;border:3px solid #FFD21F;background-repeat:no-repeat;flex:none}
+#ndAv .avc{font-size:10px;opacity:.55}
 @media(max-width:700px){.news .card.nw{flex-basis:82%}}
 .dtab{margin:16px 0}.dtab h4{margin:0 0 8px}.dr{display:grid;grid-template-columns:1fr 90px 90px;gap:8px;padding:7px 0;border-bottom:1px solid rgba(244,241,232,.1);font-size:14px}.dr b{text-align:right;font-weight:600}.dr.dh{color:var(--mute);font-size:13px}.keyl{padding-left:20px;margin:6px 0}.keyl li{margin:6px 0;font-size:14px;line-height:1.45}
 .gbody{margin:10px 0;line-height:1.55}.gq{margin-top:14px;padding:12px 14px;border-left:4px solid var(--ball);background:rgba(214,232,75,.08);font-weight:700}
@@ -530,6 +537,7 @@ footer a{color:var(--ball)}
 </main>
 
 <dialog id="newsDlg" aria-labelledby="ndTitle">
+  <div id="ndAv" hidden></div>
   <h3 id="ndTitle"></h3>
   <div class="nbody" id="ndBody" hidden></div>
   <div id="ndChoices"><p>¿Dónde quieres leerla?</p></div>
@@ -657,6 +665,21 @@ footer a{color:var(--ball)}
     });
     if(!box.children.length)box.appendChild(el('p','empty','Todavía no hay guiones.'));
   }
+  function norm(t){return String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
+  function photoIn(n){
+    var ks=Object.keys(PHOTOS||{}).filter(function(k){return PHOTOS[k]&&PHOTOS[k].src});if(!ks.length)return null;
+    function find(txt){var T=norm(txt),best=null,pos=1e9;ks.forEach(function(k){var last=norm(k).trim().split(/\s+/).pop();var m=new RegExp('(^|[^a-z])'+last+'([^a-z]|$)').exec(T);if(m&&m.index<pos){pos=m.index;best=PHOTOS[k]}});return best}
+    return find(n.t)||find(n.d);
+  }
+  function avatar(box,ph,d,cls){
+    var a=el('div',cls||'av');a.title=ph.credit||'';a.setAttribute('role','img');a.setAttribute('aria-label','Foto del jugador');box.appendChild(a);
+    function put(sz){var z=+ph.zoom||1.2,fx=ph.fx!=null?+ph.fx:.5,fy=ph.fy!=null?+ph.fy:.3;var s=(d*z)/Math.min(sz.w,sz.h),W=sz.w*s,H=sz.h*s;
+      a.style.backgroundImage='url("'+ph.src+'")';a.style.backgroundSize=W+'px '+H+'px';a.style.backgroundPosition=(d/2-fx*W)+'px '+(d/2-fy*H)+'px'}
+    if(SZ[ph.src]&&SZ[ph.src].ok){put(SZ[ph.src]);return a}
+    var t=new Image();t.onload=function(){SZ[ph.src]={ok:1,w:t.naturalWidth,h:t.naturalHeight};put(SZ[ph.src])};
+    t.onerror=function(){if(a.parentNode)a.parentNode.removeChild(a)};t.src=ph.src;return a;
+  }
+  function authorOf(ph){return String(ph.credit||'').replace(/^Foto:\s*/,'').split(',')[0]}
   /* noticias */
   function renderNews(){
     var box=$('#news');box.textContent='';var n0=0;
@@ -664,6 +687,7 @@ footer a{color:var(--ball)}
       if(!shown(n.cat))return;n0++;
       var a=el('article','card nw b'+(n0%3)+' cat-'+n.cat);
       var meta=el('div','meta');meta.appendChild(el('span','pill '+n.cls,n.tag));meta.appendChild(el('span','pill',CATN[n.cat]));
+      var ph=photoIn(n);if(ph){var w=el('div','avw');avatar(w,ph,84);w.appendChild(el('span','avc','Foto: '+authorOf(ph)));a.appendChild(w)}
       a.appendChild(meta);a.appendChild(el('h3',null,n.t));a.appendChild(el('p',null,n.d));
       var row=el('div','row');
       var v=el('button','btn small primary','Ver noticia');v.type='button';v.addEventListener('click',function(){openNews(n)});row.appendChild(v)
@@ -678,6 +702,7 @@ footer a{color:var(--ball)}
   var curN=null;
   function openNews(n){
     curN=n;$('#ndTitle').textContent=n.t;
+    var av=$('#ndAv');av.textContent='';var pp=photoIn(n);av.hidden=!pp;if(pp){avatar(av,pp,64);av.appendChild(el('span','avc','Foto: '+authorOf(pp)))}
     var b=$('#ndBody');b.textContent='';b.hidden=true;
     $('#ndChoices').hidden=false;
     $('#ndOff').hidden=!n.u;
@@ -1080,7 +1105,7 @@ footer a{color:var(--ball)}
   });
   var FEAT=[];
   fetch('destacados.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){FEAT=(j&&j.destacados)||[];if(typeof renderMatches==='function')renderMatches()}).catch(function(){});
-  fetch('fotos.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){PHOTOS=j||{};if(typeof renderMatches==='function')renderMatches();if(location.hash==='#creditos')renderCreds()}).catch(function(){});
+  fetch('fotos.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){PHOTOS=j||{};if(typeof renderMatches==='function')renderMatches();if(typeof renderNews==='function'&&DATA.news.length)renderNews();if(location.hash==='#creditos')renderCreds()}).catch(function(){});
   function renderDetail(){
     var m=curMatch();
     if(!m){$('#mTitle').textContent='';$('#mSub').textContent='';$('#stats').textContent='';$('#ctx').textContent='';return}
