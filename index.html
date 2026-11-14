@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TitoTenis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: cabecera fija con pestañas; cada pestaña es una pantalla propia. Mundo visual único: pista de tierra batida de noche. El borde de cada partido y noticia indica el circuito: azul ATP, rosa WTA, gris Challenger masculino, morado Challenger femenino. */
+:root{
+  --ink:#0C1F1D;
+  --ink-2:#13302D;
+  --ink-3:#1C423D;
+  --clay:#E2642D;
+  --ball:#D6E84B;
+  --chalk:#F4F1E8;
+  --mute:#A9BDB6;
+  --line:rgba(244,241,232,.14);
+  --atp:#4C93FF;
+  --wta:#FF74AC;
+  --chm:#8B969B;
+  --chw:#A97CFF;
+  --display:'Bricolage Grotesque','Arial Narrow',system-ui,sans-serif;
+  --body:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body::before{content:'';position:fixed;inset:70px 5vw 20px;border:2px solid rgba(244,241,232,.055);border-radius:6px;pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;left:50%;top:70px;bottom:20px;width:2px;background:rgba(244,241,232,.045);pointer-events:none;z-index:0}
+main,footer{position:relative;z-index:1}
+body{margin:0;background:radial-gradient(1100px 560px at 88% -8%,rgba(226,100,45,.20),transparent 62%),radial-gradient(900px 520px at -8% 108%,rgba(214,232,75,.08),transparent 62%),var(--ink);background-attachment:fixed;color:var(--chalk);font-family:var(--body);font-size:16px;line-height:1.5}
+h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.02em;line-height:1.08}
+p{margin:0}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--ball);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+header{position:sticky;top:0;z-index:10;background:rgba(12,31,29,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:18px;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.brand svg{width:52px;height:52px;flex:none;transition:transform .25s}
+.brand:hover svg{transform:scale(1.08)}
+.brand .tl{transform-box:fill-box;transform-origin:50% 100%;animation:lean 3.4s ease-in-out infinite}
+.brand .t2{animation-delay:.06s}
+.brand .ballg{animation:serve 3.4s linear infinite}
+@keyframes lean{0%,22%{transform:rotate(0)}44%{transform:rotate(-19deg)}52%{transform:rotate(-19deg)}58%{transform:rotate(7deg)}72%,100%{transform:rotate(0)}}
+@keyframes serve{0%{transform:translate(0,12px);opacity:1;animation-timing-function:cubic-bezier(.2,.7,.3,1)}30%{transform:translate(0,-14px);animation-timing-function:ease-in}50%{transform:translate(-1px,-2px);opacity:1}57%{transform:translate(70px,-22px) scale(.8);opacity:1}62%,93%{transform:translate(70px,-22px);opacity:0}94%{transform:translate(0,12px);opacity:0}100%{transform:translate(0,12px);opacity:1}}
+.brand b{font-family:var(--display);font-size:28px;font-weight:800;letter-spacing:-.03em}
+.brand b span{color:var(--ball)}
+nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:thin}
+nav a{text-decoration:none;font-weight:500;font-size:15px;padding:10px 14px;border-radius:10px;color:var(--mute);min-height:44px;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+nav a:hover{color:var(--chalk);background:var(--ink-2)}
+nav a[aria-current="page"]{background:var(--chalk);color:var(--ink);font-weight:700}
+nav .mini{width:8px;height:8px;border-radius:50%;background:var(--clay);animation:pulse 1.4s infinite}
+.badge{background:var(--clay);color:#1a0b04;font-size:12px;font-weight:800;min-width:20px;height:20px;border-radius:10px;display:inline-grid;place-items:center;padding:0 6px}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(226,100,45,.7)}70%{box-shadow:0 0 0 8px rgba(226,100,45,0)}100%{box-shadow:0 0 0 0 rgba(226,100,45,0)}}
+
+.view{padding:40px 0 64px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.sec-head h1{font-size:clamp(34px,5vw,56px);font-weight:800}
+.sec-head p{color:var(--mute);max-width:60ch;margin-top:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 18px;border-radius:10px;border:1px solid var(--line);background:var(--ink-2);font-weight:700;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--ink-3)}
+.btn.primary{background:var(--ball);color:#17200a;border-color:var(--ball)}
+.btn.primary:hover{background:#e6f46a}
+.btn.clay{background:var(--clay);color:#1a0b04;border-color:var(--clay)}
+.btn.clay:hover{background:#f07a44}
+.btn.small{padding:8px 14px;font-size:14px}
+.btn.link{background:transparent;border-color:var(--line);font-weight:500}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{min-height:44px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:transparent;cursor:pointer;font-weight:500;font-size:14px}
+.chip:hover{background:var(--ink-2)}
+.chip[aria-pressed="true"]{background:var(--chalk);color:var(--ink);border-color:var(--chalk);font-weight:700}
+.card{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.card h3{font-size:21px;font-weight:700;line-height:1.15}
+.card p{color:var(--mute);font-size:15px}
+.meta{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--mute);flex-wrap:wrap}
+.pill{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--ink-3);color:var(--ball)}
+.pill.est{color:#8fd3ff}
+.pill.res{color:#ffc04d}
+.pill.cir{color:#ff9fc2}
+.panel{background:var(--ink-2);border:1px solid var(--line);border-radius:16px;padding:22px}
+.panel h3{font-size:24px;margin-bottom:14px}
+.field{background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-height:44px}
+.field::placeholder{color:#7f9a92}
+label.lbl{display:block;font-size:13px;color:var(--mute);margin-bottom:4px}
+.dbnote{font-size:13px;color:var(--mute);border:1px dashed var(--line);border-radius:8px;padding:6px 10px;margin-bottom:16px;display:inline-block}
+.dbnote.ok{color:var(--ball);border-color:var(--ball)}
+.srcline{font-size:13px;color:var(--mute)}
+.srcline a{color:var(--ball)}
+
+/* filtros por circuito */
+.circ{margin-bottom:20px}
+.chip.cx{border-width:2px}
+.rrow.open{flex-wrap:wrap}
+.rwrap{border-bottom:1px solid var(--line)}
+.rwrap .rrow{border-bottom:0}
+.rdet{display:block;color:var(--mute);font-size:13px;margin-top:2px}
+.prev{padding:6px 16px 18px;background:rgba(12,31,29,.5);border-left:3px solid var(--clay)}
+.prev h4{margin:16px 0 6px;font-size:15px;color:var(--ball)}
+.prev ul{margin:0;padding-left:20px}.prev li{margin:4px 0}
+.prev .gap{color:var(--mute);font-size:14px}
+#newsDlg{max-width:620px}
+#newsDlg .nbody{max-height:55vh;overflow:auto;margin-bottom:14px}
+#newsDlg .nbody p{color:var(--chalk);margin-bottom:12px}
+
+.fbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.fthreads{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(19,48,45,.6)}
+.frow{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:14px 18px;border-top:1px solid var(--line);text-decoration:none;min-height:64px}
+.frow:first-child{border-top:0}
+.frow:hover{background:var(--ink-2)}
+.frow b{font-family:var(--display);font-size:18px;font-weight:700;display:block}
+.frow small{color:var(--mute)}
+.frow .cnt{font-family:var(--display);font-weight:800;font-size:22px;text-align:center;min-width:64px}
+.frow .cnt small{display:block;font-family:var(--body);font-weight:400;font-size:12px}
+.inc{margin:8px 0 0;font-size:13px;color:var(--ball)}
+h2.sub{grid-column:1/-1;margin:18px 0 0;font-size:18px}
+.chip.cx-atp{border-color:var(--atp)}.chip.cx-wta{border-color:var(--wta)}.chip.cx-chm{border-color:var(--chm)}.chip.cx-chw{border-color:var(--chw)}
+.chip.cx-atp[aria-pressed="true"]{background:var(--atp);color:#06101f}
+.chip.cx-wta[aria-pressed="true"]{background:var(--wta);color:#2a0618}
+.chip.cx-chm[aria-pressed="true"]{background:var(--chm);color:#0b1214}
+.chip.cx-chw[aria-pressed="true"]{background:var(--chw);color:#1a0b3a}
+.chip.cx.cx-all{border-color:var(--chalk)}.chip.cx.cx-all[aria-pressed="true"]{background:var(--chalk);color:var(--ink)}.chip.cx[aria-pressed="false"]{color:var(--mute)}
+.anabox{background:var(--ink);border:1px solid var(--line);border-radius:12px;padding:16px;margin-top:14px}
+.anabox h4{font-size:18px;margin:0 0 8px}
+.anabox ul{margin:0 0 12px;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--chalk)}
+.anabox .why{border-left:3px solid var(--clay);padding-left:12px;margin-bottom:8px}
+/* categorías por circuito */
+.cat-atp{border:2px solid var(--atp)}
+.cat-wta{border:2px solid var(--wta)}
+.cat-chm{border:2px solid var(--chm)}
+.cat-chw{border:2px solid var(--chw)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 20px;font-size:14px;color:var(--mute)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{width:16px;height:16px;border-radius:5px;border:3px solid;display:inline-block}
+.legend .a{border-color:var(--atp)}
+.legend .w{border-color:var(--wta)}
+.legend .m{border-color:var(--chm)}
+.legend .f{border-color:var(--chw)}
+
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.news .card .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+
+.live{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:12px;letter-spacing:.08em;color:var(--clay)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--clay);animation:pulse 1.4s infinite}
+.matches{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+.mcard{background:var(--ink-2);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.mcard[data-sel="1"]{box-shadow:0 0 0 3px rgba(214,232,75,.55)}
+.mtop{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);gap:8px}
+.mtop small{color:var(--mute);font-size:12px;line-height:1.3}
+table.score{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.score td,table.score th{padding:8px 8px;text-align:center}
+table.score th{font-size:11px;color:var(--mute);font-weight:500}
+table.score td:first-child,table.score th:first-child{text-align:left;width:100%;padding-left:14px}
+table.score tr+tr td{border-top:1px solid var(--line)}
+.pname{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;line-height:1.2}
+.srv{width:9px;height:9px;border-radius:50%;background:var(--ball);visibility:hidden;flex:none}
+.srv.on{visibility:visible}
+.pts{font-family:var(--display);font-size:20px;font-weight:800;color:var(--ball);min-width:40px}
+.curset{font-weight:800;background:var(--ink-3)}
+.mfoot{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 14px;border-top:1px solid var(--line);margin-top:auto;flex-wrap:wrap}
+.mfoot span{color:var(--mute);font-size:13px}
+.mfoot .acts{display:flex;gap:8px;flex-wrap:wrap}
+.detail-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.detail-head h2{font-size:clamp(24px,3vw,34px);font-weight:800}
+.tagtxt{font-size:12px;color:var(--mute);border:1px dashed var(--line);border-radius:6px;padding:2px 8px;display:inline-block}
+.ana-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.stat{margin-bottom:14px}
+.stat-row{display:flex;justify-content:space-between;font-variant-numeric:tabular-nums;font-size:15px;margin-bottom:6px;gap:8px}
+.stat-row span:nth-child(2){color:var(--mute);font-size:13px;text-align:center}
+.bars{display:flex;height:10px;border-radius:6px;overflow:hidden;background:var(--ink)}
+.bars i{display:block;height:100%}
+.bars i:first-child{background:var(--ball)}
+.bars i:last-child{background:var(--clay);margin-left:auto}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.lesson h4{font-size:22px;margin:0 0 8px}
+.lesson p{color:var(--mute);margin-bottom:10px}
+.lesson .why{border-left:3px solid var(--clay);padding-left:12px;color:var(--chalk)}
+.ctx{display:flex;flex-direction:column}
+.ctx div{padding:10px 0;border-top:1px solid var(--line);color:var(--mute);font-size:15px}
+.ctx div:first-child{border-top:0;padding-top:0}
+.results{display:flex;flex-direction:column;margin-top:8px}
+.rrow{display:grid;grid-template-columns:1fr auto;gap:10px;padding:12px 12px 12px 14px;border-radius:10px;margin-bottom:8px;align-items:center;background:var(--ink)}
+.rrow b{font-family:var(--display);font-size:17px}
+.rrow small{display:block;color:var(--mute)}
+.rrow .sc{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ball)}
+
+.forum{display:grid;grid-template-columns:340px 1fr;gap:20px}
+.threads{display:flex;flex-direction:column;gap:8px}
+.thread{text-align:left;background:var(--ink-2);border:1px solid var(--line);border-radius:12px;padding:14px;cursor:pointer;display:flex;flex-direction:column;gap:6px;min-height:44px}
+.thread:hover{background:var(--ink-3)}
+.thread[aria-pressed="true"]{border-color:var(--ball);background:var(--ink-3)}
+.thread b{font-size:16px;line-height:1.25}
+.thread small{color:var(--mute)}
+.conv{display:flex;flex-direction:column;gap:12px}
+.empty{color:var(--mute);padding:8px 0}
+.msg{display:flex;gap:12px}
+.av{width:38px;height:38px;border-radius:50%;background:var(--clay);color:#1a0b04;font-weight:800;display:grid;place-items:center;flex:none;font-family:var(--display)}
+.av.sys{background:var(--ball)}
+.msg .bubble{background:var(--ink);border:1px solid var(--line);border-radius:12px;padding:10px 14px;flex:1;overflow-wrap:anywhere}
+.msg .who{font-size:13px;color:var(--mute);margin-bottom:2px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.namebtn{background:none;border:0;padding:6px 0;min-height:32px;font-weight:700;color:var(--chalk);cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.namebtn:hover{text-decoration-color:var(--ball);color:var(--ball)}
+.quote{border-left:3px solid var(--clay);padding:4px 10px;margin-bottom:6px;color:var(--mute);font-size:14px;background:var(--ink-2);border-radius:0 8px 8px 0}
+.msg .acts{margin-top:6px}
+.linkbtn{background:none;border:0;color:var(--ball);cursor:pointer;font-weight:700;font-size:14px;padding:8px 0;min-height:32px}
+.replying{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--ink);border:1px solid var(--clay);border-radius:10px;padding:8px 12px;margin-top:14px;font-size:14px;color:var(--mute)}
+.compose{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.compose .field{flex:1;min-width:200px}
+.prop{background:var(--ink-2);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px;margin-bottom:10px}
+.prop b{font-size:16px;line-height:1.25}
+.prog{height:8px;background:var(--ink);border-radius:6px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--clay)}
+.prop small{color:var(--mute)}
+.prop .row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.sub{font-family:var(--display);font-size:20px;margin:0 0 12px}
+.notice{padding:10px 14px;border:1px solid var(--ball);color:var(--ball);border-radius:10px;margin-bottom:14px}
+.sug{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.avisos{display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+.aviso{text-align:left;background:var(--ink-2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;min-height:44px;display:flex;flex-direction:column;gap:2px}
+.aviso:hover{background:var(--ink-3)}
+.aviso.new{border-color:var(--clay)}
+.aviso small{color:var(--mute)}
+
+.rooms{display:grid;grid-template-columns:1fr 1.3fr;gap:20px}
+.room{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:14px 0;border-top:1px solid var(--line);flex-wrap:wrap}
+.room:first-of-type{border-top:0}
+.room b{display:block;font-family:var(--display);font-size:19px}
+.room small{color:var(--mute)}
+.room .acts{display:flex;gap:8px;flex-wrap:wrap}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-grid .full{grid-column:1/-1}
+.slide{aspect-ratio:16/9;background:var(--ink);border:1px solid var(--line);border-radius:12px;padding:clamp(16px,3vw,32px);display:flex;flex-direction:column;justify-content:center;gap:12px}
+.slide h4{font-size:clamp(22px,3.2vw,38px);margin:0}
+.slide p,.slide li{color:var(--mute);font-size:clamp(14px,1.6vw,18px)}
+.slide ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.slide-nav{display:flex;justify-content:space-between;align-items:center;margin-top:12px;gap:8px}
+.slide-nav span{color:var(--mute);font-size:14px;font-variant-numeric:tabular-nums}
+
+.road{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.step{font-family:var(--display);font-size:30px;font-weight:800;color:var(--clay);line-height:1}
+
+dialog{background:var(--ink-2);color:var(--chalk);border:1px solid var(--line);border-radius:16px;padding:22px;max-width:380px;width:calc(100% - 32px)}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog h3{font-size:22px;margin-bottom:8px}
+dialog p{color:var(--mute);margin-bottom:16px}
+dialog .row{display:flex;gap:8px;flex-wrap:wrap}
+#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ball);color:#17200a;font-weight:700;padding:12px 18px;border-radius:12px;z-index:30;max-width:calc(100% - 32px);box-shadow:0 8px 24px rgba(0,0,0,.4)}
+
+footer{padding:28px 0;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+footer a{color:var(--ball)}
+
+@media (max-width:980px){
+  .matches,.news{grid-template-columns:1fr 1fr}
+  .ana-grid,.forum,.rooms{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  .bar{flex-wrap:wrap}
+  nav{margin-left:0;width:100%}
+  .matches,.news,.road,.form-grid{grid-template-columns:1fr}
+  .view{padding:28px 0 48px}
+}
+@media (prefers-reduced-motion:reduce){
+  .dot,.mini,.brand .ballg,.brand .tl{animation:none}
+  .brand svg{transition:none}
+}
+.sugx{}.vs svg{width:100%;height:auto;display:block}.vs{margin:14px 0 6px;background:var(--ink-2);border-radius:14px;padding:6px}.tr{margin:10px 0}.tr h4{margin:0 0 6px}.tr svg{width:100%;height:auto}.tr .lg{display:flex;gap:14px;font-size:13px;color:var(--mute);flex-wrap:wrap}.sgl{display:flex;flex-direction:column;gap:10px;margin-top:16px}.sgi{background:var(--ink-2);border-radius:12px;padding:12px 14px}.sgi small{color:var(--mute)}
+.card.nw{position:relative;overflow:hidden;background-color:var(--ink-2);background-repeat:no-repeat;background-position:right top;background-size:cover}
+.card.nw.cat-atp{background-image:linear-gradient(to top,rgba(8,20,19,.96) 14%,rgba(8,20,19,.35) 62%,rgba(8,20,19,.05)),linear-gradient(135deg,rgba(76,147,255,.55),rgba(12,31,29,.1) 80%),url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'><g fill='none' stroke='%23F4F1E8' stroke-opacity='.22' stroke-width='3'><rect x='40' y='30' width='320' height='180'/><line x1='200' y1='30' x2='200' y2='210'/><line x1='40' y1='80' x2='360' y2='80'/><line x1='40' y1='160' x2='360' y2='160'/><line x1='120' y1='80' x2='120' y2='160'/><line x1='280' y1='80' x2='280' y2='160'/></g></svg>")}
+.card.nw.cat-wta{background-image:linear-gradient(to top,rgba(8,20,19,.96) 14%,rgba(8,20,19,.35) 62%,rgba(8,20,19,.05)),linear-gradient(135deg,rgba(255,116,172,.5),rgba(12,31,29,.1) 80%),url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'><g fill='none' stroke='%23F4F1E8' stroke-opacity='.22' stroke-width='3'><rect x='40' y='30' width='320' height='180'/><line x1='200' y1='30' x2='200' y2='210'/><line x1='40' y1='80' x2='360' y2='80'/><line x1='40' y1='160' x2='360' y2='160'/><line x1='120' y1='80' x2='120' y2='160'/><line x1='280' y1='80' x2='280' y2='160'/></g></svg>")}
+.card.nw.b1.cat-atp{background-image:linear-gradient(to top,rgba(8,20,19,.96) 14%,rgba(8,20,19,.35) 62%,rgba(8,20,19,.05)),linear-gradient(135deg,rgba(76,147,255,.55),rgba(12,31,29,.1) 80%),url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'><circle cx='300' cy='110' r='64' fill='%23D6E84B' fill-opacity='.30'/><path d='M244 82c28 8 52 30 62 60M262 56c22 6 44 26 52 54' fill='none' stroke='%23F4F1E8' stroke-opacity='.45' stroke-width='5'/><g stroke='%23D6E84B' stroke-opacity='.25' stroke-width='4' stroke-linecap='round'><line x1='120' y1='90' x2='210' y2='90'/><line x1='90' y1='118' x2='200' y2='118'/><line x1='140' y1='146' x2='215' y2='146'/></g></svg>")}
+.card.nw.b1.cat-wta{background-image:linear-gradient(to top,rgba(8,20,19,.96) 14%,rgba(8,20,19,.35) 62%,rgba(8,20,19,.05)),linear-gradient(135deg,rgba(255,116,172,.5),rgba(12,31,29,.1) 80%),url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'><circle cx='300' cy='110' r='64' fill='%23D6E84B' fill-opacity='.30'/><path d='M244 82c28 8 52 30 62 60M262 56c22 6 44 26 52 54' fill='none' stroke='%23F4F1E8' stroke-opacity='.45' stroke-width='5'/><g stroke='%23D6E84B' stroke-opacity='.25' stroke-width='4' stroke-linecap='round'><line x1='120' y1='90' x2='210' y2='90'/><line x1='90' y1='118' x2='200' y2='118'/><line x1='140' y1='146' x2='215' y2='146'/></g></svg>")}
+.card.nw.b2.cat-atp{background-image:linear-gradient(to top,rgba(8,20,19,.96) 14%,rgba(8,20,19,.35) 62%,rgba(8,20,19,.05)),linear-gradient(135deg,rgba(76,147,255,.55),rgba(12,31,29,.1) 80%),url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'><g fill='none' stroke='%23F4F1E8' stroke-opacity='.25' stroke-width='4'><ellipse cx='290' cy='95' rx='58' ry='76' transform='rotate(25 290 95)'/><line x1='240' y1='170' x2='170' y2='235'/></g><g stroke='%23F4F1E8' stroke-opacity='.12' stroke-width='2'><line x1='255' y1='45' x2='330' y2='150'/><line x1='235' y1='70' x2='315' y2='115'/><line x1='250' y1='100' x2='320' y2='60'/></g></svg>")}
+.card.nw.b2.cat-wta{background-image:linear-gradient(to top,rgba(8,20,19,.96) 14%,rgba(8,20,19,.35) 62%,rgba(8,20,19,.05)),linear-gradient(135deg,rgba(255,116,172,.5),rgba(12,31,29,.1) 80%),url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'><g fill='none' stroke='%23F4F1E8' stroke-opacity='.25' stroke-width='4'><ellipse cx='290' cy='95' rx='58' ry='76' transform='rotate(25 290 95)'/><line x1='240' y1='170' x2='170' y2='235'/></g><g stroke='%23F4F1E8' stroke-opacity='.12' stroke-width='2'><line x1='255' y1='45' x2='330' y2='150'/><line x1='235' y1='70' x2='315' y2='115'/><line x1='250' y1='100' x2='320' y2='60'/></g></svg>")}
+.card.nw h3,.card.nw .meta{text-shadow:0 1px 8px rgba(0,0,0,.6)}.card.nw p{color:#D3E0DA}
+.ana-grid[hidden]{display:none}.detail-head[hidden]{display:none}
+.vs.inl{margin:0 0 8px}.ckbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;background:var(--ink-3);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;box-shadow:0 8px 30px rgba(0,0,0,.5)}.ckbar p{flex:1 1 320px;font-size:14px;color:var(--chalk)}.ckbar[hidden]{display:none}
+.sug{margin-left:0}
+.news{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}
+.news .card.nw{flex:0 0 min(31%,390px);min-width:260px;min-height:460px;justify-content:flex-end;scroll-snap-align:start;border-radius:16px;border-width:0;padding:20px;background-size:cover;background-position:center}
+.news .card.nw h3{font-family:Georgia,'Times New Roman',serif;font-size:clamp(22px,2.2vw,30px);line-height:1.12;font-weight:800;color:#fff}
+.news .card.nw p{display:none}
+.news .card.nw .meta{gap:8px}
+.news .card.nw .pill{background:#FFD21F;color:#111;border-radius:4px;padding:5px 9px;font-size:12px}
+@media(max-width:700px){.news .card.nw{flex-basis:82%}}
+.dtab{margin:16px 0}.dtab h4{margin:0 0 8px}.dr{display:grid;grid-template-columns:1fr 90px 90px;gap:8px;padding:7px 0;border-bottom:1px solid rgba(244,241,232,.1);font-size:14px}.dr b{text-align:right;font-weight:600}.dr.dh{color:var(--mute);font-size:13px}.keyl{padding-left:20px;margin:6px 0}.keyl li{margin:6px 0;font-size:14px;line-height:1.45}
+.gbody{margin:10px 0;line-height:1.55}.gq{margin-top:14px;padding:12px 14px;border-left:4px solid var(--ball);background:rgba(214,232,75,.08);font-weight:700}
+#featHead{display:inline-block;background:var(--ball);color:var(--ink);padding:6px 14px;border-radius:999px;font-size:15px}
+.feat-wrap{}
+#feat .rwrap{position:relative;overflow:hidden;padding-top:26px;border:2px solid transparent;border-radius:16px;background:linear-gradient(var(--ink-2),var(--ink-2)) padding-box,conic-gradient(from var(--fa,0deg),#D6E84B,#E2642D,#FFD76B,#D6E84B) border-box;animation:fspin 6s linear infinite;box-shadow:0 10px 36px rgba(214,232,75,.18)}
+@property --fa{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes fspin{to{--fa:360deg}}
+#feat .rwrap::before{content:'★ ANÁLISIS COMPLETO · PARTIDO DESTACADO';position:absolute;top:0;left:0;right:0;padding:5px 14px;background:linear-gradient(90deg,#D6E84B,#FFD76B);color:#0C1F1D;font-weight:800;font-size:12px;letter-spacing:.08em}
+#feat .rrow b{font-size:21px;color:#FFD76B}
+@media (prefers-reduced-motion:reduce){#feat .rwrap{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#noticias" aria-label="TitoTenis, ir a noticias">
+      <svg viewBox="0 0 88 88" role="img" aria-label="Logo animado de TitoTenis: dos T que lanzan una pelota, se inclinan hacia la izquierda y sacan">
+        <defs>
+          <pattern id="grain" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r=".9" fill="#5a1f08" fill-opacity=".35"/><circle cx="4.5" cy="4.5" r=".7" fill="#ffd9c2" fill-opacity=".25"/></pattern>
+          <clipPath id="lclip"><rect x="2" y="2" width="84" height="84" rx="15"/></clipPath>
+        </defs>
+        <rect x="2" y="2" width="84" height="84" rx="15" fill="#C9571F"/>
+        <rect x="2" y="2" width="84" height="84" rx="15" fill="url(#grain)"/>
+        <rect x="9" y="9" width="70" height="70" rx="5" fill="none" stroke="#F4F1E8" stroke-width="2.4"/>
+        <g clip-path="url(#lclip)">
+          <g fill="none" stroke="#F4F1E8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+            <g class="tl t1"><path d="M22 44H38M30 44V70"/></g>
+            <g class="tl t2"><path d="M48 44H64M56 44V70"/></g>
+          </g>
+          <g class="ballg">
+            <circle cx="43" cy="38" r="6.5" fill="#D6E84B" stroke="#0C1F1D" stroke-width="2"/>
+            <path d="M38.5 35.5Q42.5 39 39.5 43" fill="none" stroke="#F4F1E8" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+        </g>
+      </svg>
+      <b><span>T</span>ito<span>T</span>enis</b>
+    </a>
+    <nav aria-label="Secciones" id="tabs">
+      <a href="#noticias">Noticias</a>
+      <a href="#en-vivo"><span class="mini" aria-hidden="true"></span>Partidos</a>
+      <a href="#foro">La grada</a>
+      <a href="#mis-debates">Mis debates <span class="badge" id="badge" hidden>0</span></a>
+      <a href="#sugerencias" class="sug">Sugerencias</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== NOTICIAS ===== -->
+<section class="view" id="v-noticias">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h1>Noticias</h1>
+        <p>Noticias reales del circuito, con un resumen corto escrito por TitoTenis y el enlace a la fuente original. Actualizado: <span class="upd">cargando…</span></p>
+      </div>
+    </div>
+    <div class="chips circ" role="group" aria-label="Circuitos a mostrar">
+      <button class="chip cx cx-atp" type="button" data-cx="atp" aria-pressed="true">ATP</button>
+      <button class="chip cx cx-wta" type="button" data-cx="wta" aria-pressed="false">WTA</button>
+    </div>
+    <div class="news" id="news"></div>
+  </div>
+</section>
+
+<!-- ===== EN VIVO ===== -->
+<section class="view" id="v-en-vivo" hidden>
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h1>Partidos</h1>
+        <p>Partidos ATP y WTA de hoy, mañana y pasado mañana. Los que ya han terminado tienen análisis tenístico; los que vienen, una previa con pista, cara a cara, forma y claves. Datos actualizados: <span class="upd">cargando…</span></p>
+      </div>
+      <span class="live"><span class="dot" aria-hidden="true"></span> <span id="liveCount"></span></span>
+    </div>
+    <div class="chips circ" role="group" aria-label="Circuitos a mostrar">
+      <button class="chip cx cx-atp" type="button" data-cx="atp" aria-pressed="true">ATP</button>
+      <button class="chip cx cx-wta" type="button" data-cx="wta" aria-pressed="false">WTA</button>
+    </div>
+    <div class="chips" id="dayChips" role="group" aria-label="Día"></div>
+    <div class="matches" id="matches"></div>
+
+    <div class="detail-head">
+      <h2 id="mTitle"></h2>
+      <span class="tagtxt" id="mSub"></span>
+    </div>
+    <div class="ana-grid">
+      <div class="panel">
+        <h3>Cómo va el partido</h3>
+        <div id="stats"></div>
+        <h3 style="margin-top:22px">Contexto</h3>
+        <div class="ctx" id="ctx"></div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:20px">
+      <h3>Partidos programados</h3>
+      <div class="results" id="sched"></div>
+      <h3 style="margin-top:22px" id="resHead">Resultados de hoy</h3>
+      <div class="results" id="results"></div>
+      <h3 style="margin-top:26px" id="featHead" hidden>Partido destacado: análisis completo</h3>
+      <div class="results" id="feat" hidden></div>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="v-sugerencias" hidden>
+  <div class="wrap">
+    <div class="sec-head"><div><h1>Sugerencias</h1><p>Dinos qué te gustaría ver en TitoTenis: estadísticas, torneos, funciones, lo que quieras. Cualquiera puede escribir y leer.</p></div></div>
+    <span class="dbnote" data-dbnote></span>
+    <form class="panel" id="sugForm">
+      <div class="form-grid">
+        <div class="full"><label class="lbl" for="sugText">Tu sugerencia</label><textarea class="field" id="sugText" style="width:100%" rows="3" maxlength="600" required></textarea></div>
+        <div><label class="lbl" for="sugName">Tu nombre</label><input class="field" id="sugName" style="width:100%" maxlength="30" placeholder="Invitado"></div>
+      </div>
+      <div style="margin-top:14px"><button class="btn clay" type="submit">Enviar sugerencia</button></div>
+    </form>
+    <div class="sgl" id="sugList"></div>
+  </div>
+</section>
+
+<!-- ===== FORO ===== -->
+<section class="view" id="v-foro" hidden>
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h1>La grada</h1>
+              </div>
+    </div>
+    
+    <p><a class="btn small clay" id="waJoin" target="_blank" rel="noopener" hidden>Unirse al grupo de WhatsApp</a></p>
+    <div id="fIndex">
+      <div class="fbar"><h2 class="sub" style="margin:0">Temas de La grada</h2><button class="btn clay" type="button" id="newTopicBtn">Nuevo tema</button></div>
+      <form class="panel" id="newTopicForm" hidden>
+        <div class="form-grid">
+          <div class="full"><label class="lbl" for="ntTitle">Título del tema</label><input class="field" id="ntTitle" style="width:100%" maxlength="120" placeholder="Ej.: ¿Qué cuerdas usáis en tierra batida?" required></div>
+          <div class="full"><label class="lbl" for="ntText">Tu primer mensaje</label><textarea class="field" id="ntText" style="width:100%" rows="3" maxlength="1000" required></textarea></div>
+          <div><label class="lbl" for="ntName">Tu nombre</label><input class="field" id="ntName" style="width:100%" maxlength="30" placeholder="Invitado"></div>
+        </div>
+        <div style="margin-top:14px;display:flex;gap:10px"><button class="btn clay" type="submit">Publicar tema</button><button class="btn" type="button" id="ntCancel">Cancelar</button></div>
+      </form>
+      <div class="fthreads" id="fThreads" role="list"></div>
+      <h3 style="margin:26px 0 10px">Debates de noticias y partidos</h3>
+      <div class="fthreads" id="fThreads2" role="list"></div>
+    </div>
+    <div id="fTopic" hidden>
+      <p style="margin-bottom:14px"><a class="btn small" href="#foro">← Volver al foro</a> <a class="btn small" id="waShare" target="_blank" rel="noopener" href="#">Compartir en WhatsApp</a></p>
+      <article class="card" id="fCard" style="margin-bottom:18px"></article>
+      <div class="panel">
+        <h3>Opiniones y pronósticos</h3>
+        <div class="conv" id="conv" aria-live="polite"></div>
+        <div class="replying" id="replying" hidden>
+          <span id="replyingTxt"></span>
+          <button class="linkbtn" type="button" id="replyCancel">Cancelar</button>
+        </div>
+        <form class="compose" id="postForm">
+          <input class="field" id="postName" placeholder="Tu nombre" maxlength="20" style="max-width:160px;flex:none" aria-label="Tu nombre" autocomplete="nickname">
+          <input class="field" id="postText" placeholder="¿Qué opinas de esta noticia?" maxlength="280" aria-label="Tu opinión" autocomplete="off">
+          <button class="btn clay" type="submit">Publicar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GUIONES (sin enlace en el menú: entra con #guiones) ===== -->
+<section class="view" id="v-guiones" hidden>
+  <div class="wrap">
+    <div class="sec-head"><div><h1>Guiones para redes</h1><p>Borradores de vídeos cortos de unos 30 segundos, hechos a partir de las noticias del día. Revísalos antes de grabarlos.</p></div></div>
+    <div class="news" id="gList"></div>
+  </div>
+</section>
+
+<!-- ===== CHARLAS ===== -->
+<section class="view" id="v-charlas" hidden>
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h1>Charlas con presentación</h1>
+        <p>Programa una charla en grupo, pega el enlace de la videollamada (Google Meet, Zoom o Jitsi) y proyecta una presentación mientras habláis.</p>
+      </div>
+    </div>
+    <span class="dbnote" data-dbnote></span>
+    <div class="rooms">
+      <div class="panel">
+        <h3>Charlas programadas</h3>
+        <div id="rlist"></div>
+        <form id="roomForm" style="margin-top:16px">
+          <div class="form-grid">
+            <div class="full"><label class="lbl" for="rTitle">Tema</label><input class="field" id="rTitle" style="width:100%" placeholder="Ej.: Repaso de las ATP Finals" required></div>
+            <div><label class="lbl" for="rWhen">Cuándo</label><input class="field" id="rWhen" style="width:100%" placeholder="Domingo 21:00" required></div>
+            <div><label class="lbl" for="rLink">Enlace de la videollamada</label><input class="field" id="rLink" style="width:100%" placeholder="https://meet.google.com/…" type="url"></div>
+          </div>
+          <div style="margin-top:14px"><button class="btn clay" type="submit">Programar charla</button></div>
+        </form>
+      </div>
+      <div class="panel">
+        <h3>Presentación: previa de las ATP Finals</h3>
+        <div class="slide" id="slide" aria-live="polite"></div>
+        <div class="slide-nav">
+          <button class="btn small" type="button" id="prev">Anterior</button>
+          <span id="slideNo">1 / 4</span>
+          <button class="btn small primary" type="button" id="next">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MIS DEBATES ===== -->
+<section class="view" id="v-mis-debates" hidden>
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h1>Mis debates</h1>
+        <p>Aquí aparecen las respuestas que te hacen en La grada y los debates 1 a 1 que empiezas o te proponen.</p>
+      </div>
+    </div>
+    <span class="dbnote" data-dbnote></span>
+    <p class="srcline" style="margin-bottom:16px">Los debates 1 a 1 de esta versión no son privados a nivel técnico: la interfaz solo los muestra a las dos personas. Para chats realmente privados hace falta un servidor propio.</p>
+    <div class="forum">
+      <div>
+        <h2 class="sub">Avisos</h2>
+        <div class="avisos" id="avisos"></div>
+        <h2 class="sub">Debates 1 a 1</h2>
+        <div class="threads" id="dmlist"></div>
+      </div>
+      <div class="panel">
+        <h3 id="dmTitle">Elige un debate</h3>
+        <div class="conv" id="dmconv" aria-live="polite"></div>
+        <form class="compose" id="dmForm" hidden>
+          <input class="field" id="dmText" placeholder="Escribe tu mensaje…" maxlength="280" aria-label="Mensaje del debate" autocomplete="off">
+          <button class="btn clay" type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<dialog id="newsDlg" aria-labelledby="ndTitle">
+  <h3 id="ndTitle"></h3>
+  <div class="nbody" id="ndBody" hidden></div>
+  <div id="ndChoices"><p>¿Dónde quieres leerla?</p></div>
+  <p class="srcline" id="ndSrc" style="margin-bottom:12px"></p>
+  <div class="row">
+    <button class="btn primary" type="button" id="ndHere">Ver noticia aquí</button>
+    <button class="btn" type="button" id="ndOff">Ver en la página oficial</button>
+    <button class="btn" type="button" id="ndClose">Cerrar</button>
+  </div>
+</dialog>
+<dialog id="personDlg" aria-labelledby="pdTitle">
+  <h3 id="pdTitle"></h3>
+  <p id="pdText"></p>
+  <div class="row">
+    <button class="btn clay" type="button" id="pdStart">Empezar debate 1 a 1</button>
+    <button class="btn" type="button" id="pdClose">Cerrar</button>
+  </div>
+</dialog>
+<div id="toast" role="status" hidden></div>
+
+<footer>
+  <div class="wrap">TitoTenis</div>
+</footer>
+
+<script>
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)};
+  var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
+  function snip(t){t=String(t||'');return t.length>70?t.slice(0,67)+'…':t}
+  var LS={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+  /* ---------- Pestañas ---------- */
+  var topic=null;
+  var views=['noticias','en-vivo','foro','guiones','charlas','mis-debates','sugerencias'];
+  function route(){
+    var parts=(location.hash||'').replace('#','').split('/');
+    var h=parts[0];topic=parts[1]?decodeURIComponent(parts[1]):null;
+    if(views.indexOf(h)<0)h='noticias';
+    views.forEach(function(v){$('#v-'+v).hidden=(v!==h)});
+    $$('#tabs a').forEach(function(a){
+      if(a.getAttribute('href')==='#'+h)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+    });
+    if(h==='foro'){cancelReply();renderForum();var w=$('#waShare');if(w)w.href='https://wa.me/?text='+encodeURIComponent('Debate en TitoTenis: '+location.href)}
+    if(h==='sugerencias')renderSugs();
+    if(h==='mis-debates'){seenTs=Date.now();LS.set('tt_seen',String(seenTs));renderDms();renderBadge()}
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',route);
+
+  /* ---------- Datos (data.json, renovado cada hora) ---------- */
+  var DATA={matches:[],results:[],news:[],upcoming:'',updated:''};
+  var sel=0,selId=null,lastJson='';
+  var CATN={atp:'ATP',wta:'WTA',chm:'Challenger masculino',chw:'Challenger femenino'};
+  var APP='https://apps.apple.com/app/id1480255719';
+  function loadData(){
+    return fetch('data.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(txt){
+      if(txt===lastJson)return;
+      lastJson=txt;DATA=JSON.parse(txt);
+      $$('.upd').forEach(function(u){u.textContent=DATA.updated||'—'});
+      renderNews();renderMatches();renderForum();renderGuiones();
+    }).catch(function(){
+      if(!lastJson)$$('.upd').forEach(function(u){u.textContent='no se pudieron cargar los datos'});
+    });
+  }
+
+  /* filtro por circuito (compartido entre Noticias y En vivo) */
+  var only='atp'; /* siempre hay un circuito elegido: ATP o WTA */
+  function shown(c){return only===c}
+  function syncChips(){$$('[data-cx]').forEach(function(x){x.setAttribute('aria-pressed',String(x.getAttribute('data-cx')===only))})}
+  $$('[data-cx]').forEach(function(b){b.addEventListener('click',function(){
+    only=b.getAttribute('data-cx');
+    syncChips();renderNews();renderMatches();
+  })});
+
+  function mid(x){return 'm-'+String(x.id).replace(/[^a-zA-Z0-9]+/g,'-')}
+  function matchTopic(id){
+    var out=null;
+    function mk(x,state,sc){return {cat:x.cat,tag:'Partido',cls:'est',t:x.names?x.names[0]+' contra '+x.names[1]:x.text,d:state+(sc?': '+sc:''),s:'Datos deportivos',u:'',w:'Hoy'}}
+    DATA.matches.forEach(function(x){if(mid(x)===id)out=mk(x,'En juego ahora',x.sets.map(function(z){return z[0]+'-'+z[1]}).join(' · ')+' · '+x.tour)});
+    (DATA.results||[]).forEach(function(x){if(mid(x)===id)out=mk(x,'Terminado',x.score+' · '+x.tour)});
+    (DATA.scheduled||[]).forEach(function(x){if(mid(x)===id)out=mk(x,'Hora de inicio: '+fb(x.time),x.tour)});
+    return out;
+  }
+  var TZL=(function(){try{return new Intl.DateTimeFormat('es-ES',{timeZone:'Europe/Madrid',timeZoneName:'shortOffset'}).formatToParts(new Date()).filter(function(p){return p.type==='timeZoneName'})[0].value.replace('GMT','GMT')}catch(e){return 'GMT+1'}})();
+  function fb(t){t=t||'';if(/^a continuaci[oó]n del? (primero|anterior)/i.test(t))return 'Followed by';if(/\d{1,2}:\d{2}/.test(t)){t=t.replace(/\s*\((hora de )?Madrid\)/i,'').replace(/\s*\(hora de Turín y de Madrid\)/i,'');return t+' · hora de Madrid ('+TZL+')'}return t}
+  function nid(n){return n.id||((n.cat+'-'+n.t).toLowerCase().replace(/[^a-z0-9]+/g,'-').slice(0,60))}
+  var GEN=[
+    {id:'g-atpfinals',t:'ATP Finals: pronósticos y cómo llega cada jugador a Turín',q:'¿Quién gana las Finals, y quién se queda fuera en la fase de grupos?',d:'Repaso a los ocho clasificados, sus grupos, sus cruces directos y lo que dicen las previas. Después, chatea tu pronóstico.',body:["Las Nitto ATP Finals se juegan del 15 al 22 de noviembre en el Inalpi Arena de Turín, en pista dura cubierta. Faltan Sinner, fuera por una lesión de rodilla, y Djokovic. Ocho jugadores en dos grupos de cuatro; pasan a semifinales los dos primeros de cada grupo. Mitad del cuadro debuta: Cobolli, Fils, Tiafoe y Jódar.", "Grupo John McEnroe. Zverev (1), número uno del mundo y campeón de Roland Garros y del US Open 2026, es el mejor sacador del cuadro en pista dura: según RG.org mantiene el 92,1 % de sus juegos de saque, aunque ese medio mantiene que no llega en su mejor forma. Gana 6-0 a Shelton, 5-2 a Fils y 1-0 a Jódar, según Tennisnerd, y ya ganó este torneo en 2018 y 2021. Shelton (3) llega con dos finales grandes desde septiembre, la del US Open y la de París, y cuatro títulos este año, entre ellos el Masters de Canadá. Fils (6) ganó en Cincinnati su primer Masters 1000 y tiene un 0-2 contra Shelton en pista cubierta. Jódar (8) debuta tras jugar su primera final de Masters 1000 en Shanghái y ha ganado los dos últimos duelos a Fils, ambos en pista dura.", "Grupo Ivan Lendl. Alcaraz (2) llega como el jugador en mejor forma del otoño, con el título del Masters de París, y es el favorito de las casas de apuestas. Le favorece el cara a cara con Medvedev (7-3), Tiafoe (2-1) y Cobolli (1-0), pero esta temporada perdió contra Medvedev en Indian Wells y contra Shelton en el US Open, y las Finals nunca se le han dado bien: su única final fue la de 2025, perdida con Sinner. Medvedev (4), campeón en 2020, conoce bien Turín y trae experiencia. Cobolli (5), finalista en Roland Garros y campeón en Acapulco, juega con el público italiano y ha ganado esta temporada a Zverev y a Medvedev. Tiafoe (7), campeón en Halle, llega con 44 victorias y 21 derrotas y un 83,4 % de juegos de saque ganados en pista dura.", "Los pronósticos de las previas coinciden en poco: varios sitúan a Alcaraz como campeón (Tennisnerd lo ve ganando a Shelton en la final; 365Scores, ganando a Zverev; Tenngrand, ganando a Medvedev), y las semifinales que más se repiten son Alcaraz contra Zverev y Shelton o Medvedev por el otro lado. Los debutantes parten con menos opciones, pero en un grupo de cuatro con partidos a tres sets cualquier sorpresa cambia el cuadro.", "Los dos primeros partidos son el domingo 15: Zverev contra Jódar por la tarde y Shelton contra Fils por la noche. Alcaraz debuta el lunes 16 contra Tiafoe y, por la noche, Medvedev contra Cobolli."]},
+    {id:'g-tensiones',t:'Tensión del cordaje: ¿para qué sirve y cuál usas tú?',q:'¿A cuántos kilos encuerdas tu raqueta, con qué cuerda y por qué?',d:'Qué cambia al subir o bajar la tensión y qué usan los profesionales.',body:["La tensión es la fuerza, en kilos, con la que se estiran las cuerdas al encordar. Lo habitual va de unos 18 a 32 kg, aunque la mayoría de los profesionales se mueve entre 20 y 27 kg.", "Para qué sirve: con una tensión más baja la cuerda se hunde más y devuelve más energía, así que la bola sale con más potencia, más altura y más comodidad para el brazo, pero con menos control. Con una tensión más alta el plano de cuerdas es más rígido, la bola sale más plana y más corta y se controla mejor la dirección, a costa de potencia y de más impacto en codo y hombro. En cuerdas de poliéster se suele bajar la tensión para ganar efecto sin perder control.", "Curiosidades. Tras el Open de Australia 2026 se publicaron las tensiones de todos los jugadores, según Punto de Break: Mannarino jugó con unos 10 kg, la más baja, y Eikeri con 31 kg, la más alta. Sinner encordó a unos 29 kg y Alcaraz, que ganó el torneo, a 25 kg. Otras fuentes sitúan a Sinner en 28 kg con la Head Hawk Touch, una tensión muy alta para una cuerda de poliéster completa.", "Tiafoe, según Tennisnerd (agosto de 2026), anda por unos 19 kg con Yonex PolyTour Pro, lejos de los 28 kg de Sinner y de Djokovic. Alcaraz usa Babolat RPM Blast, la misma cuerda que Nadal, con los verticales algo más tensos (unos 25 kg) que los horizontales (unos 24 kg) para que las cuerdas se muevan y den más efecto.", "Otra curiosidad: la tensión con la que encuerdas no es la tensión con la que juegas. Las cuerdas pierden tensión nada más encordar, entre un 10 % y casi un 20 % en las primeras 24 horas según la fuente, y siguen perdiéndola al jugar. El poliéster pierde bastante y por eso 'se muere' pronto; la tripa natural pierde menos.", "Y la regla de oro: no hay un número mágico. Si Tiafoe está a gusto con 19 kg y Sinner con 28, lo importante es probar, subir o bajar un kilo cada vez y fijarse en cómo cae la bola, no en cuánto corre."]}
+  ];
+  function genOf(id){var g=GEN.filter(function(x){return x.id===id})[0];return g?{cat:'atp',tag:'Tema general',cls:'est',t:g.t,d:g.d,s:'TitoTenis',u:'',w:'Siempre abierto',gen:1,q:g.q,body:g.body}:null}
+  function userOf(id){
+    if(id.indexOf('u-')!==0)return null;
+    var p=postsOf(id)[0];if(!p)return null;
+    return {cat:'atp',tag:'Tema de la comunidad',cls:'est',t:p.ntitle,d:'Tema abierto por '+p.name+'.',s:'',u:'',w:new Date(p.ts).toLocaleDateString('es-ES',{day:'numeric',month:'long'}),gen:1};
+  }
+  function newsOf(id){return genOf(id)||userOf(id)||DATA.news.filter(function(n){return nid(n)===id})[0]||matchTopic(id)}
+  function renderGuiones(){
+    var box=$('#gList');box.textContent='';
+    (DATA.guiones||[]).forEach(function(g){
+      var a=el('article','card');a.appendChild(el('h3',null,g.title));
+      a.appendChild(el('p',null,'Gancho: '+g.hook));a.appendChild(el('p',null,g.body));a.appendChild(el('p',null,'Cierre: '+g.cta));
+      a.appendChild(el('p','srcline',g.tags));
+      var b=el('button','btn small','Copiar guion');b.type='button';
+      b.addEventListener('click',function(){var t=g.hook+'\n\n'+g.body+'\n\n'+g.cta+'\n\n'+g.tags;try{navigator.clipboard.writeText(t);toast('Guion copiado')}catch(e){toast('No se pudo copiar')}});
+      a.appendChild(b);box.appendChild(a);
+    });
+    if(!box.children.length)box.appendChild(el('p','empty','Todavía no hay guiones.'));
+  }
+  /* noticias */
+  function renderNews(){
+    var box=$('#news');box.textContent='';var n0=0;
+    DATA.news.forEach(function(n){
+      if(!shown(n.cat))return;n0++;
+      var a=el('article','card nw b'+(n0%3)+' cat-'+n.cat);
+      var meta=el('div','meta');meta.appendChild(el('span','pill '+n.cls,n.tag));meta.appendChild(el('span','pill',CATN[n.cat]));
+      a.appendChild(meta);a.appendChild(el('h3',null,n.t));a.appendChild(el('p',null,n.d));
+      var row=el('div','row');
+      var v=el('button','btn small primary','Ver noticia');v.type='button';v.addEventListener('click',function(){openNews(n)});row.appendChild(v)
+      var b=el('button','btn small clay','Debatir en La grada');b.type='button';
+      b.addEventListener('click',function(){location.hash='#foro/'+nid(n)});
+      row.appendChild(b);a.appendChild(row);box.appendChild(a);
+    });
+    if(!n0)box.appendChild(el('p','empty','No hay noticias de este circuito ahora mismo.'));
+  }
+
+  /* ventana de noticia */
+  var curN=null;
+  function openNews(n){
+    curN=n;$('#ndTitle').textContent=n.t;
+    var b=$('#ndBody');b.textContent='';b.hidden=true;
+    $('#ndChoices').hidden=false;
+    $('#ndOff').hidden=!n.u;
+    $('#ndSrc').textContent=n.s?'Fuente: '+n.s:'';
+    var d=$('#newsDlg');if(d.showModal)d.showModal();else d.setAttribute('open','');
+  }
+  $('#ndHere').addEventListener('click',function(){
+    var n=curN;if(!n)return;var b=$('#ndBody');b.textContent='';
+    b.appendChild(el('p',null,n.d));
+    (n.full||[]).forEach(function(t){b.appendChild(el('p',null,t))});
+    if(!(n.full&&n.full.length))b.appendChild(el('p','srcline','La versión ampliada de esta noticia se escribe en la próxima actualización de datos. Mientras tanto puedes leerla entera en la página oficial.'));
+    b.hidden=false;$('#ndChoices').hidden=true;
+  });
+  $('#ndOff').addEventListener('click',function(){if(curN&&curN.u)window.open(curN.u,'_blank','noopener')});
+  $('#ndClose').addEventListener('click',function(){$('#newsDlg').close()});
+
+  /* partidos */
+  var dayN=0; /* 0 hoy, 1 mañana, 2 pasado mañana */
+  function dayIso(k){var t=(DATA.today||new Date().toISOString().slice(0,10)).split('-');var d=new Date(Date.UTC(+t[0],+t[1]-1,+t[2]+k));return d.toISOString().slice(0,10)}
+  function dayLabel(k){var d=new Date(dayIso(k)+'T12:00:00Z');var w=d.toLocaleDateString('es-ES',{weekday:'short',day:'numeric',month:'short',timeZone:'UTC'});return (['Hoy','Mañana','Pasado mañana'][k])+' · '+w}
+  function renderDayChips(){
+    var box=$('#dayChips');box.textContent='';
+    for(var k=0;k<3;k++)(function(k){
+      var b=el('button','chip',dayLabel(k));b.type='button';b.setAttribute('aria-pressed',String(k===dayN));
+      b.addEventListener('click',function(){dayN=k;renderMatches()});box.appendChild(b);
+    })(k);
+  }
+  function prevInto(box,p){
+    box.textContent='';box.className='prev';
+    [['pista','La pista y las condiciones'],['h2h','Cara a cara'],['forma','Cómo llega cada uno'],['saque','Saque y resto'],['claves','Claves tácticas'],['faltan','Datos que aún faltan']].forEach(function(k){
+      var L=p[k[0]];if(!L||!L.length)return;
+      box.appendChild(el('h4',null,k[1]));var u=el('ul',k[0]==='faltan'?'gap':null);L.forEach(function(t){u.appendChild(el('li',null,t))});box.appendChild(u);
+    });
+  }
+  function vis(){return DATA.matches.filter(function(m){return shown(m.cat)})}
+  function curMatch(){return vis()[sel]}
+  function renderMatches(){
+    var box=$('#matches');box.textContent='';
+    var V=vis();
+    var idx=V.map(function(m){return m.id}).indexOf(selId);
+    sel=idx>=0?idx:0;selId=V[sel]?V[sel].id:null;
+    var NR=(DATA.results||[]).filter(function(r){return shown(r.cat)}).length;
+
+    V.forEach(function(m,i){
+      var c=el('article','mcard cat-'+m.cat);c.setAttribute('data-sel',i===sel?'1':'0');
+      var top=el('div','mtop');var l=el('small',null,m.tour+' · '+CATN[m.cat]);top.appendChild(l);
+      var lv=el('span','live');var dt=el('span','dot');dt.setAttribute('aria-hidden','true');lv.appendChild(dt);lv.appendChild(document.createTextNode('EN VIVO'));top.appendChild(lv);
+      c.appendChild(top);
+      var t=el('table','score');t.setAttribute('aria-label',m.names[0]+' contra '+m.names[1]);
+      t.innerHTML='<thead><tr><th scope="col">Jugador</th><th scope="col">S1</th><th scope="col">S2</th><th scope="col">S3</th><th scope="col">Pts</th></tr></thead><tbody></tbody>';
+      var tb=t.querySelector('tbody');
+      for(var k=0;k<2;k++){
+        var tr=el('tr');var td=el('td');var d=el('div','pname');
+        var dot=el('span','srv'+(m.srv===k?' on':''));dot.setAttribute('aria-hidden','true');
+        d.appendChild(dot);d.appendChild(el('span',null,m.names[k]));td.appendChild(d);tr.appendChild(td);
+        for(var s=0;s<3;s++){
+          var v=m.sets[s]?String(m.sets[s][k]):'–';
+          tr.appendChild(el('td',s===m.sets.length-1?'curset':null,v));
+        }
+        tr.appendChild(el('td','pts',m.pts?m.pts[k]:'–'));
+        tb.appendChild(tr);
+      }
+      c.appendChild(t);
+      if(m.inc&&m.inc.length){var ib=el('p','inc','⚠ '+m.inc.join(' · '));c.appendChild(ib)}
+      var f=el('div','mfoot');f.appendChild(el('span',null,m.info));
+      var acts=el('div','acts');
+            var dl=el('a','btn small clay','Debatir');dl.href='#foro/'+mid(m);acts.appendChild(dl);
+      c.style.cursor='pointer';c.addEventListener('click',function(e){if(e.target.closest('a,button'))return;selId=m.id;sel=i;renderMatches()});
+      f.appendChild(acts);c.appendChild(f);box.appendChild(c);
+    });
+    $('.detail-head').hidden=!V.length;$('.ana-grid').hidden=!V.length;$('#matches').hidden=(dayN!==0);
+    var lc=$('#liveCount');lc.parentNode.hidden=!V.length;lc.textContent=V.length+(V.length===1?' partido en juego':' partidos en juego');
+    var wj=$('#waJoin');if(wj){if(DATA.whatsapp){wj.href=DATA.whatsapp;wj.hidden=false}else wj.hidden=true}
+    function row(x,right,kind){
+      var wrap=el('div','rwrap');
+      var d=el('div','rrow cat-'+x.cat);var l=el('div');l.appendChild(el('b',null,x.names?x.names[0]+' contra '+x.names[1]:x.text));
+      l.appendChild(el('small',null,x.tour));
+      if(x.det)l.appendChild(el('span','rdet',x.det));
+      var r=el('div','acts');r.appendChild(el('span','sc',right));
+      var an=(kind==='res')?(DATA.analisis||[]).filter(function(a){return a.id===x.id})[0]:null;
+      var pv=(kind==='sch')?x.prev:null;
+      var panel=el('div');panel.hidden=true;
+      var lab=pv?'Ver previa':(x.deep?'Ver análisis completo':(an?'Ver análisis':'Ver detalle'));
+      if(kind==='res'||pv){
+        var tg=el('button','btn small primary',lab);tg.type='button';tg.setAttribute('aria-expanded','false');
+        tg.addEventListener('click',function(){
+          var open=panel.hidden;panel.hidden=!open;tg.setAttribute('aria-expanded',String(open));tg.textContent=open?'Ocultar':lab;
+          if(open&&!panel.children.length){panel.className='prev';buildPanel(panel,x,kind,an,pv)}
+        });
+        r.appendChild(tg);
+      }
+      var b=el('a','btn small clay','Debatir');b.href='#foro/'+mid(x);b.style.marginLeft='10px';r.appendChild(b);
+      var pre=(kind==='res')?winCard(x):((kind==='sch')?vsCard(x,pv):null);
+      if(pre){pre.className='vs inl';wrap.appendChild(pre)}
+      d.appendChild(l);d.appendChild(r);wrap.appendChild(d);wrap.appendChild(panel);return wrap;
+    }
+    renderDayChips();
+    var today=(dayN===0);
+    var rBox=$('#results');rBox.textContent='';
+    var R=today?(DATA.results||[]).filter(function(r){return shown(r.cat)}):[];
+    R.forEach(function(r){rBox.appendChild(row(r,r.score,'res'))});
+    var fB=$('#feat'),FD=FEAT;fB.textContent='';FD.forEach(function(r){fB.appendChild(row(r,r.score,'res'))});fB.hidden=!FD.length;$('#featHead').hidden=!FD.length;
+    $('#resHead').hidden=!today;rBox.hidden=!today;
+    if(today&&!R.length)rBox.appendChild(el('p','empty','Todavía no hay resultados ATP/WTA hoy.'));
+    var sBox=$('#sched');sBox.textContent='';
+    var iso=dayIso(dayN);
+    var S=(DATA.scheduled||[]).filter(function(r){return shown(r.cat)&&((r.day||dayIso(0))===iso)});
+    S.forEach(function(r){sBox.appendChild(row(r,fb(r.time),'sch'))});
+    if(!S.length)sBox.appendChild(el('p','empty',today?'No hay más partidos ATP/WTA programados hoy.':'Todavía no hay partidos ATP/WTA confirmados para este día. Se añaden cuando se publica el orden de juego.'));
+    renderDetail();
+  }
+  function parseNames(x){
+    if(x.names&&x.names.length===2)return {a:x.names[0],b:x.names[1],w:x.winner||null};
+    var m=/^(.+?) gana a (.+)$/.exec(x.text||'');return m?{a:m[1],b:m[2],w:m[1]}:null;
+  }
+  function ini(n){var w=String(n).replace(/\/.*/,'').trim().split(/\s+/);return (w[0].charAt(0)+(w.length>1?w[w.length-1].charAt(0):'')).toUpperCase()}
+  var SV='http://www.w3.org/2000/svg';
+  function sv(tag,at,txt){var e=document.createElementNS(SV,tag);for(var k in at)e.setAttribute(k,at[k]);if(txt!=null)e.textContent=txt;return e}
+  var PHOTOS={},pid=0;
+  function circ(g,cx,col,label,win,name){
+    var ph=PHOTOS[name],R=58;
+    if(ph&&ph.src){
+      var id='cp'+(++pid);
+      var df=sv('defs',{});var cp=sv('clipPath',{id:id});cp.appendChild(sv('circle',{cx:cx,cy:72,r:R}));df.appendChild(cp);g.appendChild(df);
+      g.appendChild(sv('circle',{cx:cx,cy:72,r:R+5,fill:col}));
+      var im=sv('image',{href:ph.src,x:cx-R,y:72-R,width:R*2,height:R*2,'clip-path':'url(#'+id+')',preserveAspectRatio:'xMidYMin slice'});g.appendChild(im);
+      if(ph.credit)g.appendChild(sv('text',{x:cx,y:152,'text-anchor':'middle','font-size':10,fill:'var(--mute)'},ph.credit));
+      return;
+    }
+    g.appendChild(sv('circle',{cx:cx,cy:72,r:R,fill:'var(--ink)',stroke:col,'stroke-width':win?7:4}));
+    g.appendChild(sv('text',{x:cx,y:87,'text-anchor':'middle','font-size':42,'font-weight':800,fill:'var(--chalk)'},label));
+  }
+  var SCN=[
+    ['#0B2A4A','#1E5C8F','#F4F1E8'],   /* pista dura cubierta, noche */
+    ['#3A1A12','#C4562B','#F6D9C0'],   /* tierra batida al atardecer */
+    ['#0F3A22','#3F8F4F','#EAF5D0'],   /* hierba */
+    ['#2B1740','#8A4FBF','#F0E1FF'],   /* final, focos morados */
+    ['#10222A','#E2642D','#FFE9B8']    /* pista cubierta, luz cálida */
+  ];
+  function scene(svg,id,h){
+    var k=0,t=String(id||'x');for(var i=0;i<t.length;i++)k=(k*31+t.charCodeAt(i))>>>0;
+    var c=SCN[k%SCN.length],gid='sg'+(++pid);
+    var df=sv('defs',{});var lg=sv('linearGradient',{id:gid,x1:0,y1:0,x2:1,y2:1});
+    lg.appendChild(sv('stop',{offset:'0','stop-color':c[0]}));lg.appendChild(sv('stop',{offset:'1','stop-color':c[1]}));df.appendChild(lg);svg.appendChild(df);
+    svg.appendChild(sv('rect',{x:0,y:0,width:640,height:h,rx:14,fill:'url(#'+gid+')'}));
+    var f=sv('g',{fill:'none',stroke:c[2],'stroke-opacity':.14,'stroke-width':3});
+    var v=k%3;
+    if(v===0){f.appendChild(sv('line',{x1:0,y1:h*.78,x2:640,y2:h*.78}));f.appendChild(sv('line',{x1:320,y1:h*.78,x2:320,y2:h}));f.appendChild(sv('line',{x1:120,y1:h*.78,x2:60,y2:h}));f.appendChild(sv('line',{x1:520,y1:h*.78,x2:580,y2:h}))}
+    else if(v===1){for(var r=0;r<4;r++)f.appendChild(sv('circle',{cx:320,cy:h/2,r:50+r*45}))}
+    else{for(var q=0;q<6;q++)f.appendChild(sv('line',{x1:q*130-40,y1:0,x2:q*130+60,y2:h}))}
+    svg.appendChild(f);
+    svg.appendChild(sv('circle',{cx:[540,100,320,580,60][k%5],cy:[34,30,22,40,28][k%5],r:12,fill:'#D6E84B','fill-opacity':.55}));
+  }
+  function short(n,k){return n.length>k?n.slice(0,k-1)+'…':n}
+  function vsCard(x,pr){
+    var n=parseNames(x);if(!n)return null;
+    var col=x.cat==='wta'?'var(--wta)':'var(--atp)';
+    var svg=sv('svg',{viewBox:'0 0 640 180',role:'img','aria-label':n.a+' contra '+n.b+(pr&&pr.h2hScore?', cara a cara '+pr.h2hScore[0]+' a '+pr.h2hScore[1]:'')});
+    scene(svg,x.id,180);
+    circ(svg,105,col,ini(n.a),false,n.a);circ(svg,535,col,ini(n.b),false,n.b);
+    svg.appendChild(sv('text',{x:320,y:82,'text-anchor':'middle','font-size':56,'font-weight':800,fill:'var(--clay)'},'VS'));
+    if(pr&&pr.h2hScore)svg.appendChild(sv('text',{x:320,y:122,'text-anchor':'middle','font-size':30,'font-weight':800,fill:'var(--ball)'},pr.h2hScore[0]+' – '+pr.h2hScore[1]));
+    svg.appendChild(sv('text',{x:105,y:172,'text-anchor':'middle','font-size':17,'font-weight':700,fill:'var(--chalk)'},short(n.a,20)));
+    svg.appendChild(sv('text',{x:535,y:172,'text-anchor':'middle','font-size':17,'font-weight':700,fill:'var(--chalk)'},short(n.b,20)));
+    var d=el('div','vs');d.appendChild(svg);return d;
+  }
+  function winCard(x){
+    var n=parseNames(x);if(!n||!n.w)return null;
+    var col=x.cat==='wta'?'var(--wta)':'var(--atp)';
+    var svg=sv('svg',{viewBox:'0 0 640 150',role:'img','aria-label':'Ganador: '+n.w+' '+x.score});
+    scene(svg,x.id,150);
+    circ(svg,90,col,ini(n.w),true,n.w);
+    svg.appendChild(sv('text',{x:175,y:52,'font-size':15,'font-weight':800,fill:'var(--ball)','letter-spacing':3},'GANADOR'));
+    svg.appendChild(sv('text',{x:175,y:96,'font-size':36,'font-weight':800,fill:'var(--chalk)'},short(n.w,22)));
+    svg.appendChild(sv('text',{x:175,y:128,'font-size':24,'font-weight':700,fill:'var(--ball)'},x.score));
+    var d=el('div','vs');d.appendChild(svg);return d;
+  }
+  function lineChart(T){
+    var W=640,H=220,L=36,B=34,Tp=14,R=16,n=T.labels.length;
+    var all=T.a.concat(T.b);var mx=Math.max.apply(null,all.concat([1]));
+    var svg=sv('svg',{viewBox:'0 0 '+W+' '+H,role:'img','aria-label':T.title});
+    function X(i){return L+(n>1?i*(W-L-R)/(n-1):(W-L-R)/2)}
+    function Y(v){return H-B-(v/mx)*(H-B-Tp)}
+    for(var g=0;g<=mx;g+=Math.max(1,Math.ceil(mx/4))){svg.appendChild(sv('line',{x1:L,x2:W-R,y1:Y(g),y2:Y(g),stroke:'rgba(244,241,232,.12)'}));svg.appendChild(sv('text',{x:L-8,y:Y(g)+4,'text-anchor':'end','font-size':12,fill:'var(--mute)'},String(g)))}
+    T.labels.forEach(function(l,i){svg.appendChild(sv('text',{x:X(i),y:H-10,'text-anchor':'middle','font-size':12,fill:'var(--mute)'},l))});
+    [[T.a,'var(--ball)'],[T.b,'var(--clay)']].forEach(function(S){
+      var pts=S[0].map(function(v,i){return X(i)+','+Y(v)}).join(' ');
+      svg.appendChild(sv('polyline',{points:pts,fill:'none',stroke:S[1],'stroke-width':3,'stroke-linejoin':'round'}));
+      S[0].forEach(function(v,i){svg.appendChild(sv('circle',{cx:X(i),cy:Y(v),r:5,fill:S[1]}));svg.appendChild(sv('text',{x:X(i),y:Y(v)-9,'text-anchor':'middle','font-size':12,fill:'var(--chalk)'},String(v)))});
+    });
+    return svg;
+  }
+  function momentum(x,n){
+    var G=x.juegos.split(''),N=G.length,W=640,H=260,L=34,R=16,T=22,B=34,win=4;
+    var A=n.w||n.a,Bn=n.w?(n.w===n.a?n.b:n.a):n.b;
+    // pulso: % de los últimos 4 juegos ganados por cada jugador (ventana móvil)
+    var pa=[],pb=[];
+    for(var i=0;i<N;i++){var s0=Math.max(0,i-win+1),c=0,t=i-s0+1;for(var j=s0;j<=i;j++)if(G[j]==='a')c++;pa.push((c+1)/(t+2)*100);pb.push(100-(c+1)/(t+2)*100)}
+    var uid='m'+Math.floor(Math.random()*1e6);
+    var svg=sv('svg',{viewBox:'0 0 '+W+' '+H,role:'img','aria-label':'Momentum del partido, una línea por jugador'});
+    var defs=sv('defs',{});
+    [['a','#D6E84B'],['b','#E2642D']].forEach(function(q){
+      var g=sv('linearGradient',{id:uid+q[0],x1:0,y1:0,x2:0,y2:1});
+      g.appendChild(sv('stop',{offset:'0%','stop-color':q[1],'stop-opacity':.45}));
+      g.appendChild(sv('stop',{offset:'100%','stop-color':q[1],'stop-opacity':0}));defs.appendChild(g)});
+    svg.appendChild(defs);
+    svg.appendChild(sv('rect',{x:0,y:0,width:W,height:H,rx:12,fill:'rgba(0,0,0,.25)'}));
+    function X(i){return N>1?L+i*(W-L-R)/(N-1):W/2}
+    function Y(v){return T+(100-v)/100*(H-T-B)}
+    [0,25,50,75,100].forEach(function(v){
+      svg.appendChild(sv('line',{x1:L,x2:W-R,y1:Y(v),y2:Y(v),stroke:'var(--chalk)','stroke-opacity':v===50?.35:.1,'stroke-dasharray':v===50?'':'3 4'}));
+      svg.appendChild(sv('text',{x:L-6,y:Y(v)+4,'text-anchor':'end','font-size':10,fill:'var(--mute)'},v+'%'))});
+    function path(p){ // curva suave (Catmull-Rom → Bézier)
+      var d='M'+X(0)+','+Y(p[0]);
+      for(var i=0;i<p.length-1;i++){
+        var p0=i?i-1:i,p1=i,p2=i+1,p3=i+2<p.length?i+2:i+1,t=.18;
+        var c1x=X(p1)+(X(p2)-X(p0))*t,c1y=Y(p[p1])+(Y(p[p2])-Y(p[p0]))*t;
+        var c2x=X(p2)-(X(p3)-X(p1))*t,c2y=Y(p[p2])-(Y(p[p3])-Y(p[p1]))*t;
+        d+=' C'+c1x+','+Math.max(T,Math.min(H-B,c1y))+' '+c2x+','+Math.max(T,Math.min(H-B,c2y))+' '+X(p2)+','+Y(p[p2])}
+      return d}
+    var sets=(x.score||'').match(/\d+-\d+/g)||[],acc=0;
+    sets.forEach(function(t,i){var q=t.split('-'),len=(+q[0])+(+q[1]);var x0=acc;acc+=len;
+      if(i<sets.length-1){var xx=X(acc-.5);svg.appendChild(sv('line',{x1:xx,x2:xx,y1:T,y2:H-B,stroke:'var(--chalk)','stroke-opacity':.4,'stroke-dasharray':'2 4'}))}
+      svg.appendChild(sv('text',{x:(X(x0)+X(Math.min(acc-1,N-1)))/2,y:H-12,'text-anchor':'middle','font-size':11,fill:'var(--mute)'},'Set '+(i+1)))});
+    [[pa,'a','#D6E84B'],[pb,'b','#E2642D']].forEach(function(q){
+      var d=path(q[0]);
+      svg.appendChild(sv('path',{d:d+' L'+X(N-1)+','+Y(0)+' L'+X(0)+','+Y(0)+' Z',fill:'url(#'+uid+q[1]+')'}));
+      var ln=sv('path',{d:d,fill:'none',stroke:q[2],'stroke-width':3.5,'stroke-linecap':'round','stroke-linejoin':'round'});
+      svg.appendChild(ln);
+      try{var len=ln.getTotalLength();if(len){ln.style.strokeDasharray=len;ln.style.strokeDashoffset=len;ln.style.transition='stroke-dashoffset 1.6s ease-out';requestAnimationFrame(function(){requestAnimationFrame(function(){ln.style.strokeDashoffset=0})})}}catch(e){}
+      svg.appendChild(sv('circle',{cx:X(N-1),cy:Y(q[0][N-1]),r:5,fill:q[2],stroke:'var(--ink)','stroke-width':2}))});
+    // puntos de juego ganado + tooltip
+    var tip=sv('text',{x:W/2,y:H-2,'text-anchor':'middle','font-size':11,fill:'var(--chalk)'},'');
+    G.forEach(function(g,i){
+      var win=g==='a'?pa:pb,col=g==='a'?'#D6E84B':'#E2642D';
+      var c=sv('circle',{cx:X(i),cy:Y(win[i]),r:3,fill:col,'fill-opacity':.9});svg.appendChild(c);
+      var hit=sv('rect',{x:X(i)-(W-L-R)/(N-1)/2,y:T,width:(W-L-R)/(N-1),height:H-T-B,fill:'transparent'});
+      hit.addEventListener('mouseenter',function(){tip.textContent='Juego '+(i+1)+': '+(g==='a'?A:Bn)+' · pulso '+Math.round(pa[i])+'% – '+Math.round(pb[i])+'%'});
+      hit.addEventListener('click',function(){hit.dispatchEvent(new Event('mouseenter'))});
+      svg.appendChild(hit)});
+    svg.appendChild(tip);
+    // leyenda
+    svg.appendChild(sv('circle',{cx:L+4,cy:H-34+0,r:0}));
+    var lg=sv('text',{x:W-R,y:14,'text-anchor':'end','font-size':12,'font-weight':700,'font-family':'DM Sans,sans-serif'},'');
+    var t1=sv('tspan',{fill:'#D6E84B'},'● '+short(A,16));var t2=sv('tspan',{fill:'#E2642D',dx:14},'● '+short(Bn,16));
+    lg.appendChild(t1);lg.appendChild(t2);tip.setAttribute('x',L);tip.setAttribute('text-anchor','start');tip.setAttribute('y',H-1);tip.setAttribute('x',W/2);tip.setAttribute('text-anchor','middle');
+    svg.appendChild(lg);
+    return svg;
+  }
+  function statsInto(box,x,n){
+    var T=x.stats;if(!T||!T.rows)return;
+    var w=el('div','statbox');
+    var h=el('div','stat-row');h.style.cssText='color:var(--mute);font-size:13px;margin-bottom:8px';
+    h.appendChild(el('span',null,(T.names||[n.a,n.b])[0]));h.appendChild(el('span',null,''));h.appendChild(el('span',null,(T.names||[n.a,n.b])[1]));w.appendChild(h);
+    T.rows.forEach(function(r){
+      var c=el('div','stat'),row=el('div','stat-row');
+      row.appendChild(el('span',null,r[1]));row.appendChild(el('span',null,r[0]));row.appendChild(el('span',null,r[2]));
+      var bars=el('div','bars'),tot=(r[3]+r[4])||1,i1=el('i'),i2=el('i');i1.style.width=(r[3]/tot*100)+'%';i2.style.width=(r[4]/tot*100)+'%';
+      bars.appendChild(i1);bars.appendChild(i2);c.appendChild(row);c.appendChild(bars);w.appendChild(c);
+    });
+    if(T.src)w.appendChild(el('p','srcline','Datos: '+T.src));
+    box.appendChild(w);
+  }
+  function trendInto(box,x,pr){
+    var n=parseNames(x);if(!n||!x.score)return;
+    var c=el('div','tr');c.appendChild(el('h4',null,'Momentum del partido'));
+    if(x.juegos&&/^[ab]+$/.test(x.juegos)){
+      c.appendChild(momentum(x,n));
+      c.appendChild(el('p','srcline','Una línea por jugador: el porcentaje de los últimos 4 juegos que ha ganado cada uno. Cuando una línea sube, ese jugador está mandando; si se cruzan, cambia el dominio. Toca un juego para ver el detalle; las líneas de puntos separan los sets.'));
+      if(x.juegosSrc)c.appendChild(el('p','srcline','Datos: '+x.juegosSrc));
+    }else{
+      c.appendChild(el('p','srcline','Esta gráfica se dibuja juego a juego. Todavía no hay una fuente con la secuencia de juegos de este partido; en cuanto aparezca, se añade sola.'));
+    }
+    box.appendChild(c);
+  }
+
+  /* ---------- Análisis profundo (Match Charting Project) ---------- */
+  function wpChart(D){
+    var N=D.wp.length,W=680,H=300,L=40,R=16,T=26,B=34;
+    var svg=sv('svg',{viewBox:'0 0 '+W+' '+H,role:'img','aria-label':'Probabilidad de victoria punto a punto'});
+    var uid='w'+Math.floor(Math.random()*1e6);
+    var defs=sv('defs',{});
+    [['a','#D6E84B'],['b','#E2642D']].forEach(function(q){
+      var g=sv('linearGradient',{id:uid+q[0],x1:0,y1:0,x2:0,y2:1});
+      g.appendChild(sv('stop',{offset:'0%','stop-color':q[1],'stop-opacity':.35}));
+      g.appendChild(sv('stop',{offset:'100%','stop-color':q[1],'stop-opacity':0}));defs.appendChild(g)});
+    svg.appendChild(defs);
+    svg.appendChild(sv('rect',{x:0,y:0,width:W,height:H,rx:12,fill:'rgba(0,0,0,.25)'}));
+    function X(i){return L+i*(W-L-R)/(N-1)}
+    function Y(v){return T+(1-v)*(H-T-B)}
+    [0,.25,.5,.75,1].forEach(function(v){
+      svg.appendChild(sv('line',{x1:L,x2:W-R,y1:Y(v),y2:Y(v),stroke:'#F4F1E8','stroke-opacity':v===.5?.4:.1,'stroke-dasharray':v===.5?'':'3 4'}));
+      svg.appendChild(sv('text',{x:L-6,y:Y(v)+4,'text-anchor':'end','font-size':10,fill:'#A9BDB6'},Math.round(v*100)+'%'))});
+    var edges=[0].concat(D.bounds).concat([N-1]);
+    for(var k=0;k<edges.length-1;k++){
+      svg.appendChild(sv('text',{x:(X(edges[k])+X(edges[k+1]))/2,y:H-12,'text-anchor':'middle','font-size':11,fill:'#A9BDB6'},(k+1)+'.º set'));
+      if(k>0)svg.appendChild(sv('line',{x1:X(edges[k]),x2:X(edges[k]),y1:T,y2:H-B,stroke:'#F4F1E8','stroke-opacity':.4,'stroke-dasharray':'2 4'}));
+    }
+    function path(vals){
+      var d='M'+X(0)+','+Y(vals[0]);
+      for(var i=0;i<vals.length-1;i++){
+        var p0=i?i-1:i,p1=i,p2=i+1,p3=i+2<vals.length?i+2:i+1,t=.14;
+        var c1x=X(p1)+(X(p2)-X(p0))*t,c1y=Y(vals[p1])+(Y(vals[p2])-Y(vals[p0]))*t;
+        var c2x=X(p2)-(X(p3)-X(p1))*t,c2y=Y(vals[p2])-(Y(vals[p3])-Y(vals[p1]))*t;
+        c1y=Math.max(T,Math.min(H-B,c1y));c2y=Math.max(T,Math.min(H-B,c2y));
+        d+=' C'+c1x+','+c1y+' '+c2x+','+c2y+' '+X(p2)+','+Y(vals[p2])}
+      return d}
+    var a=D.wp,b=D.wp.map(function(v){return 1-v});
+    [[a,'a','#D6E84B'],[b,'b','#E2642D']].forEach(function(q){
+      var d=path(q[0]);
+      svg.appendChild(sv('path',{d:d+' L'+X(N-1)+','+Y(0)+' L'+X(0)+','+Y(0)+' Z',fill:'url(#'+uid+q[1]+')'}));
+      var ln=sv('path',{d:d,fill:'none',stroke:q[2],'stroke-width':3,'stroke-linecap':'round','stroke-linejoin':'round'});
+      svg.appendChild(ln);
+      try{var len=ln.getTotalLength();if(len){ln.style.strokeDasharray=len;ln.style.strokeDashoffset=len;ln.style.transition='stroke-dashoffset 2s ease-out';requestAnimationFrame(function(){requestAnimationFrame(function(){ln.style.strokeDashoffset=0})})}}catch(e){}
+    });
+    D.key.forEach(function(k,j){
+      svg.appendChild(sv('circle',{cx:X(k.i),cy:Y(a[k.i]),r:9,fill:'#0C1F1D',stroke:'#F4F1E8','stroke-width':1.5}));
+      svg.appendChild(sv('text',{x:X(k.i),y:Y(a[k.i])+4,'text-anchor':'middle','font-size':11,'font-weight':700,fill:'#F4F1E8'},String(j+1)))});
+    var lg=sv('text',{x:W-R,y:16,'text-anchor':'end','font-size':12,'font-weight':700,'font-family':'DM Sans,sans-serif'},'');
+    lg.appendChild(sv('tspan',{fill:'#D6E84B'},'● '+D.names[0]));lg.appendChild(sv('tspan',{fill:'#E2642D',dx:14},'● '+D.names[1]));svg.appendChild(lg);
+    var tip=sv('text',{x:L,y:16,'font-size':11,fill:'#F4F1E8'},'Toca la gráfica para ver cada punto');svg.appendChild(tip);
+    var guide=sv('line',{x1:0,x2:0,y1:T,y2:H-B,stroke:'#F4F1E8','stroke-opacity':0});svg.appendChild(guide);
+    var hit=sv('rect',{x:L,y:T,width:W-L-R,height:H-T-B,fill:'transparent',style:'cursor:crosshair'});
+    function at(ev){
+      var r=svg.getBoundingClientRect(),cx=(ev.touches?ev.touches[0].clientX:ev.clientX);
+      var x=(cx-r.left)/r.width*W,i=Math.round((x-L)/(W-L-R)*(N-1));i=Math.max(0,Math.min(N-1,i));
+      guide.setAttribute('x1',X(i));guide.setAttribute('x2',X(i));guide.setAttribute('stroke-opacity',.5);
+      var p=i<D.lab.length?D.lab[i]:'Final';
+      tip.textContent=(i<D.win.length?'Punto '+(i+1)+' · '+p+' · ':'Final · ')+D.names[0]+' '+Math.round(a[i]*100)+' % – '+Math.round(b[i]*100)+' % '+D.names[1];
+    }
+    hit.addEventListener('mousemove',at);hit.addEventListener('click',at);hit.addEventListener('touchstart',at,{passive:true});hit.addEventListener('touchmove',at,{passive:true});
+    svg.appendChild(hit);
+    return svg;
+  }
+  function deepInto(panel,D){
+    var c=el('div','tr');c.appendChild(el('h4',null,'Probabilidad de victoria, punto a punto'));
+    c.appendChild(wpChart(D));
+    box_key(c,D);panel.appendChild(c);
+    D.tables.forEach(function(t){
+      var w=el('div','dtab');w.appendChild(el('h4',null,t.t));
+      var h=el('div','dr dh');h.appendChild(el('span',null,''));h.appendChild(el('b',null,D.names[0]));h.appendChild(el('b',null,D.names[1]));w.appendChild(h);
+      if(t.rows)t.rows.forEach(function(r){var q=el('div','dr');q.appendChild(el('span',null,r[0]));q.appendChild(el('b',null,r[1]));q.appendChild(el('b',null,r[2]));w.appendChild(q)});
+      if(t.bars)t.bars.forEach(function(r){
+        var q=el('div','stat');var row=el('div','stat-row');row.appendChild(el('span',null,r[3]));row.appendChild(el('span',null,r[0]));row.appendChild(el('span',null,r[4]));q.appendChild(row);
+        var bars=el('div','bars'),tot=(r[1]+r[2])||1,i1=el('i'),i2=el('i');i1.style.width=(r[1]/tot*100)+'%';i2.style.width=(r[2]/tot*100)+'%';bars.appendChild(i1);bars.appendChild(i2);q.appendChild(bars);w.appendChild(q)});
+      panel.appendChild(w);
+    });
+    var a=el('div');anaInto(a,D.analisis);while(a.firstChild)panel.appendChild(a.firstChild);
+    var p=el('p','srcline');p.appendChild(document.createTextNode('Datos: '+D.src+' '));
+    var l=el('a',null,'Ver el partido en Tennis Abstract');l.href=D.url;l.target='_blank';l.rel='noopener';p.appendChild(l);panel.appendChild(p);
+  }
+  function box_key(c,D){
+    var ol=el('ol','keyl');D.key.forEach(function(k){var li=el('li');li.appendChild(el('b',null,k.lab+'. '));li.appendChild(document.createTextNode(k.txt));ol.appendChild(li)});
+    c.appendChild(el('h4',null,'Los puntos que cambiaron el partido'));c.appendChild(ol);
+  }
+  function buildPanel(panel,x,kind,an,pv){
+    var card=(kind==='res')?winCard(x):vsCard(x,pv);
+    if(kind==='res'){var nn=parseNames(x);if(nn)statsInto(panel,x,nn)}
+    if(x.deep){deepInto(panel,x.deep);return}
+    trendInto(panel,x,pv);
+    if(pv){var t=el('div');prevInto(t,pv);t.className='';while(t.firstChild)panel.appendChild(t.firstChild)}
+    else if(an){var t2=el('div');anaInto(t2,an);while(t2.firstChild)panel.appendChild(t2.firstChild)}
+    else panel.appendChild(el('p','srcline','Todavía no hay análisis tenístico de este partido; se añade en la siguiente actualización.'));
+  }
+  function renderSugs(){
+    var box=$('#sugList');if(!box)return;box.textContent='';
+    var L=store.sugs.slice().sort(function(a,b){return (b.ts||0)-(a.ts||0)});
+    if(!L.length)box.appendChild(el('p','empty','Aún no hay sugerencias. Sé la primera persona en escribir una.'));
+    L.forEach(function(p){var d=el('div','sgi');d.appendChild(el('div',null,p.text));d.appendChild(el('small',null,(p.name||'Invitado')+' · '+new Date(p.ts).toLocaleString('es-ES',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})));box.appendChild(d)});
+  }
+  document.addEventListener('submit',function(e){
+    if(e.target.id!=='sugForm')return;e.preventDefault();
+    var t=$('#sugText').value.trim();if(!t)return;
+    add('sugs',{name:myNm('#sugName'),uid:uid,text:t});$('#sugText').value='';
+  });
+  var FEAT=[];
+  fetch('destacados.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){FEAT=(j&&j.destacados)||[];if(typeof renderMatches==='function')renderMatches()}).catch(function(){});
+  fetch('fotos.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{}}).then(function(j){PHOTOS=j||{};if(typeof renderMatches==='function')renderMatches()}).catch(function(){});
+  function renderDetail(){
+    var m=curMatch();
+    if(!m){$('#mTitle').textContent='';$('#mSub').textContent='';$('#stats').textContent='';$('#ctx').textContent='';return}
+    $('#mTitle').textContent=m.names[0]+' contra '+m.names[1];
+    $('#mSub').textContent=m.tour+' · datos de '+(DATA.updated||'');
+    var sBox=$('#stats');sBox.textContent='';
+    if(m.st){
+      var head=el('div','stat-row');head.style.color='var(--mute)';head.style.fontSize='13px';head.style.marginBottom='12px';
+      head.appendChild(el('span',null,m.names[0]));head.appendChild(el('span',null,''));head.appendChild(el('span',null,m.names[1]));sBox.appendChild(head);
+      m.st.forEach(function(r){
+        var w=el('div','stat');var row=el('div','stat-row');
+        row.appendChild(el('span',null,r[1]));row.appendChild(el('span',null,r[0]));row.appendChild(el('span',null,r[2]));
+        var bars=el('div','bars');var tot=(r[3]+r[4])||1;
+        var i1=el('i');i1.style.width=(r[3]/tot*100)+'%';var i2=el('i');i2.style.width=(r[4]/tot*100)+'%';
+        bars.appendChild(i1);bars.appendChild(i2);w.appendChild(row);w.appendChild(bars);sBox.appendChild(w);
+      });
+      if(m.stNote)sBox.appendChild(el('p','srcline',m.stNote));
+    }else{
+      sBox.appendChild(el('p','empty','El proveedor no ofrece estadísticas detalladas de este partido. Solo el marcador por sets.'));
+    }
+    var cx2=$('#ctx');cx2.textContent='';
+    (m.ctx||[]).forEach(function(t){cx2.appendChild(el('div',null,t))});
+  }
+
+  /* ---------- Análisis del partido ---------- */
+    function de(t){var x=/(\d+)\s+de\s+(\d+)/.exec(t||'');return x?[+x[1],+x[2]]:null}
+  function pc(p){return p?Math.round(p[0]/p[1]*100)+' %':'–'}
+  function rowOf(m,key){var r=null;(m.st||[]).forEach(function(x){if(x[0].indexOf(key)===0)r=x});return r}
+  function anaInto(c,a){
+    c.appendChild(el('h4',null,'Qué pasó'));var u1=el('ul');(a.resumen||[]).forEach(function(t){u1.appendChild(el('li',null,t))});c.appendChild(u1);
+    if(a.claves&&a.claves.length){c.appendChild(el('h4',null,'Claves'));var u2=el('ul');a.claves.forEach(function(t){u2.appendChild(el('li',null,t))});c.appendChild(u2)}
+    if(a.cmp&&a.cmp.length){c.appendChild(el('h4',null,'Comparado con otros partidos de la misma superficie'));var u3=el('ul');a.cmp.forEach(function(t){u3.appendChild(el('li',null,t))});c.appendChild(u3)}
+  }
+
+  /* ---------- Capa de datos compartida (db) con respaldo local ---------- */
+  var COLL=['posts','joins','rooms','dms','dmmsgs','sugs'];
+  var store={};COLL.forEach(function(c){store[c]=[]});
+  var DB=null,canWrite=false,uid='local',mode='local',readyAt=Infinity;
+  var seenTs=+(LS.get('tt_seen')||0),notified={};
+  function setNote(){
+    $$('[data-dbnote]').forEach(function(n){
+      n.className='dbnote'+(mode==='shared'?' ok':'');
+      n.textContent=mode==='shared'?'Conectado: lo que escribes lo ve todo el que tenga acceso a la página.':
+        mode==='readonly'?'Estás en modo lectura: puedes ver los mensajes, pero para escribir necesitas permiso de colaborador.':
+        'Sin conexión compartida en esta vista: lo que escribas solo se verá en tu pantalla.';
+    });
+  }
+  setNote();
+  function byTs(a,b){return (a.ts||0)-(b.ts||0)}
+  function renderAll(){renderSugs();renderForum();renderRooms();renderDms();renderBadge();checkToasts()}
+  function fail(){canWrite=false;mode='readonly';setNote()}
+  function add(coll,obj){
+    obj.ts=Date.now();
+    if(DB&&canWrite)return DB.collection(coll).add(obj).catch(fail);
+    obj._id='l'+Math.random().toString(36).slice(2);store[coll].push(obj);renderAll();return Promise.resolve();
+  }
+  function putDoc(coll,id,obj){
+    if(DB&&canWrite)return DB.collection(coll).doc(id).set(obj).catch(fail);
+    obj._id=id;store[coll]=store[coll].filter(function(x){return x._id!==id});store[coll].push(obj);renderAll();return Promise.resolve();
+  }
+  function delDoc(coll,id){
+    if(DB&&canWrite)return DB.collection(coll).doc(id).delete().catch(function(){});
+    store[coll]=store[coll].filter(function(x){return x._id!==id});renderAll();return Promise.resolve();
+  }
+  function myNm(inputSel){
+    var v=inputSel?$(inputSel).value.trim():'';
+    if(v)LS.set('tt_name',v);
+    return v||LS.get('tt_name')||'Invitado';
+  }
+  var sn0=LS.get('tt_name');if(sn0){$('#postName').value=sn0}
+
+  /* ---------- Conexion con Supabase (foro, privados, sugerencias) ---------- */
+  var SB_URL='https://dyovvqecidgxbqiodhmg.supabase.co';
+  var SB_KEY='sb_publishable_idE9A7xfoUlbVxVVR08JXQ_l84yjE2l';
+  var SBH={apikey:SB_KEY,Authorization:'Bearer '+SB_KEY,'Content-Type':'application/json'};
+  var myUid=LS.get('tt_uid');if(!myUid){myUid='u'+Math.random().toString(36).slice(2)+Date.now().toString(36);LS.set('tt_uid',myUid)}
+  uid=myUid;
+  function sbInsert(coll,id,obj){
+    var d={};for(var k in obj)if(k!=='_id')d[k]=obj[k];d._id=id;
+    return fetch(SB_URL+'/rest/v1/docs',{method:'POST',headers:SBH,body:JSON.stringify({coll:coll,data:d,ts:obj.ts||Date.now()})}).then(function(r){if(!r.ok)throw new Error('sb '+r.status)});
+  }
+  function newId(){return 'd'+Math.random().toString(36).slice(2)+Date.now().toString(36)}
+  DB={collection:function(c){return{
+    add:function(o){return sbInsert(c,newId(),o).then(poll)},
+    doc:function(id){return{
+      set:function(o){return sbInsert(c,id,o).then(poll)},
+      delete:function(){return sbInsert(c,id,{_del:true,ts:Date.now()}).then(poll)}
+    }}
+  }}};
+  var polling=false;
+  function poll(){
+    if(polling)return Promise.resolve();polling=true;
+    return Promise.all(COLL.map(function(c){
+      return fetch(SB_URL+'/rest/v1/docs?select=id,data,ts&coll=eq.'+c+'&order=ts.asc&limit=500',{headers:SBH}).then(function(r){if(!r.ok)throw new Error('sb '+r.status);return r.json()}).then(function(rows){
+        var by={},order=[];
+        rows.forEach(function(r){var o=r.data||{};var id=o._id||('r'+r.id);if(!(id in by))order.push(id);by[id]=o;o._id=id;if(!o.ts)o.ts=r.ts});
+        var arr=[];order.forEach(function(id){if(!by[id]._del)arr.push(by[id])});
+        arr.sort(byTs);return{c:c,arr:arr};
+      });
+    })).then(function(res){
+      var changed=false;
+      res.forEach(function(x){var old=JSON.stringify(store[x.c].map(function(o){return o._id}));var nw=JSON.stringify(x.arr.map(function(o){return o._id}));if(old!==nw)changed=true;store[x.c]=x.arr});
+      if(mode!=='shared'){mode='shared';canWrite=true;setNote();readyAt=readyAt===Infinity?Date.now():readyAt;changed=true}
+      if(changed)renderAll();
+    }).catch(function(){}).then(function(){polling=false});
+  }
+  canWrite=true;
+  poll();
+  setInterval(function(){if(!document.hidden)poll()},4000);
+  document.addEventListener('visibilitychange',function(){if(!document.hidden)poll()});
+
+  function addMsg(box,p,opts){
+    opts=opts||{};
+    var m=el('div','msg');var av=el('div','av'+(opts.sys?' sys':''),(p.name||'?').charAt(0).toUpperCase());
+    var bub=el('div','bubble');var who=el('div','who');
+    if(opts.clickable&&p.uid&&p.uid!==uid){
+      var nb=el('button','namebtn',p.name);nb.type='button';nb.setAttribute('aria-label','Debatir con '+p.name);
+      nb.addEventListener('click',function(){openPerson(p)});who.appendChild(nb);
+    }else who.appendChild(el('span',null,p.name));
+    if(p.ts)who.appendChild(el('span',null,new Date(p.ts).toLocaleString('es-ES',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})));
+    bub.appendChild(who);
+    if(p.replyTo)bub.appendChild(el('div','quote','En respuesta a '+p.replyTo.name+': '+p.replyTo.text));
+    bub.appendChild(el('div',null,p.text));
+    if(opts.reply){var rb=el('button','linkbtn','Responder');rb.type='button';rb.addEventListener('click',function(){startReply(p)});var ac=el('div','acts');ac.appendChild(rb);bub.appendChild(ac)}
+    m.appendChild(av);m.appendChild(bub);box.appendChild(m);
+  }
+
+  /* ---------- Foro con respuestas ---------- */
+  var replyTo=null;
+  function postsOf(id){return store.posts.filter(function(p){return p.nid===id})}
+  function cardInto(box,n){
+    box.textContent='';box.className='card cat-'+n.cat;
+    var meta=el('div','meta');meta.appendChild(el('span','pill '+(n.cls||''),n.tag));meta.appendChild(el('span',null,(n.gen?'':CATN[n.cat]+' · ')+n.w));
+    box.appendChild(meta);box.appendChild(el('h3',null,n.t));box.appendChild(el('p',null,n.d));
+    if(n.gen){(n.body||[]).forEach(function(t){box.appendChild(el('p','gbody',t))});if(n.q)box.appendChild(el('p','gq',n.q))}
+
+  }
+  function renderForum(){
+    var idx=$('#fIndex'),tp=$('#fTopic');
+    if(!topic){
+      idx.hidden=false;tp.hidden=true;
+      var last={},title={},kind={};
+      store.posts.forEach(function(p){if(!p.nid)return;last[p.nid]=Math.max(last[p.nid]||0,p.ts||0);if(p.ntitle&&!title[p.nid])title[p.nid]=p.ntitle});
+      var rowsT=[],rowsN=[];
+      GEN.forEach(function(g){rowsT.push({id:g.id,t:g.t,k:'Tema general',ts:last[g.id]||0})});
+      Object.keys(title).forEach(function(id){
+        if(GEN.some(function(g){return g.id===id}))return;
+        if(id.indexOf('u-')===0)rowsT.push({id:id,t:title[id],k:'Tema de la comunidad',ts:last[id]||0});
+        else rowsN.push({id:id,t:title[id],k:id.indexOf('m-')===0?'Partido':'Noticia',ts:last[id]||0});
+      });
+      function fill(box,rows){
+        box.textContent='';
+        rows.sort(function(a,b){return b.ts-a.ts});
+        rows.forEach(function(r){
+          var c=postsOf(r.id).length;
+          var a=el('a','frow');a.href='#foro/'+encodeURIComponent(r.id);a.setAttribute('role','listitem');
+          var l=el('div');l.appendChild(el('b',null,r.t));
+          l.appendChild(el('small',null,r.k+(r.ts?' · última respuesta '+new Date(r.ts).toLocaleString('es-ES',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):' · sin mensajes todavía')));
+          var n=el('div','cnt',String(c));n.appendChild(el('small',null,c===1?'mensaje':'mensajes'));
+          a.appendChild(l);a.appendChild(n);box.appendChild(a);
+        });
+      }
+      fill($('#fThreads'),rowsT);
+      var f2=$('#fThreads2');fill(f2,rowsN);
+      if(!rowsN.length){f2.textContent='';f2.appendChild(el('p','empty','Aún no hay debates de noticias ni de partidos. Se abren con el botón «Debatir» en Noticias y Partidos de hoy.'))}
+      return;
+    }
+    idx.hidden=true;tp.hidden=false;
+    $('#postText').placeholder=topic.indexOf('m-')===0?'Tu pronóstico o tu comentario en directo…':((topic.indexOf('g-')===0||topic.indexOf('u-')===0)?'Escribe tu respuesta…':'¿Qué opinas de esta noticia?');
+    var n=newsOf(topic);
+    var card=$('#fCard');
+    if(n)cardInto(card,n);
+    else{
+      var old2=postsOf(topic)[0];card.textContent='';card.className='card';
+      card.appendChild(el('h3',null,old2&&old2.ntitle?old2.ntitle:'Noticia no disponible'));
+      card.appendChild(el('p',null,'Esta noticia ya no está en portada, pero el debate sigue abierto.'));
+    }
+    var cb=$('#conv');cb.textContent='';var ps=postsOf(topic);
+    if(!ps.length)cb.appendChild(el('p','empty','Nadie ha opinado todavía. Sé la primera persona.'));
+    ps.forEach(function(p){addMsg(cb,p,{clickable:true,reply:true})});
+  }
+  $('#newTopicBtn').addEventListener('click',function(){var f=$('#newTopicForm');f.hidden=!f.hidden;if(!f.hidden){var n=LS.get('tt_name');if(n)$('#ntName').value=n;$('#ntTitle').focus()}});
+  $('#ntCancel').addEventListener('click',function(){$('#newTopicForm').hidden=true});
+  $('#newTopicForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var t=$('#ntTitle').value.trim(),x=$('#ntText').value.trim();if(!t||!x)return;
+    var id='u-'+Date.now().toString(36);
+    add('posts',{nid:id,ntitle:t,name:myNm('#ntName'),uid:uid,text:x});
+    $('#ntTitle').value='';$('#ntText').value='';$('#newTopicForm').hidden=true;
+    location.hash='#foro/'+id;
+  });
+  function startReply(p){
+    replyTo={id:p._id,name:p.name,uid:p.uid||null,text:snip(p.text)};
+    $('#replying').hidden=false;$('#replyingTxt').textContent='Respondiendo a '+p.name+': '+snip(p.text);
+    $('#postText').focus();
+  }
+  function cancelReply(){replyTo=null;$('#replying').hidden=true}
+  $('#replyCancel').addEventListener('click',cancelReply);
+  $('#postForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var text=$('#postText').value.trim();if(!text)return;
+    var name=myNm('#postName');
+    if(!topic)return;
+    var nn=newsOf(topic);var old3=postsOf(topic)[0];
+    var obj={nid:topic,ntitle:nn?nn.t:(old3?old3.ntitle:''),name:name,uid:uid,text:text};
+    if(replyTo)obj.replyTo=replyTo;
+    $('#postText').value='';cancelReply();
+    add('posts',obj);
+  });
+
+  /* ---------- Debate 1 a 1 ---------- */
+  var target=null;
+  function openPerson(p){
+    target=p;
+    $('#pdTitle').textContent=p.name;
+    $('#pdText').textContent='Empieza un debate 1 a 1 con '+p.name+'. Le saltará un aviso para que responda.';
+    $('#pdStart').hidden=!(uid!=='local'&&p.uid);
+    if($('#pdStart').hidden)$('#pdText').textContent='Para debatir 1 a 1 hace falta la conexión compartida y que la otra persona haya escrito con ella.';
+    var d=$('#personDlg');if(d.showModal)d.showModal();else d.setAttribute('open','');
+  }
+  $('#pdClose').addEventListener('click',function(){$('#personDlg').close()});
+  $('#pdStart').addEventListener('click',function(){
+    $('#personDlg').close();if(!target)return;
+    var id='dm_'+[uid,target.uid].sort().join('__');
+    var exists=store.dms.some(function(d){return d._id===id});
+    if(!exists)putDoc('dms',id,{a:uid,an:myNm(),b:target.uid,bn:target.name,ts:Date.now()});
+    dcur=id;toast('Has empezado un debate con '+target.name);
+    location.hash='#mis-debates';renderDms();
+  });
+  var dcur=null;
+  function myDms(){return store.dms.filter(function(d){return d.a===uid||d.b===uid}).sort(function(a,b){return b.ts-a.ts})}
+  function other(d){return d.a===uid?d.bn:d.an}
+  function renderDms(){
+    var list=$('#dmlist');list.textContent='';var ds=myDms();
+    if(!ds.length)list.appendChild(el('p','empty','Aún no tienes debates 1 a 1. Pulsa el nombre de alguien en La grada para empezar uno.'));
+    ds.forEach(function(d){
+      var b=el('button','thread');b.type='button';b.setAttribute('aria-pressed',String(d._id===dcur));
+      b.appendChild(el('b',null,'Debate con '+other(d)));
+      var n=store.dmmsgs.filter(function(m){return m.did===d._id}).length;
+      b.appendChild(el('small',null,n+(n===1?' mensaje':' mensajes')));
+      b.addEventListener('click',function(){dcur=d._id;renderDms()});list.appendChild(b);
+    });
+    var av=$('#avisos');av.textContent='';var ns=notices();
+    if(!ns.length)av.appendChild(el('p','empty','Sin avisos. Cuando alguien te responda en La grada, aparecerá aquí.'));
+    ns.slice(0,12).forEach(function(n){
+      var b=el('button','aviso'+(n.ts>seenTs?' new':''));b.type='button';
+      b.appendChild(el('span',null,n.text));b.appendChild(el('small',null,new Date(n.ts).toLocaleString('es-ES',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})));
+      b.addEventListener('click',n.go);av.appendChild(b);
+    });
+    var d=ds.filter(function(x){return x._id===dcur})[0];
+    var conv=$('#dmconv');conv.textContent='';
+    if(!d){$('#dmTitle').textContent='Elige un debate';$('#dmForm').hidden=true;return}
+    $('#dmTitle').textContent='Debate con '+other(d);$('#dmForm').hidden=false;
+    addMsg(conv,{name:'TitoTenis',text:d.a===uid?'Has empezado un debate con '+d.bn+'.':d.an+' ha empezado un debate contigo.'},{sys:true});
+    store.dmmsgs.filter(function(m){return m.did===d._id}).forEach(function(m){addMsg(conv,m)});
+  }
+  $('#dmForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var text=$('#dmText').value.trim();if(!text||!dcur)return;
+    $('#dmText').value='';add('dmmsgs',{did:dcur,uid:uid,name:myNm(),text:text});
+  });
+  function openDm(id){dcur=id;location.hash='#mis-debates';renderDms()}
+
+  /* ---------- Avisos ---------- */
+  function notices(){
+    var out=[];if(uid==='local')return out;
+    store.posts.forEach(function(p){
+      if(p.replyTo&&p.replyTo.uid===uid&&p.uid!==uid)out.push({id:'p'+p._id,ts:p.ts,text:p.name+' te ha respondido en «'+snip(p.ntitle||'una noticia')+'»: '+snip(p.text),go:function(){location.hash='#foro/'+encodeURIComponent(p.nid)}});
+    });
+    store.dms.forEach(function(d){
+      if(d.b===uid)out.push({id:'d'+d._id,ts:d.ts,text:d.an+' ha empezado un debate contigo',go:function(){openDm(d._id)}});
+    });
+    store.dmmsgs.forEach(function(m){
+      var d=store.dms.filter(function(x){return x._id===m.did})[0];
+      if(d&&(d.a===uid||d.b===uid)&&m.uid!==uid)out.push({id:'m'+m._id,ts:m.ts,text:m.name+' te ha escrito: '+snip(m.text),go:function(){openDm(d._id)}});
+    });
+    return out.sort(function(a,b){return b.ts-a.ts});
+  }
+  function renderBadge(){
+    var n=notices().filter(function(x){return x.ts>seenTs}).length;
+    var b=$('#badge');b.hidden=!n;b.textContent=n;
+  }
+  var toastT=null;
+  function toast(t){
+    var e=$('#toast');e.textContent=t;e.hidden=false;clearTimeout(toastT);toastT=setTimeout(function(){e.hidden=true},6000);
+  }
+  function checkToasts(){
+    notices().forEach(function(n){
+      if(n.ts>readyAt&&!notified[n.id]){notified[n.id]=1;if(location.hash!=='#mis-debates')toast(n.text)}
+    });
+  }
+
+  /* ---------- Charlas ---------- */
+  function renderRooms(){
+    var box=$('#rlist');box.textContent='';
+    if(!store.rooms.length)box.appendChild(el('p','empty','No hay charlas programadas. Programa la primera abajo.'));
+    store.rooms.slice().reverse().forEach(function(r){
+      var n=store.joins.filter(function(j){return j.gid===r._id}).length;
+      var mine=store.joins.some(function(j){return j._id===r._id+'__'+uid});
+      var d=el('div','room');var l=el('div');l.appendChild(el('b',null,r.title));
+      l.appendChild(el('small',null,r.when+' · '+n+(n===1?' apuntado':' apuntados')+(r.link?'':' · enlace pendiente')));
+      d.appendChild(l);
+      var ac=el('div','acts');
+      var jb=el('button','btn small'+(mine?'':' primary'),mine?'Ya estoy apuntado':'Me apunto');jb.type='button';
+      jb.addEventListener('click',function(){var id=r._id+'__'+uid;if(mine)delDoc('joins',id);else putDoc('joins',id,{gid:r._id,uid:uid,ts:Date.now()})});
+      ac.appendChild(jb);
+      if(r.link&&/^https?:\/\//i.test(r.link)){var a=el('a','btn small','Entrar');a.href=r.link;a.target='_blank';a.rel='noopener noreferrer';ac.appendChild(a)}
+      d.appendChild(ac);box.appendChild(d);
+    });
+  }
+  $('#roomForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var r={title:$('#rTitle').value.trim(),when:$('#rWhen').value.trim(),link:$('#rLink').value.trim(),by:uid};
+    if(!r.title||!r.when)return;
+    add('rooms',r);$('#roomForm').reset();
+  });
+  var slides=[
+    '<h4>Nitto ATP Finals 2026: ¿cómo serán?</h4><p>Charla previa · domingo 15 de noviembre</p>',
+    '<h4>El torneo</h4><p>Del 15 al 22 de noviembre en el Inalpi Arena de Turín, en pista dura cubierta. Ocho jugadores en dos grupos, el Grupo John McEnroe y el Grupo Ivan Lendl. Pasan a semifinales los dos primeros de cada grupo.</p>',
+    '<h4>Para debatir</h4><ul><li>¿Quién gana el título?</li><li>¿Cuánto pesa la ausencia de Sinner?</li><li>¿Puede Jódar dar la sorpresa?</li><li>¿Favorece la pista cubierta al saque?</li></ul>',
+    '<h4>Tu turno</h4><p>Abre el micro y di tu pronóstico para las semifinales.</p>'
+  ];
+  var si=0;
+  function showSlide(){$('#slide').innerHTML=slides[si];$('#slideNo').textContent=(si+1)+' / '+slides.length}
+  $('#prev').addEventListener('click',function(){si=(si+slides.length-1)%slides.length;showSlide()});
+  $('#next').addEventListener('click',function(){si=(si+1)%slides.length;showSlide()});
+  showSlide();
+
+  renderAll();
+  loadData().then(function(){route()});
+  route();
+  setInterval(loadData,60000);
+})();
+</script>
+<div class="ckbar" id="ckbar" role="region" aria-label="Aviso de privacidad" hidden>
+  <p>TitoTenis no usa cookies de publicidad ni de seguimiento. Solo guarda en tu dispositivo tu nombre de usuario del foro y tus preferencias, para que funcione la página. Lo que publiques en el foro y en Sugerencias es público.</p>
+  <button class="btn clay" type="button" id="ckOk">Entendido</button>
+  <button class="btn" type="button" id="ckInfo">Más información</button>
+</div>
+<dialog id="privDlg" aria-labelledby="privT">
+  <h3 id="privT">Privacidad y uso de la página</h3>
+  <div class="nbody">
+    <p><b>Qué se guarda en tu dispositivo:</b> el nombre que escribes en el foro y la última vez que viste tus debates. Es almacenamiento técnico necesario; no hay analítica, publicidad ni cookies de terceros.</p>
+    <p><b>Qué es público:</b> los mensajes y sugerencias que envíes, con el nombre que elijas. Escribe un apodo y no pongas datos personales (teléfono, dirección, correo).</p>
+    <p><b>Grupo de WhatsApp:</b> si te unes, tu número lo ven los demás miembros del grupo, según las normas de WhatsApp.</p>
+    <p><b>Datos de los partidos y noticias:</b> proceden de fuentes de tenis citadas y se resumen con palabras propias. TitoTenis no está afiliada a la ATP, la WTA ni a ningún torneo.</p>
+    <p class="srcline">Antes de abrir la página al público habrá que añadir aviso legal con el titular, política de privacidad completa y, si se piden correos, consentimiento expreso.</p>
+  </div>
+  <div class="row"><button class="btn" type="button" id="privClose">Cerrar</button></div>
+</dialog>
+<script>
+(function(){
+  function g(i){return document.getElementById(i)}
+  var ok=null;try{ok=localStorage.getItem('tt_ck')}catch(e){}
+  var bar=g('ckbar');if(!ok)bar.hidden=false;
+  g('ckOk').addEventListener('click',function(){bar.hidden=true;try{localStorage.setItem('tt_ck','1')}catch(e){}});
+  g('ckInfo').addEventListener('click',function(){g('privDlg').showModal()});
+  g('privClose').addEventListener('click',function(){g('privDlg').close()});
+})();
+</script>
+</body>
+</html>
