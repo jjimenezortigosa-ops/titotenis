@@ -1972,13 +1972,19 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     return ex>=0?ex:(cnt===1?last:-1)}
   function openGuess(title,cb,exclude,hard,alt){gAlt=alt||null;gCb=cb;gEx=exclude||[];gHard=!!hard;$('#gT').textContent=title;gIn.value='';clr(gList);
     gIn.placeholder=hard?'Escribe nombre y apellido':'Escribe un apellido…';
-    $('#gHint').textContent=hard?'Modo difícil: no hay sugerencias. Escribe el nombre completo y pulsa Enviar.':'';
+    $('#gHint').textContent=hard?'Modo difícil: escribe el nombre y el principio del apellido para ver opciones, o el nombre completo y pulsa Enviar.':'';
     gDlg.showModal();gIn.focus()}
   function suggestAlt(q){var out=[];gAlt.forEach(function(nm,i){if(gEx.indexOf(nm)>=0)return;var n=norm(nm);if(n.indexOf(q)===0||n.split(' ').some(function(w){return w.indexOf(q)===0})||(q.length>=3&&n.indexOf(q)>=0))out.push(nm)});
     if(q.length>=3&&!out.length)gAlt.forEach(function(nm){if(gEx.indexOf(nm)>=0)return;if(norm(nm).split(' ').some(function(w){var x=w.slice(0,q.length);if(x.length!==q.length)return false;var d=0;for(var k=0;k<q.length;k++)if(x[k]!==q[k])d++;return d<=1}))out.push(nm)});
     out.slice(0,8).forEach(function(nm){var li=el('li');var b=el('button',null,nm);b.type='button';b.addEventListener('click',function(){var cb=gCb;gCb=null;gDlg.close();if(cb)cb(nm)});li.appendChild(b);gList.appendChild(li)});
     if(!out.length)gList.appendChild(el('li','srcline','Ningún jugador de este cuadro encaja con ese nombre.'))}
-  function suggest(){clr(gList);if(gHard)return;var q=norm(gIn.value.trim());if(q.length<2)return;var out=[];
+  function suggest(){clr(gList);var q=norm(gIn.value.trim());
+    if(gHard){var sp=q.split(' ');if(sp.length<2||!sp[1].length)return;var hs=[];
+      if(gAlt)gAlt.forEach(function(nm){if(gEx.indexOf(nm)<0&&norm(nm).indexOf(q)===0)hs.push({n:nm,v:nm})});
+      else G.p.forEach(function(p,i){if(gEx.indexOf(i)<0&&G.n[i].indexOf(q)===0)hs.push({n:p[0],v:i,r:p[5]||999})});
+      hs.sort(function(a,b){return (a.r||0)-(b.r||0)});
+      hs.slice(0,8).forEach(function(h){var li=el('li'),b=el('button',null,h.n);b.type='button';b.addEventListener('click',function(){var cb=gCb;gCb=null;gDlg.close();if(cb)cb(h.v)});li.appendChild(b);gList.appendChild(li)});return}
+    if(q.length<2)return;var out=[];
     if(gAlt)return suggestAlt(q);
     G.p.forEach(function(p,i){if(gEx.indexOf(i)>=0)return;var n=G.n[i];if(n.indexOf(q)===0||n.split(' ').some(function(w){return w.indexOf(q)===0})||(q.length>=3&&n.indexOf(q)>=0))out.push(i)});
     if(q.length>=3&&!out.length)G.p.forEach(function(p,i){if(gEx.indexOf(i)>=0||out.indexOf(i)>=0)return;if(G.n[i].split(' ').some(function(w){var x=w.slice(0,q.length);if(x.length!==q.length)return false;var d=0;for(var k=0;k<q.length;k++)if(x[k]!==q[k])d++;return d<=1}))out.push(i)});
@@ -2139,7 +2145,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     var day=dayStr(),gr=gridFor(day);
     if(!gr){box.appendChild(el('p','empty','Hoy no se ha podido preparar la cuadrícula.'));return}
     var st=loadSt({c:[],u:[],w:[],x:0,s:0,e:0}),SCX={1:6,2:5,3:4}[gDif];st.w=st.w||[];st.x=st.x||0;
-    intro(box,'Set Cruzado',gDif===3?'Pulsa una casilla y escribe un jugador que cumpla fila y columna. Sin sugerencias: tienes que saberte el nombre. Si fallas, la casilla sigue libre.':'Pulsa una casilla y elige un jugador que cumpla las dos condiciones (fila y columna). Si fallas, la casilla sigue libre, pero pierdes una vida. Sin repetir jugador.');
+    intro(box,'Set Cruzado',gDif===3?'Pulsa una casilla y escribe un jugador que cumpla fila y columna. Las sugerencias solo salen al escribir nombre y principio del apellido. Si fallas, la casilla sigue libre.':'Pulsa una casilla y elige un jugador que cumpla las dos condiciones (fila y columna). Si fallas, la casilla sigue libre, pero pierdes una vida. Sin repetir jugador.');
     var tb=el('div','ggrid');tb.appendChild(el('div'));
     gr.cols.forEach(function(c){tb.appendChild(el('div','gh',c.t))});
     var done=0;
@@ -2258,7 +2264,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     var day=dayStr(),rs=finalPick(day);
     if(!rs||rs.length<6){box.appendChild(el('p','empty','Hoy no se ha podido preparar el juego.'));return}
     var st=loadSt({a:[],p:0,s:0,e:0});
-    intro(box,'Bola de Partido',gDif===1?'Te damos una final y dos nombres: ¿quién la ganó?':gDif===2?'Te damos una final y cuatro nombres: ¿quién la ganó?':'Te damos una final y tienes que escribir el nombre del campeón. Sin sugerencias.');
+    intro(box,'Bola de Partido',gDif===1?'Te damos una final y dos nombres: ¿quién la ganó?':gDif===2?'Te damos una final y cuatro nombres: ¿quién la ganó?':'Te damos una final y tienes que escribir el nombre del campeón. Las sugerencias solo salen al escribir nombre y principio del apellido.');
     var i=st.p?st.a.length-1:st.a.length;
     if(i>=rs.length||(st.a.length>=rs.length&&!st.p)){
       var sc=st.a.filter(function(x){return x.ok}).length,em=st.a.map(function(x){return x.ok?'🟩':'🟥'}).join('');
@@ -2333,7 +2339,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     G.p.forEach(function(p,i){if(p[5]&&p[5]<=MYR[gDif])cand.push(i)});
     if(gDif<3){var cc=cand.filter(function(i){return PIS[G.p[i][0]]});if(cc.length>=5)cand=cc}
     var t=cand[Math.floor(R()*cand.length)],tp=G.p[t],MA=MYA[gDif],st=loadSt({g:[],s:0,e:0});
-    intro(box,'La Wildcard','Adivina al jugador de hoy (está entre los '+MYR[gDif]+' primeros del ranking). Tienes '+MA+' intentos.'+(gDif<3?' Te damos pistas sacadas de las noticias de la temporada.':'')+' Verde = coincide; la flecha indica si el secreto tiene un valor mayor (↑) o menor (↓).'+(gDif===3?' Sin sugerencias: escribe el nombre.':''));
+    intro(box,'La Wildcard','Adivina al jugador de hoy (está entre los '+MYR[gDif]+' primeros del ranking). Tienes '+MA+' intentos.'+(gDif<3?' Te damos pistas sacadas de las noticias de la temporada.':'')+' Verde = coincide; la flecha indica si el secreto tiene un valor mayor (↑) o menor (↓).'+(gDif===3?' Las sugerencias solo salen al escribir nombre y principio del apellido.':''));
     var won=st.g.indexOf(t)>=0,over=won||st.g.length>=MA;
     var pis=PIS[tp[0]]||[];
     if(pis.length){var shown=over?pis.length:Math.min(pis.length,1+st.g.length),pb=el('div','gpis');
