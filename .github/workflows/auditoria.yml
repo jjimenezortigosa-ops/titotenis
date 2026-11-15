@@ -15,7 +15,7 @@ jobs:
           done
           ls -la /tmp/h
       - name: Auditar
-        run: python3 -I herramientas/auditar_historico.py campeones_2010_2022.json auditoria/informe_2010_2022.md /tmp/h/*.csv
+        run: mkdir -p auditoria && python3 -I herramientas/auditar_historico.py campeones_2010_2022.json auditoria/informe_2010_2022.md /tmp/h/*.csv
       - name: Publicar
         run: |
           git config user.name "titotenis-bot"
