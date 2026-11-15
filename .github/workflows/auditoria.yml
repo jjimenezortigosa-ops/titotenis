@@ -1,0 +1,24 @@
+name: Auditoría histórica 2010-2022
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  auditoria:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar partidos ATP 2010-2022 (TML)
+        run: |
+          mkdir -p /tmp/h
+          for y in $(seq 2010 2022); do
+            curl -fsSL -o /tmp/h/$y.csv https://raw.githubusercontent.com/Tennismylife/TML-Database/master/$y.csv || echo "FALLA $y"
+          done
+          ls -la /tmp/h
+      - name: Auditar
+        run: python3 -I herramientas/auditar_historico.py campeones_2010_2022.json auditoria/informe_2010_2022.md /tmp/h/*.csv
+      - name: Publicar
+        run: |
+          git config user.name "titotenis-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add campeones_2010_2022.json auditoria
+          git diff --cached --quiet || (git commit -m "Auditoría histórica 2010-2022" && git pull --rebase && git push)
