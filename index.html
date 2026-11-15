@@ -74,6 +74,7 @@ nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:thin}
 .fav{border-radius:50%;border:3px solid #FFD21F;background-color:var(--ink);background-repeat:no-repeat;flex:none;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--chalk)}
 .facew{display:inline-flex}
 #plDlg{max-width:560px}
+#plRes{max-width:560px;width:calc(100% - 24px)}#plRes .plresl{max-height:60vh;overflow:auto;margin-top:10px}#plRes .pdr{display:flex;flex-direction:column;gap:2px;padding:8px 0;border-top:1px solid var(--line)}#plRes .pdr small{color:var(--mute)}
 #plDlg .plhead{display:flex;align-items:center;gap:16px;margin-bottom:12px}
 #plDlg .pht h3{margin:0 0 4px}
 #plDlg .pdsub{margin:0;color:#D6E84B;font-weight:700}
@@ -360,6 +361,7 @@ footer a{color:var(--ball)}
 .hlb small{display:block;font-weight:400;opacity:.85;margin-top:4px}
 .tbl{width:100%;border-collapse:collapse;font-size:14px}.tbl th,.tbl td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
 .tbl .num{text-align:right;font-variant-numeric:tabular-nums}
+.fl{width:18px;height:13px;margin-right:6px;vertical-align:-1px;border-radius:2px;object-fit:cover;display:inline-block}
 .lk{background:none;border:0;color:var(--chalk);font:inherit;cursor:pointer;text-decoration:underline dotted;padding:0;text-align:left}
 @media(pointer:coarse),(max-width:720px){.lk{padding:6px 0;min-height:32px}.evc button{min-width:32px;min-height:32px}}
 .mys td.ok{background:rgba(66,184,95,.3)}.mys td.no{background:rgba(226,100,45,.2)}
@@ -1078,16 +1080,20 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     if(!nw.length)s4.appendChild(el('p','pdempty','No hay noticias suyas en esta actualización.'));
     nw.slice(0,5).forEach(function(n){var a=el('button','pdn',n.t);a.type='button';a.addEventListener('click',function(){dlg.close();openNews(n)});s4.appendChild(a)});
     /* últimos resultados con filtro de superficie */
-    var tb=el('button','btn pdtog','Ver últimos resultados');tb.type='button';tb.setAttribute('aria-expanded','false');body.appendChild(tb);
-    var pan=el('div','pdpan');pan.hidden=true;body.appendChild(pan);
-    var sel=el('select','pdsel');[['','Todas las superficies'],['dura','Pista dura'],['tierra','Tierra batida'],['hierba','Hierba']].forEach(function(o){var op=el('option',null,o[1]);op.value=o[0];sel.appendChild(op)});
-    sel.setAttribute('aria-label','Superficie');
-    var lst=el('div','pdl');pan.appendChild(sel);pan.appendChild(lst);
-    function fill(){lst.textContent='';var v=sel.value,f=ms.filter(function(m){return !v||m.surf===v}).slice(0,50);
-      if(!f.length)lst.appendChild(el('p','pdempty',(v?'No hay partidos de este jugador en esa superficie.':'No hay partidos ATP de este jugador en nuestra base desde 2023.')));
-      f.forEach(function(m){lst.appendChild(resRow(m,name))})}
-    sel.addEventListener('change',fill);
-    tb.addEventListener('click',function(){var o=pan.hidden;pan.hidden=!o;tb.setAttribute('aria-expanded',String(o));tb.textContent=o?'Ocultar últimos resultados':'Ver últimos resultados';if(o)fill()});
+    var tb=el('button','btn pdtog','Ver últimos resultados');tb.type='button';body.appendChild(tb);
+    tb.addEventListener('click',function(){
+      var rd=$('#plRes');if(!rd){rd=document.createElement('dialog');rd.id='plRes';rd.className='plres';document.body.appendChild(rd)}
+      rd.textContent='';rd.appendChild(el('h3',null,'Últimos resultados · '+name));
+      var sel=el('select','pdsel');[['','Todas las superficies'],['dura','Pista dura'],['tierra','Tierra batida'],['hierba','Hierba']].forEach(function(o){var op=el('option',null,o[1]);op.value=o[0];sel.appendChild(op)});
+      sel.setAttribute('aria-label','Superficie');rd.appendChild(sel);
+      var lst=el('div','pdl plresl');rd.appendChild(lst);
+      function fill(){lst.textContent='';var v=sel.value,f=ms.filter(function(m){return !v||m.surf===v}).slice(0,50);
+        if(!f.length)lst.appendChild(el('p','pdempty',(v?'No hay partidos de este jugador en esa superficie.':'No hay partidos ATP de este jugador en nuestra base desde 2023.')));
+        f.forEach(function(m){lst.appendChild(resRow(m,name))})}
+      sel.addEventListener('change',fill);fill();
+      var cl=el('button','btn','← Volver al jugador');cl.type='button';cl.addEventListener('click',function(){rd.close()});
+      var r2=el('div','row');r2.style.marginTop='14px';r2.appendChild(cl);rd.appendChild(r2);
+      try{rd.showModal()}catch(e){}});
     if(BASE)body.appendChild(el('p','pdempty','Resultados hasta el '+fmtShort(BASE.hasta)+'.'));
     $('#plVid').href=ytUrl(name);
     show();
@@ -1800,8 +1806,8 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   }
   function renderForum(){
     var idx=$('#fIndex'),tp=$('#fTopic');
-    if(!topic){
-      idx.hidden=false;tp.hidden=true;
+    if(!topic){window.__ft=null;
+      idx.hidden=false;tp.hidden=true;var gh0=$('.grhero');if(gh0)gh0.hidden=false;
       var last={},title={},kind={};
       store.posts.forEach(function(p){if(!p.nid)return;last[p.nid]=Math.max(last[p.nid]||0,p.ts||0);if(p.ntitle&&!title[p.nid])title[p.nid]=p.ntitle});
       var rowsT=[],rowsN=[];
@@ -1827,7 +1833,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       var tot=store.posts.length,gs=$('#grStats');if(gs){gs.textContent='';[[rowsT.length+rowsN.length,'temas'],[tot,'mensajes']].forEach(function(x){var c=el('div');c.appendChild(el('b',null,String(x[0])));c.appendChild(el('small',null,x[1]));gs.appendChild(c)})}
       return;
     }
-    idx.hidden=true;tp.hidden=false;
+    idx.hidden=true;tp.hidden=false;var gh=$('.grhero');if(gh)gh.hidden=true;
     $('#postText').placeholder=topic.indexOf('m-')===0?'Tu pronóstico o tu comentario en directo…':((topic.indexOf('g-')===0||topic.indexOf('u-')===0)?'Escribe tu respuesta…':'¿Qué opinas de esta noticia?');
     var n=newsOf(topic);
     var card=$('#fCard');
@@ -1837,6 +1843,12 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       card.appendChild(el('h3',null,old2&&old2.ntitle?old2.ntitle:'Noticia no disponible'));
       card.appendChild(el('p',null,'Esta noticia ya no está en portada, pero el debate sigue abierto.'));
     }
+    var tg=$('#fTog');if(!tg){tg=el('div','row');tg.id='fTog';tg.style.cssText='display:flex;gap:10px;margin:10px 0 14px';card.parentNode.insertBefore(tg,card)}
+    tg.textContent='';var newT=window.__ft!==topic;if(newT){window.__ft=topic;card.hidden=true;window.scrollTo(0,0)}
+    var bRead=el('button','btn ghost',card.hidden?'📖 Leer la noticia':'📖 Ocultar la noticia'),bTalk=el('button','btn clay','💬 Hablar');bRead.type=bTalk.type='button';
+    bRead.addEventListener('click',function(){card.hidden=!card.hidden;bRead.textContent=card.hidden?'📖 Leer la noticia':'📖 Ocultar la noticia'});
+    bTalk.addEventListener('click',function(){var pt=$('#postText');pt.scrollIntoView({behavior:'smooth',block:'center'});pt.focus()});
+    tg.appendChild(bRead);tg.appendChild(bTalk);
     var cb=$('#conv');cb.textContent='';var ps=postsOf(topic);
     if(!ps.length)cb.appendChild(el('p','empty','Nadie ha opinado todavía. Sé la primera persona.'));
     ps.forEach(function(p){addMsg(cb,p,{clickable:true,reply:true})});
@@ -1992,6 +2004,16 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   loadData().then(function(){route()});
   /* ---------- Juegos, ranking, torneos y estadisticas ---------- */
   var G=null,GP=fetch('juegos.json').then(function(r){return r.ok?r.json():null}).then(function(j){if(j){G=j;G.n=j.p.map(function(p){return norm(p[0])});G.k={};j.p.forEach(function(p,i){G.k[pk(p[0])]=i})}}).catch(function(){});
+
+  var ISO2={"USA": "us", "FRA": "fr", "GBR": "gb", "AUS": "au", "ITA": "it", "ESP": "es", "ARG": "ar", "GER": "de", "SUI": "ch", "BRA": "br", "JPN": "jp", "CZE": "cz", "BUL": "bg", "CHN": "cn", "RUS": "ru", "CAN": "ca", "BEL": "be", "CRO": "hr", "SRB": "rs", "KAZ": "kz", "NED": "nl", "POL": "pl", "CHI": "cl", "AUT": "at", "IND": "in", "ROU": "ro", "POR": "pt", "PER": "pe", "NOR": "no", "GRE": "gr", "HUN": "hu", "KOR": "kr", "BIH": "ba", "DEN": "dk", "COL": "co", "UKR": "ua", "TPE": "tw", "TUN": "tn", "TUR": "tr", "SVK": "sk", "RSA": "za", "GEO": "ge", "BOL": "bo", "FIN": "fi", "EST": "ee", "LTU": "lt", "ECU": "ec", "MEX": "mx", "URU": "uy", "SWE": "se", "THA": "th", "PRT": "pt", "UZB": "uz", "MON": "mc", "PAR": "py", "HKG": "hk", "LUX": "lu", "BLR": "by", "JOR": "jo", "LBN": "lb", "DOM": "do", "MDA": "md", "MAR": "ma", "LAT": "lv", "JAM": "jm"},NF=null,flT=null;
+  function flagify(){
+    if(!G)return;if(!NF){NF={};G.p.forEach(function(p){if(ISO2[p[1]])NF[p[0]]=ISO2[p[1]]})}
+    var L=document.querySelectorAll('button,td,b,li,a,span,h4,.gq');
+    for(var i=0;i<L.length;i++){var e=L[i];if(e.dataset.fl||e.classList.contains('srcline'))continue;
+      var c=e.firstChild;if(!c||c.nodeType!==3||e.childElementCount>0)continue;var f=NF[c.nodeValue.trim()];if(!f)continue;
+      e.dataset.fl='1';var im=document.createElement('img');im.className='fl';im.alt='';im.loading='lazy';im.width=18;im.height=13;im.src='https://flagcdn.com/w20/'+f+'.png';e.insertBefore(im,c)}}
+  function flagSoon(){clearTimeout(flT);flT=setTimeout(flagify,120)}
+  GP.then(function(){flagSoon();new MutationObserver(flagSoon).observe(document.body,{childList:true,subtree:true})});
   var PIS={},PISP=fetch('pistas.json').then(function(r){return r.ok?r.json():{}}).then(function(j){PIS=j||{}}).catch(function(){});
   var ES=null,ESP=fetch('estadisticas.json').then(function(r){return r.ok?r.json():null}).then(function(j){ES=j}).catch(function(){});
   var RK=null,RKP=fetch('ranking.json').then(function(r){return r.ok?r.json():null}).then(function(j){RK=j}).catch(function(){});
