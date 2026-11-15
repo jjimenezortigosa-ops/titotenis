@@ -2778,6 +2778,11 @@ dialog h3{padding-right:42px}
       if(ks.every(function(k){return k.bye}))return {m:m,kids:[]};return {m:m,kids:ks}}
     var root=node(fin);
     if(used<ko.length*0.8)return null;
+    /* Como en un cuadro real: arriba la rama con el mejor cabeza de serie (1), abajo la del 2... */
+    function sd(p){var v=+seed[p];return v>0?v:99}
+    (function best(n){var b=n.bye?sd(n.bye):Math.min(sd(n.m[1]),sd(n.m[2]));
+      n.kids&&n.kids.forEach(function(k){b=Math.min(b,best(k))});n.s=b;
+      if(n.kids&&n.kids.length===2&&n.kids[1].s<n.kids[0].s)n.kids.reverse();return b})(root);
     var minR=9;(function f(n){if(n.m){minR=Math.min(minR,KO[n.m[0]]);n.kids.forEach(f)}})(root);
     var UH=58,CW=206,GAP=34,leaf=0;
     (function lay(n){if(n.bye){n.y=leaf+.5;leaf++;return}
