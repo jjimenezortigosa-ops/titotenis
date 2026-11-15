@@ -2328,9 +2328,9 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     var R=seedRng('conn'+gDif+day),pool=G.c.filter(function(c){return c.p.length>=6&&c.p.length<=60});
     for(var t=0;t<4000;t++){
       var cs=[];while(cs.length<4){var c=pool[Math.floor(R()*pool.length)];if(cs.indexOf(c)<0)cs.push(c)}
-      if(new Set(cs.map(fam)).size<4)continue;
+      if(new Set(cs.map(function(c){var f=fam(c);if(f!=='gana')return f;var b=c.id.slice(0,-1);return G.c.some(function(x){return x.id===b})?b:c.id})).size<4)continue;
       var ng=cs.filter(function(c){return c.id.indexOf('gana')===0}).length;
-      if(gDif===1&&ng>0)continue;if(gDif===2&&(ng<1||ng>2))continue;if(gDif===3&&ng<3)continue;
+      if(gDif===1&&ng>0)continue;if(gDif===2&&(ng<1||ng>2))continue;if(gDif===3&&ng<2)continue;
       var groups=cs.map(function(c){var o=cs.filter(function(x){return x!==c});return c.p.filter(function(i){return o.every(function(z){return z.p.indexOf(i)<0})})});
       if(groups.some(function(g){return g.length<4}))continue;
       groups=groups.map(function(g){return shuf(g,R).slice(0,4)});
