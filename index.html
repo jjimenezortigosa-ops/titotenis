@@ -2196,8 +2196,9 @@ dialog h3{padding-right:42px}
   function gid(){return gCur+gDif}
   function gname(){return GAMES.filter(function(g){return g.id===gCur})[0].n}
   function stKey(){return 'tt_g_'+gid()+'_'+dayStr()}
-  function loadSt(def){var v=lsj(stKey());if(v)return v;if(gInGame&&lsj('tt_go_'+gid()+'_'+dayStr()))saveSt(def);return def}
-  function saveSt(st){LS.set(stKey(),JSON.stringify(st))}
+  function loadSt(def){var k=stKey(),v=lsj(k);if(!v){v=def;if(gInGame&&lsj('tt_go_'+gid()+'_'+dayStr()))LS.set(k,JSON.stringify(def))}
+    try{Object.defineProperty(v,'__k',{value:k,enumerable:false,writable:true})}catch(e){}return v}
+  function saveSt(st){LS.set(st.__k||stKey(),JSON.stringify(st))}
   function secsOf(st){return Math.max(1,Math.round(((st.e||Date.now())-(st.s||Date.now()))/1000))}
   function shuf(a,R){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(R()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
   function byRank(a,b){return (G.p[a][5]||999)-(G.p[b][5]||999)}
