@@ -123,7 +123,7 @@ for (season, tid), rs in G.items():
     ms.sort(key=lambda r:(ORD[r['round']], int(r['match_num'] or 0)))
     d1 = min(r['tourney_date'] for r in rs)
     camp.append({'k':str(season)+'-'+tid,'a':season,'n':r0['tourney_name'],'nv':lv,'s':SURF[r0['surface']],'d':iso(d1),'cam':fin[0]['winner_name'],
-                 'm':[[r['round'], r['winner_name'], r['loser_name'], r['score'] or 'W/O'] for r in ms]})
+                 'm':[[r['round'], r['winner_name'], r['loser_name'], r['score'] or 'W/O', _sd(r.get('winner_seed')), _sd(r.get('loser_seed'))] for r in ms]})
 camp.sort(key=lambda t:(t['d'], t['n']))
 json.dump({'t':camp}, open(os.path.join(out,'campeones.json'),'w',encoding='utf-8'), ensure_ascii=False, separators=(',',':'))
 print('campeones.json:', len(camp), 'torneos')

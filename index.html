@@ -549,7 +549,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     <div class="chips circ" role="group" aria-label="Circuitos a mostrar">
       <button class="chip cx cx-atp" type="button" data-cx="atp" aria-pressed="true" title="Pulsa para ver solo ATP o todo el circuito masculino"><span class="ball" aria-hidden="true"></span>ATP</button>
     </div>
-    <div class="seg" id="nSeg" role="group" aria-label="Filtrar noticias"><button type="button" data-seg="" aria-pressed="true">Todo</button><button type="button" data-seg="torneo" aria-pressed="false">Por torneo</button><button type="button" data-seg="jugador" aria-pressed="false">Por jugador</button></div>
+    <div class="seg" id="nSeg" role="group" aria-label="Filtrar noticias"><button type="button" data-seg="" aria-pressed="true">Todo</button><button type="button" data-seg="torneo" aria-pressed="false">Por torneo</button></div>
     <div class="chips" id="nSub" hidden></div>
     <div class="news" id="news"></div>
   </div>
@@ -768,13 +768,13 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
 <!-- ===== RANKING ===== -->
 <section class="view" id="v-ranking" hidden>
   <div class="wrap">
-    <div class="seg subnav" role="navigation" aria-label="Datos"><a href="#ranking">Ranking</a><a href="#torneos">Torneos</a><a href="#estadisticas">Estadísticas</a></div>
+    <div class="seg subnav" role="navigation" aria-label="Datos"><a href="#ranking">Ranking</a><a href="#torneos">Torneos</a><a href="#estadisticas">Estadísticas</a><a href="#especial">Especial</a></div>
     <div class="sec-head"><div><h1>Ranking</h1>
-      <p>Ranking ATP de los 150 primeros, con puntos y la valoración Elo de cada jugador (mide el nivel real, también por superficie).</p></div>
+      <p>Los 100 primeros del ranking ATP con sus puntos. Se renueva cada lunes, cuando lo actualiza la ATP. El Elo mide el nivel real de cada jugador.</p></div>
       <span class="srcline" id="rkUpd"></span></div>
     <div class="panel">
       <h3>Clasificación</h3>
-      <div class="seg" id="rkSeg"><button type="button" data-s="r">ATP</button><button type="button" data-s="e">Elo</button><button type="button" data-s="h">Dura</button><button type="button" data-s="c">Tierra</button><button type="button" data-s="g">Hierba</button></div>
+      <div class="seg" id="rkSeg"><button type="button" data-s="r">ATP</button><button type="button" data-s="e">Elo</button></div>
       <div style="overflow-x:auto"><table class="tbl" id="rkTbl"></table></div>
     </div>
   </div>
@@ -783,7 +783,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
 <!-- ===== TORNEOS ===== -->
 <section class="view" id="v-torneos" hidden>
   <div class="wrap">
-    <div class="seg subnav" role="navigation" aria-label="Datos"><a href="#ranking">Ranking</a><a href="#torneos">Torneos</a><a href="#estadisticas">Estadísticas</a></div>
+    <div class="seg subnav" role="navigation" aria-label="Datos"><a href="#ranking">Ranking</a><a href="#torneos">Torneos</a><a href="#estadisticas">Estadísticas</a><a href="#especial">Especial</a></div>
     <div class="sec-head"><div><h1>Torneos</h1>
       <p>El calendario del año: dónde se juega, en qué superficie y quién ganó.</p></div></div>
     <div class="seg" id="tYs"><button type="button" data-y="2026">2026</button><button type="button" data-y="2025">2025</button></div>
@@ -807,16 +807,25 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
 <!-- ===== ESTADISTICAS ===== -->
 <section class="view" id="v-estadisticas" hidden>
   <div class="wrap">
-    <div class="seg subnav" role="navigation" aria-label="Datos"><a href="#ranking">Ranking</a><a href="#torneos">Torneos</a><a href="#estadisticas">Estadísticas</a></div>
+    <div class="seg subnav" role="navigation" aria-label="Datos"><a href="#ranking">Ranking</a><a href="#torneos">Torneos</a><a href="#estadisticas">Estadísticas</a><a href="#especial">Especial</a></div>
     <div class="sec-head"><div><h1>Estadísticas</h1>
       <p id="stSub">Los mejores del año en cada apartado.</p></div></div>
-    <h2 class="stsec">Quién domina en cada apartado</h2>
-    <div class="stall" id="stAll"></div>
     <h2 class="stsec">Clasificación por apartado</h2>
     <div class="row"><select class="field" id="stSel" aria-label="Estadística" style="max-width:340px"></select></div>
     <div class="panel" style="margin-top:12px"><div id="stLead" class="lead"></div><div id="stList"></div>
       <p class="srcline">Las estadísticas en porcentaje piden al menos 20 partidos jugados.</p></div>
-    <h2 class="stsec">Partido analizado del mes</h2>
+    <h2 class="stsec">Quién domina en cada apartado</h2>
+    <div class="stall" id="stAll"></div>
+  </div>
+</section>
+
+<!-- ===== ESPECIAL ===== -->
+<section class="view" id="v-especial" hidden>
+  <div class="wrap">
+    <div class="seg subnav" role="navigation" aria-label="Datos"><a href="#ranking">Ranking</a><a href="#torneos">Torneos</a><a href="#estadisticas">Estadísticas</a><a href="#especial">Especial</a></div>
+    <div class="sec-head"><div><h1>Especial</h1>
+      <p>El partido analizado a fondo y los partidos de los grandes torneos.</p></div></div>
+    <h2 class="stsec">Análisis completo del partido destacado</h2>
     <div class="panel"><p class="srcline">Cada mes analizamos a fondo un partido: qué lo decidió, estadísticas y claves.</p>
       <h3 style="margin-top:26px" id="featHead" hidden>Partido analizado del mes</h3>
       <div class="results" id="feat" hidden></div>
@@ -880,13 +889,13 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   var topic=null;
   var LINKS={wa:'https://chat.whatsapp.com/B5FhCmECMzB2bAZQ2f7koi?s=cl&p=a&iam=2',ig:'https://www.instagram.com/tito_tenis_/',tt:'https://www.tiktok.com/@tito_tenis'}; /* rellena ig y tt con tus enlaces */
   (function(){var m={socWa:'wa',socIg:'ig',socTt:'tt'};Object.keys(m).forEach(function(id){var a=document.getElementById(id),u=LINKS[m[id]];if(a&&u){a.href=u;a.hidden=false}});var j=document.getElementById('waJoin');if(j&&LINKS.wa){j.href=LINKS.wa;j.hidden=false}})();
-  var views=['juegos','ranking','torneos','estadisticas','noticias','foro','guiones','charlas','mis-debates','sugerencias','creditos'];
+  var views=['juegos','ranking','torneos','estadisticas','especial','noticias','foro','guiones','charlas','mis-debates','sugerencias','creditos'];
   function route(){
     var parts=(location.hash||'').replace('#','').split('/');
     var h=parts[0];if(h==='en-vivo')h='estadisticas';topic=parts[1]?decodeURIComponent(parts[1]):null;
     if(views.indexOf(h)<0)h='juegos';
     views.forEach(function(v){$('#v-'+v).hidden=(v!==h)});
-    var DG=['ranking','torneos','estadisticas'];
+    var DG=['ranking','torneos','estadisticas','especial'];
     $$('#tabs a').forEach(function(a){
       var on=a.getAttribute('href')==='#'+h||(a.id==='navDatos'&&DG.indexOf(h)>=0);
       if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
@@ -898,6 +907,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     if(h==='ranking')renderRanking();
     if(h==='torneos')renderTorneos();
     if(h==='estadisticas')renderStats();
+    if(h==='especial')renderMatches();
     if(h==='creditos')renderCreds();
     if(h==='mis-debates'){seenTs=Date.now();LS.set('tt_seen',String(seenTs));renderDms();renderBadge()}
     window.scrollTo(0,0);
@@ -918,7 +928,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   function loadData(){
     return fetch('data.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(txt){
       if(txt===lastJson)return;
-      lastJson=txt;DATA=JSON.parse(txt);var IMP=/grand slam|australian open|roland|wimbledon|us open|masters|atp finals|nitto|indian wells|miami|monte.?carlo|madrid|roma\b|rome|canad|montr|toronto|cincinnati|shanghai|par[ií]s|bercy/i;DATA.results=(DATA.results||[]).filter(function(x){return IMP.test(x.tour||'')});DATA.scheduled=(DATA.scheduled||[]).filter(function(x){return IMP.test(x.tour||'')});
+      lastJson=txt;DATA=JSON.parse(txt);DATA.news=(DATA.news||[]).filter(function(n){return n.tag!=='Ranking'});var IMP=/grand slam|australian open|roland|wimbledon|us open|masters|atp finals|nitto|indian wells|miami|monte.?carlo|madrid|roma\b|rome|canad|montr|toronto|cincinnati|shanghai|par[ií]s|bercy/i;DATA.results=(DATA.results||[]).filter(function(x){return IMP.test(x.tour||'')});DATA.scheduled=(DATA.scheduled||[]).filter(function(x){return IMP.test(x.tour||'')});
       $$('.upd').forEach(function(u){u.textContent=DATA.updated||'—'});
       renderNews();renderMatches();renderForum();renderGuiones();
     }).catch(function(){
@@ -2476,51 +2486,54 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     if(!CAMP||!CAMP.t){box.appendChild(el('p','empty','No se han podido cargar los torneos.'));return}
     var day=dayStr(),R=seedRng('trof'+gDif+day),L=CAMP.t.filter(function(t){return TRN[gDif].indexOf(t.nv)>=0});
     var t=L[Math.floor(R()*L.length)],st=loadSt({k:0,g:[],log:'',s:0,e:0,w:0});
-    var rds=RORD.filter(function(r){return t.m.some(function(m){return m[0]===r})}),S=rds.length-1,k=Math.min(st.k,S-1);
-    var by={};rds.forEach(function(r){by[r]=t.m.filter(function(m){return m[0]===r})});
+    var rds=RORD.filter(function(r){return t.m.some(function(m){return m[0]===r})}),by={};
+    rds.forEach(function(r){by[r]=t.m.filter(function(m){return m[0]===r})});
+    var cm=t.m.filter(function(m){return m[1]===t.cam}),N=cm.length,S=N;/* etapas 0..N: partidos del campeón y, al final, toda la primera ronda */
+    var k=Math.min(st.k||0,S);
     var surf=t.s==='tierra'?'tierra batida':t.s==='hierba'?'hierba':'pista dura';
-    intro(box,'Road to Glory','Te enseñamos el cuadro ronda a ronda. Adivina quién ganó el torneo: cuanto antes aciertes, más puntos. Fallar o pasar te enseña la ronda siguiente.');
+    var sd=function(n){return n?'('+n+') ':''};
+    intro(box,'Road to Glory','Te contamos el torneo del campeón poco a poco: primero su primer partido, luego los siguientes, y al final toda la primera ronda. Cuanto antes aciertes, más puntos.');
     box.appendChild(el('div','gq',gDif===1?t.n+' '+t.a+' · '+NVT[t.nv]+' · '+surf:gDif===2?t.n+' · '+NVT[t.nv]+' · '+surf:'Torneo misterioso · '+NVT[t.nv]+' · '+surf));
-    var over=!!st.e;
-    /* resultados de las rondas 0..k (la final nunca se enseña) */
-    var upto=Math.min(k,S-1);
-    for(var i=upto;i>=0;i--){
-      var rd=rds[i],cont=el(i===upto?'div':'details','trr');
-      if(i!==upto){cont.appendChild(el('summary',null,RDN[rd]||rd))}else cont.appendChild(el('h4',null,(RDN[rd]||rd)+' · resultados'));
-      var ul=el('ul','trl');by[rd].forEach(function(m){var li=el('li');li.appendChild(el('b',null,m[1]));li.appendChild(document.createTextNode(' '+m[3]+' '));li.appendChild(el('span','trlos',m[2]));ul.appendChild(li)});
-      cont.appendChild(ul);box.appendChild(cont);
-      if(i===0&&rds.length>1){var inR0={};by[rds[0]].forEach(function(m){inR0[m[1]]=1;inR0[m[2]]=1});
-        var byes=[];by[rds[1]].forEach(function(m){[m[1],m[2]].forEach(function(n){if(!inR0[n]&&byes.indexOf(n)<0)byes.push(n)})});
-        if(byes.length)cont.appendChild(el('p','srcline','Entran directamente en la ronda siguiente (cabezas de serie): '+byes.join(', ')+'.'))}
-    }
-    var cand=[];by[rds[upto]].forEach(function(m){if(cand.indexOf(m[1])<0)cand.push(m[1])});
-    if(upto===0&&rds.length>1){var in0={};by[rds[0]].forEach(function(m){in0[m[1]]=1;in0[m[2]]=1});by[rds[1]].forEach(function(m){[m[1],m[2]].forEach(function(n){if(!in0[n]&&cand.indexOf(n)<0)cand.push(n)})})}
-    if(upto===S-1&&rds[S]==='F'){cand=[];by.F.forEach(function(m){cand.push(m[1],m[2])})} /* en la última ronda vista: los dos finalistas */
+    var over=!!st.e,show=over?S:k;
+    var hl=el('div','trr');hl.appendChild(el('h4',null,'Pistas sobre el jugador secreto'));
+    var ul=el('ul','trl');
+    for(var i=0;i<=Math.min(show,N-1);i++){var m=cm[i],li=el('li');
+      li.appendChild(el('b',null,(RDN[m[0]]||m[0])+': '));li.appendChild(document.createTextNode('ganó '+m[3]+' a '+sd(m[5])));li.appendChild(el('span','trlos',m[2]));ul.appendChild(li)}
+    hl.appendChild(ul);box.appendChild(hl);
+    if(show>=S&&rds.length){var r0=by[rds[0]],c0=el('div','trr');c0.appendChild(el('h4',null,'Toda la primera ronda ('+(RDN[rds[0]]||rds[0])+')'));
+      var u0=el('ul','trl');r0.forEach(function(m){var li=el('li');li.appendChild(el('b',null,sd(m[4])+m[1]));li.appendChild(document.createTextNode(' '+m[3]+' '));li.appendChild(el('span','trlos',sd(m[5])+m[2]));u0.appendChild(li)});
+      c0.appendChild(u0);
+      if(rds.length>1){var in0={};r0.forEach(function(m){in0[m[1]]=1;in0[m[2]]=1});var byes=[],seen={};
+        by[rds[1]].forEach(function(m){[[m[1],m[4]],[m[2],m[5]]].forEach(function(x){if(!in0[x[0]]&&!seen[x[0]]){seen[x[0]]=1;byes.push(sd(x[1])+x[0])}})});
+        if(byes.length)c0.appendChild(el('p','srcline','Entran directamente en la segunda ronda: '+byes.join(', ')+'.'))}
+      box.appendChild(c0)}
     var all=[];t.m.forEach(function(m){[m[1],m[2]].forEach(function(n){if(all.indexOf(n)<0)all.push(n)})});
-    var left=S-k;
+    var out={};for(var j=0;j<=Math.min(k,N-1);j++)out[cm[j][2]]=1;
+    var cand=all.filter(function(n){return !out[n]});
+    var left=S+1-k;
     if(!over){
-      box.appendChild(el('p',null,'Quedan '+cand.length+' candidatos · Si aciertas ahora: '+left+' '+(left===1?'punto':'puntos')+'.'));
+      box.appendChild(el('p',null,'Si aciertas ahora: '+left+' '+(left===1?'punto':'puntos')+'.'));
       var row=el('div','row'),b=el('button','btn','¿Quién ganó el torneo?');b.type='button';
       b.addEventListener('click',function(){if(!st.s){st.s=Date.now();saveSt(st)}
         openGuess('¿Quién ganó '+(gDif===3?'este torneo':t.n)+'?',function(nm){
-          if(cand.indexOf(nm)<0){var lost=t.m.filter(function(m){return m[2]===nm})[0];toast(lost?nm+' ya estaba eliminado ('+(RDN[lost[0]]||lost[0])+').':'Ese jugador no pasó de ahí.');return}
+          if(all.indexOf(nm)<0){toast('Ese jugador no jugó este torneo.');return}
           st.g.push(nm);
           if(nm===t.cam){st.w=1;st.e=Date.now();st.log+='🟩'}
-          else{st.log+='🟥';if(k>=S-1)st.e=Date.now();else st.k=k+1;toast('No ha sido '+nm+'.')}
+          else{st.log+='🟥';if(k>=S)st.e=Date.now();else st.k=k+1;toast('No ha sido '+nm+'.')}
           saveSt(st);renderGames()},st.g,gDif===3,gDif===3?all:cand)});
       row.appendChild(b);
-      if(k<S-1){var sk=el('button','btn ghost','Ver la siguiente ronda (gasto el intento)');sk.type='button';sk.addEventListener('click',function(){if(!st.s)st.s=Date.now();st.log+='⏭';st.k=k+1;saveSt(st);renderGames()});row.appendChild(sk)}
+      if(k<S){var sk=el('button','btn ghost','Otra pista (gasto un punto)');sk.type='button';sk.addEventListener('click',function(){if(!st.s)st.s=Date.now();st.log+='⏭';st.k=k+1;saveSt(st);renderGames()});row.appendChild(sk)}
       var g2=el('button','btn ghost','Me rindo');g2.type='button';g2.addEventListener('click',function(){if(!st.s)st.s=Date.now();st.e=Date.now();saveSt(st);renderGames()});row.appendChild(g2);
       box.appendChild(row)}
     else{
       var sc=st.w?left:0,ex=el('div');
       ex.appendChild(el('p',null,(st.w?'¡Campeón acertado! ':'No ha podido ser. ')+'El campeón fue '+t.cam+' en '+t.n+' '+t.a+'.'));
       var fin=by.F&&by.F[0];if(fin)ex.appendChild(el('p','srcline','Final: '+fin[1]+' '+fin[3]+' '+fin[2]+'.'));
-      finishUI(box,sc,S,'TitoTenis · Road to Glory ('+DIFN[gDif]+') '+dayEs(day)+' · '+(st.w?sc+'/'+S:'0/'+S)+'\n'+st.log+'\n'+location.origin+location.pathname,ex)}
+      finishUI(box,sc,S+1,'TitoTenis · Road to Glory ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/'+(S+1)+'\n'+st.log+'\n'+location.origin+location.pathname,ex)}
   }
 
   /* --- Ranking y evolucion --- */
-  var rkSort=LS.get('tt_rks')||'r',evMode='r',evSel=['Jannik Sinner','Carlos Alcaraz','Alexander Zverev','Novak Djokovic'];
+  var rkSort=LS.get('tt_rks')||'r';if(rkSort!=='e')rkSort='r';var evMode='r',evSel=['Jannik Sinner','Carlos Alcaraz','Alexander Zverev','Novak Djokovic'];
   var COL=['#D6E84B','#E2642D','#4FC3F7','#FFD76B','#C792EA','#7BE0AD'];
   function renderRanking(){
     Promise.all([RKP,EVP]).then(function(){
@@ -2528,11 +2541,11 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       $$('#rkSeg button').forEach(function(b){b.classList.toggle('on',b.dataset.s===rkSort)});
       var tb=$('#rkTbl');clr(tb);
       if(!RK){tb.appendChild(el('caption',null,'No se ha podido cargar el ranking.'));return}
-      var hd=el('tr');['#','Jugador','ATP','Puntos','Edad','Elo','Dura','Tierra','Hierba'].forEach(function(h,i){hd.appendChild(el('th',i>1?'num':'',h))});tb.appendChild(hd);
-      var list=RK.j.slice().sort(function(a,b){return rkSort==='r'?a.r-b.r:b[rkSort]-a[rkSort]});
+      var hd=el('tr');['#','Jugador','ATP','Puntos','Edad','Elo'].forEach(function(h,i){hd.appendChild(el('th',i>1?'num':'',h))});tb.appendChild(hd);
+      var list=RK.j.filter(function(x){return x.r<=100}).sort(function(a,b){return rkSort==='r'?a.r-b.r:b[rkSort]-a[rkSort]});
       list.forEach(function(x,i){var tr=el('tr');tr.appendChild(el('td','num',String(i+1)));
         var td=el('td'),b=el('button','lk',x.n);b.type='button';b.addEventListener('click',function(){openPlayer(x.n)});td.appendChild(b);tr.appendChild(td);
-        [x.r,x.pt?x.pt.toLocaleString('es-ES'):'—',Math.round(x.a),Math.round(x.e),Math.round(x.h),Math.round(x.c),Math.round(x.g)].forEach(function(v){tr.appendChild(el('td','num',String(v)))});
+        [x.r,x.pt?x.pt.toLocaleString('es-ES'):'—',Math.round(x.a),Math.round(x.e)].forEach(function(v){tr.appendChild(el('td','num',String(v)))});
         tb.appendChild(tr)})});
   }
   $('#rkSeg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;rkSort=b.dataset.s;LS.set('tt_rks',rkSort);renderRanking()});
@@ -2626,7 +2639,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
       $$('#tSf .chip').forEach(function(b){b.classList.toggle('on',b.dataset.s===tS)});
       var box=$('#tList');clr(box);
       if(!TO){box.appendChild(el('p','empty','No se han podido cargar los torneos.'));return}
-      var L=TO.torneos.filter(function(t){return t.a===tY&&(tL==='all'||t.nv===tL)&&(tS==='all'||t.s===tS)});
+      var L=TO.torneos.filter(function(t){return t.a===tY&&(tL==='all'||t.nv===tL)&&(tS==='all'||t.s===tS)}).sort(function(a,b){return a.d1<b.d1?1:a.d1>b.d1?-1:0});
       if(!L.length){box.appendChild(el('p','empty','No hay torneos con ese filtro.'));return}
       var cur='';
       L.forEach(function(t){var mk=t.d1.slice(0,7);if(mk!==cur){cur=mk;box.appendChild(el('h2','tmon',['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'][+mk.slice(5,7)-1]))}
