@@ -2187,7 +2187,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     GAMES.forEach(function(g){var c=0;for(var k=0;k<n;k++){var dt=new Date(d0.getTime()+k*864e5),ds=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid'}).format(dt),ok=false;
       for(var d=1;d<=3;d++){var s=lsj('tt_g_'+g.id+d+'_'+ds);if(s&&s.e)ok=true}if(ok)c++}
       ul.appendChild(el('li',null,g.i+' '+g.n+': '+c+' de '+n+' · '+Math.round(100*c/n)+'%'))});
-    m.appendChild(ul);acctUI(m)}
+    m.appendChild(ul)}
   var GRULES={grid:'Cada casilla pide un jugador que cumpla la condición de su fila y la de su columna. Fallar te quita una vida y no puedes repetir jugador.',
     lista:'Nombra a todos los jugadores que cumplan la condición. Cada fallo te quita una vida.',
     conn:'Hay 16 jugadores repartidos en 4 grupos de 4 que comparten algo. Encuentra los grupos antes de agotar los fallos.',
