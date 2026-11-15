@@ -13,3 +13,5 @@
 - 2025: HECHO salvo Marseille, Atenas, Metz, Canada Masters (0 errores en 2.443 partidos). Informe: informe_2025_sets.md
 - Siguiente: 2024 (URLs de temporada pasada: /tennis/atp-singles/<slug>-<año>/results/; Canada Masters -> toronto-<año>/montreal-<año> según año). Recoger 1 torneo ≈ 1 min en iframe (uno a uno; en paralelo se satura). Comparar luego en flashscore.mobi (10 partidos/s). Pasar datos .com -> .mobi con window.name.
 - 2024: HECHO salvo Córdoba, Lyon, Newport, Atlanta, Amberes, Belgrado (0 errores en 2.507 partidos). Informe: informe_2024_sets.md
+
+2023 set a set: HECHO salvo Adelaide-1, Pune, Banja Luka, Lyon, Sofia, Astana, Zhuhai. 0 errores reales.
