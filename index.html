@@ -392,7 +392,8 @@ nav a[href="#mis-debates"]{display:none!important}
 .gtile{position:relative;display:flex;align-items:center;gap:10px;text-align:left;border:1px solid var(--line);border-radius:16px;padding:12px 12px;color:var(--chalk);font:inherit;cursor:pointer;background:linear-gradient(150deg,#1c4a43,#12302c);transition:.15s}
 .gtile:hover{transform:translateY(-2px);border-color:#D6E84B}
 .gtile.on{border-color:#D6E84B;box-shadow:0 0 0 2px rgba(214,232,75,.35);background:linear-gradient(150deg,#276357,#163b35)}
-.gti{display:block;width:46px;height:46px;flex:none;line-height:0}.gti svg{width:100%;height:100%;overflow:hidden;border-radius:8px}.gsh{display:flex;align-items:center;gap:12px}.gsh .gti{width:60px;height:60px}.gsh h3{margin:0}.gtt{display:flex;flex-direction:column;min-width:0}.gtt b{font-size:15px}.gtt small{opacity:.8;font-size:12px}
+.gti{display:block;width:46px;height:46px;flex:none;line-height:0}.gti svg{width:100%;height:100%;overflow:hidden;border-radius:8px}.gstats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}.gstats div{background:rgba(255,255,255,.07);border-radius:12px;padding:10px 4px;text-align:center}.gstats b{display:block;font-size:22px;color:var(--ball)}.gstats small{opacity:.8;font-size:11.5px}.gper{display:grid;gap:8px;margin:8px 0 12px}.gpr{display:flex;align-items:center;gap:10px}.gpr .gti{width:34px;height:34px}.gpt{flex:1;min-width:0}.gpt b{display:block;font-size:14px}.gpt small{opacity:.8;font-size:12px}.gbar{display:block;height:6px;border-radius:9px;background:rgba(255,255,255,.1);margin-top:4px;overflow:hidden}.gbar u{display:block;height:100%;background:var(--ball)}
+.gsh{display:flex;align-items:center;gap:12px}.gsh .gti{width:60px;height:60px}.gsh h3{margin:0}.gtt{display:flex;flex-direction:column;min-width:0}.gtt b{font-size:15px}.gtt small{opacity:.8;font-size:12px}
 @media(max-width:560px){.gtile{flex-direction:column;align-items:flex-start;gap:6px;padding:12px 10px}.gtt b{font-size:14px;padding-right:22px}.gtt small{font-size:11.5px}}
 .gck{position:absolute;top:6px;right:8px;color:#0C1F1D;background:#D6E84B;border-radius:999px;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
 .gdif{display:flex;align-items:center;gap:8px;margin:0 0 14px;flex-wrap:wrap}
@@ -885,7 +886,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
 </section>
 
 <footer>
-  <div class="wrap">TitoTenis · <a href="#creditos" style="color:inherit">Créditos</a></div>
+  <div class="wrap">TitoTenis · <a href="#creditos" style="color:inherit">Créditos</a> · <a href="#sugerencias" style="color:inherit">Contacto</a></div>
 </footer>
 
 <script>
@@ -2183,6 +2184,10 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
     m.appendChild(el('h3',null,'Mi progreso'));
     var sr=el('div','gstreak');sr.appendChild(el('b',null,'🔥 '+S.streak));sr.appendChild(el('span',null,S.streak===1?'día seguido':'días seguidos'));sr.appendChild(el('small',null,'Mejor racha: '+S.best));m.appendChild(sr);
     var mg=el('div','gmed');medals(S).forEach(function(x){var c=el('span','gm'+(x[2]?' on':''));c.title=x[1];c.appendChild(el('i',null,x[2]?x[0]:'🔒'));c.appendChild(el('small',null,x[1]));mg.appendChild(c)});m.appendChild(mg);
+    var tot=0,win=0,sumP=0,per=[];GAMES.forEach(function(g){var H=lsj('tt_hist_'+g.id)||[],w=0,sp=0;H.forEach(function(h){var p=h.max?100*h.score/h.max:0;sp+=p;if(p>=60)w++});tot+=H.length;win+=w;sumP+=sp;per.push([g,H.length,w,H.length?Math.round(sp/H.length):0])});
+    var gs=el('div','gstats');[[tot,'partidas'],[tot?Math.round(100*win/tot)+'%':'0%','victorias'],[tot?Math.round(sumP/tot)+'%':'0%','media'],[S.best,'mejor racha']].forEach(function(x){var c=el('div');c.appendChild(el('b',null,String(x[0])));c.appendChild(el('small',null,x[1]));gs.appendChild(c)});m.appendChild(gs);
+    m.appendChild(el('p','srcline','Victoria = acertar el 60 % o más. Todo se guarda en este dispositivo, sin cuenta.'));
+    var pl=el('div','gper');per.forEach(function(x){var r=el('div','gpr');r.appendChild(gicon(x[0].id));var t=el('div','gpt');t.appendChild(el('b',null,x[0].n));t.appendChild(el('small',null,x[1]+' partidas · '+x[2]+' victorias · media '+x[3]+'%'));var bar=el('i','gbar');var f=el('u');f.style.width=x[3]+'%';bar.appendChild(f);t.appendChild(bar);r.appendChild(t);pl.appendChild(r)});m.appendChild(pl);
     m.appendChild(el('p','srcline','Días completados de los '+n+' días que llevas jugando (cualquier dificultad cuenta una vez al día).'));
     var ul=el('ul','gmine');
     GAMES.forEach(function(g){var c=0;for(var k=0;k<n;k++){var dt=new Date(d0.getTime()+k*864e5),ds=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid'}).format(dt),ok=false;
