@@ -66,7 +66,7 @@ _tit = _cc.Counter(cname(x['cam']) for x in _camp if x.get('cam') and cname(x['c
 add('tit3','Ha ganado 3 torneos ATP o más (desde 2023)',[n for n,c in _tit.items() if c>=3])
 add('tit6','Ha ganado más de 5 torneos ATP (desde 2023)',[n for n,c in _tit.items() if c>5])
 _pre_gs = ('Stan Wawrinka','Marin Cilic','Dominic Thiem','Daniil Medvedev','Andy Murray','Novak Djokovic','Rafael Nadal','Roger Federer')
-_pre_1000 = ('Holger Rune','Marin Cilic','Stan Wawrinka','Dominic Thiem','Taylor Fritz','Karen Khachanov','Grigor Dimitrov','Hubert Hurkacz','Alexander Zverev','Stefanos Tsitsipas','Daniil Medvedev','Novak Djokovic','Andy Murray')
+_pre_1000 = ('Gael Monfils','Fabio Fognini','John Isner','Holger Rune','Marin Cilic','Stan Wawrinka','Dominic Thiem','Taylor Fritz','Karen Khachanov','Grigor Dimitrov','Hubert Hurkacz','Alexander Zverev','Stefanos Tsitsipas','Daniil Medvedev','Novak Djokovic','Andy Murray')
 add('campGS','Campeón de un Grand Slam',[cname(x['cam']) for x in _camp if x.get('nv')=='GS' and x.get('cam') and cname(x['cam'])]+[cname(n) for n in _pre_gs if cname(n)])
 add('camp1000','Campeón de un Masters 1000',[cname(x['cam']) for x in _camp if x.get('nv')=='1000' and x.get('cam') and cname(x['cam'])]+[cname(n) for n in _pre_1000 if cname(n)])
 add('camp500','Campeón de un ATP 500 (desde 2023)',[cname(x['cam']) for x in _camp if x.get('nv')=='500' and x.get('cam') and cname(x['cam'])])
