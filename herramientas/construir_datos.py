@@ -76,7 +76,19 @@ for n in list(E):
     # un punto por fecha (el último de la fecha)
     dd = {}
     for p in E[n]: dd[p[0]] = p
-    E[n] = list(dd.values())
+    pts = [q for q in dd.values() if q[0] not in ('2026-08-04',)]  # fecha con rankings corruptos en TML (32 de 47 jugadores fuera de rango)
+    # filtro de picos: TML a veces trae un ranking suelto erróneo en un partido (p.ej. 18 entre 96 y 69)
+    import math
+    for _ in range(2):
+        out_ = []
+        for i, q in enumerate(pts):
+            if 0 < i < len(pts)-1:
+                a, b = pts[i-1][1], pts[i+1][1]
+                l, la, lb = math.log(q[1]), math.log(a), math.log(b)
+                if (l-la > .7 and l-lb > .7) or (la-l > .7 and lb-l > .7): continue
+            out_.append(q)
+        pts = out_
+    E[n] = pts
     if len(E[n]) < 2: del E[n]
 json.dump({'j':E}, open(os.path.join(out,'evolucion.json'),'w',encoding='utf-8'), ensure_ascii=False, separators=(',',':'))
 # ---------- estadísticas de la temporada actual ----------
