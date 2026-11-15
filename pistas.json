@@ -1,27 +1,136 @@
 {
-"Carlos Alcaraz":["Este año empezó ganando un Grand Slam y se convirtió en el jugador más joven de la historia en completar los cuatro grandes.","En abril perdió la final de Montecarlo contra su gran rival, que le quitó el número 1.","Estuvo casi cinco meses parado por lesión y se bajó de Wimbledon por la muñeca.","Su exentrenador, Juan Carlos Ferrero, fue noticia por la idea de entrenar a su eterno rival. Este jugador es murciano."],
-"Jannik Sinner":["Ganó los cinco primeros Masters 1000 del año: Indian Wells, Miami, Montecarlo, Madrid y Roma.","Este año ha ganado seis títulos y solo ha perdido tres partidos.","Se bajó del US Open por una lesión de rodilla y ha dado por terminada su temporada 2026.","En julio ganó Wimbledon en la final contra Zverev, en cuatro sets. Es italiano."],
-"Alexander Zverev":["Durante años cargó con la etiqueta de «el mejor jugador que nunca ganó un Grand Slam».","En junio se la quitó en París: ganó una final a cinco sets contra un italiano que jugaba su primera final de Grand Slam.","En septiembre ganó también en Nueva York, seis años después de perder allí una final cuando ganaba por dos sets a cero.","Es alemán: el primer campeón de un grande de su país desde Boris Becker."],
-"Novak Djokovic":["Este año perdió la final del Open de Australia contra el jugador más joven en completar el Grand Slam.","En Roland Garros le eliminó un brasileño de 19 años que remontó dos sets.","En octubre llegó a la final de Pekín cuando su rival fue descalificado mientras él servía para ganar.","Serbio con 39 años, sigue persiguiendo su Grand Slam número 25."],
-"Daniil Medvedev":["Con 30 años ganó Dubái sin perder ni un solo set.","Ganó el torneo de Chengdú justo antes de Pekín, con una racha de siete victorias.","En octubre lo descalificaron en las semifinales de Pekín por darle un pelotazo en la cara a un espectador.","Ruso, campeón del US Open 2021 y clasificado para las ATP Finals 2026."],
-"Ben Shelton":["Hasta agosto llevaba cuatro títulos este año, entre ellos Dallas, Stuttgart y Montreal.","Es zurdo y de Atlanta, con uno de los saques más potentes del circuito.","Jugó su primera final de Grand Slam en el US Open 2026 y la perdió en cuatro sets.","Si ganaba, habría sido el primer estadounidense campeón en Nueva York desde Roddick en 2003."],
-"Taylor Fritz":["Este año perdió tres finales contra compatriotas suyos: Dallas, Stuttgart y Halle.","Ganó Washington en agosto, en una final contra un jovencísimo español.","Terminó 2025 como el estadounidense mejor clasificado, número 6 del mundo.","En 2025 ganó Eastbourne y llegó a semifinales de Wimbledon."],
-"Rafael Jodar":["El 5 de enero de 2026 era el número 165 del mundo; hoy está en el top 10.","Se clasificó para las ATP Finals en su primer año como profesional.","Ganó su primer título en Marrakech y perdió finales en Washington y Shanghái.","Es madrileño, tiene 20 años y pasó por la universidad antes de dar el salto."],
-"Alex De Minaur":["Ganó Róterdam este año en una final entre dos top 10.","En Pekín llegó a su décima final de un ATP 500 porque su rival de semifinales se retiró lesionado.","Australiano al que apodan «el Demonio»."],
-"Flavio Cobolli":["Llegó a su primera final de Grand Slam sin haber pasado nunca de cuartos de final.","La perdió en cinco sets, y ningún italiano gana en París desde Panatta en 1976.","El público de la pista central coreaba su nombre como si fuera un estadio de fútbol romano.","Italiano, entre los 14 primeros en junio y clasificado para las ATP Finals 2026."],
-"Frances Tiafoe":["Ha perdido tres semifinales del US Open, las dos últimas contra compatriotas.","Ganó Halle este año en una final contra otro estadounidense.","En el US Open 2026 remontó dos sets y un 3-0 en el quinto en los cuartos.","Sus padres emigraron de Sierra Leona y juega las ATP Finals 2026."],
-"Joao Fonseca":["Con 19 años remontó dos sets para eliminar a una leyenda en Roland Garros.","En abril llegó a sus primeros cuartos de un Masters 1000, en Montecarlo.","Es brasileño y la gran esperanza de su país."],
-"Francisco Cerundolo":["Ganó Buenos Aires este año sin perder ni un solo set.","En Montecarlo dejó fuera en el estreno a un griego, que salió del top 60.","Argentino, hermano de un zurdo que también juega en el circuito."],
-"Stefanos Tsitsipas":["Perdió en su estreno en Montecarlo, un torneo en el que nunca había caído en primera ronda.","Con esa derrota salió del top 60.","Griego, finalista de Roland Garros 2021 y del Open de Australia 2023."],
-"Jakub Mensik":["Fue el hombre más joven en una semifinal de Grand Slam en años: Roland Garros 2026.","Con 19 años ganó la final de Miami 2025 contra Djokovic.","Checo y muy alto: mide 1,96 m."],
-"Lorenzo Musetti":["Su revés a una mano es de los más bonitos del circuito.","Fue finalista de Montecarlo en 2025.","En 2026 le eliminó en Montecarlo un jugador de Mónaco.","Italiano."],
-"Learner Tien":["Es uno de los seis estadounidenses campeones de un título esta temporada.","Es zurdo y bajito para el top 30: 1,80 m.","Formó parte del equipo Mundo de la Laver Cup 2026."],
-"Tommy Paul":["Ganó Houston este año.","Perdió la final de Delray Beach contra un compatriota.","Estadounidense, uno de los habituales del top 15."],
-"Alexander Bublik":["En los cuartos de Montecarlo 2026 se midió al número 1 de entonces.","Es famoso por sus saques de abajo y su juego de showman.","Kazajo."],
-"Casper Ruud":["Ha perdido tres finales de Grand Slam, dos de ellas en París.","Noruego, hijo de un extenista."],
-"Luciano Darderi":["Venció a Zverev en el último torneo antes de Roland Garros.","Ha ganado un título este año.","Nació en Argentina pero juega para Italia."],
-"Valentin Vacherot":["En 2025 ganó el Masters de Shanghái siendo clasificado, contra su propio primo.","En 2026 eliminó a Musetti en Montecarlo.","Juega bajo bandera de Mónaco."],
-"Felix Auger Aliassime":["Perdió la final de Róterdam 2026 en una final entre dos top 10.","En 2025 se llevó el último billete a las ATP Finals con una cifra de puntos de las más altas de los últimos años.","Canadiense."],
-"Sebastian Korda":["Este año ganó Delray Beach en una final entre compatriotas.","Su padre ganó el Open de Australia 1998.","Estadounidense."],
-"Quentin Halys":["Ganó Kitzbühel este año sin perder ni un solo set.","Es francés y tiene 30 años."]
+ "Carlos Alcaraz": [
+  "Este año empezó ganando un Grand Slam y se convirtió en el jugador más joven de la historia en completar los cuatro grandes.",
+  "En abril perdió la final de Montecarlo contra su gran rival, que le quitó el número 1.",
+  "Estuvo más de cuatro meses parado por lesión y se bajó de Wimbledon por la muñeca.",
+  "Su exentrenador, Juan Carlos Ferrero, fue noticia por la idea de entrenar a su eterno rival. Este jugador es murciano."
+ ],
+ "Jannik Sinner": [
+  "Ganó los cinco primeros Masters 1000 del año: Indian Wells, Miami, Montecarlo, Madrid y Roma.",
+  "Este año ha ganado seis títulos y solo ha perdido tres partidos.",
+  "Se bajó del US Open por una lesión de rodilla y ha dado por terminada su temporada 2026.",
+  "En julio ganó Wimbledon en la final contra Zverev, en cuatro sets. Es italiano."
+ ],
+ "Alexander Zverev": [
+  "Durante años cargó con la etiqueta de «el mejor jugador que nunca ganó un Grand Slam».",
+  "En junio se la quitó en París: ganó una final a cinco sets contra un italiano que jugaba su primera final de Grand Slam.",
+  "En septiembre ganó también en Nueva York, seis años después de perder allí una final cuando ganaba por dos sets a cero.",
+  "Es alemán: el primer campeón de un grande de su país desde Boris Becker."
+ ],
+ "Novak Djokovic": [
+  "Este año perdió la final del Open de Australia contra el jugador más joven en completar el Grand Slam.",
+  "En Roland Garros le eliminó un brasileño de 19 años que remontó dos sets.",
+  "En octubre llegó a la final de Pekín cuando su rival fue descalificado mientras él servía para ganar.",
+  "Serbio con 39 años, sigue persiguiendo su Grand Slam número 25."
+ ],
+ "Daniil Medvedev": [
+  "Con 30 años ganó Dubái sin perder ni un solo set.",
+  "Llegó a Pekín con una racha de siete victorias seguidas y un título recién ganado.",
+  "En octubre lo descalificaron en las semifinales de Pekín por darle un pelotazo en la cara a un espectador.",
+  "Ruso, campeón del US Open 2021 y clasificado para las ATP Finals 2026."
+ ],
+ "Ben Shelton": [
+  "Hasta agosto llevaba cuatro títulos este año, entre ellos Dallas, Stuttgart y Montreal.",
+  "Es zurdo y de Atlanta, con uno de los saques más potentes del circuito.",
+  "Jugó su primera final de Grand Slam en el US Open 2026 y la perdió en cuatro sets.",
+  "Si ganaba, habría sido el primer estadounidense campeón en Nueva York desde Roddick en 2003."
+ ],
+ "Taylor Fritz": [
+  "Este año perdió tres finales contra compatriotas suyos: Dallas, Stuttgart y Halle.",
+  "Ganó Washington en agosto, en una final contra un jovencísimo español.",
+  "Terminó 2025 como el estadounidense mejor clasificado, número 6 del mundo.",
+  "En 2025 ganó Eastbourne y llegó a semifinales de Wimbledon."
+ ],
+ "Rafael Jodar": [
+  "Empezó 2026 en torno al puesto 165 del mundo; hoy está en el top 10.",
+  "Se clasificó para las ATP Finals en su primer año como profesional.",
+  "Ganó su primer título en Marrakech y perdió finales en Washington y Shanghái.",
+  "Es madrileño, tiene 20 años y pasó por la universidad antes de dar el salto."
+ ],
+ "Alex De Minaur": [
+  "Ganó Róterdam este año en una final entre dos top 10.",
+  "En Pekín llegó a su décima final de un ATP 500 porque su rival de semifinales se retiró lesionado.",
+  "Australiano al que apodan «el Demonio»."
+ ],
+ "Flavio Cobolli": [
+  "Llegó a su primera final de Grand Slam sin haber pasado nunca de cuartos de final.",
+  "La perdió en cinco sets, y ningún italiano gana en París desde Panatta en 1976.",
+  "El público de la pista central coreaba su nombre como si fuera un estadio de fútbol romano.",
+  "Italiano, entre los 14 primeros en junio y clasificado para las ATP Finals 2026."
+ ],
+ "Frances Tiafoe": [
+  "Ha perdido tres semifinales del US Open, las dos últimas contra compatriotas.",
+  "Ganó Halle este año en una final contra otro estadounidense.",
+  "En el US Open 2026 remontó dos sets y un 3-0 en el quinto en los cuartos.",
+  "Sus padres emigraron de Sierra Leona y juega las ATP Finals 2026."
+ ],
+ "Joao Fonseca": [
+  "Con 19 años remontó dos sets para eliminar a una leyenda en Roland Garros.",
+  "En abril llegó a sus primeros cuartos de un Masters 1000, en Montecarlo.",
+  "Es brasileño y la gran esperanza de su país."
+ ],
+ "Francisco Cerundolo": [
+  "Ganó Buenos Aires este año sin perder ni un solo set.",
+  "En Montecarlo dejó fuera en el estreno a un griego, que salió del top 60.",
+  "Argentino, hermano de un zurdo que también juega en el circuito."
+ ],
+ "Stefanos Tsitsipas": [
+  "Perdió en su estreno en Montecarlo, un torneo en el que nunca había caído en primera ronda.",
+  "Con esa derrota salió del top 60.",
+  "Griego, finalista de Roland Garros 2021 y del Open de Australia 2023."
+ ],
+ "Jakub Mensik": [
+  "Fue el hombre más joven en una semifinal de Grand Slam en años: Roland Garros 2026.",
+  "Con 19 años ganó la final de Miami 2025 contra Djokovic.",
+  "Checo y muy alto: mide 1,96 m."
+ ],
+ "Lorenzo Musetti": [
+  "Su revés a una mano es de los más bonitos del circuito.",
+  "Fue finalista de Montecarlo en 2025.",
+  "En 2026 le eliminó en Montecarlo un jugador de Mónaco.",
+  "Italiano."
+ ],
+ "Learner Tien": [
+  "Es uno de los seis estadounidenses campeones de un título esta temporada.",
+  "Es zurdo y bajito para el top 30: 1,80 m.",
+  "Formó parte del equipo Mundo de la Laver Cup 2026."
+ ],
+ "Tommy Paul": [
+  "Ganó Houston este año.",
+  "Perdió la final de Delray Beach contra un compatriota.",
+  "Estadounidense, uno de los habituales del top 15."
+ ],
+ "Alexander Bublik": [
+  "En los cuartos de Montecarlo 2026 se midió al número 1 de entonces.",
+  "Es famoso por sus saques de abajo y su juego de showman.",
+  "Kazajo."
+ ],
+ "Casper Ruud": [
+  "Ha perdido tres finales de Grand Slam, dos de ellas en París.",
+  "Noruego, hijo de un extenista."
+ ],
+ "Luciano Darderi": [
+  "Venció a Zverev en el último torneo antes de Roland Garros.",
+  "Ha ganado un título este año.",
+  "Nació en Argentina pero juega para Italia."
+ ],
+ "Valentin Vacherot": [
+  "En 2025 ganó el Masters de Shanghái siendo clasificado, contra su propio primo.",
+  "En 2026 eliminó a Musetti en Montecarlo.",
+  "Juega bajo bandera de Mónaco."
+ ],
+ "Felix Auger Aliassime": [
+  "Perdió la final de Róterdam 2026 en una final entre dos top 10.",
+  "En 2025 se llevó el último billete a las ATP Finals con una cifra de puntos de las más altas de los últimos años.",
+  "Canadiense."
+ ],
+ "Sebastian Korda": [
+  "Este año ganó Delray Beach en una final entre compatriotas.",
+  "Su padre ganó el Open de Australia 1998.",
+  "Estadounidense."
+ ],
+ "Quentin Halys": [
+  "Ganó Kitzbühel este año sin perder ni un solo set.",
+  "Es francés y tiene 30 años."
+ ]
 }

@@ -25,6 +25,7 @@ for arg in sys.argv[3:]:
     for r in csv.DictReader(open(path,encoding='utf-8')):
         if r['tourney_name'].startswith('Davis Cup') or r['tourney_level']=='D': continue
         if r['surface'] not in SURF: continue
+        if r['tourney_level']=='A' and r['tourney_name'] in ('Doha','Los Cabos'): r['tourney_level']='250'  # TML 2024 los marca 'A'; eran ATP 250
         k = (season, r['tourney_id'], r['match_num'] or (r['winner_name'], r['loser_name'], r['round']))
         if k in seen: continue
         seen.add(k); r['_s'] = season; r['_x'] = extra; rows.append(r)
