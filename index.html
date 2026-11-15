@@ -492,6 +492,16 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
 .ggrid .gcell:not(:disabled):hover{background:#06222C;border-color:#0CC7F2}
 .ggrid .gcell.ok{background:#14532D;border-color:#42b85f;color:#fff}
 .ggrid .gcell.no{background:#5A2410;border-color:#E2642D;color:#fff}
+
+/* La grada: portada llamativa */
+.grhero{position:relative;overflow:hidden;border-radius:22px;padding:28px 26px 120px;margin:6px 0 22px;background:radial-gradient(700px 300px at 85% 0%,rgba(226,100,45,.55),transparent 65%),linear-gradient(160deg,#17493F,#0C1F1D);border:1px solid rgba(214,232,75,.35)}
+.grtxt{position:relative;z-index:2;max-width:560px}.grtag{display:inline-block;background:rgba(214,232,75,.16);color:var(--ball);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:700}
+.grhero h1{font-size:clamp(2.4rem,9vw,3.6rem);margin:10px 0 6px;line-height:1}.grhero p{margin:0 0 14px;font-size:1.05rem;opacity:.92}
+.grstats{display:flex;gap:12px;margin:0 0 16px}.grstats div{background:rgba(0,0,0,.28);border-radius:14px;padding:8px 16px;text-align:center}.grstats b{display:block;font-size:1.6rem;color:var(--ball);line-height:1.1}.grstats small{opacity:.8}
+.grcta{display:flex;flex-wrap:wrap;gap:10px}.btn.big{padding:13px 26px;font-size:1.05rem;font-weight:800}
+.grcrowd{position:absolute;left:0;right:0;bottom:0;height:110px;background:linear-gradient(180deg,transparent,rgba(5,20,26,.85)),radial-gradient(circle at 10px 12px,rgba(244,241,232,.55) 4px,transparent 5px) 0 0/22px 24px,radial-gradient(circle at 21px 24px,rgba(214,232,75,.5) 4px,transparent 5px) 0 0/22px 24px,radial-gradient(circle at 10px 12px,rgba(226,100,45,.55) 4px,transparent 5px) 11px 12px/22px 24px;opacity:.75;z-index:1}
+.frow{display:flex;align-items:center;gap:12px}.frow .fic{flex:none;width:44px;height:44px;border-radius:50%;background:rgba(214,232,75,.14);display:flex;align-items:center;justify-content:center;font-size:22px}
+.frow>div:nth-child(2){flex:1;min-width:0}.frow .cnt{flex:none;min-width:56px;text-align:center;border-radius:14px;background:rgba(255,255,255,.07);padding:6px 8px}.frow .cnt.hot{background:rgba(226,100,45,.3);box-shadow:inset 0 0 0 1px #E2642D}.frow .cnt.hot::before{content:'🔥 '}
 </style>
 </head>
 <body>
@@ -586,15 +596,18 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
 <!-- ===== FORO ===== -->
 <section class="view" id="v-foro" hidden>
   <div class="wrap">
-    <div class="sec-head">
-      <div>
+    <div class="grhero">
+      <div class="grtxt">
+        <span class="grtag">🏟️ Comunidad TitoTenis</span>
         <h1>La grada</h1>
-              </div>
+        <p>Aquí se discute de tenis: opina de los partidos, haz tu pronóstico y debate con otros aficionados.</p>
+        <div class="grstats" id="grStats"></div>
+        <div class="grcta"><button class="btn clay big" type="button" id="newTopicBtn">💬 Abrir un tema</button><a class="btn wa" id="waJoin" target="_blank" rel="noopener" hidden>Unirme al grupo de WhatsApp</a></div>
+      </div>
+      <div class="grcrowd" aria-hidden="true"></div>
     </div>
-    
-    <p><a class="btn wa" id="waJoin" target="_blank" rel="noopener" hidden>Unirme al grupo de WhatsApp</a></p>
     <div id="fIndex">
-      <div class="fbar"><h2 class="sub" style="margin:0">Temas de La grada</h2><button class="btn clay" type="button" id="newTopicBtn">Nuevo tema</button></div>
+      <div class="fbar"><h2 class="sub" style="margin:0">🔥 Temas de La grada</h2></div>
       <form class="panel" id="newTopicForm" hidden>
         <div class="form-grid">
           <div class="full"><label class="lbl" for="ntTitle">Título del tema</label><input class="field" id="ntTitle" style="width:100%" maxlength="120" placeholder="Ej.: ¿Qué cuerdas usáis en tierra batida?" required></div>
@@ -1802,13 +1815,14 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
         rows.forEach(function(r){
           var c=postsOf(r.id).length;
           var a=el('a','frow');a.href='#foro/'+encodeURIComponent(r.id);a.setAttribute('role','listitem');
-          var l=el('div');l.appendChild(el('b',null,r.t));
+          a.appendChild(el('span','fic',r.k==='Partido'?'🎾':r.k==='Noticia'?'📰':r.k==='Tema general'?'🏆':'💬'));var l=el('div');l.appendChild(el('b',null,r.t));
           l.appendChild(el('small',null,r.k+(r.ts?' · última respuesta '+new Date(r.ts).toLocaleString('es-ES',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):' · sin mensajes todavía')));
-          var n=el('div','cnt',String(c));n.appendChild(el('small',null,c===1?'mensaje':'mensajes'));
+          var n=el('div','cnt'+(c>=5?' hot':''),String(c));n.appendChild(el('small',null,c===1?'mensaje':'mensajes'));
           a.appendChild(l);a.appendChild(n);box.appendChild(a);
         });
       }
       fill($('#fThreads'),rowsT);
+      var tot=store.posts.length,gs=$('#grStats');if(gs){gs.textContent='';[[rowsT.length+rowsN.length,'temas'],[tot,'mensajes']].forEach(function(x){var c=el('div');c.appendChild(el('b',null,String(x[0])));c.appendChild(el('small',null,x[1]));gs.appendChild(c)})}
       return;
     }
     idx.hidden=true;tp.hidden=false;
