@@ -57,29 +57,28 @@ add('top30','Top 30 actual',[p[0] for p in pool if 0<p[5]<=30])
 add('top100','Top 100 actual',[p[0] for p in pool if 0<p[5]<=100])
 add('joven','23 años o menos',[p[0] for p in pool if 0<p[4]<=23])
 add('vet','30 años o más',[p[0] for p in pool if p[4]>=30])
-# campeones (2025-26)
 def cname(x): return canon.get(pk(x), None)
-for lvl, t, mn in (('GS','Campeón de un Grand Slam (2025-26)',1),('1000','Campeón de un Masters 1000 (2025-26)',1),('500','Campeón de un ATP 500 (2025-26)',1),('250','Campeón de un ATP 250 (2025-26)',1)):
-    add('camp'+lvl, t, [cname(x['cam']) for x in tor if x['nv']==lvl and x['cam'] and cname(x['cam'])])
-add('campTierra','Campeón en tierra batida (2025-26)',[cname(x['cam']) for x in tor if x['s']=='tierra' and x['nv'] in ('GS','1000','500','250') and x['cam'] and cname(x['cam'])])
-add('campHierba','Campeón en hierba (2025-26)',[cname(x['cam']) for x in tor if x['s']=='hierba' and x['cam'] and cname(x['cam'])])
-add('campDura','Campeón en pista dura (2025-26)',[cname(x['cam']) for x in tor if x['s']=='dura' and x['cam'] and cname(x['cam'])])
-add('finalista','Finalista de un Masters 1000 o Grand Slam (2025-26)',[cname(x['fin']) for x in tor if x['nv'] in ('GS','1000') and x['fin'] and cname(x['fin'])])
 # campeones 2023-26 (campeones.json) y listas variadas
 import collections as _cc
 try: _camp = L('campeones.json')['t']
 except Exception: _camp = []
 _tit = _cc.Counter(cname(x['cam']) for x in _camp if x.get('cam') and cname(x['cam']))
-add('tit3','Ha ganado 3 torneos ATP o más (2023-26)',[n for n,c in _tit.items() if c>=3])
-add('tit6','Ha ganado más de 5 torneos ATP (2023-26)',[n for n,c in _tit.items() if c>5])
-add('campGS23','Campeón de un Grand Slam (2023-26)',[cname(x['cam']) for x in _camp if x.get('nv')=='GS' and x.get('cam') and cname(x['cam'])])
-add('camp100023','Campeón de un Masters 1000 (2023-26)',[cname(x['cam']) for x in _camp if x.get('nv')=='1000' and x.get('cam') and cname(x['cam'])])
-add('camp500b','Campeón de un ATP 500 (2023-26)',[cname(x['cam']) for x in _camp if x.get('nv')=='500' and x.get('cam') and cname(x['cam'])])
+add('tit3','Ha ganado 3 torneos ATP o más (desde 2023)',[n for n,c in _tit.items() if c>=3])
+add('tit6','Ha ganado más de 5 torneos ATP (desde 2023)',[n for n,c in _tit.items() if c>5])
+_pre_gs = ('Stan Wawrinka','Marin Cilic','Dominic Thiem','Daniil Medvedev','Andy Murray','Novak Djokovic','Rafael Nadal','Roger Federer')
+_pre_1000 = ('Holger Rune','Marin Cilic','Stan Wawrinka','Dominic Thiem','Taylor Fritz','Karen Khachanov','Grigor Dimitrov','Hubert Hurkacz','Alexander Zverev','Stefanos Tsitsipas','Daniil Medvedev','Novak Djokovic','Andy Murray')
+add('campGS','Campeón de un Grand Slam',[cname(x['cam']) for x in _camp if x.get('nv')=='GS' and x.get('cam') and cname(x['cam'])]+[cname(n) for n in _pre_gs if cname(n)])
+add('camp1000','Campeón de un Masters 1000',[cname(x['cam']) for x in _camp if x.get('nv')=='1000' and x.get('cam') and cname(x['cam'])]+[cname(n) for n in _pre_1000 if cname(n)])
+add('camp500','Campeón de un ATP 500 (desde 2023)',[cname(x['cam']) for x in _camp if x.get('nv')=='500' and x.get('cam') and cname(x['cam'])])
+add('camp250','Campeón de un ATP 250 (desde 2023)',[cname(x['cam']) for x in _camp if x.get('nv')=='250' and x.get('cam') and cname(x['cam'])])
+add('campTierra','Campeón en tierra batida (desde 2023)',[cname(x['cam']) for x in _camp if x.get('s')=='tierra' and x.get('cam') and cname(x['cam'])])
+add('campHierba','Campeón en hierba (desde 2023)',[cname(x['cam']) for x in _camp if x.get('s')=='hierba' and x.get('cam') and cname(x['cam'])])
+add('campDura','Campeón en pista dura (desde 2023)',[cname(x['cam']) for x in _camp if x.get('s')=='dura' and x.get('cam') and cname(x['cam'])])
 add('sinTitulo','Sin ningún título ATP desde 2023',[p[0] for p in pool if p[0] not in _tit and p[5] and p[5]<=60])
 def _g(*ns): return [cname(n) for n in ns if cname(n)]
 add('gsHist','Ha ganado un Grand Slam (en toda su carrera)',_g('Novak Djokovic','Carlos Alcaraz','Jannik Sinner','Daniil Medvedev','Stan Wawrinka','Dominic Thiem','Marin Cilic','Andy Murray','Rafael Nadal','Roger Federer','Juan Martin Del Potro','Andy Roddick','Marat Safin','Gaston Gaudio','Albert Costa','Juan Carlos Ferrero','Carlos Moya','Thomas Johansson','Lleyton Hewitt','Gustavo Kuerten','Andre Agassi','Pete Sampras'))
 add('exNum1','Ha sido número 1 del mundo',_g('Novak Djokovic','Carlos Alcaraz','Jannik Sinner','Daniil Medvedev','Andy Murray','Rafael Nadal','Roger Federer','Juan Carlos Ferrero','Carlos Moya','Lleyton Hewitt','Marat Safin','Andy Roddick','Andre Agassi','Pete Sampras'))
-add('reves1','Revés a una mano',_g('Stan Wawrinka','Lorenzo Musetti','Stefanos Tsitsipas','Denis Shapovalov','Grigor Dimitrov','Dominic Thiem','Roger Federer','Richard Gasquet','Gael Monfils','Alexei Popyrin','Cameron Norrie','Alejandro Davidovich Fokina','Jiri Lehecka','Flavio Cobolli','Nuno Borges','Daniel Altmaier','Federico Coria'))
+add('reves1','Revés a una mano',_g('Stan Wawrinka','Lorenzo Musetti','Stefanos Tsitsipas','Denis Shapovalov','Grigor Dimitrov','Dominic Thiem','Richard Gasquet','Daniel Altmaier','Christopher Oconnell','Dusan Lajovic','Aleksandar Kovacevic','Christopher Eubanks','Daniel Evans'))
 add('nordico','Nórdico (Suecia, Noruega, Dinamarca o Finlandia)',[p[0] for p in pool if p[1] in ('SWE','NOR','DEN','FIN')])
 add('sudam','Sudamericano',[p[0] for p in pool if p[1] in ('ARG','CHI','BRA','COL','PER','BOL','ECU','URU','PAR')])
 add('balcan','De los Balcanes',[p[0] for p in pool if p[1] in ('SRB','CRO','BIH','MNE','SLO','MKD','BUL')])
@@ -91,13 +90,14 @@ wins = {}  # (perdedor) -> {None:set, surf:set}
 for d, s, ti, rd, w, l, sc in base['m']:
     wn, ln = cname(J[w]), cname(J[l])
     if not wn or not ln: continue
+    if d < '2026-01-01': continue
     wins.setdefault(ln, {}).setdefault('', set()).add(wn)
     wins[ln].setdefault(s, set()).add(wn)
 for rv in ('Jannik Sinner','Carlos Alcaraz','Novak Djokovic','Alexander Zverev','Daniil Medvedev','Taylor Fritz','Casper Ruud','Stefanos Tsitsipas','Andrey Rublev','Ben Shelton'):
     if rv in wins:
-        add('gana'+rv.split()[-1], 'Ha ganado a '+rv+' (desde 2023)', wins[rv].get('', []))
+        add('gana'+rv.split()[-1], 'Ha ganado a '+rv+' en 2026', wins[rv].get('', []))
         for s in 'dth':
-            add('gana'+rv.split()[-1]+s, 'Ha ganado a '+rv+' '+surfname[s], wins[rv].get(s, []))
+            add('gana'+rv.split()[-1]+s, 'Ha ganado a '+rv+' '+surfname[s]+' en 2026', wins[rv].get(s, []))
 json.dump({'actualizado': base.get('hasta',''), 'p': pool, 'c': crit}, open(out,'w',encoding='utf-8'), ensure_ascii=False, separators=(',',':'))
 print(len(pool), 'jugadores', len(crit), 'criterios')
 for c in crit: print(c['id'], len(c['p']))
