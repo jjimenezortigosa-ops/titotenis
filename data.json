@@ -1,376 +1,422 @@
 {
- "updated": "15 nov 2026, 19:55 (Madrid)",
- "matches": [],
- "results": [
-  {
-   "id": "atpf-zverev-jodar",
-   "cat": "atp",
-   "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
-   "text": "Alexander Zverev gana a Rafael Jódar",
-   "score": "6-4 6-4",
-   "det": "Debut en las Finals, pista dura cubierta · 10 aces, todos en el primer set · 37 de 43 puntos ganados con el primer saque",
-   "stats": {
-    "names": [
-     "Zverev",
-     "Jódar"
-    ],
-    "src": "Tennis Majors, partido del 15 nov 2026",
-    "rows": [
-     [
-      "Puntos ganados",
-      "69",
-      "53",
-      69,
-      53
-     ],
-     [
-      "Errores no forzados",
-      "18",
-      "10",
-      18,
-      10
-     ],
-     [
-      "Aces",
-      "10",
-      "dato no disponible",
-      10,
-      0
-     ]
-    ]
-   }
-  }
- ],
- "news": [
-  {
-   "id": "atp-zverev-estrena-las-finals-con-victoria-sobre-j-dar",
-   "cat": "atp",
-   "tag": "ATP Finals",
-   "cls": "est",
-   "t": "Zverev estrena las Finals con victoria sobre Jódar",
-   "d": "El número 1 ganó 6-4 6-4 con 10 aces, todos en el primer set, y no cedió ningún juego de saque. Esta noche juegan Shelton y Fils.",
-   "s": "Tennis Majors",
-   "u": "https://www.tennismajors.com/atp/nitto-atp-finals-atp/zverev-on-a-mission-as-he-opens-atp-finals-with-straight-sets-win-over-jodar-867040.html",
-   "w": "15 nov",
-   "full": [
-    "Alexander Zverev abrió el Grupo John McEnroe con un 6-4 6-4 sobre Rafael Jódar, debutante de 20 años.",
-    "El alemán sacó con mucha autoridad: 10 aces, todos en el primer set, y salvó las dos bolas de rotura que afrontó cuando sacaba para ganar la manga.",
-    "En el segundo set Jódar salvó tres de cuatro bolas de rotura, pero Zverev encontró una rotura y no tuvo que defender ninguna con su saque.",
-    "Zverev llegaba tras dos derrotas seguidas. Esta noche, no antes de las 20:30, juegan Shelton y Fils en el mismo grupo."
-   ]
-  },
-  {
-   "cat": "atp",
-   "tag": "ATP Finals",
-   "cls": "",
-   "t": "Turín abre las Nitto ATP Finals el domingo 15 de noviembre",
-   "d": "El torneo de maestros se juega del 15 al 22 en el Inalpi Arena, en pista dura cubierta. Los ocho clasificados se reparten en dos grupos, el Grupo John McEnroe y el Grupo Ivan Lendl, y pasan a semifinales los dos primeros de cada uno.",
-   "s": "ATP Tour",
-   "u": "https://www.atptour.com/es/news/nitto-atp-finals-2026-history-draw-schedule",
-   "w": "9 nov",
-   "id": "atp-tur-n-abre-las-nitto-atp-finals-el-domingo-15-de-noviemb"
-  },
-  {
-   "cat": "atp",
-   "tag": "ATP Finals",
-   "cls": "",
-   "t": "Jódar completa el cuadro de Turín",
-   "d": "Rafael Jódar fue el último en clasificarse, el 6 de noviembre. Zverev y Medvedev son los dos excampeones del torneo que juegan este año, y por cuarto año seguido hay un italiano en el cuadro de individuales.",
-   "s": "ATP Tour",
-   "u": "https://www.atptour.com/es/news/nitto-atp-finals-2026-field-is-set",
-   "w": "6 nov",
-   "id": "atp-j-dar-completa-el-cuadro-de-tur-n"
-  },
-  {
-   "cat": "atp",
-   "tag": "Circuito",
-   "cls": "cir",
-   "t": "Sinner da por cerrada su temporada 2026",
-   "d": "El italiano no volverá a competir este año y asegura que necesita pensar en su carrera. Su ausencia deja a Turín sin el último campeón.",
-   "s": "Flashscore",
-   "u": "https://www.flashscore.com.br/noticias/finais-turim-atp-simples/MeRVE9s8CdnS0XT8/",
-   "w": "Reciente",
-   "id": "atp-sinner-da-por-cerrada-su-temporada-2026"
-  },
-  {
-   "id": "atp-sorteo-de-tur-n-zverev-y-alcaraz-encabezan-los-dos",
-   "cat": "atp",
-   "tag": "ATP Finals",
-   "cls": "est",
-   "t": "Sorteo de Turín: Zverev y Alcaraz encabezan los dos grupos",
-   "d": "El Grupo John McEnroe lo forman Zverev, Shelton, Fils y Jódar; el Ivan Lendl, Alcaraz, Medvedev, Cobolli y Tiafoe. El lunes debutan Alcaraz-Tiafoe y Medvedev-Cobolli.",
-   "s": "TennisNerd",
-   "u": "https://www.tennisnerd.net/news/atp-finals-2026-preview-predictions-odds-my-pick-to-win-in-turin/70638",
-   "w": "12 nov",
-   "full": [
-    "El Nitto ATP Finals se juega en el Inalpi Arena del 15 al 22 de noviembre, en pista dura cubierta. Pasan a semifinales los dos primeros de cada grupo.",
-    "Grupo John McEnroe: Zverev (1), Shelton (3), Fils (6) y Jódar (8). Grupo Ivan Lendl: Alcaraz (2), Medvedev (4), Cobolli (5) y Tiafoe (7).",
-    "Solo Zverev (2018 y 2021) y Medvedev (2020) han ganado antes el torneo. Fils, Cobolli, Tiafoe y Jódar debutan.",
-    "El domingo 15 juegan Zverev-Jódar y Shelton-Fils, y el lunes 16 Alcaraz-Tiafoe y Medvedev-Cobolli. La final es el domingo 22."
-   ]
-  },
-  {
-   "id": "atp-alcaraz-llega-a-tur-n-como-favorito-tras-ganar-el-",
-   "cat": "atp",
-   "tag": "ATP Finals",
-   "cls": "est",
-   "t": "Alcaraz llega a Turín como favorito tras ganar el Masters de París",
-   "d": "Alcaraz regresó de una lesión de muñeca y llega con una racha de victorias y el título de París. Busca su primer ATP Finals y debuta el lunes ante Tiafoe.",
-   "s": "ESPN",
-   "u": "https://www.espn.com/tennis/story/_/id/50473425/atp-finals-alcaraz-zverev-shelton-tiafoe-jodar-medvedev",
-   "w": "12 nov",
-   "full": [
-    "Carlos Alcaraz afronta el torneo en plena racha, tras volver de una lesión de muñeca y ganar el Masters 1000 de París. Es el favorito de las casas de apuestas.",
-    "Todavía no ha ganado este torneo: su única final fue la de 2025, que perdió contra Sinner por 7-6(4), 7-5.",
-    "Debuta el lunes 16 contra Frances Tiafoe, que ganó Halle este año y alcanzó las semifinales del US Open."
-   ]
-  },
-  {
-   "id": "atp-shelton-busca-ser-el-primer-estadounidense-campe-n",
-   "cat": "atp",
-   "tag": "ATP Finals",
-   "cls": "cir",
-   "t": "Shelton busca ser el primer estadounidense campeón de las Finals desde Sampras",
-   "d": "Shelton llega tras ser finalista del US Open y ganar el Canadian Open. Un título sería el primero para EE. UU. desde Pete Sampras en 1999. Debuta el domingo ante Fils.",
-   "s": "ESPN",
-   "u": "https://www.espn.com/tennis/story/_/id/50473425/atp-finals-alcaraz-zverev-shelton-tiafoe-jodar-medvedev",
-   "w": "12 nov",
-   "full": [
-    "Ben Shelton, de 24 años, llega a Turín en el mejor momento de su carrera tras jugar su primera final de Grand Slam en el US Open y ganar el Canadian Open.",
-    "Si ganara el torneo sería el primer estadounidense campeón desde Pete Sampras en 1999. Es su segunda participación.",
-    "Abre el torneo el domingo 15, en la sesión nocturna, contra Arthur Fils."
-   ]
-  }
- ],
- "guiones": [
-  {
-   "id": "g-zverev-debut",
-   "title": "Zverev gana en su debut en Turín",
-   "hook": "Diez aces en un solo set. Así arrancó Zverev las Finals.",
-   "body": "El número 1 ganó 6-4 6-4 a Jódar y no cedió ningún juego de saque. Ganó 37 de 43 puntos con su primer servicio.",
-   "cta": "¿Puede Zverev ganar el título? Debátelo en TitoTenis y juega a los juegos diarios.",
-   "tags": "#tenis #ATPFinals #Turin #Zverev"
-  },
-  {
-   "id": "g-shelton-fils",
-   "title": "Shelton contra Fils, esta noche",
-   "hook": "Dos jugadores, un hueco en semifinales.",
-   "body": "Shelton gana 2-1 el duelo directo con Fils y las dos victorias fueron en pista dura cubierta. Empiezan no antes de las 20:30.",
-   "cta": "¿Quién gana? Dilo en TitoTenis.",
-   "tags": "#tenis #ATPFinals #Shelton #Fils"
-  },
-  {
-   "id": "g-alcaraz-lunes",
-   "title": "Alcaraz debuta el lunes en Turín",
-   "hook": "Alcaraz llega como favorito tras ganar París.",
-   "body": "El lunes, Alcaraz-Tiafoe y Medvedev-Cobolli abren el Grupo Ivan Lendl. La final es el domingo 22.",
-   "cta": "¿Quién será campeón? Debátelo en TitoTenis y juega a los juegos diarios.",
-   "tags": "#tenis #ATPFinals #Alcaraz"
-  }
- ],
- "scheduled": [
-  {
-   "id": "atpf-shelton-fils",
-   "cat": "atp",
-   "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
-   "names": [
-    "Ben Shelton",
-    "Arthur Fils"
-   ],
-   "time": "no antes de las 20:30",
-   "day": "2026-11-15",
-   "prev": {
-    "pista": [
-     "Inalpi Arena (Turín), pista dura cubierta. Sin viento ni sol, bola siempre igual de rápida de noche que de día.",
-     "Ritmo: una fuente la describe como pista dura de velocidad media; no hay dato oficial de velocidad.",
-     "Altitud: unos 240 m (nivel del mar a efectos prácticos).",
-     "Sesión de noche: no antes de las 20:30 (hora de Turín y de Madrid). Sigue al partido Zverev–Jódar, así que la hora real depende de cuánto dure."
-    ],
-    "h2h": [
-     "Shelton gana 2-1. Las dos victorias de Shelton fueron en pista dura cubierta, la misma superficie de este partido. No se han enfrentado desde 2024. La fuente no da la superficie de la victoria de Fils."
-    ],
-    "forma": [
-     "Shelton: n.º 3 del torneo, zurdo. Llega de ser finalista en el Masters 1000 de París, donde perdió con Alcaraz. Fue finalista del US Open, que perdió contra Zverev por 6-3, 7-6(2), 5-7, 6-2.",
-     "Fils: n.º 6 del torneo y debutante en las Finals. Ganó su primer Masters 1000 en Cincinnati este año, tras estar unos ocho meses parado por una lesión crónica de espalda."
-    ],
-    "saque": [
-     "Faltan datos de saque y resto de 2026 en pista dura cubierta de los dos. Se añadirán en cuanto haya una fuente citable."
-    ],
-    "claves": [
-     "Lectura de TitoTenis, no son datos medidos: Shelton ya ganó dos veces aquí al francés en esta misma superficie, y su saque zurdo es el arma que más cambia el partido. Fils tiene que devolver profundo y mover a Shelton con el golpe de derecha para que no mande desde el primer saque."
-    ],
-    "faltan": [
-     "Estadísticas de saque y resto por superficie y rendimiento en pista cubierta esta temporada."
-    ],
-    "h2hScore": [
-     2,
-     1
-    ]
-   }
-  },
-  {
-   "id": "atpf-alcaraz-tiafoe",
-   "cat": "atp",
-   "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
-   "names": [
-    "Carlos Alcaraz",
-    "Frances Tiafoe"
-   ],
-   "time": "no antes de las 14:00",
-   "day": "2026-11-16",
-   "prev": {
-    "pista": [
-     "Inalpi Arena (Turín), pista dura cubierta, sin viento ni sol. Turín está a unos 240 m sobre el nivel del mar (dato geográfico de la ciudad, no del torneo).",
-     "Sesión: no antes de las 14:00 (hora de Turín, igual que Madrid)."
-    ],
-    "h2h": [
-     "Alcaraz gana 2-1: Tiafoe ganó en 2021; Alcaraz ganó en cinco sets en el US Open 2022 y en Wimbledon 2024. Marcadores exactos: dato no disponible."
-    ],
-    "h2hScore": [
-     2,
-     1
-    ],
-    "forma": [
-     "Alcaraz (cabeza 2): 42-5 en 2026, ganó Masters 1000 de París y viene de una racha de partidos ganados de nueve o diez. Nunca ha ganado este torneo; perdió la final de 2025 ante Sinner.",
-     "Tiafoe (cabeza 7, debutante): su mejor temporada, con título en Halle, final de Cincinnati y semifinales del US Open; llega con cuatro derrotas seguidas."
-    ],
-    "saque": [
-     "Datos de saque y resto de 2026 en pista cubierta: dato no disponible en fuentes abiertas consultadas."
-    ],
-    "claves": [
-     "Lectura de TitoTenis: el contraste de momentos (racha ganadora frente a bache) favorece a Alcaraz, pero Tiafoe es un jugador de saque y derecha que puede subir el nivel en el debut."
-    ],
-    "faltan": [
-     "Ranking actual de Alcaraz y Tiafoe y saque/resto por superficie: dato no disponible."
-    ]
-   }
-  },
-  {
-   "id": "atpf-medvedev-cobolli",
-   "cat": "atp",
-   "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
-   "names": [
-    "Daniil Medvedev",
-    "Flavio Cobolli"
-   ],
-   "time": "no antes de las 20:30",
-   "day": "2026-11-16",
-   "prev": {
-    "pista": [
-     "Inalpi Arena (Turín), pista dura cubierta, sin viento ni sol. Turín está a unos 240 m sobre el nivel del mar (dato geográfico de la ciudad, no del torneo).",
-     "Sesión: no antes de las 20:30 (hora de Turín, igual que Madrid)."
-    ],
-    "h2h": [
-     "Medvedev gana 2-1: ganó los dos de 2024 y Cobolli el último, en Madrid 2026, en tierra batida. Marcadores: dato no disponible."
-    ],
-    "h2hScore": [
-     2,
-     1
-    ],
-    "forma": [
-     "Medvedev (cabeza 4): campeón de las Finales de 2020, 30 años, el mayor del cuadro; semifinalista en Viena (perdió ante Alcaraz).",
-     "Cobolli (cabeza 5, debutante): ganó Acapulco 2026 y fue finalista de Roland Garros; se retiró ante Berrettini en Viena con una molestia en la pierna."
-    ],
-    "saque": [
-     "Datos de saque y resto de 2026 en pista cubierta: dato no disponible en fuentes abiertas consultadas."
-    ],
-    "claves": [
-     "Lectura de TitoTenis: la incógnita es el estado físico de Cobolli; Medvedev tiene más experiencia en este formato, pero Cobolli juega con el público a favor en Turín."
-    ],
-    "faltan": [
-     "Estado físico confirmado de Cobolli, saque/resto por superficie: dato no disponible."
-    ]
-   }
-  }
- ],
- "analisis": [
-  {
-   "id": "atpf-zverev-jodar",
-   "title": "Zverev 6-4 6-4 Jódar: el saque marcó la diferencia",
-   "tour": "Nitto ATP Finals · fase de grupos",
-   "surf": "dura cubierta",
-   "score": "6-4 6-4",
-   "resumen": "Zverev ganó 37 de 43 puntos con su primer saque y Jódar solo ganó 7 de 43 al resto sobre ese servicio. Las roturas fueron escasas y decidieron cada set.",
-   "claves": [
-    "Patrón táctico: saque agresivo y primer servicio dentro (84 %) para acortar los puntos y evitar que Jódar entrara en juego.",
-    "Momento clave: sacando para ganar el primer set, Zverev salvó dos bolas de rotura con ace, saque ganador y otro ace.",
-    "Ángulo mental: venía de dos derrotas y se sacudió la presión con un partido sólido, aunque dijo que no fue perfecto. Jódar, debutante, no encontró cómo hacer daño al resto."
-   ],
-   "cmp": "Solo hay 1 partido comparable en pista dura cubierta en el archivo, así que no hay comparación fiable todavía."
-  }
- ],
- "archivo": [
-  {
-   "id": "sr:76430186",
-   "date": "2026-11-13",
-   "surf": "dura cubierta",
-   "tour": "ATP 250 Estocolmo",
-   "names": [
-    "Fritz",
-    "Musetti"
-   ],
-   "winner": 0,
-   "p1saque": [
-    82,
-    69
-   ],
-   "p2saque": [
-    80,
-    36
-   ],
-   "aces": [
-    7,
-    3
-   ],
-   "df": [
-    1,
-    1
-   ],
-   "bp": [
-    "3/4",
-    "0/0"
-   ],
-   "pts": [
-    57,
-    38
-   ]
-  },
-  {
-   "id": "atpf-zverev-jodar",
-   "date": "2026-11-15",
-   "surf": "dura cubierta",
-   "tour": "Nitto ATP Finals",
-   "names": [
-    "Zverev",
-    "Jódar"
-   ],
-   "winner": 0,
-   "p1saque": [
-    84,
-    null
-   ],
-   "p2saque": [
-    null,
-    null
-   ],
-   "aces": [
-    10,
-    null
-   ],
-   "df": [
-    null,
-    null
-   ],
-   "bp": [
-    null,
-    null
-   ],
-   "pts": [
-    69,
-    53
-   ]
-  }
- ],
- "today": "2026-11-15",
- "whatsapp": "https://chat.whatsapp.com/B5FhCmECMzB2bAZQ2f7koi?s=cl&p=a&iam=2"
+  "updated": "15 nov 2026, 23:55 (Madrid)",
+  "matches": [],
+  "results": [
+    {
+      "id": "atpf-shelton-fils",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
+      "text": "Ben Shelton gana a Arthur Fils",
+      "score": "6-2 3-6 6-3",
+      "det": "Debut de ambos en el Grupo John McEnroe, pista dura cubierta · 12 aces de Shelton · salvó 3 de 4 bolas de rotura",
+      "stats": {
+        "names": [
+          "Shelton",
+          "Fils"
+        ],
+        "src": "Tennis Now, partido del 15 nov 2026",
+        "rows": [
+          [
+            "Aces",
+            "12",
+            "dato no disponible",
+            12,
+            0
+          ],
+          [
+            "Bolas de rotura salvadas",
+            "3 de 4",
+            "dato no disponible",
+            3,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "atpf-zverev-jodar",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
+      "text": "Alexander Zverev gana a Rafael Jódar",
+      "score": "6-4 6-4",
+      "det": "Debut en las Finals, pista dura cubierta · 10 aces, todos en el primer set · 37 de 43 puntos ganados con el primer saque",
+      "stats": {
+        "names": [
+          "Zverev",
+          "Jódar"
+        ],
+        "src": "Tennis Majors, partido del 15 nov 2026",
+        "rows": [
+          [
+            "Puntos ganados",
+            "69",
+            "53",
+            69,
+            53
+          ],
+          [
+            "Errores no forzados",
+            "18",
+            "10",
+            18,
+            10
+          ],
+          [
+            "Aces",
+            "10",
+            "dato no disponible",
+            10,
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "news": [
+    {
+      "id": "atp-shelton-estrena-las-finals-ante-fils",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "est",
+      "t": "Shelton remonta un set y vence a Fils en su debut en las Finals",
+      "d": "El estadounidense ganó 6-2 3-6 6-3 con 12 aces y consiguió su primera victoria en las Nitto ATP Finals. Comparte grupo con Zverev, que ganó antes a Jódar.",
+      "s": "Tennis Now",
+      "u": "https://tennisnow.com/shelton-fends-off-fils-for-first-atp-finals-win/",
+      "w": "15 nov",
+      "full": [
+        "Ben Shelton estrenó su cuenta en las Nitto ATP Finals con un 6-2 3-6 6-3 sobre Arthur Fils, en el Grupo John McEnroe.",
+        "Dominó el primer set con cinco juegos seguidos tras romper en el 3-2. Fils convirtió su primera bola de rotura del partido en el segundo set y empató.",
+        "En el tercero, Shelton rompió para ponerse 2-0 y cerró con dos aces en un juego en el que había salvado una bola de rotura. Firmó 12 aces y salvó 3 de 4 bolas de rotura."
+      ]
+    },
+    {
+      "id": "atp-zverev-estrena-las-finals-con-victoria-sobre-j-dar",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "est",
+      "t": "Zverev estrena las Finals con victoria sobre Jódar",
+      "d": "El número 1 ganó 6-4 6-4 con 10 aces, todos en el primer set, y no cedió ningún juego de saque. Shelton ganó después a Fils en el mismo grupo.",
+      "s": "Tennis Majors",
+      "u": "https://www.tennismajors.com/atp/nitto-atp-finals-atp/zverev-on-a-mission-as-he-opens-atp-finals-with-straight-sets-win-over-jodar-867040.html",
+      "w": "15 nov",
+      "full": [
+        "Alexander Zverev abrió el Grupo John McEnroe con un 6-4 6-4 sobre Rafael Jódar, debutante de 20 años.",
+        "El alemán sacó con mucha autoridad: 10 aces, todos en el primer set, y salvó las dos bolas de rotura que afrontó cuando sacaba para ganar la manga.",
+        "En el segundo set Jódar salvó tres de cuatro bolas de rotura, pero Zverev encontró una rotura y no tuvo que defender ninguna con su saque.",
+        "Zverev llegaba tras dos derrotas seguidas. En la segunda sesión del día, Shelton derrotó a Fils en el mismo grupo."
+      ]
+    },
+    {
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "",
+      "t": "Jódar completa el cuadro de Turín",
+      "d": "Rafael Jódar fue el último en clasificarse, el 6 de noviembre. Zverev y Medvedev son los dos excampeones del torneo que juegan este año, y por cuarto año seguido hay un italiano en el cuadro de individuales.",
+      "s": "ATP Tour",
+      "u": "https://www.atptour.com/es/news/nitto-atp-finals-2026-field-is-set",
+      "w": "6 nov",
+      "id": "atp-j-dar-completa-el-cuadro-de-tur-n"
+    },
+    {
+      "cat": "atp",
+      "tag": "Circuito",
+      "cls": "cir",
+      "t": "Sinner da por cerrada su temporada 2026",
+      "d": "El italiano no volverá a competir este año y asegura que necesita pensar en su carrera. Su ausencia deja a Turín sin el último campeón.",
+      "s": "Flashscore",
+      "u": "https://www.flashscore.com.br/noticias/finais-turim-atp-simples/MeRVE9s8CdnS0XT8/",
+      "w": "Reciente",
+      "id": "atp-sinner-da-por-cerrada-su-temporada-2026"
+    },
+    {
+      "id": "atp-sorteo-de-tur-n-zverev-y-alcaraz-encabezan-los-dos",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "est",
+      "t": "Sorteo de Turín: Zverev y Alcaraz encabezan los dos grupos",
+      "d": "El Grupo John McEnroe lo forman Zverev, Shelton, Fils y Jódar; el Ivan Lendl, Alcaraz, Medvedev, Cobolli y Tiafoe. El lunes debutan Alcaraz-Tiafoe y Medvedev-Cobolli.",
+      "s": "TennisNerd",
+      "u": "https://www.tennisnerd.net/news/atp-finals-2026-preview-predictions-odds-my-pick-to-win-in-turin/70638",
+      "w": "12 nov",
+      "full": [
+        "El Nitto ATP Finals se juega en el Inalpi Arena del 15 al 22 de noviembre, en pista dura cubierta. Pasan a semifinales los dos primeros de cada grupo.",
+        "Grupo John McEnroe: Zverev (1), Shelton (3), Fils (6) y Jódar (8). Grupo Ivan Lendl: Alcaraz (2), Medvedev (4), Cobolli (5) y Tiafoe (7).",
+        "Solo Zverev (2018 y 2021) y Medvedev (2020) han ganado antes el torneo. Fils, Cobolli, Tiafoe y Jódar debutan.",
+        "El domingo 15 juegan Zverev-Jódar y Shelton-Fils, y el lunes 16 Alcaraz-Tiafoe y Medvedev-Cobolli. La final es el domingo 22."
+      ]
+    },
+    {
+      "id": "atp-alcaraz-llega-a-tur-n-como-favorito-tras-ganar-el-",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "est",
+      "t": "Alcaraz llega a Turín como favorito tras ganar el Masters de París",
+      "d": "Alcaraz regresó de una lesión de muñeca y llega con una racha de victorias y el título de París. Busca su primer ATP Finals y debuta el lunes ante Tiafoe.",
+      "s": "ESPN",
+      "u": "https://www.espn.com/tennis/story/_/id/50473425/atp-finals-alcaraz-zverev-shelton-tiafoe-jodar-medvedev",
+      "w": "12 nov",
+      "full": [
+        "Carlos Alcaraz afronta el torneo en plena racha, tras volver de una lesión de muñeca y ganar el Masters 1000 de París. Es el favorito de las casas de apuestas.",
+        "Todavía no ha ganado este torneo: su única final fue la de 2025, que perdió contra Sinner por 7-6(4), 7-5.",
+        "Debuta el lunes 16 contra Frances Tiafoe, que ganó Halle este año y alcanzó las semifinales del US Open."
+      ]
+    },
+    {
+      "id": "atp-shelton-busca-ser-el-primer-estadounidense-campe-n",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "cir",
+      "t": "Shelton busca ser el primer estadounidense campeón de las Finals desde Sampras",
+      "d": "Shelton llega tras ser finalista del US Open y ganar el Canadian Open. Un título sería el primero para EE. UU. desde Pete Sampras en 1999. Debuta el domingo ante Fils.",
+      "s": "ESPN",
+      "u": "https://www.espn.com/tennis/story/_/id/50473425/atp-finals-alcaraz-zverev-shelton-tiafoe-jodar-medvedev",
+      "w": "12 nov",
+      "full": [
+        "Ben Shelton, de 24 años, llega a Turín en el mejor momento de su carrera tras jugar su primera final de Grand Slam en el US Open y ganar el Canadian Open.",
+        "Si ganara el torneo sería el primer estadounidense campeón desde Pete Sampras en 1999. Es su segunda participación.",
+        "Abre el torneo el domingo 15, en la sesión nocturna, contra Arthur Fils."
+      ]
+    }
+  ],
+  "guiones": [
+    {
+      "id": "g-zverev-debut",
+      "title": "Zverev gana en su debut en Turín",
+      "hook": "Diez aces en un solo set. Así arrancó Zverev las Finals.",
+      "body": "El número 1 ganó 6-4 6-4 a Jódar y no cedió ningún juego de saque. Ganó 37 de 43 puntos con su primer servicio.",
+      "cta": "¿Puede Zverev ganar el título? Debátelo en TitoTenis y juega a los juegos diarios.",
+      "tags": "#tenis #ATPFinals #Turin #Zverev"
+    },
+    {
+      "id": "g-shelton-fils",
+      "title": "Shelton contra Fils, esta noche",
+      "hook": "Dos jugadores, un hueco en semifinales.",
+      "body": "Shelton gana 2-1 el duelo directo con Fils y las dos victorias fueron en pista dura cubierta. Empiezan no antes de las 20:30.",
+      "cta": "¿Quién gana? Dilo en TitoTenis.",
+      "tags": "#tenis #ATPFinals #Shelton #Fils"
+    },
+    {
+      "id": "g-alcaraz-lunes",
+      "title": "Alcaraz debuta el lunes en Turín",
+      "hook": "Alcaraz llega como favorito tras ganar París.",
+      "body": "El lunes, Alcaraz-Tiafoe y Medvedev-Cobolli abren el Grupo Ivan Lendl. La final es el domingo 22.",
+      "cta": "¿Quién será campeón? Debátelo en TitoTenis y juega a los juegos diarios.",
+      "tags": "#tenis #ATPFinals #Alcaraz"
+    }
+  ],
+  "scheduled": [
+    {
+      "id": "atpf-alcaraz-tiafoe",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
+      "names": [
+        "Carlos Alcaraz",
+        "Frances Tiafoe"
+      ],
+      "time": "no antes de las 14:00",
+      "day": "2026-11-16",
+      "prev": {
+        "pista": [
+          "Inalpi Arena (Turín), pista dura cubierta, sin viento ni sol. Turín está a unos 240 m sobre el nivel del mar (dato geográfico de la ciudad, no del torneo).",
+          "Sesión: no antes de las 14:00 (hora de Turín, igual que Madrid)."
+        ],
+        "h2h": [
+          "Alcaraz gana 2-1: Tiafoe ganó en 2021; Alcaraz ganó en cinco sets en el US Open 2022 y en Wimbledon 2024. Marcadores exactos: dato no disponible."
+        ],
+        "h2hScore": [
+          2,
+          1
+        ],
+        "forma": [
+          "Alcaraz (cabeza 2): 42-5 en 2026, ganó Masters 1000 de París y viene de una racha de partidos ganados de nueve o diez. Nunca ha ganado este torneo; perdió la final de 2025 ante Sinner.",
+          "Tiafoe (cabeza 7, debutante): su mejor temporada, con título en Halle, final de Cincinnati y semifinales del US Open; llega con cuatro derrotas seguidas."
+        ],
+        "saque": [
+          "Datos de saque y resto de 2026 en pista cubierta: dato no disponible en fuentes abiertas consultadas."
+        ],
+        "claves": [
+          "Lectura de TitoTenis: el contraste de momentos (racha ganadora frente a bache) favorece a Alcaraz, pero Tiafoe es un jugador de saque y derecha que puede subir el nivel en el debut."
+        ],
+        "faltan": [
+          "Ranking actual de Alcaraz y Tiafoe y saque/resto por superficie: dato no disponible."
+        ]
+      }
+    },
+    {
+      "id": "atpf-medvedev-cobolli",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
+      "names": [
+        "Daniil Medvedev",
+        "Flavio Cobolli"
+      ],
+      "time": "no antes de las 20:30",
+      "day": "2026-11-16",
+      "prev": {
+        "pista": [
+          "Inalpi Arena (Turín), pista dura cubierta, sin viento ni sol. Turín está a unos 240 m sobre el nivel del mar (dato geográfico de la ciudad, no del torneo).",
+          "Sesión: no antes de las 20:30 (hora de Turín, igual que Madrid)."
+        ],
+        "h2h": [
+          "Medvedev gana 2-1: ganó los dos de 2024 y Cobolli el último, en Madrid 2026, en tierra batida. Marcadores: dato no disponible."
+        ],
+        "h2hScore": [
+          2,
+          1
+        ],
+        "forma": [
+          "Medvedev (cabeza 4): campeón de las Finales de 2020, 30 años, el mayor del cuadro; semifinalista en Viena (perdió ante Alcaraz).",
+          "Cobolli (cabeza 5, debutante): ganó Acapulco 2026 y fue finalista de Roland Garros; se retiró ante Berrettini en Viena con una molestia en la pierna."
+        ],
+        "saque": [
+          "Datos de saque y resto de 2026 en pista cubierta: dato no disponible en fuentes abiertas consultadas."
+        ],
+        "claves": [
+          "Lectura de TitoTenis: la incógnita es el estado físico de Cobolli; Medvedev tiene más experiencia en este formato, pero Cobolli juega con el público a favor en Turín."
+        ],
+        "faltan": [
+          "Estado físico confirmado de Cobolli, saque/resto por superficie: dato no disponible."
+        ]
+      }
+    }
+  ],
+  "analisis": [
+    {
+      "id": "atpf-shelton-fils",
+      "title": "Shelton 6-2 3-6 6-3 Fils: el saque sacó a Shelton de los apuros",
+      "tour": "Nitto ATP Finals · fase de grupos",
+      "surf": "dura cubierta",
+      "score": "6-2 3-6 6-3",
+      "resumen": "Shelton firmó 12 aces y salvó 3 de 4 bolas de rotura. Tras un primer set muy cómodo, Fils reaccionó en el segundo, pero Shelton volvió a romper pronto en el tercero.",
+      "claves": [
+        "Patrón táctico: saque zurdo para abrir ángulos y derechas cruzadas para tomar la iniciativa; los aces aparecieron en los puntos de más presión.",
+        "Momento clave: la rotura para ponerse 2-0 en el tercer set, tras cuatro bolas de rotura en ese juego, marcó el tramo final.",
+        "Ángulo mental: Shelton aguantó la reacción de Fils sin perder la calma y cerró con dos aces cuando sacaba para ganar."
+      ],
+      "cmp": "Solo hay 2 partidos comparables en pista dura cubierta en el archivo (menos de 3), así que no hay comparación fiable todavía."
+    },
+    {
+      "id": "atpf-zverev-jodar",
+      "title": "Zverev 6-4 6-4 Jódar: el saque marcó la diferencia",
+      "tour": "Nitto ATP Finals · fase de grupos",
+      "surf": "dura cubierta",
+      "score": "6-4 6-4",
+      "resumen": "Zverev ganó 37 de 43 puntos con su primer saque y Jódar solo ganó 7 de 43 al resto sobre ese servicio. Las roturas fueron escasas y decidieron cada set.",
+      "claves": [
+        "Patrón táctico: saque agresivo y primer servicio dentro (84 %) para acortar los puntos y evitar que Jódar entrara en juego.",
+        "Momento clave: sacando para ganar el primer set, Zverev salvó dos bolas de rotura con ace, saque ganador y otro ace.",
+        "Ángulo mental: venía de dos derrotas y se sacudió la presión con un partido sólido, aunque dijo que no fue perfecto. Jódar, debutante, no encontró cómo hacer daño al resto."
+      ],
+      "cmp": "Solo hay 1 partido comparable en pista dura cubierta en el archivo, así que no hay comparación fiable todavía."
+    }
+  ],
+  "archivo": [
+    {
+      "id": "sr:76430186",
+      "date": "2026-11-13",
+      "surf": "dura cubierta",
+      "tour": "ATP 250 Estocolmo",
+      "names": [
+        "Fritz",
+        "Musetti"
+      ],
+      "winner": 0,
+      "p1saque": [
+        82,
+        69
+      ],
+      "p2saque": [
+        80,
+        36
+      ],
+      "aces": [
+        7,
+        3
+      ],
+      "df": [
+        1,
+        1
+      ],
+      "bp": [
+        "3/4",
+        "0/0"
+      ],
+      "pts": [
+        57,
+        38
+      ]
+    },
+    {
+      "id": "atpf-zverev-jodar",
+      "date": "2026-11-15",
+      "surf": "dura cubierta",
+      "tour": "Nitto ATP Finals",
+      "names": [
+        "Zverev",
+        "Jódar"
+      ],
+      "winner": 0,
+      "p1saque": [
+        84,
+        null
+      ],
+      "p2saque": [
+        null,
+        null
+      ],
+      "aces": [
+        10,
+        null
+      ],
+      "df": [
+        null,
+        null
+      ],
+      "bp": [
+        null,
+        null
+      ],
+      "pts": [
+        69,
+        53
+      ]
+    },
+    {
+      "id": "atpf-shelton-fils",
+      "date": "2026-11-15",
+      "surf": "dura cubierta",
+      "tour": "Nitto ATP Finals",
+      "names": [
+        "Shelton",
+        "Fils"
+      ],
+      "winner": 0,
+      "p1saque": [
+        null,
+        null
+      ],
+      "p2saque": [
+        null,
+        null
+      ],
+      "aces": [
+        12,
+        null
+      ],
+      "df": [
+        null,
+        null
+      ],
+      "bp": [
+        "3/4",
+        null
+      ],
+      "pts": [
+        null,
+        null
+      ]
+    }
+  ],
+  "today": "2026-11-15",
+  "whatsapp": "https://chat.whatsapp.com/B5FhCmECMzB2bAZQ2f7koi?s=cl&p=a&iam=2"
 }
