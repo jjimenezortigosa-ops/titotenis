@@ -15,3 +15,10 @@
 - 2024: HECHO salvo Córdoba, Lyon, Newport, Atlanta, Amberes, Belgrado (0 errores en 2.507 partidos). Informe: informe_2024_sets.md
 
 2023 set a set: HECHO salvo Adelaide-1, Pune, Banja Luka, Lyon, Sofia, Astana, Zhuhai. 0 errores reales.
+
+## Descarga histórica Flashscore (2004–2021) — copia de seguridad 16-nov-2026
+- Fichero: datos/flashscore_2004_2021.json (clave por año; cada año: slugs, err, t{torneo:[[ronda,local,visitante,sh,sa,sets,estado,fecha,mid]]}). 2003 solo parcial (clave 2003_parcial_F, formato de fase 1, sin sets).
+- Partidos por año (con sets): 2004 2904, 2005 2953, 2006 3046, 2007 3054, 2008 2821, 2009 3165, 2010 3515, 2011 4404, 2012 4336, 2013 4171, 2014 4229, 2015 4206, 2016 3806, 2017 3825, 2018 3704, 2019 3626, 2020 1731, 2021 3293.
+- Torneos con error (0 filas) por reintentar al final: ver campo err de cada año. Incluye 2005: Milán, Salvador, Scottsdale, Ho Chi Minh, Lyon, Masters Cup.
+- Las filas pueden incluir clasificación (tras la 2ª 'Final'). Retiradas: ganador no derivable de sh/sa.
+- PENDIENTE: terminar 2003 y bajar hasta 1990; reintentos; comparar finales con campeones_2010_2022.json; informe de discrepancias.
