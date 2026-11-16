@@ -22,3 +22,8 @@
 - Torneos con error (0 filas) por reintentar al final: ver campo err de cada año. Incluye 2005: Milán, Salvador, Scottsdale, Ho Chi Minh, Lyon, Masters Cup.
 - Las filas pueden incluir clasificación (tras la 2ª 'Final'). Retiradas: ganador no derivable de sh/sa.
 - PENDIENTE: terminar 2003 y bajar hasta 1990; reintentos; comparar finales con campeones_2010_2022.json; informe de discrepancias.
+
+## 16 nov 2026 (noche) – Descarga completa 1990–2021
+- `datos/flashscore_1990_2021.json`: 102.160 partidos ATP individuales con sets (Flashscore), 32 años. Formato por año: `{year,slugs,err,t:{torneo:[[ronda,local,visitante,sets_l,sets_v,sets,estado,fecha,id],...]}}`.
+- Torneos sin datos (campo `err`): por año ~2–22 (sobre todo 1990–2003, nombres/torneos que Flashscore no tiene). Pendiente: reintento con otros nombres + 2ª fuente.
+- Avisos: filas de clasificación mezcladas (tras el segundo "Final"), algunos partidos sin sets (5–18/año). Aún NO verificado contra segunda fuente.
