@@ -35,3 +35,4 @@
 
 - CORRECCIÓN 17-nov: en el estado `Finished / retired - X` y `Walkover - X`, X es el GANADOR (no el que se retira). Comprobado con el cuadro: 2.975 vs 48. El aviso anterior de que el ganador de retiradas no es derivable era erróneo.
 - 5 Grand Slams ausentes recuperados: `datos/flashscore_5slams_ausentes.json` (AO 1995, W 2001/2002/2003, RG 2003). Con ellos Federer 20, Nadal 20, Djokovic 20, Agassi 8, Sampras 14 Slams.
+- 17 nov: recuperados Los Cabos 2018, New York Open 2019, Serbia Open 2021 (datos/flashscore_recuperados_2018_2021.json). Probados sin éxito (0 filas): Chennai/Memphis/Lyon 2017, Quito/Istanbul/Lyon/Shenzhen 2018, Sao Paulo/Budapest/Lyon 2019, New York/Cologne 1-2/Sardinia 2020, Antalya/Great Ocean Road/Murray River/Singapore/Cagliari/Marbella/Lyon/Parma/Moscow/St. Petersburg/NextGen 2021. Truco de transferencia: los blobs descargados quedan completos como .tmp en Descargas y se pueden leer sin pulsar nada.
