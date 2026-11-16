@@ -32,3 +32,6 @@
 - `datos_unificados/titotenis_datos_unificados.json` + `LEEME.md`: partidos 1990–2021 con cuadro principal/clasificación separados, campeones, Slams, jugadores, huecos y comparación con campeones.json. 4 marcadores corregidos con 2ª fuente (Indian Wells 2001/2005/2006, Vienna 2003).
 - Hallazgos: 5 Grand Slams ausentes (AO 1995, W 2001/2002/2003, RG 2003); campeones.json pone en la temporada anterior los torneos que empiezan 29–31 dic.
 - Pendiente: reintentar los 307 torneos sin datos y los 5 Slams (necesita el navegador), añadir 2022–2026, verificar con 2ª fuente el resto.
+
+- CORRECCIÓN 17-nov: en el estado `Finished / retired - X` y `Walkover - X`, X es el GANADOR (no el que se retira). Comprobado con el cuadro: 2.975 vs 48. El aviso anterior de que el ganador de retiradas no es derivable era erróneo.
+- 5 Grand Slams ausentes recuperados: `datos/flashscore_5slams_ausentes.json` (AO 1995, W 2001/2002/2003, RG 2003). Con ellos Federer 20, Nadal 20, Djokovic 20, Agassi 8, Sampras 14 Slams.
