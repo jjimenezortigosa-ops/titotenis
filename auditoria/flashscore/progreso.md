@@ -27,3 +27,8 @@
 - `datos/flashscore_1990_2021.json`: 102.160 partidos ATP individuales con sets (Flashscore), 32 años. Formato por año: `{year,slugs,err,t:{torneo:[[ronda,local,visitante,sets_l,sets_v,sets,estado,fecha,id],...]}}`.
 - Torneos sin datos (campo `err`): por año ~2–22 (sobre todo 1990–2003, nombres/torneos que Flashscore no tiene). Pendiente: reintento con otros nombres + 2ª fuente.
 - Avisos: filas de clasificación mezcladas (tras el segundo "Final"), algunos partidos sin sets (5–18/año). Aún NO verificado contra segunda fuente.
+
+## 17 nov 2026 (madrugada) – Archivo único
+- `datos_unificados/titotenis_datos_unificados.json` + `LEEME.md`: partidos 1990–2021 con cuadro principal/clasificación separados, campeones, Slams, jugadores, huecos y comparación con campeones.json. 4 marcadores corregidos con 2ª fuente (Indian Wells 2001/2005/2006, Vienna 2003).
+- Hallazgos: 5 Grand Slams ausentes (AO 1995, W 2001/2002/2003, RG 2003); campeones.json pone en la temporada anterior los torneos que empiezan 29–31 dic.
+- Pendiente: reintentar los 307 torneos sin datos y los 5 Slams (necesita el navegador), añadir 2022–2026, verificar con 2ª fuente el resto.
