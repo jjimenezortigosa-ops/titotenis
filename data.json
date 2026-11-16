@@ -1,75 +1,22 @@
 {
-  "updated": "15 nov 2026, 23:55 (Madrid)",
+  "updated": "16 nov 2026, 09:55 (Madrid)",
   "matches": [],
   "results": [
-    {
-      "id": "atpf-shelton-fils",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
-      "text": "Ben Shelton gana a Arthur Fils",
-      "score": "6-2 3-6 6-3",
-      "det": "Debut de ambos en el Grupo John McEnroe, pista dura cubierta · 12 aces de Shelton · salvó 3 de 4 bolas de rotura",
-      "stats": {
-        "names": [
-          "Shelton",
-          "Fils"
-        ],
-        "src": "Tennis Now, partido del 15 nov 2026",
-        "rows": [
-          [
-            "Aces",
-            "12",
-            "dato no disponible",
-            12,
-            0
-          ],
-          [
-            "Bolas de rotura salvadas",
-            "3 de 4",
-            "dato no disponible",
-            3,
-            0
-          ]
-        ]
-      }
-    },
     {
       "id": "atpf-zverev-jodar",
       "cat": "atp",
       "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
       "text": "Alexander Zverev gana a Rafael Jódar",
       "score": "6-4 6-4",
-      "det": "Debut en las Finals, pista dura cubierta · 10 aces, todos en el primer set · 37 de 43 puntos ganados con el primer saque",
-      "stats": {
-        "names": [
-          "Zverev",
-          "Jódar"
-        ],
-        "src": "Tennis Majors, partido del 15 nov 2026",
-        "rows": [
-          [
-            "Puntos ganados",
-            "69",
-            "53",
-            69,
-            53
-          ],
-          [
-            "Errores no forzados",
-            "18",
-            "10",
-            18,
-            10
-          ],
-          [
-            "Aces",
-            "10",
-            "dato no disponible",
-            10,
-            0
-          ]
-        ]
-      }
+      "det": "Fase de grupos · pista dura cubierta · 10 aces y 37 de 43 puntos ganados con el primer saque; no cedió ningún juego de saque"
+    },
+    {
+      "id": "atpf-shelton-fils",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
+      "text": "Ben Shelton gana a Arthur Fils",
+      "score": "6-2 3-6 6-3",
+      "det": "Fase de grupos · pista dura cubierta · 12 aces y 3 bolas de rotura salvadas de 4"
     }
   ],
   "news": [
@@ -105,28 +52,6 @@
         "En el segundo set Jódar salvó tres de cuatro bolas de rotura, pero Zverev encontró una rotura y no tuvo que defender ninguna con su saque.",
         "Zverev llegaba tras dos derrotas seguidas. En la segunda sesión del día, Shelton derrotó a Fils en el mismo grupo."
       ]
-    },
-    {
-      "cat": "atp",
-      "tag": "ATP Finals",
-      "cls": "",
-      "t": "Jódar completa el cuadro de Turín",
-      "d": "Rafael Jódar fue el último en clasificarse, el 6 de noviembre. Zverev y Medvedev son los dos excampeones del torneo que juegan este año, y por cuarto año seguido hay un italiano en el cuadro de individuales.",
-      "s": "ATP Tour",
-      "u": "https://www.atptour.com/es/news/nitto-atp-finals-2026-field-is-set",
-      "w": "6 nov",
-      "id": "atp-j-dar-completa-el-cuadro-de-tur-n"
-    },
-    {
-      "cat": "atp",
-      "tag": "Circuito",
-      "cls": "cir",
-      "t": "Sinner da por cerrada su temporada 2026",
-      "d": "El italiano no volverá a competir este año y asegura que necesita pensar en su carrera. Su ausencia deja a Turín sin el último campeón.",
-      "s": "Flashscore",
-      "u": "https://www.flashscore.com.br/noticias/finais-turim-atp-simples/MeRVE9s8CdnS0XT8/",
-      "w": "Reciente",
-      "id": "atp-sinner-da-por-cerrada-su-temporada-2026"
     },
     {
       "id": "atp-sorteo-de-tur-n-zverev-y-alcaraz-encabezan-los-dos",
@@ -417,6 +342,6 @@
       ]
     }
   ],
-  "today": "2026-11-15",
+  "today": "2026-11-16",
   "whatsapp": "https://chat.whatsapp.com/B5FhCmECMzB2bAZQ2f7koi?s=cl&p=a&iam=2"
 }
