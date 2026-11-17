@@ -1283,5 +1283,56 @@
    "https://www.foxnews.com/sports/paire-advances-lu-exits-chennai"
   ],
   "nota": "Paire gana 6-3 6-4 (Fox Sports, The Peninsula, CoreTennis); antes figuraba Cipolla ganador"
+ },
+ {
+  "clave": [
+   2001,
+   "Hong Kong (Salem Open)",
+   "1/16-finals",
+   "Bjorkman J.",
+   "Sargsian S."
+  ],
+  "veredicto": "corregido",
+  "marcador": "6-2,6-4",
+  "estado": "Finished",
+  "fuentes": [
+   "https://assets.espn.com/tennis/news/2001/0926/1255526.html",
+   "https://stats.tennismylife.org/h2h/jonas-bjorkman-vs-sargis-sargsian"
+  ],
+  "nota": "ESPN y Wikipedia dan 6-2 6-4; TML daba 6-2 6-2"
+ },
+ {
+  "clave": [
+   2002,
+   "'s-Hertogenbosch (Heineken Trophy)",
+   "1/8-finals",
+   "Pioline C.",
+   "Escude N."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.wikiwand.com/en/articles/2002_Ordina_Open_%E2%80%93_Men's_singles",
+   "https://stats.tennismylife.org/h2h/cedric-pioline-vs-nicolas-escude"
+  ],
+  "nota": "Escude (5) se retira por lesion; Pioline gana (4-6, 3-1 ret.)"
+ },
+ {
+  "clave": [
+   2003,
+   "Flushing (2003 US Open)",
+   "1/64-finals",
+   "Sanchez-Munoz D.",
+   "Gambill J."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.dhnet.be/sports/tennis/2003/09/07/us-open-les-resultats-du-tableau-hommes-CV6M6UYZSZGSPOYZFR7ZYUJLR4/",
+   "https://edx.atptour.com/en/scores/match-stats/archive/2003/560/ms118"
+  ],
+  "nota": "Gambill gana 7-6(3) 6-2 6-2"
  }
 ]
