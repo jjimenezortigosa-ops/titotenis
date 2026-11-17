@@ -1,7 +1,66 @@
 {
-  "updated": "17 nov 2026, 17:55 (Madrid)",
+  "updated": "17 nov 2026, 23:55 (Madrid)",
   "matches": [],
   "results": [
+    {
+      "id": "atpf-zverev-shelton",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
+      "text": "Alexander Zverev gana a Ben Shelton",
+      "score": "6-2 7-6(4)",
+      "det": "Fase de grupos · pista dura cubierta · 14 aces, ninguna doble falta y 38 de 43 puntos ganados con el primer saque",
+      "stats": {
+        "names": [
+          "Zverev",
+          "Shelton"
+        ],
+        "src": "Tennis Majors",
+        "rows": [
+          [
+            "Aces",
+            "14",
+            "15",
+            14,
+            15
+          ],
+          [
+            "Dobles faltas",
+            "0",
+            "—",
+            0,
+            0
+          ],
+          [
+            "Puntos con 1.er saque",
+            "38/43 (88%)",
+            "dato no disponible",
+            38,
+            0
+          ],
+          [
+            "Bolas de rotura convertidas",
+            "2/6",
+            "0/2",
+            2,
+            0
+          ],
+          [
+            "Errores no forzados",
+            "10",
+            "24",
+            10,
+            24
+          ],
+          [
+            "Puntos ganados",
+            "74",
+            "55",
+            74,
+            55
+          ]
+        ]
+      }
+    },
     {
       "id": "atpf-fils-jodar",
       "cat": "atp",
@@ -81,6 +140,22 @@
     }
   ],
   "news": [
+    {
+      "id": "atp-zverev-a-semifinales-en-turin",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "est",
+      "t": "Zverev, primer semifinalista de las Finals tras ganar a Shelton",
+      "d": "El número 1 venció 6-2 7-6(4) y, con 2-0 en el Grupo John McEnroe, ya está en semifinales. Extiende a 7-0 su balance ante el estadounidense.",
+      "s": "Tennis Majors",
+      "u": "https://www.tennismajors.com/atp/nitto-atp-finals-atp/untouchable-on-serve-zverev-beats-shelton-to-reach-the-atp-finals-semi-finals-867214.html",
+      "w": "17 nov",
+      "full": [
+        "Alexander Zverev derrotó a Ben Shelton por 6-2 7-6(4) y se aseguró su plaza en las semifinales de las Nitto ATP Finals con dos victorias en dos partidos.",
+        "Firmó 14 aces sin ninguna doble falta, ganó 38 de 43 puntos con el primer saque y salvó las dos bolas de rotura que afrontó. Es su séptima victoria seguida ante Shelton, a quien ya había ganado la final del US Open.",
+        "La segunda plaza del grupo se decidirá el jueves: Zverev se mide a Fils y Shelton a Jódar."
+      ]
+    },
     {
       "id": "atp-fils-remonta-a-jodar-en-turin",
       "cat": "atp",
@@ -213,11 +288,11 @@
   ],
   "guiones": [
     {
-      "id": "g-zverev-debut",
-      "title": "Zverev gana en su debut en Turín",
-      "hook": "Diez aces en un solo set. Así arrancó Zverev las Finals.",
-      "body": "El número 1 ganó 6-4 6-4 a Jódar y no cedió ningún juego de saque. Ganó 37 de 43 puntos con su primer servicio.",
-      "cta": "¿Puede Zverev ganar el título? Debátelo en TitoTenis y juega a los juegos diarios.",
+      "id": "g-zverev-semis",
+      "title": "Zverev ya está en semifinales",
+      "hook": "Siete victorias seguidas ante Shelton y plaza en semifinales.",
+      "body": "Zverev ganó 6-2 7-6(4) en Turín, con 14 aces y 38 de 43 puntos con el primer saque. Es el primer semifinalista de las Finals.",
+      "cta": "¿Quién le acompaña desde su grupo? Debátelo en TitoTenis y juega a los juegos diarios.",
       "tags": "#tenis #ATPFinals #Turin #Zverev"
     },
     {
@@ -238,38 +313,6 @@
     }
   ],
   "scheduled": [
-    {
-      "id": "atpf-zverev-shelton",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
-      "names": [
-        "Alexander Zverev",
-        "Ben Shelton"
-      ],
-      "time": "no antes de las 20:30",
-      "day": "2026-11-17",
-      "prev": {
-        "pista": [
-          "Inalpi Arena (Turín), pista dura cubierta."
-        ],
-        "h2h": [
-          "Historial entre ambos: dato no disponible."
-        ],
-        "forma": [
-          "Zverev venció a Jódar 6-4 6-4 sin ceder ningún juego de saque; Shelton remontó a Fils 6-2 3-6 6-3 con 12 aces."
-        ],
-        "saque": [
-          "Zverev ganó 37 de 43 puntos con el primer saque en su debut; Shelton firmó 12 aces ante Fils."
-        ],
-        "claves": [
-          "Lectura de TitoTenis: dos grandes sacadores, así que las bolas de rotura serán escasas y los tie-breaks pueden decidir. El ganador se acerca a la semifinal del grupo.",
-          "Quien gane se acerca a la semifinal: Shelton pasaría con una victoria y Zverev con un 2-0 en sets."
-        ],
-        "faltan": [
-          "Historial directo: dato no disponible."
-        ]
-      }
-    },
     {
       "id": "atpf-medvedev-alcaraz",
       "cat": "atp",
@@ -334,6 +377,20 @@
     }
   ],
   "analisis": [
+    {
+      "id": "atpf-zverev-shelton",
+      "title": "Zverev 6-2 7-6(4) Shelton: un saque sin fisuras",
+      "tour": "Nitto ATP Finals · fase de grupos",
+      "surf": "dura cubierta",
+      "score": "6-2 7-6(4)",
+      "resumen": "Zverev ganó 38 de 43 puntos con el primer saque, no cometió dobles faltas y salvó las dos bolas de rotura que afrontó. Shelton igualó en aces (15 por 14) pero cometió 24 errores no forzados por 10 del alemán.",
+      "claves": [
+        "Patrón táctico: Zverev neutralizó el saque de Shelton con restos profundos y dominó los intercambios largos.",
+        "Momento clave: el tie-break del segundo set, donde Zverev se impuso por 7-4 y cerró en su primer punto de partido.",
+        "Ángulo mental: con el 7-0 en el historial, Shelton llegó con poco margen para creer en la remontada."
+      ],
+      "cmp": "Solo hay 3 partidos comparables en pista dura cubierta en el archivo; el nivel de saque de Zverev (88% de puntos con primer servicio) queda por encima de los demás, pero la muestra es pequeña."
+    },
     {
       "id": "atpf-shelton-fils",
       "title": "Shelton 6-2 3-6 6-3 Fils: el saque sacó a Shelton de los apuros",
@@ -515,6 +572,41 @@
       ],
       "pts": [
         70,
+        55
+      ]
+    },
+    {
+      "id": "atpf-zverev-shelton",
+      "date": "2026-11-17",
+      "surf": "dura cubierta",
+      "tour": "Nitto ATP Finals",
+      "names": [
+        "Zverev",
+        "Shelton"
+      ],
+      "winner": 0,
+      "p1saque": [
+        88,
+        null
+      ],
+      "p2saque": [
+        null,
+        null
+      ],
+      "aces": [
+        14,
+        15
+      ],
+      "df": [
+        0,
+        null
+      ],
+      "bp": [
+        "2/6",
+        "0/2"
+      ],
+      "pts": [
+        74,
         55
       ]
     }
