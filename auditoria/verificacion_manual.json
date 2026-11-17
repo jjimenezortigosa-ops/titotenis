@@ -1187,5 +1187,101 @@
    "https://www.coretennis.net/majic/pageServer/0r0100000c/en/tid/33/Tournament-Rounds.html"
   ],
   "nota": "Berdych gana 6-1 y Kiefer abandona (muneca)"
+ },
+ {
+  "clave": [
+   2009,
+   "Paris (BNP Paribas Masters)",
+   "1/8-finals",
+   "Gonzalez F.",
+   "Del Potro J."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "busqueda web (resultados de prensa y Wikipedia)"
+  ],
+  "nota": "Del Potro gana por abandono de Gonzalez tras 7-6 6-7"
+ },
+ {
+  "clave": [
+   2009,
+   "Shanghai (Shanghai ATP Masters 1000 p/b Rolex)",
+   "1/16-finals",
+   "Haas T.",
+   "Schuttler R."
+  ],
+  "veredicto": "corregido",
+  "marcador": "4-6",
+  "estado": "Finished / retired - Schuttler R.",
+  "fuentes": [
+   "busqueda web (resultados de prensa y Wikipedia)"
+  ],
+  "nota": "Schuettler gana 6-4 en el 1er set y Haas abandona; el marcador anterior era falso"
+ },
+ {
+  "clave": [
+   2009,
+   "Paris (French Open)",
+   "1/64-finals",
+   "Lu Y.H.",
+   "Montcourt M."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "busqueda web (resultados de prensa y Wikipedia)"
+  ],
+  "nota": "Montcourt gana 6-2 y Lu abandona"
+ },
+ {
+  "clave": [
+   2009,
+   "MercedesCup",
+   "1/8-finals",
+   "Simon G.",
+   "Zverev M."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "busqueda web (resultados de prensa y Wikipedia)"
+  ],
+  "nota": "Zverev gana 6-4 6-2"
+ },
+ {
+  "clave": [
+   2010,
+   "Australian Open",
+   "1/64-finals",
+   "Hernandez Perez O.",
+   "Montanes A."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.libertaddigital.com/deportes/resultados-de-la-segunda-jornada-1276381958/"
+  ],
+  "nota": "Montanes gana 7-6(5) 2-2 y Hernandez abandona (Libertad Digital + cuadro Eurosport)"
+ },
+ {
+  "clave": [
+   2013,
+   "Aircel Chennai Open",
+   "1/16-finals",
+   "Cipolla F.",
+   "Paire B."
+  ],
+  "veredicto": "corregido",
+  "marcador": "3-6,4-6",
+  "estado": "Finished",
+  "fuentes": [
+   "https://www.foxnews.com/sports/paire-advances-lu-exits-chennai"
+  ],
+  "nota": "Paire gana 6-3 6-4 (Fox Sports, The Peninsula, CoreTennis); antes figuraba Cipolla ganador"
  }
 ]
