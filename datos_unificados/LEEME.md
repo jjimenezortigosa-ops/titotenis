@@ -42,3 +42,6 @@ Nota 17-nov: se recuperaron además Los Cabos 2018, New York Open 2019 y Belgrad
 
 ## Actualización 17-nov (tarde): 8 torneos más desde Wikipedia
 Añadidos (224 partidos, fuente WIKIPEDIA): ATP Lyon 2017, 2018, 2019; Memphis 2017; Düsseldorf 2014; Bogotá 2015; Kuala Lumpur 2015; San Francisco 1992. Al revisar los avisos de "huecos", la mayoría (~230 de 282) eran el mismo torneo con otro nombre; quedan ~40 por comprobar a mano (Atlanta 1992–99, Génova 1992, Zaragoza 1994, Tashkent 2002, Parma/NextGen 2021, etc.). No es un 100% verificado.
+
+## Actualización 17-nov (mediodía): barrido completo contra Wikipedia 1990–2021
+Se leyeron 1.379 páginas "Singles" de Wikipedia (calendario ATP de cada año) y se comprobó que la final de cada torneo estuviera en el fichero. Resultado: 56 torneos con cuadro principal faltaban del todo (San Francisco 1990/91, Chevrolet Classic/Guarujá, Banespa, Maceió, US Clay Court, Hamlet Cup, Lyon 1991/99/2001/02/03/07, Kremlin Cup 93/02/03, Shanghai 98/99/01, Tata Open 2019, Istanbul/Shenzhen/Sibiu 2018, etc.). Añadidos desde Wikipedia (fuente WIKIPEDIA, nombres completos, sin fecha). Quedan por comprobar partidos sueltos dentro de torneos ya presentes.
