@@ -1334,5 +1334,93 @@
    "https://edx.atptour.com/en/scores/match-stats/archive/2003/560/ms118"
   ],
   "nota": "Gambill gana 7-6(3) 6-2 6-2"
+ },
+ {
+  "clave": [
+   2000,
+   "Long Island",
+   "Quarter-finals",
+   "Krajicek R.",
+   "Moya C."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://m.espn.com/tennis/news/2000/0825/703294.html",
+   "https://www.betexplorer.com/tennis/atp-singles/long-island-2000/results/"
+  ],
+  "nota": "Krajicek pasa por walkover de Moya"
+ },
+ {
+  "clave": [
+   2007,
+   "Paris (French Open)",
+   "1/64-finals",
+   "Hernych J.",
+   "Youzhny M."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.rte.ie/sport/tennis/2007/0529/218412-frenchopenm/",
+   "https://www.tennis-x.com/story/2007-05-30/i.php"
+  ],
+  "nota": "Youzhny gana; Hernych se retira tras 9 puntos (walkover segun prensa)"
+ },
+ {
+  "clave": [
+   2003,
+   "Costa do Sauipe",
+   "Final",
+   "Schalken S.",
+   "Schuttler R."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://en.wikipedia.org/wiki/2003_Brasil_Open_%E2%80%93_Singles",
+   "https://www.the-sports.org/tennis-2003-international-series-2-costa-do-sauipe-epr113436.html",
+   "https://www.landoftennis.com/h2h_finals_men/sjeng_schalken_vs_rainer_schuttler.htm"
+  ],
+  "nota": "Schalken gana 6-2 6-4"
+ },
+ {
+  "clave": [
+   2009,
+   "Canada Masters",
+   "1/32-finals",
+   "Robredo T.",
+   "Bogomolov A. Jr"
+  ],
+  "veredicto": "corregido",
+  "marcador": "6-4,6-2",
+  "estado": "Finished",
+  "fuentes": [
+   "https://www.montevideo.com.uy/Deportes/Federer-debuto-con-triunfo-en-Montreal-uc89346",
+   "https://stringtension.com/tournament/atp/canada-masters-2009",
+   "https://en.tennistemple.com/competitions/rogers-cup/2009/draw"
+  ],
+  "nota": "Robredo 6-4 6-2"
+ },
+ {
+  "clave": [
+   2013,
+   "Winston-Salem",
+   "1/32-finals",
+   "Bogomolov A. Jr",
+   "Hanescu V."
+  ],
+  "veredicto": "corregido",
+  "marcador": "6-3,6-4",
+  "estado": "Finished",
+  "fuentes": [
+   "https://www.tennis.com/news/articles/fish-beats-donskoy-in-winston-salem-first-round",
+   "https://tennis-db.com/matches/sackmann_atp:5fe1c01b819efd1d8f688523ccb637455fbbb7e2eeedfdbf1082cf9c4b2da92a/alex-bogomolov-jr-vs-victor-hanescu",
+   "https://bleacherreport.com/articles/1742785-winston-salem-open-2013-daily-scores-results-and-schedule"
+  ],
+  "nota": "Bogomolov 6-3 6-4"
  }
 ]
