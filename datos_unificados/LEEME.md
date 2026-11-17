@@ -86,3 +86,8 @@ Solo sobre partidos con una fuente o en conflicto. Fuentes añadidas: ATP (serve
 - Siguen sin segunda fuente independiente legible ~142 partidos de cuadro principal: ~132 de los años 90 (Zaragoza 1993/94, Taipei 1992, parte de Tokio…) y ~10 de 2000–2005 (varios en St. Pölten 2005, Bucarest 2000…). No significa que estén mal: solo que no hay segunda fuente. Lista en `auditoria/analisis_partidos_restantes.md`.
 - Clasificación (qualifying): ~26.000 partidos con una sola fuente.
 - Pendiente: 38 filas "Hernandez A. (." de clasificación, duplicado de ronda Zhang–Vesely Shenzhen 2015, y "Martin D." ambiguos (2007/2011/2024-25).
+
+## Pasada automática de coherencia (17-nov, tarde)
+Revisados los 131.042 partidos con reglas internas (ganador vs sets, detalle vs sets, sets imposibles, duplicados, jugador repetido en una ronda). Esto NO prueba que cada marcador sea real: solo detecta incoherencias.
+- Eliminados 187 duplicados (copia de clasificación de un partido ya presente en cuadro principal). Quedan 130.855 partidos.
+- Quedan señaladas en `auditoria/anomalias_coherencia.json` (sin corregir aún): ~395 walkovers/sin marcador, ~215 y ~109 partidos con marcador incompleto marcado "Finished" (casi todos retiradas), 43 ganador vs sets, 14 detalle vs sets (p. ej. Moya–Safin Barcelona 2003 final, Wimbledon 2016 Novak–Roger-Vasselin) y ~155 casos de un jugador con dos partidos en la misma ronda.
