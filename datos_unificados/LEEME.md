@@ -39,3 +39,6 @@ Nota 17-nov: se recuperaron además Los Cabos 2018, New York Open 2019 y Belgrad
 - Fuente `WIKIPEDIA` (cuadro principal, nombre completo, sin fecha ni id): 2022 Lyon y Melbourne; 2021 Antalya, Singapur, Cagliari, Marbella, Lyon, Moscú y San Petersburgo (247 partidos). Comprobadas las finales: coinciden con los campeones reales que conozco (p. ej. Popyrin en Singapur, Sonego en Cagliari, Karatsev en Moscú, Nadal en Melbourne 2022).
 - La final de Antalya 2021 solo trae sets ganados (0-2) en Wikipedia.
 - Siguen sin datos 2021: Great Ocean Road Open, Murray River Open, Parma, NextGen Finals; 2022: Nápoles.
+
+## Actualización 17-nov (tarde): 8 torneos más desde Wikipedia
+Añadidos (224 partidos, fuente WIKIPEDIA): ATP Lyon 2017, 2018, 2019; Memphis 2017; Düsseldorf 2014; Bogotá 2015; Kuala Lumpur 2015; San Francisco 1992. Al revisar los avisos de "huecos", la mayoría (~230 de 282) eran el mismo torneo con otro nombre; quedan ~40 por comprobar a mano (Atlanta 1992–99, Génova 1992, Zaragoza 1994, Tashkent 2002, Parma/NextGen 2021, etc.). No es un 100% verificado.
