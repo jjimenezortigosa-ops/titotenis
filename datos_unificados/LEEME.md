@@ -61,3 +61,12 @@ Segundo barrido, esta vez partido a partido contra ~1.860 páginas de Wikipedia 
 - Límite conocido: "Apellido I." no es un identificador único (p. ej. "Martin A." mezcla a Alberto, Andrej y Andrés Martín; "Silva J.", "Martin D."). Los 214 jugadores que no estaban en Flashscore se generaron con una regla (última palabra = apellido) y pueden tener errores.
 - Se rehicieron `campeones_por_torneo` (2.581 finales), `campeones_grand_slam` (147, con 3 en 2020 por Wimbledon cancelado), `jugadores` (2.506) y `resumen_por_anio`. Comprobación rápida: Federer 20 Grand Slams, Nadal 22, Djokovic 24.
 - No incluidos por no ser cuadros de eliminación directa o no ser ATP Tour: ATP Finals/Masters Cup (liguilla), NextGen Finals, Juegos Olímpicos, Copa Davis, Laver Cup, United Cup, Challengers. Por eso los títulos de Federer salen 97 (103 reales, 6 de ellos en ATP Finals).
+
+## Tercera fuente: TML-Database (17-nov-2026)
+Se ha contrastado todo el cuadro principal 1990-2026 con **TML-Database** (https://github.com/Tennismylife/TML-Database, datos ATP, licencia CC BY-NC-SA 4.0: uso no comercial con atribución).
+- Columnas nuevas al final de cada partido: `id_local`, `id_visitante` (ID de jugador ATP, resuelve los homónimos tipo "Becker B."), `tml_torneo`, `tercera_fuente` y `fiabilidad`.
+- `fiabilidad`: **contrastado** = al menos 2 fuentes coinciden; **desempate** = resuelto por mayoría o con un dato que faltaba; **conflicto** = las fuentes no coinciden y no hay mayoría (se usa TML); **sin_contrastar** = una sola fuente (casi toda la clasificación).
+- Resultado: ~97.500 partidos coinciden exactamente con TML; ~360 marcadores corregidos porque TML y Wikipedia coincidían; ~250 aplicados sin mayoría (revisar en `auditoria/conflictos_tres_fuentes.json`); ~110 partidos a los que faltaban sets/ganador; ~3.000 partidos añadidos (70 torneos que faltaban y partidos sueltos).
+- Se han quitado ~140 duplicados (finales falsas de Wikipedia, partidos repetidos) y ~650 partidos de clasificación que estaban marcados como cuadro principal.
+- Nombres unificados por ID ATP (p.ej. "Falla A." que en realidad era Garcia-Lopez G.).
+- Límites: la clasificación (qualifying) tiene una sola fuente; no hay tie-breaks en `detalle_sets`; algunos nombres de jugadores raros siguen sin ID; ATP Finals, Copa Davis, Juegos Olímpicos, Laver Cup, ATP/United Cup, World Team Cup, Grand Slam Cup y Challengers no están incluidos. Dos torneos con estructura rara (Newsweek 1999, Madrid 2026) pendientes de revisar.
