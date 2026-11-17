@@ -73,3 +73,9 @@ Se ha contrastado todo el cuadro principal 1990-2026 con **TML-Database** (https
 
 ## Segunda pasada de contraste (17-nov)
 Solo sobre partidos con una fuente o en conflicto. Fuentes añadidas: ATP (serve-and-volley, CC BY 4.0, 1990-2022), Stakah y JEG (derivadas de Sackmann; NO independientes de TML), y cuadros de Wikipedia (incl. Tokyo Indoor 1990-95). Nueva columna `fuentes_extra`. Se fusionaron 6 torneos duplicados y se quitaron 6 Challengers (auditoria/torneos_challenger_excluidos.json). Pendiente de contrastar: qualifying, parte de Zaragoza 1993/94, Taipei 1992 y 2026. No se pudieron usar ATP Tour ni TennisExplorer (requerían aprobación).
+
+## Tercera pasada: verificacion manual de 2026 (17-nov)
+- 41 partidos dudosos de 2026 comprobados uno a uno con prensa, ATP y marcadores en vivo; 2+ fuentes cada uno. Enlaces en `auditoria/verificacion_manual.json`; script: `auditoria/correcciones_manuales.py`.
+- Corregidos: Alcaraz–Hanfmann (AO 2026) 7-6,6-3,6-2; Djokovic–Safiullin (Wimbledon 2026) 7-6,6-3,3-6,6-3; Next Gen 2017 final y 3er puesto.
+- Eliminados 7 duplicados (Madrid/AO 2026 con nombre "Kjr", Next Gen 2017 y 2022). Martin D. -> Damm Jr. M. (2026).
+- Quedan 256 partidos del cuadro principal sin doble fuente independiente (0,2 %): ver `auditoria/analisis_partidos_restantes.md`.

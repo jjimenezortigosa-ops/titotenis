@@ -1,0 +1,723 @@
+[
+ {
+  "clave": [
+   2026,
+   "Stockholm",
+   "Quarter-finals",
+   "Fritz T.",
+   "Rune H."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Fritz T.",
+  "fuentes": [
+   "https://www.atptour.com/en/news/stockholm-2026-thursday-report-qfs",
+   "https://tennismajors.com/atp/rune-rallies-past-kecmanovic-to-set-up-fritz-clash-in-stockholm-866701.html",
+   "https://tennistourtalk.com/?p=139075"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Dubai",
+   "Final",
+   "Medvedev D.",
+   "Griekspoor T."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Medvedev D.",
+  "fuentes": [
+   "https://tennisnow.com/medvedev-wins-dubai-as-griekspoor-withdraws-with-leg-injury/",
+   "https://www.tennismajors.com/?p=845518",
+   "https://www.atptour.com/es/news/dubai-2026-sabado-final-medvedev-griekspoor"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Roland Garros",
+   "Semi-finals",
+   "Cobolli F.",
+   "Arnaldi M."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Cobolli F.",
+  "fuentes": [
+   "https://en.wikipedia.org/wiki/2026_French_Open_%E2%80%93_Men%27s_singles"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Australian Open",
+   "1/64-finals",
+   "Borges N.",
+   "Auger-Aliassime F."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "3-6,6-4,6-4",
+  "estado": "Finished / retired - Borges N.",
+  "fuentes": [
+   "https://www.tenniscanada.com/news/pro-tennis/2026/2026-australian-open-monday-auger-aliassime-stakusic",
+   "https://tennisnow.com/hobbled-auger-aliassime-retires-from-ao-opener/",
+   "https://en.wikipedia.org/wiki/2026_Australian_Open_%E2%80%93_Men%27s_singles"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Australian Open",
+   "1/64-finals",
+   "Sinner J.",
+   "Gaston H."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-2,6-1",
+  "estado": "Finished / retired - Sinner J.",
+  "fuentes": [
+   "https://tribune.com.pk/story/2588107/sinner-into-melbourne-round-two",
+   "https://www.rte.ie/sport/tennis/2026/0120/1554033-no-worries-for-sinner-at-australian-open",
+   "https://ausopen.com/node/260256"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Australian Open",
+   "1/32-finals",
+   "Alcaraz C.",
+   "Hanfmann Y."
+  ],
+  "veredicto": "corregido",
+  "marcador": "7-6,6-3,6-2",
+  "estado": "Finished",
+  "fuentes": [
+   "https://www.rte.ie/sport/tennis/2026/0121/1554214-alcaraz-goes-up-a-gear-to-progress-at-australian-open",
+   "https://www.tennismajors.com/australian-open-news/australian-open-alcaraz-weathers-hanfmann-challenge-to-stay-on-track-for-career-grand-slam-842225.html",
+   "https://www.outlookindia.com/sports/tennis/carson-alcaraz-vs-yannick-hanfmann-2nd-round-match-report-australian-open-2026",
+   "https://en.wikipedia.org/wiki/2026_Australian_Open_%E2%80%93_Men%27s_singles"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Wimbledon",
+   "1/8-finals",
+   "Djokovic N.",
+   "Safiullin R."
+  ],
+  "veredicto": "corregido",
+  "marcador": "7-6,6-3,3-6,6-3",
+  "estado": "Finished",
+  "fuentes": [
+   "https://www.modernghana.com/sports/1508018/wimbledon-2026-novak-djokovic-beats-roman-safiull.amp",
+   "https://en.wikipedia.org/wiki/2026_Wimbledon_Championships_%E2%80%93_Men%27s_singles"
+  ]
+ },
+ {
+  "clave": [
+   2017,
+   "Next Gen Finals",
+   "Final",
+   "Chung H.",
+   "Rublev A."
+  ],
+  "veredicto": "corregido",
+  "marcador": "3-4,4-3,4-2,4-2",
+  "estado": "Finished",
+  "fuentes": [
+   "https://en.wikipedia.org/wiki/2017_Next_Generation_ATP_Finals"
+  ],
+  "nota": "fila duplicada Rublev-Chung eliminada"
+ },
+ {
+  "clave": [
+   2017,
+   "Next Gen Finals",
+   "3rd place",
+   "Medvedev D.",
+   "Coric B."
+  ],
+  "veredicto": "corregido",
+  "marcador": "",
+  "estado": "Walkover - Medvedev D.",
+  "fuentes": [
+   "https://en.wikipedia.org/wiki/2017_Next_Generation_ATP_Finals"
+  ],
+  "nota": "fila Semi-finals Coric-Medvedev (W/O) era el mismo partido mal etiquetado; se elimina"
+ },
+ {
+  "clave": [
+   2022,
+   "NextGen Finals",
+   "Final",
+   "Nakashima B.",
+   "Lehecka J."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "4-3,4-3,4-2",
+  "estado": "Finished",
+  "fuentes": [
+   "https://en.wikipedia.org/wiki/2022_Next_Generation_ATP_Finals"
+  ],
+  "nota": "fila duplicada eliminada"
+ },
+ {
+  "clave": [
+   2026,
+   "Houston",
+   "1/16-finals",
+   "Nakashima B.",
+   "Martin D."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "7-6,6-2",
+  "estado": "Finished",
+  "fuentes": [
+   "https://www.atptour.com/en/scores/current/houston/717/daily-schedule?day=6",
+   "https://fieldlevelmedia.com/atp-tour/atp-roundup-sebastian-baez-returns-to-bucharest-with-stylish-win",
+   "https://www.puntodebreak.com/en/2026/04/01/popyrin-gains-confidence-in-houston-and-sets-up-clash-with-michelsen",
+   "https://www.coretennis.net/majic/pageServer/0r0100000c/en/tid/127194/Tournament-Rounds.html"
+  ],
+  "nota": "Martin D. = Damm M. (Martin Damm Jr)"
+ },
+ {
+  "clave": [
+   2026,
+   "Houston",
+   "1/16-finals",
+   "Basavareddy N.",
+   "Draxl L."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-3,2-6,6-4",
+  "estado": "Finished",
+  "fuentes": [
+   "https://www.atptour.com/en/news/michelsen-wong-houston-2026-tuesday",
+   "https://www.puntodebreak.com/en/2026/04/01/popyrin-gains-confidence-in-houston-and-sets-up-clash-with-michelsen"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Houston",
+   "1/16-finals",
+   "Popyrin A.",
+   "Kypson P."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "4-6,6-4,6-3",
+  "estado": "Finished",
+  "fuentes": [
+   "https://www.atptour.com/en/scores/current/houston/717/daily-schedule?day=6",
+   "https://www.puntodebreak.com/en/2026/04/01/popyrin-gains-confidence-in-houston-and-sets-up-clash-with-michelsen",
+   "https://www.atptour.com/en/news/michelsen-wong-houston-2026-tuesday"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Houston",
+   "1/16-finals",
+   "Michelsen A.",
+   "Wong C. W. M."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-4,6-2",
+  "estado": "Finished",
+  "fuentes": [
+   "https://www.atptour.com/en/news/michelsen-wong-houston-2026-tuesday",
+   "https://www.puntodebreak.com/en/2026/04/01/popyrin-gains-confidence-in-houston-and-sets-up-clash-with-michelsen",
+   "https://tennis-db.com/tournaments/239/fayez-sarofim-co-u-s-men-s-clay-court-championship?view=draw"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Houston",
+   "1/16-finals",
+   "Hijikata R.",
+   "Kovacevic A."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-4,6-2",
+  "estado": "Finished",
+  "fuentes": [
+   "https://www.atptour.com/en/scores/current/houston/717/daily-schedule?day=6",
+   "https://tennis-db.com/tournaments/239/fayez-sarofim-co-u-s-men-s-clay-court-championship?view=draw"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Houston",
+   "1/16-finals",
+   "Burruchaga R.",
+   "Walton A."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-2,6-3",
+  "estado": "Finished",
+  "fuentes": [
+   "https://tennis-db.com/tournaments/239/fayez-sarofim-co-u-s-men-s-clay-court-championship?view=draw",
+   "https://www.coretennis.net/majic/pageServer/0r0100000c/en/tid/127194/Tournament-Rounds.html",
+   "https://www.espn.com.br/tenis/resultados/torneio/_/ano/2026/idEvento/145-2026"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Madrid Masters",
+   "1/64-finals",
+   "Kjaer N.",
+   "Opelka R."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "5-3",
+  "estado": "Finished / retired - Kjaer N.",
+  "fuentes": [
+   "https://www.mykhel.com/tennis/mutua-madrid-open-2026-mens-singles-1-128-final-live-scoreboard-420761/",
+   "https://dropshotft.com/matches/a25510fa-6a88-4bde-8af0-7b8009de1ab7",
+   "https://www.tenislosalcazares.com/cuadros/masters/madrid26.pdf"
+  ],
+  "nota": "Opelka se retira perdiendo 3-5. Las filas duplicadas 'Kjr N.' (rondas mal puestas) se eliminan."
+ },
+ {
+  "clave": [
+   2026,
+   "Madrid Masters",
+   "1/32-finals",
+   "Kjaer N.",
+   "Shapovalov D."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-2,6-1",
+  "estado": "Finished",
+  "fuentes": [
+   "https://www.tuttosport.com/tennis/risultati/atp/madrid-open-911792/nicolai-budkov-kjaer-denis-shapovalov/5388627",
+   "https://www.tenislosalcazares.com/cuadros/masters/madrid26.pdf"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Madrid Masters",
+   "1/16-finals",
+   "Medvedev D.",
+   "Kjaer N."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-3,6-2",
+  "estado": "Finished",
+  "fuentes": [
+   "https://tennistourtalk.com/?p=133172",
+   "https://www.puntodebreak.com/en/2026/04/27/medvedev-shines-in-madrid-at-the-expense-of-budkov-kjaer",
+   "https://dropshotft.com/matches/bc8e5314-e6bd-4fbd-9b08-a7f940ead5c0"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Australian Open",
+   "1/64-finals",
+   "Opelka R.",
+   "Kjaer N."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-4,6-3,6-4",
+  "estado": "Finished",
+  "fuentes": [
+   "https://www.mykhel.com/tennis/mutua-madrid-open-2026-mens-singles-1-128-final-live-scoreboard-420761/"
+  ],
+  "nota": "La fila duplicada 'Kjr N.–Opelka 1/8-finals 0-3' se elimina (era un error de Wikipedia)."
+ },
+ {
+  "clave": [
+   2026,
+   "Paris Masters",
+   "1/8-finals",
+   "Alcaraz C.",
+   "Berrettini M."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Alcaraz C.",
+  "fuentes": [
+   "https://www.tennismajors.com/atp/rolex-paris-masters-1000-atp/berrettini-withdraws-alcaraz-into-the-paris-quarter-finals-without-playing-865754.html",
+   "https://www.thestar.com.my/sport/tennis/2026/11/05/tennis-alcaraz-into-paris-quarter-finals-after-berrettini-withdraws"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Barcelona",
+   "1/8-finals",
+   "Machac T.",
+   "Alcaraz C."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Machac T.",
+  "fuentes": [
+   "https://tennistourtalk.com/?p=132781",
+   "https://fieldlevelmedia.com/atp-tour/carlos-alcaraz-withdraws-with-wrist-injury-in-barcelona/",
+   "https://dropshotft.com/matches/313566bf-def4-4417-8907-aab7d8c95927"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Rome Masters",
+   "1/32-finals",
+   "Medvedev D.",
+   "Machac T."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Medvedev D.",
+  "fuentes": [
+   "https://www.tennismajors.com/?p=850196",
+   "https://www.puntodebreak.com/en/2026/05/09/medvedev-advances-to-the-third-round-in-rome-without-having-debuted",
+   "https://www.stevegtennis.com/head-to-head/men/Tomas_Machac/Daniil_Medvedev/"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Australian Open",
+   "1/16-finals",
+   "Paul T.",
+   "Davidovich Fokina A."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-1,6-1",
+  "estado": "Finished / retired - Paul T.",
+  "fuentes": [
+   "https://fieldlevelmedia.com/?p=434968",
+   "https://commish.rotowire.com/tennis/player/tommy-paul-1447",
+   "https://www.puntodebreak.com/en/2026/01/23/physically-affected-davidovich-withdraws-against-paul-who-awaits-alcaraz-in-the-round-of-16"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Madrid Masters",
+   "1/16-finals",
+   "Kopriva V.",
+   "Rinderknech A."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-4,3-6",
+  "estado": "Finished / retired - Kopriva V.",
+  "fuentes": [
+   "https://dicodusport.fr/blog/?p=665750",
+   "https://dropshotft.com/matches/kopriva-vs-rinderknech-madrid-open-r32-587e76fb",
+   "https://www.tuttosport.com/tennis/risultati/atp/madrid-open-911792/vit-kopriva-arthur-rinderknech/5406124"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "US Open",
+   "1/32-finals",
+   "Tsitsipas S.",
+   "Harris L."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-7,6-3,7-6,6-4",
+  "estado": "Finished",
+  "fuentes": [
+   "https://greekcitytimes.com/2026/09/03/stefanos-tsitsipas-us-open-third-round/",
+   "https://campaigns.supersport.com/tennis/us-open/news/bfe9456a-c715-441e-b2cc-c42836f4a0fb/watch-this-brilliant-point-played-by-sa-s-lloyd-harris",
+   "https://sportmail.ru/article/tennis/72221067/"
+  ],
+  "nota": "Wikipedia daba otro marcador; las 3 fuentes coinciden con el dato del repo."
+ },
+ {
+  "clave": [
+   2026,
+   "Wimbledon",
+   "1/64-finals",
+   "Carreno-Busta P.",
+   "Shapovalov D."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-3,7-6",
+  "estado": "Finished / retired - Carreno-Busta P.",
+  "fuentes": [
+   "https://www.wimbledon.com/en_GB/scores/2026/schedule/pdf/schedulePDF8.pdf",
+   "https://www.tenniscanada.com/news/pro-tennis/2026/shapovalov-retires-from-first-round-match-at-wimbledon",
+   "https://wtop.com/sports/2026/06/wimbledon-results/"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Almaty",
+   "Semi-finals",
+   "Medvedev D.",
+   "Bublik A."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-3",
+  "estado": "Finished / retired - Medvedev D.",
+  "fuentes": [
+   "https://www.atptour.com/en/scores/current/almaty/9410/results",
+   "https://www.tennismajors.com/?p=863928",
+   "https://tass.com/sports/2207303"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Australian Open",
+   "1/8-finals",
+   "Djokovic N.",
+   "Mensik J."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Djokovic N.",
+  "fuentes": [
+   "https://www.atptour.com/en/news/mensik-australian-open-2026-withdrawal",
+   "https://www.startribune.com/novak-djokovic-advances-to-australian-open-quarterfinals-on-a-walkover-after-jakub-mensik-withdraws/601570694",
+   "https://prod.tennis.com/news/articles/abdominal-injury-fells-jakub-mensik-ahead-of-novak-djokovic-rematch-at-australian-open"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Bastad",
+   "1/8-finals",
+   "Vallejo A.",
+   "Van De Zandschulp B."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "4-6,6-3,7-6",
+  "estado": "Finished",
+  "fuentes": [
+   "https://www.atptour.com/en/news/dimitrov-borges-bastad-2026-wednesday",
+   "https://www.tennismajors.com/?p=856534",
+   "https://nos.nl/artikel/2623088-van-de-zandschulp-na-marathonpartij-in-tweede-ronde-onderuit-in-bastad"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Bastad",
+   "Quarter-finals",
+   "Tabilo A.",
+   "Tirante T. A."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Tabilo A.",
+  "fuentes": [
+   "https://www.atptour.com/en/news/rublev-baez-bastad-2026-qfs",
+   "https://dropshotft.com/tournaments/swedish-open/news"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Brussels",
+   "1/8-finals",
+   "Fils A.",
+   "Munar J."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Fils A.",
+  "fuentes": [
+   "https://www.puntodebreak.com/en/2026/10/20/munar-withdraws-from-brussels-and-fils-moves-into-the-quarterfinals-without-having",
+   "https://tennistonic.com/tennis-news/1069169/arthur-fils-reaches-brussels-quarter-finals-without-playing-to-boost-atp-finals-bid/"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Canada Masters",
+   "1/32-finals",
+   "Blockx A.",
+   "Munar J."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Blockx A.",
+  "fuentes": [
+   "https://lasvegassun.com/news/2026/aug/04/atp-national-bank-open-results/",
+   "https://fieldlevelmedia.com/?p=485368",
+   "https://sporza.be/nl/matches/tennis/2026-08/jaume-munar-alexander-blockx-gewennig-op-hardcourt-moet-nog-even-wachten-alexander-blockx-zonder-te-spelen-naar-3e-ronde-in-montreal~1785872395921/"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Cincinnati Masters",
+   "1/16-finals",
+   "O'Connell C.",
+   "Fonseca J."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - O'Connell C.",
+  "fuentes": [
+   "https://wtop.com/sports/2026/08/western-southern-open-results-6/",
+   "https://dropshotft.com/tournaments/cincinnati-open/news"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Madrid Masters",
+   "1/32-finals",
+   "Fonseca J.",
+   "Cilic M."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Fonseca J.",
+  "fuentes": [
+   "https://tennistourtalk.com/?p=133073",
+   "https://www.puntodebreak.com/2026/04/24/cilic-baja-ultima-hora-fonseca-espera-jodar-o-minaur-tercera-ronda-madrid",
+   "https://www.mykhel.com/tennis/mutua-madrid-open-2026-mens-singles-1-64-final-live-scoreboard-420781/"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Indian Wells Masters",
+   "1/32-finals",
+   "Rinderknech A.",
+   "Cerundolo J. M."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Rinderknech A.",
+  "fuentes": [
+   "https://opencourt.ca/?p=230189",
+   "https://www.puntodebreak.com/2026/03/07/alcaraz-conoce-quien-seria-rival-tercera-ronda-indian-wells",
+   "https://dropshotft.com/matches/caeed157-1054-45ac-b135-216395d473f5"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Marrakech",
+   "Quarter-finals",
+   "Darderi L.",
+   "Hanfmann Y."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Darderi L.",
+  "fuentes": [
+   "https://www.tennis.com/tournaments/grand-prix-hassan-ii/matches/l-darderi-vs-y-hanfmann-2026-04-04",
+   "https://www.mykhel.com/tennis/grand-prix-hassan-ii-2026-mens-singles-quarter-finals-live-scoreboard-419633/",
+   "https://www.rfet.es/descargar/file-noticias-adjuntos/5454_Documento/cuadro-atp-250-marrakech-mar.pdf"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Miami Masters",
+   "1/64-finals",
+   "Martin D.",
+   "Fearnley J."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-0",
+  "estado": "Finished / retired - Martin D.",
+  "fuentes": [
+   "https://apps.rotowire.com/tennis/player/jacob-fearnley-5098",
+   "https://www.tuttosport.com/tennis/risultati/atp/miami-open-911778/martin-damm-jacob-fearnley/5250862",
+   "https://www.puntodebreak.com/en/2026/03/20/tsitsipas-regains-good-feelings-in-miami"
+  ],
+  "nota": "Martin D. = Martin Damm Jr. (se renombra 'Damm Jr. M.')"
+ },
+ {
+  "clave": [
+   2026,
+   "Montpellier",
+   "1/16-finals",
+   "Gea A.",
+   "Mpetshi Perricard G."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "6-3",
+  "estado": "Finished / retired - Gea A.",
+  "fuentes": [
+   "https://www.tennis.com/news/articles/giovanni-mpetshi-perricard-retires-freak-eye-injury-bounce-montpellier-gea",
+   "https://www.atptour.com/es/scores/archive/montpellier/375/2026/results",
+   "https://tennistourtalk.com/130236/mannarino-ends-four-month-losing-drought-with-win-in-montpellier"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Roland Garros",
+   "1/32-finals",
+   "De Minaur A.",
+   "Blockx A."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - De Minaur A.",
+  "fuentes": [
+   "https://wtop.com/sports/2026/05/french-open-results-4/",
+   "https://tennisnow.com/blockx-withdraws-from-roland-garros-sending-de-minaur-into-third-round/",
+   "https://www.tennis.com.au/fan-zone/news/2026/05/27/roland-garros--alex-de-minaur-advances-to-third-round"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Roland Garros",
+   "1/32-finals",
+   "Tabilo A.",
+   "Vacherot V."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Tabilo A.",
+  "fuentes": [
+   "https://www.tennismajors.com/?p=851727",
+   "https://dropshotft.com/matches/28ee938e-0b88-4ac9-b995-2b4d06cddd12"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Shanghai",
+   "1/32-finals",
+   "De Minaur A.",
+   "Molcan A."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - De Minaur A.",
+  "fuentes": [
+   "https://www.theleader.com.au/story/9365913/demon-gifted-walkover-and-birthday-boy-ben-celebrates/",
+   "https://surprisesports.com/scores/tennis/rolex-shanghai-masters-2026-315/molcan-vs-de-minaur-184927",
+   "https://sporza.be/nl/sport/tennis/~3352062/"
+  ]
+ },
+ {
+  "clave": [
+   2026,
+   "Stockholm",
+   "1/8-finals",
+   "Tirante T. A.",
+   "Etcheverry T. M."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Tirante T. A.",
+  "fuentes": [
+   "https://www.tennismajors.com/?p=866603",
+   "https://www.atptour.com/-/media/59fd526b078643b18a3b9fe8c6a247aa.pdf"
+  ]
+ }
+]
