@@ -36,3 +36,9 @@
 - CORRECCIÓN 17-nov: en el estado `Finished / retired - X` y `Walkover - X`, X es el GANADOR (no el que se retira). Comprobado con el cuadro: 2.975 vs 48. El aviso anterior de que el ganador de retiradas no es derivable era erróneo.
 - 5 Grand Slams ausentes recuperados: `datos/flashscore_5slams_ausentes.json` (AO 1995, W 2001/2002/2003, RG 2003). Con ellos Federer 20, Nadal 20, Djokovic 20, Agassi 8, Sampras 14 Slams.
 - 17 nov: recuperados Los Cabos 2018, New York Open 2019, Serbia Open 2021 (datos/flashscore_recuperados_2018_2021.json). Probados sin éxito (0 filas): Chennai/Memphis/Lyon 2017, Quito/Istanbul/Lyon/Shenzhen 2018, Sao Paulo/Budapest/Lyon 2019, New York/Cologne 1-2/Sardinia 2020, Antalya/Great Ocean Road/Murray River/Singapore/Cagliari/Marbella/Lyon/Parma/Moscow/St. Petersburg/NextGen 2021. Truco de transferencia: los blobs descargados quedan completos como .tmp en Descargas y se pueden leer sin pulsar nada.
+
+## 17 nov 2026 (mañana) – 2022 y 2023-2026 en el unificado
+- `datos/flashscore_2022.json` ahora tiene los 3.215 partidos con sets (antes solo 110 filas). `flashscore_2022_reintentos.json`: US Open, Winston-Salem, Adelaide-2, NextGen + Belgrado, Florencia, Gijón, San Diego, Seúl, Sídney, Tel Aviv.
+- Truco: las últimas ediciones de algunos torneos están en la dirección SIN año (`/tennis/atp-singles/tel-aviv/`). Hay que comprobar el año por las fechas (Lyon sin año = 2026, descartado).
+- Sigue sin cargar: Melbourne, Nápoles 2022.
+- Descarga a Descargas: solo funciona con el nombre `flashscore_2022.json`; otros nombres no llegaban.

@@ -29,3 +29,8 @@ Archivo único: `titotenis_datos_unificados.json` (17,8 MB). Generado la madruga
 
 
 Nota 17-nov: se recuperaron además Los Cabos 2018, New York Open 2019 y Belgrado (Serbia Open) 2021. Los otros torneos de 2017–2021 se probaron con varias direcciones y Flashscore no devuelve datos (probablemente no los tiene).
+
+## Actualización 17-nov (mañana): 2022–2026 incluidos
+- **2022**: 3.801 partidos de Flashscore (set a set), cuadro principal 2.529 y clasificación 1.272. Recuperados con otra dirección: US Open, Winston-Salem, Adelaide 2, NextGen Finals, Belgrado, Florencia, Gijón, San Diego, Seúl, Sídney, Tel Aviv. **Siguen sin datos: Melbourne y Nápoles** (Lyon descartado: la página sin año era de 2026). Sin segunda fuente.
+- **2023–2026**: 10.592 partidos del cuadro principal tomados de `campeones.json` (los datos de la propia web), marcados `WEB_SITIO`. Nombre completo del jugador y fecha = inicio del torneo; sin clasificación. Comparados set a set con Flashscore en `auditoria/flashscore/informe_20xx_sets.md` (0 diferencias reales en 2023–2025).
+- Los nombres de 2023–2026 (completos) no coinciden con los de 1990–2022 ("Apellido I."): para estadísticas por jugador hay que unificarlos antes.
