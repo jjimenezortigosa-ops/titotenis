@@ -79,3 +79,10 @@ Solo sobre partidos con una fuente o en conflicto. Fuentes añadidas: ATP (serve
 - Corregidos: Alcaraz–Hanfmann (AO 2026) 7-6,6-3,6-2; Djokovic–Safiullin (Wimbledon 2026) 7-6,6-3,3-6,6-3; Next Gen 2017 final y 3er puesto.
 - Eliminados 7 duplicados (Madrid/AO 2026 con nombre "Kjr", Next Gen 2017 y 2022). Martin D. -> Damm Jr. M. (2026).
 - Quedan 256 partidos del cuadro principal sin doble fuente independiente (0,2 %): ver `auditoria/analisis_partidos_restantes.md`.
+
+## Cierre de la verificación manual (17-nov-2026)
+- Unas 100 entradas de `auditoria/verificacion_manual.json` (2000–2026) comprobadas a mano con prensa/ATP/Wikipedia: varias corregidas (p. ej. Haas–Schüttler Shanghai 2009, Cipolla–Paire Chennai 2013, Björkman–Sargsian Hong Kong 2001, rival de Pashanski en San Petersburgo 2007) y el resto confirmadas.
+- Límites honestos: en 3 entradas antiguas los enlaces son plausibles pero no los abrí; en Sánchez–Moodie (AO 2004) solo se leyeron 3 sets de la fuente.
+- Siguen sin segunda fuente independiente legible ~142 partidos de cuadro principal: ~132 de los años 90 (Zaragoza 1993/94, Taipei 1992, parte de Tokio…) y ~10 de 2000–2005 (varios en St. Pölten 2005, Bucarest 2000…). No significa que estén mal: solo que no hay segunda fuente. Lista en `auditoria/analisis_partidos_restantes.md`.
+- Clasificación (qualifying): ~26.000 partidos con una sola fuente.
+- Pendiente: 38 filas "Hernandez A. (." de clasificación, duplicado de ronda Zhang–Vesely Shenzhen 2015, y "Martin D." ambiguos (2007/2011/2024-25).

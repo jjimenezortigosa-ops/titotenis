@@ -1492,5 +1492,112 @@
    "https://tennis-db.com/players/2993108/d-moyano"
   ],
   "nota": "Oscar Hernandez gana 6-1 4-6 6-4"
+ },
+ {
+  "clave": [
+   2004,
+   "Acapulco (Abierto Mexicano)",
+   "1/8-finals",
+   "Horna L.",
+   "Hernandez Perez O."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.wikiwand.com/en/articles/2004_Abierto_Mexicano_Telefonica_Movistar_%E2%80%93_Men's_Singles",
+   "https://wiki.undernet.uy/content/wikipedia_es_all_maxi_2024-02/A/Anexo%3ATorneo_de_Acapulco_2004_(individual_masculino)",
+   "https://www.jornada.com.mx/2004/03/06/32an3dep.php?printver=1"
+  ],
+  "nota": "Oscar Hernandez gana 3-6 6-4 7-6(2) (cuadro Wikipedia ES; despues pierde con Chela en semis segun La Jornada)"
+ },
+ {
+  "clave": [
+   2003,
+   "St. Poelten",
+   "1/16-finals",
+   "Sanchez-Munoz D.",
+   "Hipfl M."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://en.wikipedia.org/wiki/2003_International_Raiffeisen_Grand_Prix_%E2%80%93_Singles",
+   "https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/2003_International_Raiffeisen_Grand_Prix_%E2%80%93_Singles",
+   "https://stats.tennismylife.org/players/david-sanchez/season/2003"
+  ],
+  "nota": "Sanchez gana 6-1 6-0 (cuadro Wikipedia + TML)"
+ },
+ {
+  "clave": [
+   2003,
+   "St. Poelten",
+   "1/8-finals",
+   "Sanchez-Munoz D.",
+   "Sanguinetti D."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://en.wikipedia.org/wiki/2003_International_Raiffeisen_Grand_Prix_%E2%80%93_Singles",
+   "https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/2003_International_Raiffeisen_Grand_Prix_%E2%80%93_Singles",
+   "https://stats.tennismylife.org/players/david-sanchez/season/2003"
+  ],
+  "nota": "Sanchez gana 6-4 6-4 (cuadro Wikipedia + TML)"
+ },
+ {
+  "clave": [
+   2003,
+   "St. Poelten",
+   "Quarter-finals",
+   "Sanchez-Munoz D.",
+   "Ancic M."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://en.wikipedia.org/wiki/2003_International_Raiffeisen_Grand_Prix_%E2%80%93_Singles",
+   "https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/2003_International_Raiffeisen_Grand_Prix_%E2%80%93_Singles",
+   "https://stats.tennismylife.org/players/david-sanchez/season/2003"
+  ],
+  "nota": "Sanchez gana 6-1 6-4 (cuadro Wikipedia + TML)"
+ },
+ {
+  "clave": [
+   2004,
+   "Long Island",
+   "1/16-finals",
+   "Ferreira W.",
+   "Sanchez-Munoz D."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.arabnews.com/node/254330",
+   "https://mg.co.za/?p=491050",
+   "https://stats.tennismylife.org/h2h/david-sanchez-vs-wayne-ferreira"
+  ],
+  "nota": "Ferreira gana 6-2 6-3 (Arab News/AP + TML)"
+ },
+ {
+  "clave": [
+   2026,
+   "Almaty",
+   "1/8-finals",
+   "Bublik A.",
+   "Marozsan F."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "Walkover - Bublik A.",
+  "fuentes": [
+   "https://www.atptour.com/en/scores/current/almaty/9410/results",
+   "https://deadspin.com/atp-roundup-alexander-bublik-survives-thriller-to-reach-almaty-semis/"
+  ],
+  "nota": "ATP: Winner A. BUBLIK by Walkover (octavos); Deadspin: Bublik llegó a cuartos por walkover en 2ª ronda."
  }
 ]

@@ -5,27 +5,9 @@
   "ronda": "1/8-finals",
   "local": "Lendl I.",
   "visitante": "Davis S.",
-  "marcador_en_datos": "7-6,4-6,6-2",
+  "detalle": "7-6,4-6,6-2",
   "estado": "Finished",
-  "ganador": "Lendl I.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=diff;ATP_alt=60 63(Ivan Lendl);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria"
- },
- {
-  "anio": 1990,
-  "torneo": "Barcelona (Trofeo Conde de Godó)",
-  "ronda": "1/32-finals",
-  "local": "Riglewski U.",
-  "visitante": "Camporese O.",
-  "marcador_en_datos": "2-6,3-6",
-  "estado": "Finished",
-  "ganador": "Camporese O.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=64 63(Omar Camporese);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 1990,
@@ -33,13 +15,9 @@
   "ronda": "1/16-finals",
   "local": "Motta C.",
   "visitante": "Roese F.",
-  "marcador_en_datos": "3-6,7-6",
+  "detalle": "3-6,7-6",
   "estado": "Finished / retired - Motta C.",
-  "ganador": "Motta C.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=diff;ATP_alt=63 36 62(Cassio Motta);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 1991,
@@ -47,13 +25,9 @@
   "ronda": "1/8-finals",
   "local": "Mancini A.",
   "visitante": "Kulti N.",
-  "marcador_en_datos": "2-6,7-6,6-4",
+  "detalle": "2-6,7-6,6-4",
   "estado": "Finished",
-  "ganador": "Mancini A.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=eq;JEG=none;WIKI=diff;ATP_alt=76(1) 62(Nicklas Kulti);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 1992,
@@ -61,13 +35,9 @@
   "ronda": "Semi-finals",
   "local": "Santoro F.",
   "visitante": "Novacek K.",
-  "marcador_en_datos": "3-6,1-6",
+  "detalle": "3-6,1-6",
   "estado": "Finished",
-  "ganador": "Novacek K.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=none;WIKI=diff;ATP_alt=64 57 64(Fabrice Santoro);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 1993,
@@ -75,13 +45,9 @@
   "ronda": "1/8-finals",
   "local": "Dosedel S.",
   "visitante": "Pescariu D-M.",
-  "marcador_en_datos": "",
+  "detalle": "",
   "estado": "Walkover - Pescariu D-M.",
-  "ganador": "Pescariu D-M.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=none;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 1994,
@@ -89,27 +55,9 @@
   "ronda": "Quarter-finals",
   "local": "Rosset M.",
   "visitante": "Kafelnikov Y.",
-  "marcador_en_datos": "5-7,6-4,6-3",
+  "detalle": "5-7,6-4,6-3",
   "estado": "Finished",
-  "ganador": "Rosset M.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=diff;ATP_alt=76(5) 63(Marc Rosset);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria"
- },
- {
-  "anio": 1995,
-  "torneo": "Montreal (Canadian Open)",
-  "ronda": "1/16-finals",
-  "local": "Krajicek R.",
-  "visitante": "Steven B.",
-  "marcador_en_datos": "5-7,1-3",
-  "estado": "Finished / retired - Steven B.",
-  "ganador": "Steven B.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=diff;ATP_alt=75(7) 31 (RET)(Brett Steven);VOTO=ORIG+ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 1995,
@@ -117,13 +65,9 @@
   "ronda": "1/16-finals",
   "local": "Gilbert R.",
   "visitante": "Antonitsch A.",
-  "marcador_en_datos": "6-7,1-6",
+  "detalle": "6-7,1-6",
   "estado": "Finished",
-  "ganador": "Antonitsch A.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=diff;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 1995,
@@ -131,13 +75,9 @@
   "ronda": "1/8-finals",
   "local": "Chang M.",
   "visitante": "Hlasek J.",
-  "marcador_en_datos": "6-1,6-3",
+  "detalle": "6-1,6-3",
   "estado": "Finished",
-  "ganador": "Chang M.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "WIKI_TOKYO_DISCREPA",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 1996,
@@ -145,13 +85,9 @@
   "ronda": "1/8-finals",
   "local": "Agassi A.",
   "visitante": "Reneberg R.",
-  "marcador_en_datos": "6-4,6-2",
+  "detalle": "6-4,6-2",
   "estado": "Finished",
-  "ganador": "Agassi A.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=diff;ATP_alt=76(3) 64(Andre Agassi);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 1996,
@@ -159,27 +95,9 @@
   "ronda": "1/32-finals",
   "local": "Woodbridge T.",
   "visitante": "Vacek D.",
-  "marcador_en_datos": "4-6,6-1,6-4",
+  "detalle": "4-6,6-1,6-4",
   "estado": "Finished",
-  "ganador": "Woodbridge T.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=diff;ATP_alt=76(3) 76(3)(Todd Woodbridge);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria"
- },
- {
-  "anio": 1997,
-  "torneo": "Grand Prix de Tennis de Lyon",
-  "ronda": "1/16-finals",
-  "local": "Mantilla F.",
-  "visitante": "Medvedev A.",
-  "marcador_en_datos": "6-3,3-0",
-  "estado": "Finished / retired - Mantilla F.",
-  "ganador": "Mantilla F.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=62 64(Andrei Medvedev);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 1997,
@@ -187,41 +105,9 @@
   "ronda": "Final",
   "local": "Kafelnikov Y.",
   "visitante": "Korda P.",
-  "marcador_en_datos": "7-6,6-4",
+  "detalle": "7-6,6-4",
   "estado": "Finished",
-  "ganador": "Kafelnikov Y.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=diff;ATP_alt=76(2) 67(5) 76(7)(Yevgeny Kafelnikov);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria"
- },
- {
-  "anio": 1998,
-  "torneo": "Amsterdam (Dutch Open)",
-  "ronda": "1/16-finals",
-  "local": "Norman M.",
-  "visitante": "Arazi H.",
-  "marcador_en_datos": "7-5,6-4",
-  "estado": "Finished / retired - Norman M.",
-  "ganador": "Norman M.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=75 64(Magnus Norman);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1999,
-  "torneo": "Oeiras Municipality (Estoril Open)",
-  "ronda": "Quarter-finals",
-  "local": "Meligeni F.",
-  "visitante": "Martin T.",
-  "marcador_en_datos": "6-3,6-4,3-6,4-6,1-6",
-  "estado": "Finished / retired - Martin T.",
-  "ganador": "Martin T.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=ganador_distinto;ATP_alt=36 46 63 64 61(Todd Martin);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 2000,
@@ -229,97 +115,9 @@
   "ronda": "1/16-finals",
   "local": "Rochus C.",
   "visitante": "Sanchez-Munoz D.",
-  "marcador_en_datos": "6-2,6-3",
+  "detalle": "6-2,6-3",
   "estado": "Finished",
-  "ganador": "Rochus C.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2001,
-  "torneo": "Hong Kong (Salem Open)",
-  "ronda": "1/16-finals",
-  "local": "Bjorkman J.",
-  "visitante": "Sargsian S.",
-  "marcador_en_datos": "6-2,6-2",
-  "estado": "Finished",
-  "ganador": "Bjorkman J.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=diff;WIKI=diff;ATP_alt=62(Jonas Bjorkman);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2001,
-  "torneo": "Paris (French Open)",
-  "ronda": "1/32-finals",
-  "local": "Russell M.",
-  "visitante": "Bruguera S.",
-  "marcador_en_datos": "4-6,5-7,6-3",
-  "estado": "Finished / retired - Russell M. (Usa)",
-  "ganador": "Russell M.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=diff;WIKI=ganador_distinto;ATP_alt=46 57 63 (RET)(Michael Russell);VOTO=ATP+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2001,
-  "torneo": "Stuttgart Masters",
-  "ronda": "Semi-finals",
-  "local": "Hewitt L.",
-  "visitante": "Haas T.",
-  "marcador_en_datos": "6-2,3-6,4-6",
-  "estado": "Finished",
-  "ganador": "Haas T.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=diff;STAKAH=ganador_distinto;JEG=diff;WIKI=diff;ATP_alt=64 06 61(Tommy Haas);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2002,
-  "torneo": "'s-Hertogenbosch (Heineken Trophy)",
-  "ronda": "1/8-finals",
-  "local": "Pioline C.",
-  "visitante": "Escude N.",
-  "marcador_en_datos": "4-6,3-1",
-  "estado": "Finished / retired - Pioline C.",
-  "ganador": "Pioline C.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=eq;WIKI=none;ATP_alt=63 75(Nicolas Escude);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2003,
-  "torneo": "Flushing (2003 US Open)",
-  "ronda": "1/64-finals",
-  "local": "Sanchez-Munoz D.",
-  "visitante": "Gambill J.",
-  "marcador_en_datos": "6-7,2-6,2-6",
-  "estado": "Finished",
-  "ganador": "Gambill J.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2004,
-  "torneo": "Acapulco (Abierto Mexicano)",
-  "ronda": "1/8-finals",
-  "local": "Horna L.",
-  "visitante": "Hernandez Perez O.",
-  "marcador_en_datos": "6-3,4-6,6-7",
-  "estado": "Finished",
-  "ganador": "Hernandez Perez O.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 2004,
@@ -327,27 +125,9 @@
   "ronda": "1/16-finals",
   "local": "Sanchez-Munoz D.",
   "visitante": "Blanco G.",
-  "marcador_en_datos": "3-6,6-7",
+  "detalle": "3-6,6-7",
   "estado": "Finished",
-  "ganador": "Blanco G.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2004,
-  "torneo": "Buenos Aires (Argentina Open)",
-  "ronda": "1/16-finals",
-  "local": "Moyano D.",
-  "visitante": "Hernandez Perez O.",
-  "marcador_en_datos": "1-6,6-4,4-6",
-  "estado": "Finished",
-  "ganador": "Hernandez Perez O.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 2004,
@@ -355,475 +135,9 @@
   "ronda": "Quarter-finals",
   "local": "Davydenko N.",
   "visitante": "Sanchez-Munoz D.",
-  "marcador_en_datos": "6-3,1-6",
+  "detalle": "6-3,1-6",
   "estado": "Finished / retired - Sanchez-Munoz D.",
-  "ganador": "Sanchez-Munoz D.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2004,
-  "torneo": "Kroger St. Jude International",
-  "ronda": "1/16-finals",
-  "local": "De Chaunac S.",
-  "visitante": "Labadze I.",
-  "marcador_en_datos": "3-6,6-3,7-6",
-  "estado": "Finished",
-  "ganador": "De Chaunac S.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=eq;WIKI=none;VOTO=ACTUAL+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2004,
-  "torneo": "Melbourne (Australian Open)",
-  "ronda": "1/64-finals",
-  "local": "Sanchez-Munoz D.",
-  "visitante": "Moodie W.",
-  "marcador_en_datos": "6-7,7-6,4-6,6-4,6-3",
-  "estado": "Finished",
-  "ganador": "Sanchez-Munoz D.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2006,
-  "torneo": "Paris (French Open)",
-  "ronda": "1/16-finals",
-  "local": "Berdych T.",
-  "visitante": "Kiefer N.",
-  "marcador_en_datos": "6-1",
-  "estado": "Finished / retired - Berdych T.",
-  "ganador": "Berdych T.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=eq;WIKI=diff;ATP_alt=67(5) 63 63(Tomas Berdych);VOTO=ACTUAL+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2007,
-  "torneo": "Buenos Aires (Copa Telmex)",
-  "ronda": "Round robin",
-  "local": "Berlocq C.",
-  "visitante": "Di Mauro A.",
-  "marcador_en_datos": "1-6,3-6",
-  "estado": "Finished",
-  "ganador": "Di Mauro A.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=eq;JEG=eq;WIKI=none;ATP_alt=61 64(Carlos Berlocq);VOTO=ACTUAL+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2007,
-  "torneo": "Paris (French Open)",
-  "ronda": "1/64-finals",
-  "local": "Hernych J.",
-  "visitante": "Youzhny M.",
-  "marcador_en_datos": "0-0",
-  "estado": "Finished / retired - Youzhny M.",
-  "ganador": "Youzhny M.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=diff;STAKAH=sinmarc;JEG=sinmarc;WIKI=none;ATP_alt=76(6) 62 60(Mikhail Youzhny);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2007,
-  "torneo": "Saint Petersburg (St Petersburg Open)",
-  "ronda": "1/16-finals",
-  "local": "Pashanski B.",
-  "visitante": "Falla A.",
-  "marcador_en_datos": "7-6,6-4",
-  "estado": "Finished",
-  "ganador": "Pashanski B.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
- },
- {
-  "anio": 2008,
-  "torneo": "Dutch Open Tennis",
-  "ronda": "1/8-finals",
-  "local": "Huta-Galung J.",
-  "visitante": "Hernandez Perez O.",
-  "marcador_en_datos": "3-6,2-6",
-  "estado": "Finished",
-  "ganador": "Hernandez Perez O.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2009,
-  "torneo": "Auckland (Heineken Open)",
-  "ronda": "Quarter-finals",
-  "local": "Kohlschreiber P.",
-  "visitante": "Ferrer D.",
-  "marcador_en_datos": "",
-  "estado": "Walkover - Ferrer D.",
-  "ganador": "Ferrer D.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=sinmarc;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2009,
-  "torneo": "Chennai (Chennai Open)",
-  "ronda": "1/8-finals",
-  "local": "Davydenko N.",
-  "visitante": "Dlouhy L.",
-  "marcador_en_datos": "",
-  "estado": "Walkover - Dlouhy L.",
-  "ganador": "Dlouhy L.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=sinmarc;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2009,
-  "torneo": "London (Aegon Championships)",
-  "ronda": "1/8-finals",
-  "local": "Monfils G.",
-  "visitante": "Darcis S.",
-  "marcador_en_datos": "",
-  "estado": "Walkover - Darcis S.",
-  "ganador": "Darcis S.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=sinmarc;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2009,
-  "torneo": "London (The Championships, Wimbledon)",
-  "ronda": "1/32-finals",
-  "local": "Bolelli S.",
-  "visitante": "Tsonga J-W.",
-  "marcador_en_datos": "",
-  "estado": "Walkover - Tsonga J-W.",
-  "ganador": "Tsonga J-W.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=sinmarc;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2009,
-  "torneo": "MercedesCup",
-  "ronda": "1/8-finals",
-  "local": "Simon G.",
-  "visitante": "Zverev M.",
-  "marcador_en_datos": "4-6,2-6",
-  "estado": "Finished",
-  "ganador": "Zverev M.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=eq;WIKI=diff;ATP_alt=64 61(Mischa Zverev);VOTO=ACTUAL+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2009,
-  "torneo": "Paris (BNP Paribas Masters)",
-  "ronda": "1/8-finals",
-  "local": "Gonzalez F.",
-  "visitante": "Del Potro J.",
-  "marcador_en_datos": "7-6,6-7",
-  "estado": "Finished / retired - Del Potro J.",
-  "ganador": "Del Potro J.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=eq;WIKI=none;ATP_alt=76(2) 63(Juan Martin del Potro);VOTO=ACTUAL+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2009,
-  "torneo": "Paris (French Open)",
-  "ronda": "1/64-finals",
-  "local": "Lu Y.H.",
-  "visitante": "Montcourt M.",
-  "marcador_en_datos": "2-6",
-  "estado": "Finished / retired - Montcourt M. (Fra)",
-  "ganador": "Montcourt M.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=diff;WIKI=none;ATP_alt=62 (RET)(Mathieu Montcourt);VOTO=ATP+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2009,
-  "torneo": "Shanghai (Shanghai ATP Masters 1000 p/b Rolex)",
-  "ronda": "1/16-finals",
-  "local": "Haas T.",
-  "visitante": "Schuttler R.",
-  "marcador_en_datos": "6-7,6-2,6-4",
-  "estado": "Finished / retired - Schuttler R.",
-  "ganador": "Haas T.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=ganador_distinto;WIKI=diff;ATP_alt=67(4) 62 64(Tommy Haas);VOTO=ATP+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2009,
-  "torneo": "Stockholm (If Stockholm Open)",
-  "ronda": "Semi-finals",
-  "local": "Soderling R.",
-  "visitante": "Baghdatis M.",
-  "marcador_en_datos": "6-3,5-7,3-6,3-6",
-  "estado": "Walkover - Baghdatis M.",
-  "ganador": "Baghdatis M.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=sinmarc;WIKI=none;VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2009,
-  "torneo": "Sydney (Medibank International Sydney)",
-  "ronda": "Quarter-finals",
-  "local": "Tsonga J-W.",
-  "visitante": "Nieminen J.",
-  "marcador_en_datos": "",
-  "estado": "Walkover - Nieminen J.",
-  "ganador": "Nieminen J.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=sinmarc;WIKI=none;ATP_alt=06 76(1) 76(5)(Jo-Wilfried Tsonga);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2009,
-  "torneo": "Washington (Legg Mason Tennis Classic)",
-  "ronda": "Quarter-finals",
-  "local": "Soderling R.",
-  "visitante": "Del Potro J.",
-  "marcador_en_datos": "4-6,3-6",
-  "estado": "Walkover - Del Potro J.",
-  "ganador": "Del Potro J.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=sinmarc;WIKI=none;VOTO=ATP+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2010,
-  "torneo": "Australian Open",
-  "ronda": "1/16-finals",
-  "local": "Youzhny M.",
-  "visitante": "Kubot L.",
-  "marcador_en_datos": "",
-  "estado": "Walkover - Kubot L.",
-  "ganador": "Kubot L.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=sinmarc;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2010,
-  "torneo": "Australian Open",
-  "ronda": "1/64-finals",
-  "local": "Hernandez Perez O.",
-  "visitante": "Montanes A.",
-  "marcador_en_datos": "6-7,2-2",
-  "estado": "Finished / retired - Montanes A.",
-  "ganador": "Montanes A.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2011,
-  "torneo": "Queen's Club",
-  "ronda": "1/32-finals",
-  "local": "Bogomolov A. Jr",
-  "visitante": "Kunitsyn I.",
-  "marcador_en_datos": "4-6,6-6",
-  "estado": "Finished / retired - Kunitsyn I.",
-  "ganador": "Kunitsyn I.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2012,
-  "torneo": "Doha",
-  "ronda": "1/8-finals",
-  "local": "Ramos A.",
-  "visitante": "Bogomolov A. Jr",
-  "marcador_en_datos": "",
-  "estado": "Walkover - Bogomolov A. Jr",
-  "ganador": "Bogomolov A. Jr",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2012,
-  "torneo": "Queen's Club",
-  "ronda": "Final",
-  "local": "Nalbandian D.",
-  "visitante": "Cilic M.",
-  "marcador_en_datos": "7-6,3-4",
-  "estado": "Finished / retired - Cilic M.",
-  "ganador": "Cilic M.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=eq;JEG=ganador_distinto;WIKI=none;ATP_alt=76(3) 76(4)(David Nalbandian);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2013,
-  "torneo": "Aircel Chennai Open",
-  "ronda": "1/16-finals",
-  "local": "Cipolla F.",
-  "visitante": "Paire B.",
-  "marcador_en_datos": "6-3,6-4",
-  "estado": "Finished",
-  "ganador": "Cipolla F.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=ganador_distinto;WIKI=diff;ATP_alt=63 64(Flavio Cipolla);VOTO=ATP+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2014,
-  "torneo": "Eastbourne",
-  "ronda": "1/8-finals",
-  "local": "Querrey S.",
-  "visitante": "Estrella V.",
-  "marcador_en_datos": "7-5",
-  "estado": "Finished / retired - Querrey S. (Usa)",
-  "ganador": "Querrey S.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=none;STAKAH=diff;JEG=diff;WIKI=none;VOTO=TML+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2014,
-  "torneo": "Memphis",
-  "ronda": "Semi-finals",
-  "local": "Lu Y.H.",
-  "visitante": "Karlovic I.",
-  "marcador_en_datos": "1-6",
-  "estado": "Finished / retired - Karlovic I. (Cro)",
-  "ganador": "Karlovic I.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=ganador_distinto;JEG=diff;WIKI=none;ATP_alt=61 (RET)(Ivo Karlovic);VOTO=ATP+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2015,
-  "torneo": "Nottingham",
-  "ronda": "1/32-finals",
-  "local": "Granollers M.",
-  "visitante": "Pospisil V.",
-  "marcador_en_datos": "4-6,6-4",
-  "estado": "Finished / retired - Granollers M. (Esp)",
-  "ganador": "Granollers M.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=diff;WIKI=none;ATP_alt=46 64 (RET)(Marcel Granollers);VOTO=ATP+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2015,
-  "torneo": "US Open",
-  "ronda": "1/64-finals",
-  "local": "Gabashvili T.",
-  "visitante": "Andujar P.",
-  "marcador_en_datos": "7-6,0-6,4-6,6-4",
-  "estado": "Finished / retired - Gabashvili T. (Wrl)",
-  "ganador": "Gabashvili T.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=diff;WIKI=none;ATP_alt=76(6) 06 46 64 (RET)(Teymuraz Gabashvili);VOTO=ATP+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2016,
-  "torneo": "US Open",
-  "ronda": "1/64-finals",
-  "local": "Lacko L.",
-  "visitante": "Escobedo E.",
-  "marcador_en_datos": "4-6,6-4,6-4,3-6",
-  "estado": "Finished / retired - Escobedo E. (Mex)",
-  "ganador": "Escobedo E.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=diff;WIKI=none;ATP_alt=64 46 46 63 (RET)(Ernesto Escobedo);VOTO=ATP+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2019,
-  "torneo": "Next Gen Finals",
-  "ronda": "Round robin",
-  "local": "De Minaur A.",
-  "visitante": "Davidovich Fokina A.",
-  "marcador_en_datos": "4-2,3-4,4-1,4-1",
-  "estado": "Finished",
-  "ganador": "De Minaur A.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=none;JEG=none;WIKI=none;ATP_alt=42 34(5) 41 41(Alex de Minaur);VOTO=ORIG+ATP",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2021,
-  "torneo": "Umag",
-  "ronda": "1/16-finals",
-  "local": "Altmaier D.",
-  "visitante": "Moutet C.",
-  "marcador_en_datos": "5-7,6-1,0-0",
-  "estado": "Finished / retired - Altmaier D. (Ger)",
-  "ganador": "Altmaier D.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=none;JEG=eq;WIKI=none;ATP_alt=57 61                                                                                                                                     (RET)(Daniel Altmaier);VOTO=ACTUAL+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2021,
-  "torneo": "Wimbledon",
-  "ronda": "1/64-finals",
-  "local": "Federer R.",
-  "visitante": "Mannarino A.",
-  "marcador_en_datos": "6-4,6-7,3-6,6-2,0-0",
-  "estado": "Finished / retired - Federer R. (Sui)",
-  "ganador": "Federer R.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=none;JEG=eq;WIKI=none;ATP_alt=64 67(3) 36 62                                             (RET)(Roger Federer);VOTO=ACTUAL+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2022,
-  "torneo": "Seoul",
-  "ronda": "1/16-finals",
-  "local": "Tseng C. H.",
-  "visitante": "O'Connell C.",
-  "marcador_en_datos": "6-4,0-0",
-  "estado": "Finished / retired - Tseng C. H. (Tpe)",
-  "ganador": "Tseng C. H.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=none;JEG=eq;WIKI=none;ATP_alt=64                                                                                                                                                                                 (RET)(Chun-Hsin Tseng);VOTO=ACTUAL+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 2026,
@@ -831,41 +145,9 @@
   "ronda": "1/8-finals",
   "local": "Bublik A.",
   "visitante": "Marozsan F.",
-  "marcador_en_datos": "",
+  "detalle": "",
   "estado": "Walkover - Bublik A.",
-  "ganador": "Bublik A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
- },
- {
-  "anio": 1990,
-  "torneo": "Tokyo Indoor",
-  "ronda": "Semi-finals",
-  "local": "Becker B.",
-  "visitante": "Reneberg R.",
-  "marcador_en_datos": "6-4,6-4",
-  "estado": "Finished",
-  "ganador": "Becker B.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=64 64(Boris Becker);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1991,
-  "torneo": "Volvo International",
-  "ronda": "1/32-finals",
-  "local": "Chang M.",
-  "visitante": "Pernfors M.",
-  "marcador_en_datos": "6-3,5-7,6-2",
-  "estado": "Finished",
-  "ganador": "Chang M.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=26 61 76(Michael Chang);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1991,
@@ -873,13 +155,9 @@
   "ronda": "1/16-finals",
   "local": "Reneberg R.",
   "visitante": "Annacone P.",
-  "marcador_en_datos": "",
+  "detalle": "",
   "estado": "Walkover - Reneberg R.",
-  "ganador": "Reneberg R.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1991,
@@ -887,13 +165,9 @@
   "ronda": "1/32-finals",
   "local": "Grabb J.",
   "visitante": "Kim B.",
-  "marcador_en_datos": "6-2,6-4",
+  "detalle": "6-2,6-4",
   "estado": "Finished",
-  "ganador": "Grabb J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1991,
@@ -901,13 +175,9 @@
   "ronda": "Semi-finals",
   "local": "Rostagno D.",
   "visitante": "Lendl I.",
-  "marcador_en_datos": "7-6,6-2",
+  "detalle": "7-6,6-2",
   "estado": "Finished",
-  "ganador": "Rostagno D.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -915,27 +185,9 @@
   "ronda": "1/16-finals",
   "local": "Korda P.",
   "visitante": "Boetsch A.",
-  "marcador_en_datos": "",
+  "detalle": "",
   "estado": "Walkover - Korda P.",
-  "ganador": "Korda P.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1992,
-  "torneo": "Volvo International",
-  "ronda": "1/8-finals",
-  "local": "Ivanisevic G.",
-  "visitante": "Rosset M.",
-  "marcador_en_datos": "3-6,7-6,6-4",
-  "estado": "Finished",
-  "ganador": "Ivanisevic G.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=63 75 62(Marc Rosset);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -943,13 +195,9 @@
   "ronda": "1/32-finals",
   "local": "Rafter P.",
   "visitante": "Kim B.",
-  "marcador_en_datos": "6-4,6-4",
+  "detalle": "6-4,6-4",
   "estado": "Finished",
-  "ganador": "Rafter P.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -957,41 +205,9 @@
   "ronda": "1/16-finals",
   "local": "Volkov A.",
   "visitante": "Bryan S.",
-  "marcador_en_datos": "6-1,6-4",
+  "detalle": "6-1,6-4",
   "estado": "Finished",
-  "ganador": "Volkov A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1993,
-  "torneo": "Tokyo Indoor",
-  "ronda": "1/16-finals",
-  "local": "McEnroe P.",
-  "visitante": "Pernfors M.",
-  "marcador_en_datos": "3-6,3-6",
-  "estado": "Finished",
-  "ganador": "Pernfors M.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=none;WIKI=none;ATP_alt=63 63(Mikael Pernfors);VOTO=ATP+STAKAH,WIKI_TOKYO_DISCREPA",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1993,
-  "torneo": "Tokyo Indoor",
-  "ronda": "1/16-finals",
-  "local": "Becker B.",
-  "visitante": "Borwick N.",
-  "marcador_en_datos": "6-4,6-7,3-6",
-  "estado": "Finished",
-  "ganador": "Borwick N.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=none;WIKI=none;ATP_alt=46 76(6) 63(Neil Borwick);VOTO=ATP+STAKAH,WIKI_TOKYO_DISCREPA",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -999,13 +215,9 @@
   "ronda": "1/8-finals",
   "local": "Lendl I.",
   "visitante": "Volkov A.",
-  "marcador_en_datos": "6-7,6-2,6-4",
+  "detalle": "6-7,6-2,6-4",
   "estado": "Finished",
-  "ganador": "Lendl I.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -1013,27 +225,9 @@
   "ronda": "Semi-finals",
   "local": "Lendl I.",
   "visitante": "Haarhuis P.",
-  "marcador_en_datos": "3-6,6-4,7-6",
+  "detalle": "3-6,6-4,7-6",
   "estado": "Finished",
-  "ganador": "Lendl I.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1994,
-  "torneo": "Tokyo Indoor",
-  "ronda": "Quarter-finals",
-  "local": "Eltingh J.",
-  "visitante": "Stark J.",
-  "marcador_en_datos": "2-6,4-6",
-  "estado": "Finished",
-  "ganador": "Stark J.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=none;WIKI=none;ATP_alt=62 64(Jonathan Stark);VOTO=ATP+STAKAH,WIKI_TOKYO_DISCREPA",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -1041,13 +235,9 @@
   "ronda": "Semi-finals",
   "local": "Chang M.",
   "visitante": "Eltingh J.",
-  "marcador_en_datos": "6-3,6-4",
+  "detalle": "6-3,6-4",
   "estado": "Finished",
-  "ganador": "Chang M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1995,
@@ -1055,139 +245,9 @@
   "ronda": "Semi-finals",
   "local": "Philippoussis M.",
   "visitante": "Dreekmann H.",
-  "marcador_en_datos": "6-4,4-6,6-2",
+  "detalle": "6-4,4-6,6-2",
   "estado": "Finished",
-  "ganador": "Philippoussis M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1996,
-  "torneo": "Pilot Pen International",
-  "ronda": "1/16-finals",
-  "local": "Siemerink J.",
-  "visitante": "Stolle S.",
-  "marcador_en_datos": "3-6,7-6,2-6",
-  "estado": "Finished",
-  "ganador": "Stolle S.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=none;WIKI=none;ATP_alt=63 67(1) 62(Sandon Stolle);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1996,
-  "torneo": "Pilot Pen International",
-  "ronda": "Quarter-finals",
-  "local": "Ferreira W.",
-  "visitante": "Vacek D.",
-  "marcador_en_datos": "6-2,3-6,6-1",
-  "estado": "Finished",
-  "ganador": "Ferreira W.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=62 36 61(Wayne Ferreira);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1998,
-  "torneo": "Pilot Pen International",
-  "ronda": "1/8-finals",
-  "local": "Raoux G.",
-  "visitante": "Rafter P.",
-  "marcador_en_datos": "7-6,6-3",
-  "estado": "Finished",
-  "ganador": "Raoux G.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=61 63(Patrick Rafter);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 2013,
-  "torneo": "Winston-Salem",
-  "ronda": "1/32-finals",
-  "local": "Bogomolov A. Jr",
-  "visitante": "Hanescu V.",
-  "marcador_en_datos": "6-3,6-4",
-  "estado": "Finished",
-  "ganador": "Bogomolov A. Jr",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
- },
- {
-  "anio": 2015,
-  "torneo": "Nottingham",
-  "ronda": "1/32-finals",
-  "local": "Baghdatis M.",
-  "visitante": "Estrella V.",
-  "marcador_en_datos": "7-5,3-0",
-  "estado": "Finished / retired - Baghdatis M.",
-  "ganador": "Baghdatis M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=eq;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
- },
- {
-  "anio": 2017,
-  "torneo": "Rome Masters",
-  "ronda": "1/32-finals",
-  "local": "Isner J.",
-  "visitante": "Ramos A.",
-  "marcador_en_datos": "6-7,7-6,6-1",
-  "estado": "Finished",
-  "ganador": "Isner J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=eq;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
- },
- {
-  "anio": 1990,
-  "torneo": "Madrid",
-  "ronda": "1/8-finals",
-  "local": "Gomez A.",
-  "visitante": "Perez D.",
-  "marcador_en_datos": "3-6,6-3,7-6",
-  "estado": "Finished",
-  "ganador": "Gomez A.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=36 63 76(Andres Gomez);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1990,
-  "torneo": "Genoa",
-  "ronda": "1/16-finals",
-  "local": "Camporese O.",
-  "visitante": "Perez D.",
-  "marcador_en_datos": "6-2,1-6,6-2",
-  "estado": "Finished",
-  "ganador": "Camporese O.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=36 76 63 46 62(Diego Perez);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1990,
-  "torneo": "Genoa",
-  "ronda": "1/16-finals",
-  "local": "Clavet F.",
-  "visitante": "Oresar B.",
-  "marcador_en_datos": "6-1,7-6",
-  "estado": "Finished",
-  "ganador": "Clavet F.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=61 76(Francisco Clavet);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1990,
@@ -1195,41 +255,9 @@
   "ronda": "1/16-finals",
   "local": "Nido M.",
   "visitante": "Lopez-Montoya G.",
-  "marcador_en_datos": "6-3,6-7,6-1",
+  "detalle": "6-3,6-7,6-1",
   "estado": "Finished",
-  "ganador": "Nido M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1991,
-  "torneo": "Stuttgart Indoor",
-  "ronda": "Quarter-finals",
-  "local": "Edberg S.",
-  "visitante": "Gustafsson M.",
-  "marcador_en_datos": "6-2,6-3",
-  "estado": "Finished",
-  "ganador": "Edberg S.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=60 64(Stefan Edberg);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1991,
-  "torneo": "Chicago",
-  "ronda": "1/16-finals",
-  "local": "Krishnan R.",
-  "visitante": "Rahunen A.",
-  "marcador_en_datos": "7-6,7-6",
-  "estado": "Finished",
-  "ganador": "Krishnan R.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=76(4) 76(1)(Ramesh Krishnan);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1991,
@@ -1237,13 +265,9 @@
   "ronda": "Quarter-finals",
   "local": "McEnroe J.",
   "visitante": "Mronz A.",
-  "marcador_en_datos": "",
+  "detalle": "",
   "estado": "Walkover - McEnroe J.",
-  "ganador": "McEnroe J.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=none;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 1991,
@@ -1251,41 +275,9 @@
   "ronda": "1/8-finals",
   "local": "Evernden K.",
   "visitante": "Holm H.",
-  "marcador_en_datos": "",
+  "detalle": "",
   "estado": "Walkover - Evernden K.",
-  "ganador": "Evernden K.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1991,
-  "torneo": "Genova",
-  "ronda": "1/16-finals",
-  "local": "Muster T.",
-  "visitante": "Champion T.",
-  "marcador_en_datos": "4-6,6-0,6-3",
-  "estado": "Finished",
-  "ganador": "Muster T.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=46 63 62(Thomas Muster);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1991,
-  "torneo": "Genova",
-  "ronda": "Semi-finals",
-  "local": "Arrese J.",
-  "visitante": "Masso E.",
-  "marcador_en_datos": "7-6,6-3",
-  "estado": "Finished",
-  "ganador": "Arrese J.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=62 57 61(Eduardo Masso);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1991,
@@ -1293,13 +285,9 @@
   "ronda": "1/16-finals",
   "local": "Lopez-Montoya G.",
   "visitante": "Azar R.",
-  "marcador_en_datos": "7-6,7-6",
+  "detalle": "7-6,7-6",
   "estado": "Finished",
-  "ganador": "Lopez-Montoya G.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1991,
@@ -1307,13 +295,9 @@
   "ronda": "1/8-finals",
   "local": "Masso E.",
   "visitante": "Sanchez E.",
-  "marcador_en_datos": "",
+  "detalle": "",
   "estado": "Walkover - Masso E.",
-  "ganador": "Masso E.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1991,
@@ -1321,27 +305,9 @@
   "ronda": "1/8-finals",
   "local": "Miniussi C.",
   "visitante": "Lopez-Montoya G.",
-  "marcador_en_datos": "",
+  "detalle": "",
   "estado": "Walkover - Miniussi C.",
-  "ganador": "Miniussi C.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1991,
-  "torneo": "Sao Paulo",
-  "ronda": "Quarter-finals",
-  "local": "Clavet F.",
-  "visitante": "Masso E.",
-  "marcador_en_datos": "6-0,6-1",
-  "estado": "Finished",
-  "ganador": "Clavet F.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=60 61(Francisco Clavet);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1349,55 +315,9 @@
   "ronda": "1/16-finals",
   "local": "Gustafsson M.",
   "visitante": "Lopez-Montoya G.",
-  "marcador_en_datos": "6-2,6-1",
+  "detalle": "6-2,6-1",
   "estado": "Finished",
-  "ganador": "Gustafsson M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1992,
-  "torneo": "Genova",
-  "ronda": "1/16-finals",
-  "local": "Perez D.",
-  "visitante": "Pescosolido S.",
-  "marcador_en_datos": "3-6,6-4,6-3,7-5",
-  "estado": "Finished",
-  "ganador": "Perez D.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=36 64 63 75(Diego Perez);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1992,
-  "torneo": "Genova",
-  "ronda": "1/8-finals",
-  "local": "Filippini M.",
-  "visitante": "Haarhuis P.",
-  "marcador_en_datos": "7-6,0-6,6-2",
-  "estado": "Finished",
-  "ganador": "Filippini M.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=76(1) 06 62(Marcelo Filippini);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1992,
-  "torneo": "Long Island",
-  "ronda": "1/16-finals",
-  "local": "Chang M.",
-  "visitante": "Pozzi G.",
-  "marcador_en_datos": "6-3,6-3",
-  "estado": "Finished",
-  "ganador": "Chang M.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=63 63(Michael Chang);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1405,13 +325,9 @@
   "ronda": "1/8-finals",
   "local": "Chang M.",
   "visitante": "Connors J.",
-  "marcador_en_datos": "",
+  "detalle": "",
   "estado": "Walkover - Chang M.",
-  "ganador": "Chang M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1419,41 +335,9 @@
   "ronda": "Quarter-finals",
   "local": "Lendl I.",
   "visitante": "Becker B.",
-  "marcador_en_datos": "",
+  "detalle": "",
   "estado": "Walkover - Lendl I.",
-  "ganador": "Lendl I.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1992,
-  "torneo": "Long Island",
-  "ronda": "Semi-finals",
-  "local": "Lendl I.",
-  "visitante": "Chang M.",
-  "marcador_en_datos": "6-3,6-2",
-  "estado": "Finished",
-  "ganador": "Lendl I.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=63 62(Ivan Lendl);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1992,
-  "torneo": "Cologne",
-  "ronda": "1/8-finals",
-  "local": "Muster T.",
-  "visitante": "Gisbert J. J.",
-  "marcador_en_datos": "6-4,3-6,6-1",
-  "estado": "Finished",
-  "ganador": "Muster T.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=64 36 61(Thomas Muster);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1461,13 +345,9 @@
   "ronda": "1/16-finals",
   "local": "Bruguera S.",
   "visitante": "Bavelas A.",
-  "marcador_en_datos": "6-2,6-1",
+  "detalle": "6-2,6-1",
   "estado": "Finished",
-  "ganador": "Bruguera S.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1475,13 +355,9 @@
   "ronda": "1/32-finals",
   "local": "Raoux G.",
   "visitante": "Kim B.",
-  "marcador_en_datos": "6-2,6-3",
+  "detalle": "6-2,6-3",
   "estado": "Finished",
-  "ganador": "Raoux G.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1489,13 +365,9 @@
   "ronda": "1/16-finals",
   "local": "Volkov A.",
   "visitante": "Fromberg R.",
-  "marcador_en_datos": "6-3,6-1",
+  "detalle": "6-3,6-1",
   "estado": "Finished",
-  "ganador": "Volkov A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1503,13 +375,9 @@
   "ronda": "1/8-finals",
   "local": "Volkov A.",
   "visitante": "Matsuoka S.",
-  "marcador_en_datos": "7-5,6-2",
+  "detalle": "7-5,6-2",
   "estado": "Finished",
-  "ganador": "Volkov A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1517,13 +385,9 @@
   "ronda": "Quarter-finals",
   "local": "Volkov A.",
   "visitante": "Edberg S.",
-  "marcador_en_datos": "6-3,3-6,7-5",
+  "detalle": "6-3,3-6,7-5",
   "estado": "Finished",
-  "ganador": "Volkov A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1531,13 +395,9 @@
   "ronda": "Semi-finals",
   "local": "Holm H.",
   "visitante": "Volkov A.",
-  "marcador_en_datos": "7-5,6-2",
+  "detalle": "7-5,6-2",
   "estado": "Finished",
-  "ganador": "Holm H.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1545,55 +405,9 @@
   "ronda": "Semi-finals",
   "local": "Lendl I.",
   "visitante": "Chang M.",
-  "marcador_en_datos": "6-3,6-4",
+  "detalle": "6-3,6-4",
   "estado": "Finished",
-  "ganador": "Lendl I.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1992,
-  "torneo": "Lyon",
-  "ronda": "1/16-finals",
-  "local": "Rosset M.",
-  "visitante": "Delaitre O.",
-  "marcador_en_datos": "6-1,7-6",
-  "estado": "Finished",
-  "ganador": "Rosset M.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=61 76(2)(Marc Rosset);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1992,
-  "torneo": "Lyon",
-  "ronda": "1/8-finals",
-  "local": "Boetsch A.",
-  "visitante": "Camporese O.",
-  "marcador_en_datos": "6-4,6-3",
-  "estado": "Finished",
-  "ganador": "Boetsch A.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=64 63(Arnaud Boetsch);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1992,
-  "torneo": "Lyon",
-  "ronda": "Quarter-finals",
-  "local": "Pioline C.",
-  "visitante": "Boetsch A.",
-  "marcador_en_datos": "2-6,2-6",
-  "estado": "Finished",
-  "ganador": "Boetsch A.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=none;WIKI=none;ATP_alt=62 62(Arnaud Boetsch);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1601,13 +415,9 @@
   "ronda": "1/16-finals",
   "local": "Stolle S.",
   "visitante": "Chang C.",
-  "marcador_en_datos": "7-6,6-2",
+  "detalle": "7-6,6-2",
   "estado": "Finished",
-  "ganador": "Stolle S.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1615,13 +425,9 @@
   "ronda": "1/16-finals",
   "local": "Bloom G.",
   "visitante": "Mronz A.",
-  "marcador_en_datos": "6-4,6-4",
+  "detalle": "6-4,6-4",
   "estado": "Finished",
-  "ganador": "Bloom G.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1629,13 +435,9 @@
   "ronda": "1/16-finals",
   "local": "Fitzgerald J.",
   "visitante": "Barrientos F.",
-  "marcador_en_datos": "7-5,6-2",
+  "detalle": "7-5,6-2",
   "estado": "Finished",
-  "ganador": "Fitzgerald J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1643,13 +445,9 @@
   "ronda": "1/16-finals",
   "local": "Kuhnen P.",
   "visitante": "Chen C.",
-  "marcador_en_datos": "6-1,6-3",
+  "detalle": "6-1,6-3",
   "estado": "Finished",
-  "ganador": "Kuhnen P.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1657,13 +455,9 @@
   "ronda": "1/16-finals",
   "local": "Grabb J.",
   "visitante": "Salumaa S.",
-  "marcador_en_datos": "7-5,6-7,6-4",
+  "detalle": "7-5,6-7,6-4",
   "estado": "Finished",
-  "ganador": "Grabb J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1671,13 +465,9 @@
   "ronda": "1/16-finals",
   "local": "Lin B. C.",
   "visitante": "Odizor N.",
-  "marcador_en_datos": "4-6,7-6,6-2",
+  "detalle": "4-6,7-6,6-2",
   "estado": "Finished",
-  "ganador": "Lin B. C.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none;VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 1992,
@@ -1685,13 +475,9 @@
   "ronda": "1/16-finals",
   "local": "Steven B.",
   "visitante": "Lien Y.",
-  "marcador_en_datos": "3-6,6-3,6-3",
+  "detalle": "3-6,6-3,6-3",
   "estado": "Finished",
-  "ganador": "Steven B.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1699,13 +485,9 @@
   "ronda": "1/16-finals",
   "local": "Shelton B.",
   "visitante": "Mezzadri C.",
-  "marcador_en_datos": "3-6,6-3,6-3",
+  "detalle": "3-6,6-3,6-3",
   "estado": "Finished",
-  "ganador": "Shelton B.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1713,13 +495,9 @@
   "ronda": "1/16-finals",
   "local": "Nargiso D.",
   "visitante": "Pridham C.",
-  "marcador_en_datos": "6-3,7-6",
+  "detalle": "6-3,7-6",
   "estado": "Finished",
-  "ganador": "Nargiso D.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1727,13 +505,9 @@
   "ronda": "1/16-finals",
   "local": "Garnett B.",
   "visitante": "Daufresne X.",
-  "marcador_en_datos": "6-4,7-6",
+  "detalle": "6-4,7-6",
   "estado": "Finished",
-  "ganador": "Garnett B.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1741,13 +515,9 @@
   "ronda": "1/16-finals",
   "local": "Olhovskiy A.",
   "visitante": "Norman D.",
-  "marcador_en_datos": "7-5,7-6",
+  "detalle": "7-5,7-6",
   "estado": "Finished",
-  "ganador": "Olhovskiy A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1755,13 +525,9 @@
   "ronda": "1/16-finals",
   "local": "Baur P.",
   "visitante": "Youl S.",
-  "marcador_en_datos": "7-5,6-2",
+  "detalle": "7-5,6-2",
   "estado": "Finished",
-  "ganador": "Baur P.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1769,13 +535,9 @@
   "ronda": "1/16-finals",
   "local": "Martin T.",
   "visitante": "Fromberg R.",
-  "marcador_en_datos": "6-3,6-2",
+  "detalle": "6-3,6-2",
   "estado": "Finished",
-  "ganador": "Martin T.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1783,13 +545,9 @@
   "ronda": "1/16-finals",
   "local": "Morgan J.",
   "visitante": "Van Rensburg C.",
-  "marcador_en_datos": "6-2,6-7,6-3",
+  "detalle": "6-2,6-7,6-3",
   "estado": "Finished",
-  "ganador": "Morgan J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1797,13 +555,9 @@
   "ronda": "1/16-finals",
   "local": "Black B.",
   "visitante": "Muller G.",
-  "marcador_en_datos": "7-6,6-4",
+  "detalle": "7-6,6-4",
   "estado": "Finished",
-  "ganador": "Black B.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1811,13 +565,9 @@
   "ronda": "1/16-finals",
   "local": "Carlsen K.",
   "visitante": "Adams D.",
-  "marcador_en_datos": "3-6,6-3,7-5",
+  "detalle": "3-6,6-3,7-5",
   "estado": "Finished",
-  "ganador": "Carlsen K.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1825,13 +575,9 @@
   "ronda": "1/8-finals",
   "local": "Bloom G.",
   "visitante": "Stolle S.",
-  "marcador_en_datos": "7-6,6-4",
+  "detalle": "7-6,6-4",
   "estado": "Finished",
-  "ganador": "Bloom G.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1839,13 +585,9 @@
   "ronda": "1/8-finals",
   "local": "Kuhnen P.",
   "visitante": "Fitzgerald J.",
-  "marcador_en_datos": "6-0,6-1",
+  "detalle": "6-0,6-1",
   "estado": "Finished",
-  "ganador": "Kuhnen P.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1853,13 +595,9 @@
   "ronda": "1/8-finals",
   "local": "Grabb J.",
   "visitante": "Lin B. C.",
-  "marcador_en_datos": "6-3,6-3",
+  "detalle": "6-3,6-3",
   "estado": "Finished",
-  "ganador": "Grabb J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1867,13 +605,9 @@
   "ronda": "1/8-finals",
   "local": "Steven B.",
   "visitante": "Shelton B.",
-  "marcador_en_datos": "6-4,7-5",
+  "detalle": "6-4,7-5",
   "estado": "Finished",
-  "ganador": "Steven B.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1881,13 +615,9 @@
   "ronda": "1/8-finals",
   "local": "Nargiso D.",
   "visitante": "Garnett B.",
-  "marcador_en_datos": "6-2,6-2",
+  "detalle": "6-2,6-2",
   "estado": "Finished",
-  "ganador": "Nargiso D.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1895,13 +625,9 @@
   "ronda": "1/8-finals",
   "local": "Olhovskiy A.",
   "visitante": "Baur P.",
-  "marcador_en_datos": "6-2,7-6",
+  "detalle": "6-2,7-6",
   "estado": "Finished",
-  "ganador": "Olhovskiy A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1909,13 +635,9 @@
   "ronda": "1/8-finals",
   "local": "Morgan J.",
   "visitante": "Martin T.",
-  "marcador_en_datos": "7-6,6-4",
+  "detalle": "7-6,6-4",
   "estado": "Finished",
-  "ganador": "Morgan J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1923,13 +645,9 @@
   "ronda": "1/8-finals",
   "local": "Carlsen K.",
   "visitante": "Black B.",
-  "marcador_en_datos": "6-4,6-2",
+  "detalle": "6-4,6-2",
   "estado": "Finished",
-  "ganador": "Carlsen K.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1937,13 +655,9 @@
   "ronda": "Quarter-finals",
   "local": "Kuhnen P.",
   "visitante": "Bloom G.",
-  "marcador_en_datos": "6-0,6-4",
+  "detalle": "6-0,6-4",
   "estado": "Finished",
-  "ganador": "Kuhnen P.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1951,13 +665,9 @@
   "ronda": "Quarter-finals",
   "local": "Grabb J.",
   "visitante": "Steven B.",
-  "marcador_en_datos": "5-7,6-3,6-2",
+  "detalle": "5-7,6-3,6-2",
   "estado": "Finished",
-  "ganador": "Grabb J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1965,13 +675,9 @@
   "ronda": "Quarter-finals",
   "local": "Olhovskiy A.",
   "visitante": "Nargiso D.",
-  "marcador_en_datos": "7-6,4-6,6-4",
+  "detalle": "7-6,4-6,6-4",
   "estado": "Finished",
-  "ganador": "Olhovskiy A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1979,13 +685,9 @@
   "ronda": "Quarter-finals",
   "local": "Morgan J.",
   "visitante": "Carlsen K.",
-  "marcador_en_datos": "6-3,6-4",
+  "detalle": "6-3,6-4",
   "estado": "Finished",
-  "ganador": "Morgan J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -1993,13 +695,9 @@
   "ronda": "Semi-finals",
   "local": "Grabb J.",
   "visitante": "Kuhnen P.",
-  "marcador_en_datos": "6-3,6-1",
+  "detalle": "6-3,6-1",
   "estado": "Finished",
-  "ganador": "Grabb J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -2007,27 +705,9 @@
   "ronda": "Semi-finals",
   "local": "Morgan J.",
   "visitante": "Olhovskiy A.",
-  "marcador_en_datos": "6-7,7-5,7-5",
+  "detalle": "6-7,7-5,7-5",
   "estado": "Finished",
-  "ganador": "Morgan J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1992,
-  "torneo": "Taipei",
-  "ronda": "Final",
-  "local": "Grabb J.",
-  "visitante": "Morgan J.",
-  "marcador_en_datos": "6-4,6-3",
-  "estado": "Finished",
-  "ganador": "Grabb J.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=64 63(Jim Grabb);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -2035,13 +715,9 @@
   "ronda": "1/16-finals",
   "local": "Motta C.",
   "visitante": "Lopez-Montoya G.",
-  "marcador_en_datos": "6-2,6-4",
+  "detalle": "6-2,6-4",
   "estado": "Finished",
-  "ganador": "Motta C.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1992,
@@ -2049,41 +725,9 @@
   "ronda": "1/16-finals",
   "local": "Mattar L.",
   "visitante": "Lopez-Montoya G.",
-  "marcador_en_datos": "1-6,6-4,6-2",
+  "detalle": "1-6,6-4,6-2",
   "estado": "Finished",
-  "ganador": "Mattar L.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1992,
-  "torneo": "Buzios",
-  "ronda": "1/8-finals",
-  "local": "Roig F.",
-  "visitante": "Corretja A.",
-  "marcador_en_datos": "6-1,5-7,1-6",
-  "estado": "Finished",
-  "ganador": "Corretja A.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=none;WIKI=none;ATP_alt=16 75 61(Alex Corretja);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1992,
-  "torneo": "Buzios",
-  "ronda": "1/8-finals",
-  "local": "Oncins J.",
-  "visitante": "Azar R.",
-  "marcador_en_datos": "7-6,6-1",
-  "estado": "Finished",
-  "ganador": "Oncins J.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=76(4) 61(Jaime Oncins);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2091,13 +735,9 @@
   "ronda": "1/16-finals",
   "local": "Novacek K.",
   "visitante": "Apell J.",
-  "marcador_en_datos": "6-4,6-4",
+  "detalle": "6-4,6-4",
   "estado": "Finished",
-  "ganador": "Novacek K.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2105,13 +745,9 @@
   "ronda": "1/16-finals",
   "local": "Matuszewski R.",
   "visitante": "Jonsson L.",
-  "marcador_en_datos": "6-2,7-5",
+  "detalle": "6-2,7-5",
   "estado": "Finished",
-  "ganador": "Matuszewski R.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2119,13 +755,9 @@
   "ronda": "1/16-finals",
   "local": "Cunha-Silva J.",
   "visitante": "Borg B.",
-  "marcador_en_datos": "6-1,5-7,7-5",
+  "detalle": "6-1,5-7,7-5",
   "estado": "Finished",
-  "ganador": "Cunha-Silva J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2133,13 +765,9 @@
   "ronda": "1/16-finals",
   "local": "Roig F.",
   "visitante": "Fontang F.",
-  "marcador_en_datos": "6-2,3-6,7-6",
+  "detalle": "6-2,3-6,7-6",
   "estado": "Finished",
-  "ganador": "Roig F.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2147,13 +775,9 @@
   "ronda": "1/16-finals",
   "local": "Jarryd A.",
   "visitante": "Riglewski U.",
-  "marcador_en_datos": "6-1,6-7,7-5",
+  "detalle": "6-1,6-7,7-5",
   "estado": "Finished",
-  "ganador": "Jarryd A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2161,13 +785,9 @@
   "ronda": "1/16-finals",
   "local": "Renzenbrink J.",
   "visitante": "Vacek D.",
-  "marcador_en_datos": "6-4,6-2",
+  "detalle": "6-4,6-2",
   "estado": "Finished",
-  "ganador": "Renzenbrink J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2175,13 +795,9 @@
   "ronda": "1/16-finals",
   "local": "Goellner M.",
   "visitante": "Sansoni S.",
-  "marcador_en_datos": "3-6,6-3,6-4",
+  "detalle": "3-6,6-3,6-4",
   "estado": "Finished",
-  "ganador": "Goellner M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2189,13 +805,9 @@
   "ronda": "1/16-finals",
   "local": "Wuyts B.",
   "visitante": "Anda T.",
-  "marcador_en_datos": "7-6,7-5",
+  "detalle": "7-6,7-5",
   "estado": "Finished",
-  "ganador": "Wuyts B.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2203,13 +815,9 @@
   "ronda": "1/16-finals",
   "local": "Simian S.",
   "visitante": "Perez D.",
-  "marcador_en_datos": "6-3,3-6,6-3",
+  "detalle": "6-3,3-6,6-3",
   "estado": "Finished",
-  "ganador": "Simian S.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2217,13 +825,9 @@
   "ronda": "1/16-finals",
   "local": "Damm M.",
   "visitante": "Antonitsch A.",
-  "marcador_en_datos": "6-2,6-1",
+  "detalle": "6-2,6-1",
   "estado": "Finished",
-  "ganador": "Damm M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2231,13 +835,9 @@
   "ronda": "1/16-finals",
   "local": "Altur J. F.",
   "visitante": "Paes L.",
-  "marcador_en_datos": "7-5,0-6,6-4",
+  "detalle": "7-5,0-6,6-4",
   "estado": "Finished",
-  "ganador": "Altur J. F.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2245,13 +845,9 @@
   "ronda": "1/16-finals",
   "local": "Svensson J.",
   "visitante": "Dreekmann H.",
-  "marcador_en_datos": "6-4,5-7,7-5",
+  "detalle": "6-4,5-7,7-5",
   "estado": "Finished",
-  "ganador": "Svensson J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2259,13 +855,9 @@
   "ronda": "1/16-finals",
   "local": "Zoecke M.",
   "visitante": "Schaller G.",
-  "marcador_en_datos": "7-5,7-5",
+  "detalle": "7-5,7-5",
   "estado": "Finished",
-  "ganador": "Zoecke M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2273,13 +865,9 @@
   "ronda": "1/16-finals",
   "local": "Saceanu C.",
   "visitante": "Pridham C.",
-  "marcador_en_datos": "7-6,7-6",
+  "detalle": "7-6,7-6",
   "estado": "Finished",
-  "ganador": "Saceanu C.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2287,13 +875,9 @@
   "ronda": "1/16-finals",
   "local": "Thoms A.",
   "visitante": "Rikl D.",
-  "marcador_en_datos": "6-4,3-6,6-4",
+  "detalle": "6-4,3-6,6-4",
   "estado": "Finished",
-  "ganador": "Thoms A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2301,13 +885,9 @@
   "ronda": "1/16-finals",
   "local": "Gustafsson M.",
   "visitante": "Baur P.",
-  "marcador_en_datos": "7-6,7-6",
+  "detalle": "7-6,7-6",
   "estado": "Finished",
-  "ganador": "Gustafsson M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2315,13 +895,9 @@
   "ronda": "1/8-finals",
   "local": "Novacek K.",
   "visitante": "Matuszewski R.",
-  "marcador_en_datos": "6-4,6-2",
+  "detalle": "6-4,6-2",
   "estado": "Finished",
-  "ganador": "Novacek K.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2329,13 +905,9 @@
   "ronda": "1/8-finals",
   "local": "Roig F.",
   "visitante": "Cunha-Silva J.",
-  "marcador_en_datos": "6-2,7-6",
+  "detalle": "6-2,7-6",
   "estado": "Finished",
-  "ganador": "Roig F.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2343,27 +915,9 @@
   "ronda": "1/8-finals",
   "local": "Jarryd A.",
   "visitante": "Renzenbrink J.",
-  "marcador_en_datos": "6-2,6-2",
+  "detalle": "6-2,6-2",
   "estado": "Finished",
-  "ganador": "Jarryd A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1993,
-  "torneo": "Zaragoza",
-  "ronda": "1/8-finals",
-  "local": "Goellner M.",
-  "visitante": "Wuyts B.",
-  "marcador_en_datos": "7-6,6-4",
-  "estado": "Finished",
-  "ganador": "Goellner M.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=64 64(Marc-Kevin Goellner);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2371,13 +925,9 @@
   "ronda": "1/8-finals",
   "local": "Damm M.",
   "visitante": "Simian S.",
-  "marcador_en_datos": "6-3,6-3",
+  "detalle": "6-3,6-3",
   "estado": "Finished",
-  "ganador": "Damm M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2385,13 +935,9 @@
   "ronda": "1/8-finals",
   "local": "Svensson J.",
   "visitante": "Altur J. F.",
-  "marcador_en_datos": "7-6,6-2",
+  "detalle": "7-6,6-2",
   "estado": "Finished",
-  "ganador": "Svensson J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2399,13 +945,9 @@
   "ronda": "1/8-finals",
   "local": "Zoecke M.",
   "visitante": "Saceanu C.",
-  "marcador_en_datos": "6-4,7-6",
+  "detalle": "6-4,7-6",
   "estado": "Finished",
-  "ganador": "Zoecke M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2413,13 +955,9 @@
   "ronda": "1/8-finals",
   "local": "Thoms A.",
   "visitante": "Gustafsson M.",
-  "marcador_en_datos": "6-4,7-6",
+  "detalle": "6-4,7-6",
   "estado": "Finished",
-  "ganador": "Thoms A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2427,13 +965,9 @@
   "ronda": "Quarter-finals",
   "local": "Novacek K.",
   "visitante": "Roig F.",
-  "marcador_en_datos": "6-4,6-4",
+  "detalle": "6-4,6-4",
   "estado": "Finished",
-  "ganador": "Novacek K.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2441,13 +975,9 @@
   "ronda": "Quarter-finals",
   "local": "Jarryd A.",
   "visitante": "Goellner M.",
-  "marcador_en_datos": "7-5,6-4",
+  "detalle": "7-5,6-4",
   "estado": "Finished",
-  "ganador": "Jarryd A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2455,13 +985,9 @@
   "ronda": "Quarter-finals",
   "local": "Svensson J.",
   "visitante": "Damm M.",
-  "marcador_en_datos": "3-6,6-1,6-2",
+  "detalle": "3-6,6-1,6-2",
   "estado": "Finished",
-  "ganador": "Svensson J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2469,27 +995,9 @@
   "ronda": "Quarter-finals",
   "local": "Zoecke M.",
   "visitante": "Thoms A.",
-  "marcador_en_datos": "7-5,6-2",
+  "detalle": "7-5,6-2",
   "estado": "Finished",
-  "ganador": "Zoecke M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1993,
-  "torneo": "Zaragoza",
-  "ronda": "Semi-finals",
-  "local": "Novacek K.",
-  "visitante": "Jarryd A.",
-  "marcador_en_datos": "6-3,3-6,6-3",
-  "estado": "Finished",
-  "ganador": "Novacek K.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=63 75(Anders Jarryd);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2497,13 +1005,9 @@
   "ronda": "Semi-finals",
   "local": "Svensson J.",
   "visitante": "Zoecke M.",
-  "marcador_en_datos": "6-3,6-3",
+  "detalle": "6-3,6-3",
   "estado": "Finished",
-  "ganador": "Svensson J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2511,153 +1015,9 @@
   "ronda": "Final",
   "local": "Novacek K.",
   "visitante": "Svensson J.",
-  "marcador_en_datos": "3-6,6-2,6-1",
+  "detalle": "3-6,6-2,6-1",
   "estado": "Finished",
-  "ganador": "Novacek K.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1993,
-  "torneo": "Durban",
-  "ronda": "Quarter-finals",
-  "local": "Stafford G.",
-  "visitante": "Weiss R.",
-  "marcador_en_datos": "7-5,7-6",
-  "estado": "Finished",
-  "ganador": "Stafford G.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=63 60(Grant Stafford);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1993,
-  "torneo": "Madrid",
-  "ronda": "1/16-finals",
-  "local": "Filippini M.",
-  "visitante": "Furlan R.",
-  "marcador_en_datos": "1-6,3-6",
-  "estado": "Finished",
-  "ganador": "Furlan R.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=none;WIKI=none;ATP_alt=61 63(Renzo Furlan);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1993,
-  "torneo": "Madrid",
-  "ronda": "1/16-finals",
-  "local": "Davin F.",
-  "visitante": "Becker B.",
-  "marcador_en_datos": "4-6,6-3,6-1",
-  "estado": "Finished",
-  "ganador": "Davin F.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=46 63 61(Franco Davin);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1993,
-  "torneo": "Madrid",
-  "ronda": "Quarter-finals",
-  "local": "Bruguera S.",
-  "visitante": "Burillo J.",
-  "marcador_en_datos": "7-6,6-2",
-  "estado": "Finished",
-  "ganador": "Bruguera S.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=76(3) 62(Sergi Bruguera);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1993,
-  "torneo": "Tampa",
-  "ronda": "1/16-finals",
-  "local": "Rostagno D.",
-  "visitante": "Lavalle L.",
-  "marcador_en_datos": "6-4,7-5",
-  "estado": "Finished",
-  "ganador": "Rostagno D.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=61 75(Derrick Rostagno);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1993,
-  "torneo": "Tampa",
-  "ronda": "1/16-finals",
-  "local": "Shelton B.",
-  "visitante": "Skoff H.",
-  "marcador_en_datos": "6-3,1-0",
-  "estado": "Finished / retired - Shelton B.",
-  "ganador": "Shelton B.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=63 64(Bryan Shelton);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1993,
-  "torneo": "Tampa",
-  "ronda": "Quarter-finals",
-  "local": "Yzaga J.",
-  "visitante": "Martin T.",
-  "marcador_en_datos": "7-6,4-6,6-1",
-  "estado": "Finished",
-  "ganador": "Yzaga J.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=62 26 62(Jaime Yzaga);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1993,
-  "torneo": "Tampa",
-  "ronda": "Semi-finals",
-  "local": "Fromberg R.",
-  "visitante": "Shelton B.",
-  "marcador_en_datos": "6-7,5-3,7-5",
-  "estado": "Finished / retired - Fromberg R.",
-  "ganador": "Fromberg R.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=67(5) 53 75(Richard Fromberg);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1993,
-  "torneo": "Genova",
-  "ronda": "1/16-finals",
-  "local": "Sanchez J.",
-  "visitante": "Filippini M.",
-  "marcador_en_datos": "6-2,6-2",
-  "estado": "Finished",
-  "ganador": "Sanchez J.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=75 67(7) 64(Javier Sanchez);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1993,
-  "torneo": "Kitzbuhel",
-  "ronda": "Final",
-  "local": "Muster T.",
-  "visitante": "Sanchez J.",
-  "marcador_en_datos": "6-3,7-5,6-4",
-  "estado": "Finished",
-  "ganador": "Muster T.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=75 62(Javier Sanchez);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2665,13 +1025,9 @@
   "ronda": "1/16-finals",
   "local": "Puentes-Alcaniz G.",
   "visitante": "Berasategui A.",
-  "marcador_en_datos": "6-4,6-4",
+  "detalle": "6-4,6-4",
   "estado": "Finished",
-  "ganador": "Puentes-Alcaniz G.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1993,
@@ -2679,27 +1035,9 @@
   "ronda": "1/8-finals",
   "local": "Altur J. F.",
   "visitante": "Puentes-Alcaniz G.",
-  "marcador_en_datos": "6-4,6-2",
+  "detalle": "6-4,6-2",
   "estado": "Finished",
-  "ganador": "Altur J. F.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1993,
-  "torneo": "Bolzano",
-  "ronda": "1/16-finals",
-  "local": "Damm M.",
-  "visitante": "Stich M.",
-  "marcador_en_datos": "6-4,3-6,6-2",
-  "estado": "Finished",
-  "ganador": "Damm M.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=76(6) 64(Michael Stich);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2707,13 +1045,9 @@
   "ronda": "1/16-finals",
   "local": "Bergstrom C.",
   "visitante": "Novacek K.",
-  "marcador_en_datos": "3-6,6-1,6-2",
+  "detalle": "3-6,6-1,6-2",
   "estado": "Finished",
-  "ganador": "Bergstrom C.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2721,13 +1055,9 @@
   "ronda": "1/16-finals",
   "local": "Rehmann L.",
   "visitante": "Steeb C.",
-  "marcador_en_datos": "7-6,6-3",
+  "detalle": "7-6,6-3",
   "estado": "Finished",
-  "ganador": "Rehmann L.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2735,13 +1065,9 @@
   "ronda": "1/16-finals",
   "local": "Pozzi G.",
   "visitante": "Cunha-Silva J.",
-  "marcador_en_datos": "7-5,4-6,6-4",
+  "detalle": "7-5,4-6,6-4",
   "estado": "Finished",
-  "ganador": "Pozzi G.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2749,13 +1075,9 @@
   "ronda": "1/16-finals",
   "local": "Carbonell T.",
   "visitante": "Dreekmann H.",
-  "marcador_en_datos": "2-6,6-3,6-2",
+  "detalle": "2-6,6-3,6-2",
   "estado": "Finished",
-  "ganador": "Carbonell T.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2763,13 +1085,9 @@
   "ronda": "1/16-finals",
   "local": "Kafelnikov Y.",
   "visitante": "Poliakov D.",
-  "marcador_en_datos": "6-1,6-7,6-0",
+  "detalle": "6-1,6-7,6-0",
   "estado": "Finished",
-  "ganador": "Kafelnikov Y.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2777,13 +1095,9 @@
   "ronda": "1/16-finals",
   "local": "Rascon-Lope J.",
   "visitante": "Camporese O.",
-  "marcador_en_datos": "7-6,7-6",
+  "detalle": "7-6,7-6",
   "estado": "Finished",
-  "ganador": "Rascon-Lope J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2791,13 +1105,9 @@
   "ronda": "1/16-finals",
   "local": "Nydahl T.",
   "visitante": "Mronz A.",
-  "marcador_en_datos": "6-4,7-6",
+  "detalle": "6-4,7-6",
   "estado": "Finished",
-  "ganador": "Nydahl T.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2805,13 +1115,9 @@
   "ronda": "1/16-finals",
   "local": "Dewulf F.",
   "visitante": "Damm M.",
-  "marcador_en_datos": "6-4,6-7,6-4",
+  "detalle": "6-4,6-7,6-4",
   "estado": "Finished",
-  "ganador": "Dewulf F.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2819,13 +1125,9 @@
   "ronda": "1/16-finals",
   "local": "Carlsen K.",
   "visitante": "Holm H.",
-  "marcador_en_datos": "7-5,6-4",
+  "detalle": "7-5,6-4",
   "estado": "Finished",
-  "ganador": "Carlsen K.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2833,13 +1135,9 @@
   "ronda": "1/16-finals",
   "local": "Kuhnen P.",
   "visitante": "Marques N.",
-  "marcador_en_datos": "6-3,6-4",
+  "detalle": "6-3,6-4",
   "estado": "Finished",
-  "ganador": "Kuhnen P.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2847,13 +1145,9 @@
   "ronda": "1/16-finals",
   "local": "Simian S.",
   "visitante": "Carretero R.",
-  "marcador_en_datos": "6-3,6-4",
+  "detalle": "6-3,6-4",
   "estado": "Finished",
-  "ganador": "Simian S.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2861,13 +1155,9 @@
   "ronda": "1/16-finals",
   "local": "Larsson M.",
   "visitante": "Caratti C.",
-  "marcador_en_datos": "6-2,6-4",
+  "detalle": "6-2,6-4",
   "estado": "Finished",
-  "ganador": "Larsson M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2875,13 +1165,9 @@
   "ronda": "1/16-finals",
   "local": "Jarryd A.",
   "visitante": "Hlasek J.",
-  "marcador_en_datos": "6-3,7-5",
+  "detalle": "6-3,7-5",
   "estado": "Finished",
-  "ganador": "Jarryd A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2889,13 +1175,9 @@
   "ronda": "1/16-finals",
   "local": "Zoecke M.",
   "visitante": "Dier D.",
-  "marcador_en_datos": "6-7,6-4,6-2",
+  "detalle": "6-7,6-4,6-2",
   "estado": "Finished",
-  "ganador": "Zoecke M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2903,13 +1185,9 @@
   "ronda": "1/16-finals",
   "local": "Prinosil D.",
   "visitante": "Renzenbrink J.",
-  "marcador_en_datos": "7-6,3-6,6-2",
+  "detalle": "7-6,3-6,6-2",
   "estado": "Finished",
-  "ganador": "Prinosil D.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2917,13 +1195,9 @@
   "ronda": "1/16-finals",
   "local": "Svensson J.",
   "visitante": "Van Herck J.",
-  "marcador_en_datos": "6-1,6-4",
+  "detalle": "6-1,6-4",
   "estado": "Finished",
-  "ganador": "Svensson J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2931,13 +1205,9 @@
   "ronda": "1/8-finals",
   "local": "Rehmann L.",
   "visitante": "Bergstrom C.",
-  "marcador_en_datos": "6-3,6-4",
+  "detalle": "6-3,6-4",
   "estado": "Finished",
-  "ganador": "Rehmann L.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2945,13 +1215,9 @@
   "ronda": "1/8-finals",
   "local": "Pozzi G.",
   "visitante": "Carbonell T.",
-  "marcador_en_datos": "4-6,6-3,7-5",
+  "detalle": "4-6,6-3,7-5",
   "estado": "Finished",
-  "ganador": "Pozzi G.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2959,13 +1225,9 @@
   "ronda": "1/8-finals",
   "local": "Kafelnikov Y.",
   "visitante": "Rascon-Lope J.",
-  "marcador_en_datos": "6-3,6-4",
+  "detalle": "6-3,6-4",
   "estado": "Finished",
-  "ganador": "Kafelnikov Y.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2973,13 +1235,9 @@
   "ronda": "1/8-finals",
   "local": "Nydahl T.",
   "visitante": "Dewulf F.",
-  "marcador_en_datos": "6-4,6-3",
+  "detalle": "6-4,6-3",
   "estado": "Finished",
-  "ganador": "Nydahl T.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -2987,13 +1245,9 @@
   "ronda": "1/8-finals",
   "local": "Kuhnen P.",
   "visitante": "Carlsen K.",
-  "marcador_en_datos": "7-6,6-4",
+  "detalle": "7-6,6-4",
   "estado": "Finished",
-  "ganador": "Kuhnen P.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -3001,13 +1255,9 @@
   "ronda": "1/8-finals",
   "local": "Larsson M.",
   "visitante": "Simian S.",
-  "marcador_en_datos": "6-4,4-6,6-4",
+  "detalle": "6-4,4-6,6-4",
   "estado": "Finished",
-  "ganador": "Larsson M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -3015,13 +1265,9 @@
   "ronda": "1/8-finals",
   "local": "Jarryd A.",
   "visitante": "Zoecke M.",
-  "marcador_en_datos": "6-0,6-4",
+  "detalle": "6-0,6-4",
   "estado": "Finished",
-  "ganador": "Jarryd A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -3029,13 +1275,9 @@
   "ronda": "1/8-finals",
   "local": "Prinosil D.",
   "visitante": "Svensson J.",
-  "marcador_en_datos": "4-6,6-2,6-3",
+  "detalle": "4-6,6-2,6-3",
   "estado": "Finished",
-  "ganador": "Prinosil D.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -3043,13 +1285,9 @@
   "ronda": "Quarter-finals",
   "local": "Rehmann L.",
   "visitante": "Pozzi G.",
-  "marcador_en_datos": "7-6,3-6,7-6",
+  "detalle": "7-6,3-6,7-6",
   "estado": "Finished",
-  "ganador": "Rehmann L.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -3057,13 +1295,9 @@
   "ronda": "Quarter-finals",
   "local": "Nydahl T.",
   "visitante": "Kafelnikov Y.",
-  "marcador_en_datos": "",
+  "detalle": "",
   "estado": "Walkover - Nydahl T.",
-  "ganador": "Nydahl T.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=sinmarc;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -3071,13 +1305,9 @@
   "ronda": "Quarter-finals",
   "local": "Larsson M.",
   "visitante": "Kuhnen P.",
-  "marcador_en_datos": "6-3,6-3",
+  "detalle": "6-3,6-3",
   "estado": "Finished",
-  "ganador": "Larsson M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -3085,13 +1315,9 @@
   "ronda": "Quarter-finals",
   "local": "Jarryd A.",
   "visitante": "Prinosil D.",
-  "marcador_en_datos": "6-2,6-4",
+  "detalle": "6-2,6-4",
   "estado": "Finished",
-  "ganador": "Jarryd A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -3099,13 +1325,9 @@
   "ronda": "Semi-finals",
   "local": "Rehmann L.",
   "visitante": "Nydahl T.",
-  "marcador_en_datos": "7-5,6-4",
+  "detalle": "7-5,6-4",
   "estado": "Finished",
-  "ganador": "Rehmann L.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -3113,13 +1335,9 @@
   "ronda": "Semi-finals",
   "local": "Larsson M.",
   "visitante": "Jarryd A.",
-  "marcador_en_datos": "6-4,4-6,6-2",
+  "detalle": "6-4,4-6,6-2",
   "estado": "Finished",
-  "ganador": "Larsson M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1994,
@@ -3127,97 +1345,9 @@
   "ronda": "Final",
   "local": "Larsson M.",
   "visitante": "Rehmann L.",
-  "marcador_en_datos": "6-4,6-4",
+  "detalle": "6-4,6-4",
   "estado": "Finished",
-  "ganador": "Larsson M.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=eq;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1994,
-  "torneo": "Osaka",
-  "ronda": "Semi-finals",
-  "local": "Sampras P.",
-  "visitante": "Agassi A.",
-  "marcador_en_datos": "5-7,6-3,6-3",
-  "estado": "Finished",
-  "ganador": "Sampras P.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=57 63 63(Pete Sampras);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1994,
-  "torneo": "Pinehurst",
-  "ronda": "1/16-finals",
-  "local": "Martin T.",
-  "visitante": "Dunn B.",
-  "marcador_en_datos": "7-6,6-2",
-  "estado": "Finished",
-  "ganador": "Martin T.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=63 62(Todd Martin);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1994,
-  "torneo": "Pinehurst",
-  "ronda": "1/16-finals",
-  "local": "Filippini M.",
-  "visitante": "Stoltenberg J.",
-  "marcador_en_datos": "5-7,6-7",
-  "estado": "Finished",
-  "ganador": "Stoltenberg J.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=none;WIKI=none;ATP_alt=75 76(2)(Jason Stoltenberg);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1994,
-  "torneo": "Pinehurst",
-  "ronda": "Semi-finals",
-  "local": "Martin T.",
-  "visitante": "Wilander M.",
-  "marcador_en_datos": "6-3,2-6,6-4",
-  "estado": "Finished",
-  "ganador": "Martin T.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=63 76(3)(Todd Martin);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1994,
-  "torneo": "St. Poelten",
-  "ronda": "1/8-finals",
-  "local": "Clavet F.",
-  "visitante": "El Aynaoui Y.",
-  "marcador_en_datos": "6-3,3-6,6-4",
-  "estado": "Finished",
-  "ganador": "Clavet F.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=63 36 64(Francisco Clavet);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1995,
-  "torneo": "Pinehurst",
-  "ronda": "1/8-finals",
-  "local": "Frana J.",
-  "visitante": "Stoltenberg J.",
-  "marcador_en_datos": "2-6,6-2,6-4",
-  "estado": "Finished",
-  "ganador": "Frana J.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=eq;JEG=none;WIKI=none;ATP_alt=76(5) 61(Javier Frana);VOTO=ACTUAL+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 1995,
@@ -3225,41 +1355,9 @@
   "ronda": "Quarter-finals",
   "local": "Clavet F.",
   "visitante": "Fromberg R.",
-  "marcador_en_datos": "",
+  "detalle": "",
   "estado": "Walkover - Clavet F.",
-  "ganador": "Clavet F.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente legible; sin cuadro en Wikipedia y atptour/tennisarchives bloqueados por robots.txt"
- },
- {
-  "anio": 1997,
-  "torneo": "Singapore",
-  "ronda": "1/8-finals",
-  "local": "Gustafsson M.",
-  "visitante": "Sinner M.",
-  "marcador_en_datos": "7-6,1-6,7-6",
-  "estado": "Finished",
-  "ganador": "Gustafsson M.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=none;WIKI=none;ATP_alt=76(3) 16 76(5)(Magnus Gustafsson);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
- },
- {
-  "anio": 1997,
-  "torneo": "Singapore",
-  "ronda": "Quarter-finals",
-  "local": "Johansson T.",
-  "visitante": "Courier J.",
-  "marcador_en_datos": "3-6,4-6",
-  "estado": "Finished",
-  "ganador": "Courier J.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=none;WIKI=none;ATP_alt=63 64(Jim Courier);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes se reparten; el voto elige un valor pero no hay evidencia externa decisiva"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 2000,
@@ -3267,181 +1365,9 @@
   "ronda": "1/8-finals",
   "local": "Portas A.",
   "visitante": "Gaudenzi A.",
-  "marcador_en_datos": "6-2,6-0",
+  "detalle": "6-2,6-0",
   "estado": "Finished",
-  "ganador": "Portas A.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=eq;WIKI=none;ATP_alt=62 62(Albert Portas);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2000,
-  "torneo": "Long Island",
-  "ronda": "Quarter-finals",
-  "local": "Krajicek R.",
-  "visitante": "Moya C.",
-  "marcador_en_datos": "",
-  "estado": "Walkover - Krajicek R.",
-  "ganador": "Krajicek R.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=sinmarc;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
- },
- {
-  "anio": 2000,
-  "torneo": "Long Island",
-  "ronda": "Semi-finals",
-  "local": "Norman M.",
-  "visitante": "Krajicek R.",
-  "marcador_en_datos": "5-7,6-7",
-  "estado": "Finished",
-  "ganador": "Krajicek R.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=ganador_distinto;WIKI=none;ATP_alt=75 76(7)(Richard Krajicek);VOTO=ATP+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2000,
-  "torneo": "Long Island",
-  "ronda": "Semi-finals",
-  "local": "Enqvist T.",
-  "visitante": "Clement A.",
-  "marcador_en_datos": "6-2,6-2",
-  "estado": "Finished",
-  "ganador": "Enqvist T.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=diff;WIKI=none;ATP_alt=62 62(Thomas Enqvist);VOTO=ATP+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2003,
-  "torneo": "St. Poelten",
-  "ronda": "1/16-finals",
-  "local": "Sanchez-Munoz D.",
-  "visitante": "Hipfl M.",
-  "marcador_en_datos": "6-1,6-0",
-  "estado": "Finished",
-  "ganador": "Sanchez-Munoz D.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
- },
- {
-  "anio": 2003,
-  "torneo": "St. Poelten",
-  "ronda": "1/8-finals",
-  "local": "Sanchez-Munoz D.",
-  "visitante": "Sanguinetti D.",
-  "marcador_en_datos": "6-4,6-4",
-  "estado": "Finished",
-  "ganador": "Sanchez-Munoz D.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
- },
- {
-  "anio": 2003,
-  "torneo": "St. Poelten",
-  "ronda": "Quarter-finals",
-  "local": "Sanchez-Munoz D.",
-  "visitante": "Ancic M.",
-  "marcador_en_datos": "6-1,6-4",
-  "estado": "Finished",
-  "ganador": "Sanchez-Munoz D.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
- },
- {
-  "anio": 2003,
-  "torneo": "St. Poelten",
-  "ronda": "Semi-finals",
-  "local": "Roddick A.",
-  "visitante": "Sanchez-Munoz D.",
-  "marcador_en_datos": "6-2,2-0",
-  "estado": "Finished / retired - Roddick A.",
-  "ganador": "Roddick A.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
- },
- {
-  "anio": 2003,
-  "torneo": "Canada Masters",
-  "ronda": "1/32-finals",
-  "local": "Henman T.",
-  "visitante": "Gonzalez F.",
-  "marcador_en_datos": "6-3,6-4",
-  "estado": "Finished / retired - Henman T.",
-  "ganador": "Henman T.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=diff;WIKI=none;ATP_alt=63 64(Tim Henman);VOTO=ATP+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2003,
-  "torneo": "Canada Masters",
-  "ronda": "1/32-finals",
-  "local": "Lopez F.",
-  "visitante": "Coria G.",
-  "marcador_en_datos": "4-6,0-6",
-  "estado": "Finished / retired - Lopez F.",
-  "ganador": "Coria G.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=ganador_distinto;WIKI=none;ATP_alt=64 60(Guillermo Coria);VOTO=ATP+STAKAH",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2003,
-  "torneo": "Canada Masters",
-  "ronda": "1/32-finals",
-  "local": "Roddick A.",
-  "visitante": "Malisse X.",
-  "marcador_en_datos": "6-4,6-1",
-  "estado": "Finished",
-  "ganador": "Roddick A.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=diff;WIKI=none;ATP_alt=64 61(Andy Roddick);VOTO=ATP+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2003,
-  "torneo": "Canada Masters",
-  "ronda": "1/16-finals",
-  "local": "Lopez F.",
-  "visitante": "Mathieu P.",
-  "marcador_en_datos": "3-6,6-3,3-0",
-  "estado": "Finished",
-  "ganador": "Lopez F.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=diff;WIKI=none;ATP_alt=36 63 30 (RET)(Feliciano Lopez);VOTO=ATP+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
- },
- {
-  "anio": 2003,
-  "torneo": "Long Island",
-  "ronda": "1/16-finals",
-  "local": "Chela J. I.",
-  "visitante": "Gonzalez F.",
-  "marcador_en_datos": "6-2,6-4",
-  "estado": "Finished",
-  "ganador": "Chela J. I.",
-  "fiabilidad": "desempate",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=diff;WIKI=none;ATP_alt=62 64(Juan Ignacio Chela);VOTO=ATP+STAKAH+JEG",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan (suele ser marcador de retirada mal parseado); pendiente de contraste con prensa"
+  "fiabilidad": "conflicto"
  },
  {
   "anio": 2003,
@@ -3449,55 +1375,9 @@
   "ronda": "1/16-finals",
   "local": "Beck K.",
   "visitante": "Sanchez-Munoz D.",
-  "marcador_en_datos": "2-6,6-4,6-3",
+  "detalle": "2-6,6-4,6-3",
   "estado": "Finished",
-  "ganador": "Beck K.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
- },
- {
-  "anio": 2003,
-  "torneo": "Costa do Sauipe",
-  "ronda": "Final",
-  "local": "Schalken S.",
-  "visitante": "Schuttler R.",
-  "marcador_en_datos": "6-2,6-4",
-  "estado": "Finished",
-  "ganador": "Schalken S.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=diff;STAKAH=diff;JEG=eq;WIKI=none;ATP_alt=61 46 63 64(Sjeng Schalken);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
- },
- {
-  "anio": 2004,
-  "torneo": "Long Island",
-  "ronda": "1/16-finals",
-  "local": "Ferreira W.",
-  "visitante": "Sanchez-Munoz D.",
-  "marcador_en_datos": "6-2,6-3",
-  "estado": "Finished",
-  "ganador": "Ferreira W.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
- },
- {
-  "anio": 2004,
-  "torneo": "Long Island",
-  "ronda": "Quarter-finals",
-  "local": "Srichaphan P.",
-  "visitante": "Johansson J.",
-  "marcador_en_datos": "3-6,7-6,6-3",
-  "estado": "Finished",
-  "ganador": "Srichaphan P.",
-  "fiabilidad": "conflicto",
-  "detalle_fuentes": "ATP=ganador_distinto;STAKAH=ganador_distinto;JEG=eq;WIKI=none;ATP_alt=62 63(Joachim Johansson);VOTO=empate",
-  "veredicto": "sin_verificar",
-  "motivo": "las fuentes discrepan sin mayoria; pendiente de contraste con prensa"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 2004,
@@ -3505,13 +1385,9 @@
   "ronda": "1/16-finals",
   "local": "Arthurs W.",
   "visitante": "Lee H.",
-  "marcador_en_datos": "",
+  "detalle": "",
   "estado": "Walkover - Arthurs W.",
-  "ganador": "Arthurs W.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=sinmarc;STAKAH=sinmarc;JEG=sinmarc;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 2005,
@@ -3519,13 +1395,9 @@
   "ronda": "1/16-finals",
   "local": "Mantilla F.",
   "visitante": "Fogues-Domenech F.",
-  "marcador_en_datos": "7-6,7-5",
+  "detalle": "7-6,7-5",
   "estado": "Finished",
-  "ganador": "Mantilla F.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 2005,
@@ -3533,13 +1405,9 @@
   "ronda": "1/16-finals",
   "local": "Sanchez-Munoz D.",
   "visitante": "Ginepri R.",
-  "marcador_en_datos": "3-6,7-6,6-4",
+  "detalle": "3-6,7-6,6-4",
   "estado": "Finished",
-  "ganador": "Sanchez-Munoz D.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 2005,
@@ -3547,13 +1415,9 @@
   "ronda": "1/8-finals",
   "local": "Sanchez-Munoz D.",
   "visitante": "Starace P.",
-  "marcador_en_datos": "6-4,6-4",
+  "detalle": "6-4,6-4",
   "estado": "Finished",
-  "ganador": "Sanchez-Munoz D.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
+  "fiabilidad": "sin_contrastar"
  },
  {
   "anio": 2005,
@@ -3561,26 +1425,8 @@
   "ronda": "Quarter-finals",
   "local": "Melzer J.",
   "visitante": "Sanchez-Munoz D.",
-  "marcador_en_datos": "5-7,6-4,6-4",
+  "detalle": "5-7,6-4,6-4",
   "estado": "Finished",
-  "ganador": "Melzer J.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
- },
- {
-  "anio": 2009,
-  "torneo": "Canada Masters",
-  "ronda": "1/32-finals",
-  "local": "Robredo T.",
-  "visitante": "Bogomolov A. Jr",
-  "marcador_en_datos": "6-4,6-2",
-  "estado": "Finished",
-  "ganador": "Robredo T.",
-  "fiabilidad": "sin_contrastar",
-  "detalle_fuentes": "ATP=none;STAKAH=none;JEG=none;WIKI=none",
-  "veredicto": "sin_verificar",
-  "motivo": "solo una fuente en el repo; pendiente de buscar prensa/segunda fuente"
+  "fiabilidad": "sin_contrastar"
  }
 ]
