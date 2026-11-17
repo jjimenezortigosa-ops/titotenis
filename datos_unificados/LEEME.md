@@ -55,3 +55,9 @@ Segundo barrido, esta vez partido a partido contra ~1.860 páginas de Wikipedia 
 - Nueva columna `segunda_fuente` en cada partido: "Wikipedia: mismo marcador" (83.313 partidos, set a set), "Wikipedia: marcador distinto (…)" (939: aquí Flashscore y Wikipedia no coinciden; revisar a mano), "solo Wikipedia" o vacío (sin comparar: qualy, rondas que Wikipedia no detalla, 2023–2026 que vienen de la web propia).
 - Lista de las discrepancias: `auditoria/discrepancias_marcadores_wikipedia.json`.
 - Qué NO está comprobado: ~33.600 partidos sin segunda fuente (principalmente clasificación y 2023–2026), y los partidos donde las dos fuentes se equivocan igual. Wikipedia no es infalible.
+
+## Actualización 17-nov (tarde, final): nombres unificados y estadísticas rehechas
+- Los nombres de 2023+ y de Wikipedia (nombre completo) se pasaron al formato de Flashscore "Apellido I." para poder sumar estadísticas del mismo jugador entre 1990 y 2026. El nombre original queda en la columna `nombres_originales`; el bloque `jugadores_alias` lista las variantes de cada jugador.
+- Límite conocido: "Apellido I." no es un identificador único (p. ej. "Martin A." mezcla a Alberto, Andrej y Andrés Martín; "Silva J.", "Martin D."). Los 214 jugadores que no estaban en Flashscore se generaron con una regla (última palabra = apellido) y pueden tener errores.
+- Se rehicieron `campeones_por_torneo` (2.581 finales), `campeones_grand_slam` (147, con 3 en 2020 por Wimbledon cancelado), `jugadores` (2.506) y `resumen_por_anio`. Comprobación rápida: Federer 20 Grand Slams, Nadal 22, Djokovic 24.
+- No incluidos por no ser cuadros de eliminación directa o no ser ATP Tour: ATP Finals/Masters Cup (liguilla), NextGen Finals, Juegos Olímpicos, Copa Davis, Laver Cup, United Cup, Challengers. Por eso los títulos de Federer salen 97 (103 reales, 6 de ellos en ATP Finals).

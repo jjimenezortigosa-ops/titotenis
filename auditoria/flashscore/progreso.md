@@ -43,3 +43,7 @@
 - Sigue sin cargar: Melbourne, Nápoles 2022.
 - Descarga a Descargas: solo funciona con el nombre `flashscore_2022.json`; otros nombres no llegaban.
 - 17 nov 10:30: Wikipedia sirve como 2ª fuente: la API `/w/api.php?action=parse&prop=wikitext` da los cuadros (plantillas `NTeamBracket`); datos en `datos/wikipedia_torneos_faltantes.json`. Parser en el navegador (bloque final + 2 mitades). Great Ocean Road y Murray River tienen otra estructura (pendiente).
+
+## Cierre 2026-11-17
+- Nombres unificados ("Apellido I."), estadísticas regeneradas, 2 torneos femeninos retirados, meta.cobertura y huecos reescritos.
+- Pendiente de revisión: 939 discrepancias de marcador FS vs Wikipedia (auditoria/discrepancias_marcadores_wikipedia.json), ~550 partidos sin sets, año-frontera en campeones.json (Brisbane/Chennai/Doha/Pune).
