@@ -70,3 +70,6 @@ Se ha contrastado todo el cuadro principal 1990-2026 con **TML-Database** (https
 - Se han quitado ~140 duplicados (finales falsas de Wikipedia, partidos repetidos) y ~650 partidos de clasificación que estaban marcados como cuadro principal.
 - Nombres unificados por ID ATP (p.ej. "Falla A." que en realidad era Garcia-Lopez G.).
 - Límites: la clasificación (qualifying) tiene una sola fuente; no hay tie-breaks en `detalle_sets`; algunos nombres de jugadores raros siguen sin ID; ATP Finals, Copa Davis, Juegos Olímpicos, Laver Cup, ATP/United Cup, World Team Cup, Grand Slam Cup y Challengers no están incluidos. Dos torneos con estructura rara (Newsweek 1999, Madrid 2026) pendientes de revisar.
+
+## Segunda pasada de contraste (17-nov)
+Solo sobre partidos con una fuente o en conflicto. Fuentes añadidas: ATP (serve-and-volley, CC BY 4.0, 1990-2022), Stakah y JEG (derivadas de Sackmann; NO independientes de TML), y cuadros de Wikipedia (incl. Tokyo Indoor 1990-95). Nueva columna `fuentes_extra`. Se fusionaron 6 torneos duplicados y se quitaron 6 Challengers (auditoria/torneos_challenger_excluidos.json). Pendiente de contrastar: qualifying, parte de Zaragoza 1993/94, Taipei 1992 y 2026. No se pudieron usar ATP Tour ni TennisExplorer (requerían aprobación).
