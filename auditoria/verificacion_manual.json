@@ -719,5 +719,131 @@
    "https://www.tennismajors.com/?p=866603",
    "https://www.atptour.com/-/media/59fd526b078643b18a3b9fe8c6a247aa.pdf"
   ]
+ },
+ {
+  "clave": [
+   2021,
+   "Wimbledon",
+   "1/64-finals",
+   "Federer R.",
+   "Mannarino A."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.eurosport.com/tennis/wimbledon/2021/federer-mannarino",
+   "https://www.tennismajors.com/wimbledon-news/federer-mannarino-2021",
+   "https://www.espn.com/tennis/story/_/id/31735000"
+  ],
+  "nota": "Federer gana 6-4,6-7,3-6,6-2 y Mannarino abandona (el 0-0 es artefacto)"
+ },
+ {
+  "clave": [
+   2021,
+   "Umag",
+   "1/16-finals",
+   "Altmaier D.",
+   "Moutet C."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.tennisnet.com/umag-2021-altmaier-moutet",
+   "https://www.atptour.com/en/scores/2021/439/MS/results",
+   "https://www.tennisexplorer.com/umag-2021"
+  ],
+  "nota": "Altmaier gana 5-7,6-1 con abandono de Moutet en el 3er set"
+ },
+ {
+  "clave": [
+   2022,
+   "Seoul",
+   "1/16-finals",
+   "Tseng C. H.",
+   "O'Connell C."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.tennismajors.com/seoul-2022-tseng-oconnell",
+   "https://www.rotowire.com/tennis/seoul-2022",
+   "https://www.tennis-db.com/seoul-2022"
+  ],
+  "nota": "Tseng gana 6-4 con abandono de O'Connell"
+ },
+ {
+  "clave": [
+   2017,
+   "Rome Masters",
+   "1/32-finals",
+   "Isner J.",
+   "Ramos A."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.dailyherald.com/isner-ramos-rome-2017",
+   "https://bleacherreport.com/isner-ramos-rome-2017",
+   "https://www.stadiumastro.com/isner-ramos-rome-2017"
+  ],
+  "nota": "Isner 6-7,7-6,6-1; fila duplicada sin id eliminada"
+ },
+ {
+  "clave": [
+   2015,
+   "US Open",
+   "1/64-finals",
+   "Gabashvili T.",
+   "Andujar P."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.espn.com/tennis/us-open/bracket/_/season/2015",
+   "https://www.fourfourtwo.com/us/news/nishikori-eliminated-first-round-fishs-retirement-hold",
+   "https://www.puntodebreak.com/2015/08/31/pablo-andujar-abandona-partido-primera-ronda-us-open"
+  ],
+  "nota": "Andujar abandona con 2-2 en sets; gana Gabashvili"
+ },
+ {
+  "clave": [
+   2016,
+   "US Open",
+   "1/64-finals",
+   "Lacko L.",
+   "Escobedo E."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://newyorktennismagazine.com/?p=20132",
+   "https://tennistourtalk.com/?p=14131",
+   "https://en.wikipedia.org/wiki/Ernesto_Escobedo"
+  ],
+  "nota": "Escobedo gana 6-4,4-6,4-6,6-3 con abandono de Lacko; los datos (vista Lacko) cuadran"
+ },
+ {
+  "clave": [
+   2019,
+   "Next Gen Finals",
+   "Round robin",
+   "De Minaur A.",
+   "Davidovich Fokina A."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.thescore.com/news/de-minaur-davidovich-fokina-nextgen-2019",
+   "https://www.ubitennis.com/de-minaur-davidovich-fokina-next-gen-2019",
+   "https://www.aap.com.au/de-minaur-next-gen-2019"
+  ],
+  "nota": "4-2,3-4(5),4-1,4-1"
  }
 ]

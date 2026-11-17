@@ -25,6 +25,8 @@ for i,p in enumerate(P):
 for i,p in enumerate(P):
     if p[0]==2017 and p[1]=='Next Gen Finals' and ((p[2]=='Final' and p[3]=='Rublev A.' and p[4]=='Chung H.') or (p[2]=='Semi-finals' and p[3]=='Coric B.' and p[4]=='Medvedev D.')): dele.add(i)
     if p[0]==2022 and p[1]=='NextGen Finals' and p[2]=='Final' and p[ix['verificacion']]=='CORREGIDO_VOTO': dele.add(i)
+for i,p in enumerate(P):
+    if p[0]==2017 and p[1]=='Rome Masters' and p[2]=='1/32-finals' and p[3]=='Isner J.' and p[4]=='Ramos A.' and not p[ix['id']]: dele.add(i)
 sin=[]
 for e in V:
     idx=find(e['clave'])
