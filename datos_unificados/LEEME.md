@@ -34,3 +34,8 @@ Nota 17-nov: se recuperaron además Los Cabos 2018, New York Open 2019 y Belgrad
 - **2022**: 3.801 partidos de Flashscore (set a set), cuadro principal 2.529 y clasificación 1.272. Recuperados con otra dirección: US Open, Winston-Salem, Adelaide 2, NextGen Finals, Belgrado, Florencia, Gijón, San Diego, Seúl, Sídney, Tel Aviv. **Siguen sin datos: Melbourne y Nápoles** (Lyon descartado: la página sin año era de 2026). Sin segunda fuente.
 - **2023–2026**: 10.592 partidos del cuadro principal tomados de `campeones.json` (los datos de la propia web), marcados `WEB_SITIO`. Nombre completo del jugador y fecha = inicio del torneo; sin clasificación. Comparados set a set con Flashscore en `auditoria/flashscore/informe_20xx_sets.md` (0 diferencias reales en 2023–2025).
 - Los nombres de 2023–2026 (completos) no coinciden con los de 1990–2022 ("Apellido I."): para estadísticas por jugador hay que unificarlos antes.
+
+## Actualización 17-nov (10:30): torneos recuperados de Wikipedia
+- Fuente `WIKIPEDIA` (cuadro principal, nombre completo, sin fecha ni id): 2022 Lyon y Melbourne; 2021 Antalya, Singapur, Cagliari, Marbella, Lyon, Moscú y San Petersburgo (247 partidos). Comprobadas las finales: coinciden con los campeones reales que conozco (p. ej. Popyrin en Singapur, Sonego en Cagliari, Karatsev en Moscú, Nadal en Melbourne 2022).
+- La final de Antalya 2021 solo trae sets ganados (0-2) en Wikipedia.
+- Siguen sin datos 2021: Great Ocean Road Open, Murray River Open, Parma, NextGen Finals; 2022: Nápoles.

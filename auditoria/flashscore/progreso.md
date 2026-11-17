@@ -42,3 +42,4 @@
 - Truco: las últimas ediciones de algunos torneos están en la dirección SIN año (`/tennis/atp-singles/tel-aviv/`). Hay que comprobar el año por las fechas (Lyon sin año = 2026, descartado).
 - Sigue sin cargar: Melbourne, Nápoles 2022.
 - Descarga a Descargas: solo funciona con el nombre `flashscore_2022.json`; otros nombres no llegaban.
+- 17 nov 10:30: Wikipedia sirve como 2ª fuente: la API `/w/api.php?action=parse&prop=wikitext` da los cuadros (plantillas `NTeamBracket`); datos en `datos/wikipedia_torneos_faltantes.json`. Parser en el navegador (bloque final + 2 mitades). Great Ocean Road y Murray River tienen otra estructura (pendiente).
