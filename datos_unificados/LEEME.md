@@ -48,3 +48,10 @@ Se leyeron 1.379 páginas "Singles" de Wikipedia (calendario ATP de cada año) y
 
 ## Actualización 17-nov (13:00): 178 torneos más desde Wikipedia (5.842 partidos)
 Segundo barrido, esta vez partido a partido contra ~1.860 páginas de Wikipedia 1990–2026. Torneos de cuadro principal que no estaban en el fichero (sobre todo 1990–1997: Hamlet Cup, Tokyo Indoor, Kremlin Cup, Lyon, Newsweek/Indian Wells, Eurocard, Athens, Halle 1993, etc., y varios 2005–2010 y 2013–2021) añadidos con fuente WIKIPEDIA. Ya hay 251 torneos de Wikipedia (8.041 partidos). Pendiente: Great Ocean Road y Murray River 2021 (el lector falla), y unas 1.200 discrepancias dentro de torneos ya presentes (mayormente nombres escritos distinto, p.ej. Pashanski/Pašanski) que se listarán aparte.
+
+## Actualización 17-nov (tarde): segunda fuente (Wikipedia) en TODO el fichero
+- Se añadieron 3 torneos de 2011 (Johannesburgo, Costa do Sauípe, Kuala Lumpur), Great Ocean Road y Murray River 2021 (ya arreglados), 68 torneos de 1998–2004 y 178 de otros años. Total de torneos tomados de Wikipedia: ~320.
+- 398 partidos sueltos que faltaban dentro de torneos de Flashscore se completaron con Wikipedia (fuente `WIKIPEDIA_COMPLEMENTO`).
+- Nueva columna `segunda_fuente` en cada partido: "Wikipedia: mismo marcador" (83.313 partidos, set a set), "Wikipedia: marcador distinto (…)" (939: aquí Flashscore y Wikipedia no coinciden; revisar a mano), "solo Wikipedia" o vacío (sin comparar: qualy, rondas que Wikipedia no detalla, 2023–2026 que vienen de la web propia).
+- Lista de las discrepancias: `auditoria/discrepancias_marcadores_wikipedia.json`.
+- Qué NO está comprobado: ~33.600 partidos sin segunda fuente (principalmente clasificación y 2023–2026), y los partidos donde las dos fuentes se equivocan igual. Wikipedia no es infalible.
