@@ -1079,5 +1079,113 @@
    "https://bleacherreport.com/articles/1955219-us-national-indoor-tennis-championships-2014-daily-scores-results-and-schedule"
   ],
   "nota": "Lu abandona (cuello) tras perder el 1er set 1-6; gana Karlovic"
+ },
+ {
+  "clave": [
+   2014,
+   "Eastbourne",
+   "1/8-finals",
+   "Querrey S.",
+   "Estrella V."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://lta.org.uk/49c3a9/siteassets/events/eastbourne/media/2014.pdf",
+   "https://www.coretennis.net/majic/pageServer/0r0100000c/en/tid/40316/Tournament-Rounds.html",
+   "https://en.wikipedia.com/wiki/2014_Aegon_International_%E2%80%93_Men%27s_singles"
+  ],
+  "nota": "Querrey gana 7-5 y Estrella abandona (0-0 en el 2o set es artefacto)"
+ },
+ {
+  "clave": [
+   2015,
+   "Nottingham",
+   "1/32-finals",
+   "Granollers M.",
+   "Pospisil V."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.foxsports.com/stories/tennis/alexandr-dolgopolov-starts-grass-event-with-win-over-donald-young",
+   "https://www.puntodebreak.com/2015/06/21/granolellers-gana-nottingham-almagro-ramos-caen",
+   "https://www.eurosport.es/tenis/aegon-nottingham-open-masculino/2015/live-david-ferrer-tba_mtc778290/live-matches.shtml"
+  ],
+  "nota": "Granollers gana 4-6,6-4 y Pospisil abandona al empezar el 3er set (espalda)"
+ },
+ {
+  "clave": [
+   2015,
+   "Nottingham",
+   "1/32-finals",
+   "Baghdatis M.",
+   "Estrella V."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.si.com/tennis/2015/06/21/ap-ten-aegon-open",
+   "https://sportskeeda.com/tennis/marcos-baghdatis-reaches-second-round-nottingham",
+   "https://Www.wikipedia.org/wiki/2015_Nottingham_Open_%E2%80%93_Men%27s_singles"
+  ],
+  "nota": "Baghdatis gana 7-5,3-0 y Estrella abandona (cuello)"
+ },
+ {
+  "clave": [
+   2001,
+   "Stuttgart Masters",
+   "Semi-finals",
+   "Hewitt L.",
+   "Haas T."
+  ],
+  "veredicto": "corregido",
+  "marcador": "6-3,4-6,5-7",
+  "estado": "Finished",
+  "fuentes": [
+   "https://www.espn.com/tennis/news/2001/1020/1266725.html",
+   "https://www.dawn.com/news/amp/2557",
+   "https://voodemar.com/stuttgart01haas_mirnyi"
+  ],
+  "nota": "Haas gana 3-6,6-4,7-5 (6-3,4-6,5-7 desde Hewitt). El dato antiguo 6-2,3-6,4-6 era erroneo"
+ },
+ {
+  "clave": [
+   2001,
+   "Paris (French Open)",
+   "1/32-finals",
+   "Russell M.",
+   "Bruguera S."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://fr.wikipedia.com/wiki/Simple_messieurs_des_Internationaux_de_France_2001",
+   "https://www.espn.com.au/magazine/curry_20010603.html",
+   "https://voodemar.com/rg01kuerten_russell"
+  ],
+  "nota": "Bruguera gana 2 sets, pierde el 3o y abandona; gana Russell 4-6,5-7,6-3 ret."
+ },
+ {
+  "clave": [
+   2006,
+   "Paris (French Open)",
+   "1/16-finals",
+   "Berdych T.",
+   "Kiefer N."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.rte.ie/sport/tennis/2006/0602/205339-nalbandiand/",
+   "https://vindyarchives.com/news/2006/jun/03/french-open-results",
+   "https://www.coretennis.net/majic/pageServer/0r0100000c/en/tid/33/Tournament-Rounds.html"
+  ],
+  "nota": "Berdych gana 6-1 y Kiefer abandona (muneca)"
  }
 ]
