@@ -1422,5 +1422,75 @@
    "https://bleacherreport.com/articles/1742785-winston-salem-open-2013-daily-scores-results-and-schedule"
   ],
   "nota": "Bogomolov 6-3 6-4"
+ },
+ {
+  "clave": [
+   2004,
+   "Melbourne (Australian Open)",
+   "1/64-finals",
+   "Sanchez-Munoz D.",
+   "Moodie W."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.the-sports.org/tennis-2004-men-s-grand-slam-australian-open-epr875.html",
+   "https://en.wikipedia.org/wiki/David_S%C3%A1nchez_(tennis)"
+  ],
+  "nota": "Sanchez gana en 5 sets; 3 primeros sets vistos (6-7,7-6,4-6), 4o y 5o no legibles en la fuente"
+ },
+ {
+  "clave": [
+   2008,
+   "Dutch Open Tennis",
+   "1/8-finals",
+   "Huta-Galung J.",
+   "Hernandez Perez O."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.upi.com/Sports_News/2008/07/17/Acasuso-cruises-to-Dutch-Open-quarters/15381216321145/",
+   "https://www.coretennis.net/majic/pageServer/0r0100000c/en/tid/5889/Tournament-Rounds.html",
+   "https://tennis-db.com/tournaments/atp_archive:317/dutch-open?view=draw"
+  ],
+  "nota": "Oscar Hernandez gana 6-3 6-2"
+ },
+ {
+  "clave": [
+   2004,
+   "Long Island",
+   "Quarter-finals",
+   "Srichaphan P.",
+   "Johansson J."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.voanews.com/a/a-13-a-2004-08-28-10-men-s/292987.html",
+   "https://stringtension.com/tournament/atp/long-island-2004"
+  ],
+  "nota": "Srichaphan gana 3-6 7-6 6-3"
+ },
+ {
+  "clave": [
+   2004,
+   "Buenos Aires (Argentina Open)",
+   "1/16-finals",
+   "Moyano D.",
+   "Hernandez Perez O."
+  ],
+  "veredicto": "confirmado",
+  "marcador": "",
+  "estado": "",
+  "fuentes": [
+   "https://www.the-sports.org/diego-moyano-tennis-spf5227.html",
+   "https://stats.tennismylife.org/h2h/diego-moyano-vs-oscar-hernandez",
+   "https://tennis-db.com/players/2993108/d-moyano"
+  ],
+  "nota": "Oscar Hernandez gana 6-1 4-6 6-4"
  }
 ]
