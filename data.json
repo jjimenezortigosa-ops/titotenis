@@ -1,5 +1,5 @@
 {
-  "updated": "18 nov 2026, 09:49 (Madrid)",
+  "updated": "18 nov 2026, 17:55 (Madrid)",
   "matches": [],
   "results": [
     {
@@ -137,9 +137,77 @@
           ]
         ]
       }
+    },
+    {
+      "id": "atpf-alcaraz-medvedev",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
+      "text": "Carlos Alcaraz gana a Daniil Medvedev",
+      "score": "6-2 6-4",
+      "det": "Fase de grupos · pista dura cubierta · 3 de 4 bolas de rotura convertidas y ninguna concedida; ya suma 8-3 en el historial",
+      "stats": {
+        "names": [
+          "Carlos Alcaraz",
+          "Daniil Medvedev"
+        ],
+        "src": "Tennis Majors",
+        "rows": [
+          [
+            "Puntos ganados",
+            "54",
+            "41",
+            54,
+            41
+          ],
+          [
+            "Golpes ganadores",
+            "16",
+            "15",
+            16,
+            15
+          ],
+          [
+            "Errores no forzados",
+            "13",
+            "21",
+            13,
+            21
+          ],
+          [
+            "Puntos con segundo saque",
+            "16 de 21",
+            "7 de 18",
+            16,
+            7
+          ],
+          [
+            "Bolas de rotura convertidas",
+            "3 de 4",
+            "0 de 0",
+            3,
+            0
+          ]
+        ]
+      }
     }
   ],
   "news": [
+    {
+      "id": "atp-alcaraz-supera-a-medvedev-y-roza-semifinales",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "est",
+      "t": "Alcaraz vence a Medvedev y roza las semifinales pese a una molestia en la pierna",
+      "d": "Alcaraz ganó 6-2 6-4 y suma dos victorias en el Grupo Ivan Lendl. Recibió asistencia médica en el segundo set por una molestia en la parte alta de la pierna izquierda.",
+      "s": "Tennis Majors",
+      "u": "https://www.tennismajors.com/atp/nitto-atp-finals-atp/alcaraz-beats-medvedev-in-straight-sets-one-step-from-the-semi-finals-867235.html",
+      "w": "18 nov",
+      "full": [
+        "Carlos Alcaraz derrotó a Daniil Medvedev por 6-2 6-4 y llega a dos victorias en dos partidos en Turín. Convirtió tres de cuatro bolas de rotura y no concedió ninguna.",
+        "En el segundo set pidió asistencia médica por una molestia en la pierna izquierda. Dijo que era un pequeño problema y que las próximas horas serán importantes para evaluarlo.",
+        "Su clasificación para semifinales se decide con el Cobolli-Tiafoe de esta noche y la última jornada del grupo."
+      ]
+    },
     {
       "id": "atp-zverev-a-semifinales-en-turin",
       "cat": "atp",
@@ -288,62 +356,31 @@
   ],
   "guiones": [
     {
+      "id": "g-alcaraz-medvedev",
+      "title": "Alcaraz arrasa a Medvedev",
+      "hook": "Alcaraz no concedió ni una bola de rotura.",
+      "body": "Ganó 6-2 6-4 a Medvedev en Turín y convirtió tres de cuatro roturas. Suma dos victorias en el Grupo Ivan Lendl, aunque tuvo una molestia en la pierna.",
+      "cta": "¿Llegará al 100% a semifinales? Debátelo en TitoTenis y juega a los juegos diarios.",
+      "tags": "#tenis #ATPFinals #Alcaraz #Turin"
+    },
+    {
+      "id": "g-cobolli-tiafoe",
+      "title": "Cobolli y Tiafoe, a vida o muerte",
+      "hook": "Hoy se juega el pase de Alcaraz.",
+      "body": "Cobolli y Tiafoe, sin victorias en el grupo, se miden no antes de las 20:30 y su resultado condiciona la clasificación de Alcaraz.",
+      "cta": "¿Quién gana? Dilo en TitoTenis y juega a los juegos diarios.",
+      "tags": "#tenis #ATPFinals #Cobolli #Tiafoe"
+    },
+    {
       "id": "g-zverev-semis",
       "title": "Zverev ya está en semifinales",
       "hook": "Siete victorias seguidas ante Shelton y plaza en semifinales.",
       "body": "Zverev ganó 6-2 7-6(4) en Turín, con 14 aces y 38 de 43 puntos con el primer saque. Es el primer semifinalista de las Finals.",
       "cta": "¿Quién le acompaña desde su grupo? Debátelo en TitoTenis y juega a los juegos diarios.",
       "tags": "#tenis #ATPFinals #Turin #Zverev"
-    },
-    {
-      "id": "g-shelton-fils",
-      "title": "Shelton contra Fils, esta noche",
-      "hook": "Dos jugadores, un hueco en semifinales.",
-      "body": "Shelton gana 2-1 el duelo directo con Fils y las dos victorias fueron en pista dura cubierta. Empiezan no antes de las 20:30.",
-      "cta": "¿Quién gana? Dilo en TitoTenis.",
-      "tags": "#tenis #ATPFinals #Shelton #Fils"
-    },
-    {
-      "id": "g-alcaraz-lunes",
-      "title": "Alcaraz debuta el lunes en Turín",
-      "hook": "Alcaraz llega como favorito tras ganar París.",
-      "body": "El lunes, Alcaraz-Tiafoe y Medvedev-Cobolli abren el Grupo Ivan Lendl. La final es el domingo 22.",
-      "cta": "¿Quién será campeón? Debátelo en TitoTenis y juega a los juegos diarios.",
-      "tags": "#tenis #ATPFinals #Alcaraz"
     }
   ],
   "scheduled": [
-    {
-      "id": "atpf-medvedev-alcaraz",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
-      "names": [
-        "Daniil Medvedev",
-        "Carlos Alcaraz"
-      ],
-      "time": "no antes de las 14:00",
-      "day": "2026-11-18",
-      "prev": {
-        "pista": [
-          "Inalpi Arena (Turín), pista dura cubierta."
-        ],
-        "h2h": [
-          "Historial entre ambos: dato no disponible."
-        ],
-        "forma": [
-          "Medvedev ganó a Cobolli 7-6(4) 6-3 sin ceder ningún juego de saque; Alcaraz ganó a Tiafoe 6-2 6-2."
-        ],
-        "saque": [
-          "Datos de saque en pista cubierta: dato no disponible."
-        ],
-        "claves": [
-          "Lectura de TitoTenis: Alcaraz llega con ventaja tras su 6-2 6-2 a Tiafoe; Medvedev necesita sostener el nivel de saque que mostró ante Cobolli para igualar el duelo."
-        ],
-        "faltan": [
-          "Historial directo y estadísticas de saque: dato no disponible."
-        ]
-      }
-    },
     {
       "id": "atpf-cobolli-tiafoe",
       "cat": "atp",
@@ -368,7 +405,7 @@
           "Datos de saque en pista cubierta: dato no disponible."
         ],
         "claves": [
-          "Lectura de TitoTenis: el partido decide quién sigue vivo en el grupo; el primer saque y la gestión de las bolas de rotura serán la clave."
+          "Lectura de TitoTenis: Alcaraz ya suma dos victorias y este partido define su clasificación; Cobolli y Tiafoe juegan para seguir vivos y el primer saque y las bolas de rotura marcarán el duelo."
         ],
         "faltan": [
           "Historial directo y estadísticas de saque: dato no disponible."
@@ -377,6 +414,20 @@
     }
   ],
   "analisis": [
+    {
+      "id": "atpf-alcaraz-medvedev",
+      "title": "Alcaraz 6-2 6-4 Medvedev: roturas y menos errores",
+      "tour": "Nitto ATP Finals · fase de grupos",
+      "surf": "dura cubierta",
+      "score": "6-2 6-4",
+      "resumen": "Alcaraz no afrontó ninguna bola de rotura y convirtió tres de cuatro. Cometió 13 errores no forzados por 21 de Medvedev y ganó 16 de 21 puntos con segundo saque, frente a 7 de 18 del ruso.",
+      "claves": [
+        "Patrón táctico: Alcaraz atacó el segundo saque de Medvedev y le obligó a jugar desde atrás.",
+        "Momento clave: las dos roturas del primer set, que dejaron el partido encarrilado.",
+        "Ángulo mental: la molestia en la pierna en el segundo set no alteró su control del marcador."
+      ],
+      "cmp": "Solo hay 4 partidos de pista dura cubierta en el archivo, pero no hay datos de saque completos de este; la comparación sería poco fiable."
+    },
     {
       "id": "atpf-zverev-shelton",
       "title": "Zverev 6-2 7-6(4) Shelton: un saque sin fisuras",
@@ -608,6 +659,41 @@
       "pts": [
         74,
         55
+      ]
+    },
+    {
+      "id": "atpf-alcaraz-medvedev",
+      "date": "2026-11-18",
+      "surf": "dura cubierta",
+      "tour": "Nitto ATP Finals",
+      "names": [
+        "Alcaraz",
+        "Medvedev"
+      ],
+      "winner": 0,
+      "p1saque": [
+        75,
+        null
+      ],
+      "p2saque": [
+        null,
+        null
+      ],
+      "aces": [
+        null,
+        null
+      ],
+      "df": [
+        null,
+        null
+      ],
+      "bp": [
+        "3/4",
+        "0/0"
+      ],
+      "pts": [
+        54,
+        41
       ]
     }
   ],
