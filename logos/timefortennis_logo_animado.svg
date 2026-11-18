@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" role="img" aria-label="Logo animado de Time for Tennis: una derecha paralela cae medio milímetro fuera de la línea (OUT) y la pelota se convierte en el reloj de la O de OUT">
+<style>
+:root{--bola:#D6E84B;--marfil:#F4F1E8;--fondo:#0C1F1D;--out:#FF4B3A}
+.t{animation-duration:9s;animation-iteration-count:infinite;animation-timing-function:linear}
+#scene{animation-name:sc}
+@keyframes sc{0%{opacity:1}40%{opacity:1}46%{opacity:0}97%{opacity:0}100%{opacity:1}}
+#arm{transform-box:view-box;transform-origin:150px 282px;animation-name:sw}
+@keyframes sw{0%{transform:rotate(-120deg)}8%{transform:rotate(-120deg)}12.5%{transform:rotate(10deg)}17%{transform:rotate(75deg)}100%{transform:rotate(75deg)}}
+#ball1{offset-path:path('M228 272 Q340 70 442 190');offset-rotate:0deg;animation-name:fl;opacity:0}
+@keyframes fl{0%,12%{offset-distance:0%;opacity:0;transform:scale(1)}12.5%{opacity:1;offset-distance:0%;transform:scale(1)}23%{offset-distance:100%;opacity:1;transform:scale(.45)}24%{offset-distance:100%;opacity:0;transform:scale(.45)}100%{opacity:0}}
+#mark{animation-name:mk;opacity:0}
+@keyframes mk{0%,22.5%{opacity:0}23.5%,38%{opacity:1}42%,100%{opacity:0}}
+#zoom{animation-name:zm;opacity:0;transform-box:view-box;transform-origin:360px 200px}
+@keyframes zm{0%,27%{opacity:0;transform:scale(.3)}31%{opacity:1;transform:scale(1)}41%{opacity:1;transform:scale(1)}45%,100%{opacity:0;transform:scale(1.2)}}
+#outtxt{animation-name:ot;opacity:0}
+@keyframes ot{0%,33%{opacity:0}35%{opacity:1}36%{opacity:.3}37%{opacity:1}41%{opacity:1}44%,100%{opacity:0}}
+#word{animation-name:wd;opacity:0}
+@keyframes wd{0%,43%{opacity:0}45%,95%{opacity:1}99%,100%{opacity:0}}
+#clock{transform-box:view-box;transform-origin:230px 200px;animation-name:ck;opacity:0}
+@keyframes ck{0%,43%{opacity:0;transform:translate(130px,0) scale(.35)}52%{opacity:1;transform:translate(0,0) scale(1.08)}55%{opacity:1;transform:scale(1)}100%{opacity:1;transform:scale(1)}}
+#face{animation-name:fc;opacity:0}
+@keyframes fc{0%,52%{opacity:0}58%,100%{opacity:1}}
+#hm{transform-box:view-box;transform-origin:230px 200px;animation-name:hm}
+@keyframes hm{0%,52%{transform:rotate(0)}100%{transform:rotate(1080deg)}}
+#hh{transform-box:view-box;transform-origin:230px 200px;animation-name:hh}
+@keyframes hh{0%,52%{transform:rotate(300deg)}100%{transform:rotate(390deg)}}
+.ld{stroke-dasharray:420;stroke-dashoffset:420;animation-name:dr}
+#lu{animation-delay:0s}
+@keyframes dr{0%,54%{stroke-dashoffset:420}62%,100%{stroke-dashoffset:0}}
+.ld2{stroke-dasharray:420;stroke-dashoffset:420;animation-name:dr2}
+@keyframes dr2{0%,60%{stroke-dashoffset:420}68%,100%{stroke-dashoffset:0}}
+#sub{animation-name:sb;opacity:0}
+@keyframes sb{0%,66%{opacity:0}74%,100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.t{animation:none!important}#scene,#zoom,#mark,#outtxt,#ball1{opacity:0}#word,#clock,#face,#sub{opacity:1;transform:none}.ld,.ld2{stroke-dashoffset:0}#hm{transform:rotate(60deg)}#hh{transform:rotate(330deg)}}
+</style>
+<rect width="720" height="400" fill="#0C1F1D"/>
+
+<!-- ESCENA: pista vista desde detrás del jugador -->
+<g id="scene" class="t">
+  <polygon points="40,380 680,380 470,140 250,140" fill="#14463a"/>
+  <g fill="none" stroke="#F4F1E8" stroke-width="3" stroke-linecap="round">
+    <line x1="40" y1="380" x2="680" y2="380"/>
+    <line x1="250" y1="140" x2="470" y2="140"/>
+    <line x1="40" y1="380" x2="250" y2="140"/><line x1="680" y1="380" x2="470" y2="140"/>
+    <line x1="150" y1="380" x2="318" y2="140" opacity=".0"/>
+    <line x1="565" y1="380" x2="402" y2="140"/>
+    <line x1="155" y1="380" x2="318" y2="140"/>
+    <line x1="360" y1="140" x2="360" y2="255" opacity=".55"/>
+    <line x1="318" y1="255" x2="402" y2="255" opacity=".55"/>
+    <line x1="318" y1="140" x2="318" y2="255" opacity=".55"/><line x1="402" y1="140" x2="402" y2="255" opacity=".55"/>
+  </g>
+  <!-- jugador de espaldas -->
+  <g stroke="#F4F1E8" stroke-width="13" stroke-linecap="round" fill="#F4F1E8">
+    <circle cx="150" cy="240" r="15" stroke="none"/>
+    <line x1="150" y1="262" x2="150" y2="325"/>
+    <line x1="150" y1="325" x2="132" y2="372"/><line x1="150" y1="325" x2="172" y2="372"/>
+    <g id="arm" class="t">
+      <line x1="150" y1="282" x2="190" y2="282" stroke-width="10"/>
+      <line x1="190" y1="282" x2="214" y2="268" stroke-width="5" stroke="#D6E84B"/>
+      <ellipse cx="226" cy="262" rx="9" ry="16" transform="rotate(30 226 262)" fill="none" stroke="#D6E84B" stroke-width="4"/>
+    </g>
+  </g>
+  <circle id="ball1" class="t" r="9" fill="#D6E84B" stroke="#0C1F1D" stroke-width="2"/>
+  <ellipse id="mark" class="t" cx="442" cy="190" rx="8" ry="3.4" fill="#FF4B3A"/>
+</g>
+
+<!-- ZOOM tipo ojo de halcón -->
+<g id="zoom" class="t">
+  <circle cx="360" cy="200" r="150" fill="#14463a" stroke="#F4F1E8" stroke-width="5"/>
+  <clipPath id="zc"><circle cx="360" cy="200" r="147"/></clipPath>
+  <g clip-path="url(#zc)">
+    <rect x="270" y="40" width="28" height="320" fill="#F4F1E8"/>
+    <ellipse cx="352" cy="200" rx="40" ry="24" fill="#FF4B3A" opacity=".95"/>
+    <line x1="298" y1="150" x2="298" y2="250" stroke="#0C1F1D" stroke-width="1" opacity="0"/>
+  </g>
+  <g stroke="#F4F1E8" stroke-width="2"><line x1="298" y1="132" x2="312" y2="132"/><line x1="298" y1="268" x2="312" y2="268"/></g>
+  <text id="outtxt" class="t" x="360" y="326" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="46" fill="#FF4B3A" letter-spacing="8">OUT</text>
+</g>
+
+<!-- MARCA: OUT = Time (reloj) + For (4/U) + Tennis (T) -->
+<g id="word" class="t" fill="none" stroke="#F4F1E8" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+  <g id="clock" class="t">
+    <circle cx="230" cy="200" r="74" fill="#D6E84B" stroke="#0C1F1D" stroke-width="5"/>
+    <g id="face" class="t" stroke="#0C1F1D" stroke-width="5">
+      <path d="M160 178Q230 150 300 178M160 222Q230 250 300 222" stroke="#F4F1E8" stroke-width="3.5" opacity=".7"/>
+      <g stroke-width="4"><line x1="230" y1="140" x2="230" y2="152"/><line x1="230" y1="248" x2="230" y2="260"/><line x1="170" y1="200" x2="182" y2="200"/><line x1="278" y1="200" x2="290" y2="200"/></g>
+      <line id="hh" class="t" x1="230" y1="200" x2="230" y2="168" stroke-width="7"/>
+      <line id="hm" class="t" x1="230" y1="200" x2="230" y2="150" stroke-width="5"/>
+      <circle cx="230" cy="200" r="5" fill="#0C1F1D" stroke="none"/>
+    </g>
+  </g>
+  <path id="lu" class="t ld" d="M352 128V218Q352 266 400 266Q448 266 448 218V128M448 128V282"/>
+  <path class="t ld2" d="M498 140H618M558 140V268"/>
+  <g id="sub" class="t" fill="#F4F1E8" stroke="none" font-family="Arial,sans-serif" font-weight="700" font-size="22" letter-spacing="7" text-anchor="middle">
+    <text x="230" y="340">TIME</text><text x="400" y="340">FOR</text><text x="558" y="340">TENNIS</text>
+  </g>
+</g>
+</svg>

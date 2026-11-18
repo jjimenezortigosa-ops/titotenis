@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88" role="img" aria-label="Logo animado de TitoTenis: dos T que lanzan una pelota, se inclinan hacia la izquierda y sacan">
+        <defs>
+          <pattern id="grain" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r=".9" fill="#5a1f08" fill-opacity=".35"/><circle cx="4.5" cy="4.5" r=".7" fill="#ffd9c2" fill-opacity=".25"/></pattern>
+          <clipPath id="lclip"><rect x="2" y="2" width="84" height="84" rx="15"/></clipPath>
+        </defs>
+        <rect x="2" y="2" width="84" height="84" rx="15" fill="#C9571F"/>
+        <rect x="2" y="2" width="84" height="84" rx="15" fill="url(#grain)"/>
+        <rect x="9" y="9" width="70" height="70" rx="5" fill="none" stroke="#F4F1E8" stroke-width="2.4"/>
+        <g clip-path="url(#lclip)">
+          <g fill="none" stroke="#F4F1E8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+            <g class="tl t1"><path d="M22 44H38M30 44V70"/></g>
+            <g class="tl t2"><path d="M48 44H64M56 44V70"/></g>
+          </g>
+          <g class="ballg">
+            <circle cx="43" cy="38" r="6.5" fill="#D6E84B" stroke="#0C1F1D" stroke-width="2"/>
+            <path d="M38.5 35.5Q42.5 39 39.5 43" fill="none" stroke="#F4F1E8" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+        </g>
+      </svg>
