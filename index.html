@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TitoTenis</title>
+<title>Time for Tennis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -42,8 +42,11 @@ button,input,select,textarea{font:inherit;color:inherit}
 header{position:sticky;top:0;z-index:10;background:rgba(12,31,29,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;gap:18px;padding-top:8px;padding-bottom:8px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
-.brand svg{width:52px;height:52px;flex:none;transition:transform .25s}
-.brand:hover svg{transform:scale(1.08)}
+.brand svg{width:98px;height:52px;flex:none;transition:transform .25s}
+.brand:hover svg{transform:scale(1.06)}
+.brand .hm,.brand .hh{transform-box:view-box;transform-origin:46px 50px;animation:tk 6s linear infinite}
+.brand .hh{animation-duration:72s}
+@keyframes tk{to{transform:rotate(360deg)}}
 .brand .tl{transform-box:fill-box;transform-origin:50% 100%;animation:lean 3.4s ease-in-out infinite}
 .brand .t2{animation-delay:.06s}
 .brand .ballg{animation:serve 3.4s linear infinite}
@@ -439,7 +442,7 @@ button.tcard{width:100%;text-align:left;color:var(--chalk);font:inherit;cursor:p
   .view{padding:28px 0 48px}
 }
 @media (prefers-reduced-motion:reduce){
-  .dot,.mini,.brand .ballg,.brand .tl{animation:none}
+  .dot,.mini,.brand .ballg,.brand .tl,.brand .hm,.brand .hh{animation:none}
   .brand svg{transition:none}
 }
 .sugx{}.vs svg{width:100%;height:auto;display:block}.vs{margin:14px 0 6px;background:var(--ink-2);border-radius:14px;padding:6px}.tr{margin:10px 0}.tr h4{margin:0 0 6px}.tr svg{width:100%;height:auto}.tr .lg{display:flex;gap:14px;font-size:13px;color:var(--mute);flex-wrap:wrap}.sgl{display:flex;flex-direction:column;gap:10px;margin-top:16px}.sgi{background:var(--ink-2);border-radius:12px;padding:12px 14px}.sgi small{color:var(--mute)}
@@ -566,30 +569,19 @@ dialog h3{padding-right:42px}
 
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#juegos" aria-label="TitoTenis, ir a los juegos">
-      <svg viewBox="0 0 88 88" role="img" aria-label="Logo animado de TitoTenis: dos T que lanzan una pelota, se inclinan hacia la izquierda y sacan">
-        <defs>
-          <pattern id="grain" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r=".9" fill="#5a1f08" fill-opacity=".35"/><circle cx="4.5" cy="4.5" r=".7" fill="#ffd9c2" fill-opacity=".25"/></pattern>
-          <clipPath id="lclip"><rect x="2" y="2" width="84" height="84" rx="15"/></clipPath>
-        </defs>
-        <rect x="2" y="2" width="84" height="84" rx="15" fill="#C9571F"/>
-        <rect x="2" y="2" width="84" height="84" rx="15" fill="url(#grain)"/>
-        <rect x="9" y="9" width="70" height="70" rx="5" fill="none" stroke="#F4F1E8" stroke-width="2.4"/>
-        <g clip-path="url(#lclip)">
-          <g fill="none" stroke="#F4F1E8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-            <g class="tl t1"><path d="M22 44H38M30 44V70"/></g>
-            <g class="tl t2"><path d="M48 44H64M56 44V70"/></g>
-          </g>
-          <g class="ballg">
-            <circle cx="43" cy="38" r="6.5" fill="#D6E84B" stroke="#0C1F1D" stroke-width="2"/>
-            <path d="M38.5 35.5Q42.5 39 39.5 43" fill="none" stroke="#F4F1E8" stroke-width="1.5" stroke-linecap="round"/>
-          </g>
-        </g>
+    <a class="brand" href="#juegos" aria-label="Time for Tennis, ir a los juegos">
+      <svg viewBox="0 0 190 100" role="img" aria-label="Logo de Time for Tennis: un reloj con forma de pelota hace de O, y junto a él la U y la T de OUT">
+        <circle cx="46" cy="50" r="40" fill="#D6E84B" stroke="#0C1F1D" stroke-width="3"/>
+        <path d="M8 38Q46 22 84 38M8 62Q46 78 84 62" fill="none" stroke="#F4F1E8" stroke-width="2.4" opacity=".7"/>
+        <g stroke="#0C1F1D" stroke-linecap="round"><line x1="46" y1="16" x2="46" y2="22" stroke-width="3"/><line x1="46" y1="78" x2="46" y2="84" stroke-width="3"/><line x1="12" y1="50" x2="18" y2="50" stroke-width="3"/><line x1="74" y1="50" x2="80" y2="50" stroke-width="3"/>
+          <line class="hh" x1="46" y1="50" x2="46" y2="32" stroke-width="5"/><line class="hm" x1="46" y1="50" x2="46" y2="24" stroke-width="3.4"/></g>
+        <circle cx="46" cy="50" r="3.4" fill="#0C1F1D"/>
+        <g fill="none" stroke="#F4F1E8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"><path d="M100 22V58Q100 80 118 80Q136 80 136 58V22M136 22V92"/><path d="M148 24H186M167 24V78"/></g>
       </svg>
-      <b><span>T</span>ito<span>T</span>enis</b>
+      <b>Time <span>for</span> Tennis</b>
     </a>
     <form class="ps" id="psF" role="search"><input id="psQ" placeholder="Buscar jugador" aria-label="Buscar jugador" autocomplete="off" maxlength="40"><ul class="psl" id="psL" hidden></ul></form>
-    <div class="soc" id="soc" aria-label="Redes de TitoTenis">
+    <div class="soc" id="soc" aria-label="Redes de Time for Tennis">
       <a id="socWa" target="_blank" rel="noopener" aria-label="WhatsApp" title="Grupo de WhatsApp" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2zm0 18.1a8.1 8.1 0 0 1-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.1 8.1 0 1 1 12 20.100zm4.5-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.200-.3.200-.5.100a6.600 6.600 0 0 1-3.300-2.900c-.2-.4.2-.4.700-1.300.1-.2 0-.3 0-.5l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.300 3 3 0 0 0-.9 2.200c0 1.300.9 2.500 1 2.700.1.200 1.800 2.800 4.400 3.900 1.600.7 2.200.7 3 .6.500-.1 1.500-.6 1.700-1.200.2-.6.2-1.100.2-1.200-.1-.1-.3-.2-.5-.3z"/></svg></a>
       <a id="socIg" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.500A4.500 4.500 0 1 1 7.500 12 4.500 4.500 0 0 1 12 7.500zm0 2A2.500 2.500 0 1 0 14.500 12 2.500 2.500 0 0 0 12 9.500zM17.300 5.800a1.100 1.100 0 1 1-1.100 1.100 1.100 1.100 0 0 1 1.100-1.100z"/></svg></a>
       <a id="socTt" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path class="tc" fill="#25F4EE" transform="translate(-1.2 -1.2)" d="M16.600 2h-3.200v13.200a2.800 2.800 0 1 1-2-2.700V9.200a6 6 0 1 0 5.200 5.900V8.500a7.400 7.400 0 0 0 4.200 1.300V6.600A4.300 4.300 0 0 1 16.600 2z"/><path class="tr" fill="#FE2C55" transform="translate(1.2 1.2)" d="M16.600 2h-3.200v13.200a2.800 2.800 0 1 1-2-2.700V9.200a6 6 0 1 0 5.200 5.900V8.500a7.400 7.400 0 0 0 4.200 1.300V6.600A4.300 4.300 0 0 1 16.600 2z"/><path fill="currentColor" d="M16.600 2h-3.200v13.200a2.800 2.800 0 1 1-2-2.700V9.200a6 6 0 1 0 5.200 5.900V8.500a7.400 7.400 0 0 0 4.200 1.300V6.600A4.300 4.300 0 0 1 16.600 2z"/></svg></a>
@@ -628,7 +620,7 @@ dialog h3{padding-right:42px}
 
 <section class="view" id="v-sugerencias" hidden>
   <div class="wrap">
-    <div class="sec-head"><div><h1>Sugerencias</h1><p>Dinos qué te gustaría ver en TitoTenis: estadísticas, torneos, funciones, lo que quieras. Cualquiera puede escribir y leer.</p></div></div>
+    <div class="sec-head"><div><h1>Sugerencias</h1><p>Dinos qué te gustaría ver en Time for Tennis: estadísticas, torneos, funciones, lo que quieras. Cualquiera puede escribir y leer.</p></div></div>
     <span class="dbnote" data-dbnote></span>
     <p class="lbl" style="margin:6px 0 8px">Ideas rápidas (pulsa una y complétala)</p>
     <div class="chips" id="sugIdeas" role="group" aria-label="Ideas rápidas">
@@ -656,7 +648,7 @@ dialog h3{padding-right:42px}
   <div class="wrap">
     <div class="grhero">
       <div class="grtxt">
-        <span class="grtag">🏟️ Comunidad TitoTenis</span>
+        <span class="grtag">🏟️ Comunidad Time for Tennis</span>
         <h1>La grada</h1>
         <p>Aquí se discute de tenis: opina de los partidos, haz tu pronóstico y debate con otros aficionados.</p>
         <div class="grstats" id="grStats"></div>
@@ -943,7 +935,7 @@ dialog h3{padding-right:42px}
 </section>
 
 <footer>
-  <div class="wrap">TitoTenis · <a href="#creditos" style="color:inherit">Créditos</a> · <a href="#sugerencias" style="color:inherit">Contacto</a></div>
+  <div class="wrap">Time for Tennis · <a href="#creditos" style="color:inherit">Créditos</a> · <a href="#sugerencias" style="color:inherit">Contacto</a></div>
 </footer>
 
 <script>
@@ -971,7 +963,7 @@ dialog h3{padding-right:42px}
       if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
     });
     $$('.subnav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+h)});
-    if(h==='foro'){cancelReply();renderForum();var w=$('#waShare');if(w)w.href='https://wa.me/?text='+encodeURIComponent('Debate en TitoTenis: '+location.href)}
+    if(h==='foro'){cancelReply();renderForum();var w=$('#waShare');if(w)w.href='https://wa.me/?text='+encodeURIComponent('Debate en Time for Tennis: '+location.href)}
     if(h==='sugerencias')renderSugs();
     if(h==='juegos'){var gp=parts[1]||'';if(gp&&GAMES.some(function(g){return g.id===gp}))gCur=gp;else gp='';gInGame=!!gp;if(!gp)gDayBack=0;renderGames()}else gDayBack=0;
     document.body.classList.toggle('ingame',h==='juegos'&&!!gInGame);
@@ -1106,7 +1098,7 @@ dialog h3{padding-right:42px}
     var head=$('#plHead');head.textContent='';
     function show(){if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','')}
     if(!name){
-      body.appendChild(el('p',null,'No encontramos a «'+q+'» entre los jugadores de TitoTenis. Prueba con el apellido, por ejemplo «Alcaraz».'));
+      body.appendChild(el('p',null,'No encontramos a «'+q+'» entre los jugadores de Time for Tennis. Prueba con el apellido, por ejemplo «Alcaraz».'));
       $('#plVid').hidden=true;show();return;
     }
     $('#plVid').hidden=false;
@@ -1235,7 +1227,7 @@ dialog h3{padding-right:42px}
   }
 
   /* filtro por circuito (compartido entre Noticias y En vivo) */
-  var onlyAtp=true; /* activado: solo ATP; desactivado: todo el circuito masculino. La WTA no se muestra en TitoTenis */
+  var onlyAtp=true; /* activado: solo ATP; desactivado: todo el circuito masculino. La WTA no se muestra en Time for Tennis */
   function shown(c){if(c==='wta'||c==='chw')return false;return !onlyAtp||c==='atp'}
   function syncChips(){$$('[data-cx]').forEach(function(x){x.setAttribute('aria-pressed',String(onlyAtp))})}
   $$('[data-cx]').forEach(function(b){b.addEventListener('click',function(){
@@ -1259,7 +1251,7 @@ dialog h3{padding-right:42px}
     {id:'g-atpfinals',t:'ATP Finals: pronósticos y cómo llega cada jugador a Turín',q:'¿Quién gana las Finals, y quién se queda fuera en la fase de grupos?',d:'Repaso a los ocho clasificados, sus grupos, sus cruces directos y lo que dicen las previas. Después, chatea tu pronóstico.',body:["Las Nitto ATP Finals se juegan del 15 al 22 de noviembre en el Inalpi Arena de Turín, en pista dura cubierta. Faltan Sinner, fuera por una lesión de rodilla, y Djokovic. Ocho jugadores en dos grupos de cuatro; pasan a semifinales los dos primeros de cada grupo. Mitad del cuadro debuta: Cobolli, Fils, Tiafoe y Jódar.", "Grupo John McEnroe. Zverev (1), número uno del mundo y campeón de Roland Garros y del US Open 2026, es el mejor sacador del cuadro en pista dura: mantiene el 92,1 % de sus juegos de saque. Gana 6-0 a Shelton, 5-2 a Fils y 1-0 a Jódar, y ya ganó este torneo en 2018 y 2021. Shelton (3) llega con dos finales grandes desde septiembre, la del US Open y la de París, y cuatro títulos este año, entre ellos el Masters de Canadá. Fils (6) ganó en Cincinnati su primer Masters 1000 y tiene un 0-2 contra Shelton en pista cubierta. Jódar (8) debuta tras jugar su primera final de Masters 1000 en Shanghái y ha ganado los dos últimos duelos a Fils, ambos en pista dura.", "Grupo Ivan Lendl. Alcaraz (2) llega como el jugador en mejor forma del otoño, con el título del Masters de París, y es el favorito de las casas de apuestas. Le favorece el cara a cara con Medvedev (7-3), Tiafoe (2-1) y Cobolli (1-0), pero esta temporada perdió contra Medvedev en Indian Wells y contra Shelton en el US Open, y las Finals nunca se le han dado bien: su única final fue la de 2025, perdida con Sinner. Medvedev (4), campeón en 2020, conoce bien Turín y trae experiencia. Cobolli (5), finalista en Roland Garros y campeón en Acapulco, juega con el público italiano y ha ganado esta temporada a Zverev y a Medvedev. Tiafoe (7), campeón en Halle, llega con 44 victorias y 21 derrotas y un 83,4 % de juegos de saque ganados en pista dura.", "Los pronósticos de las previas coinciden en poco: varios sitúan a Alcaraz como campeón (unos lo ven ganando a Shelton en la final, otros a Zverev y otros a Medvedev), y las semifinales que más se repiten son Alcaraz contra Zverev y Shelton o Medvedev por el otro lado. Los debutantes parten con menos opciones, pero en un grupo de cuatro con partidos a tres sets cualquier sorpresa cambia el cuadro.", "Los dos primeros partidos son el domingo 15: Zverev contra Jódar por la tarde y Shelton contra Fils por la noche. Alcaraz debuta el lunes 16 contra Tiafoe y, por la noche, Medvedev contra Cobolli."]},
     {id:'g-tensiones',t:'Tensión del cordaje: ¿para qué sirve y cuál usas tú?',q:'¿A cuántos kilos encuerdas tu raqueta, con qué cuerda y por qué?',d:'Qué cambia al subir o bajar la tensión y qué usan los profesionales.',body:["La tensión es la fuerza, en kilos, con la que se estiran las cuerdas al encordar. Lo habitual va de unos 18 a 32 kg, aunque la mayoría de los profesionales se mueve entre 20 y 27 kg.", "Para qué sirve: con una tensión más baja la cuerda se hunde más y devuelve más energía, así que la bola sale con más potencia, más altura y más comodidad para el brazo, pero con menos control. Con una tensión más alta el plano de cuerdas es más rígido, la bola sale más plana y más corta y se controla mejor la dirección, a costa de potencia y de más impacto en codo y hombro. En cuerdas de poliéster se suele bajar la tensión para ganar efecto sin perder control.", "Curiosidades. Tras el Open de Australia 2026 se publicaron las tensiones de todos los jugadores: Mannarino jugó con unos 10 kg, la más baja, y Eikeri con 31 kg, la más alta. Sinner encordó a unos 29 kg y Alcaraz, que ganó el torneo, a 25 kg. Se dice que Sinner usa 28 kg con la Head Hawk Touch, una tensión muy alta para una cuerda de poliéster completa.", "Tiafoe anda por unos 19 kg con Yonex PolyTour Pro, lejos de los 28 kg de Sinner y de Djokovic. Alcaraz usa Babolat RPM Blast, la misma cuerda que Nadal, con los verticales algo más tensos (unos 25 kg) que los horizontales (unos 24 kg) para que las cuerdas se muevan y den más efecto.", "Otra curiosidad: la tensión con la que encuerdas no es la tensión con la que juegas. Las cuerdas pierden tensión nada más encordar, entre un 10 % y casi un 20 % en las primeras 24 horas, y siguen perdiéndola al jugar. El poliéster pierde bastante y por eso 'se muere' pronto; la tripa natural pierde menos.", "Y la regla de oro: no hay un número mágico. Si Tiafoe está a gusto con 19 kg y Sinner con 28, lo importante es probar, subir o bajar un kilo cada vez y fijarse en cómo cae la bola, no en cuánto corre."]}
   ];
-  function genOf(id){var g=GEN.filter(function(x){return x.id===id})[0];return g?{cat:'atp',tag:'Tema general',cls:'est',t:g.t,d:g.d,s:'TitoTenis',u:'',w:'Siempre abierto',gen:1,q:g.q,body:g.body}:null}
+  function genOf(id){var g=GEN.filter(function(x){return x.id===id})[0];return g?{cat:'atp',tag:'Tema general',cls:'est',t:g.t,d:g.d,s:'Time for Tennis',u:'',w:'Siempre abierto',gen:1,q:g.q,body:g.body}:null}
   function userOf(id){
     if(id.indexOf('u-')!==0)return null;
     var p=postsOf(id)[0];if(!p)return null;
@@ -1988,7 +1980,7 @@ dialog h3{padding-right:42px}
     var conv=$('#dmconv');conv.textContent='';
     if(!d){$('#dmTitle').textContent='Elige un debate';$('#dmForm').hidden=true;return}
     $('#dmTitle').textContent='Debate con '+other(d);$('#dmForm').hidden=false;
-    addMsg(conv,{name:'TitoTenis',text:d.a===uid?'Has empezado un debate con '+d.bn+'.':d.an+' ha empezado un debate contigo.'},{sys:true});
+    addMsg(conv,{name:'Time for Tennis',text:d.a===uid?'Has empezado un debate con '+d.bn+'.':d.an+' ha empezado un debate contigo.'},{sys:true});
     store.dmmsgs.filter(function(m){return m.did===d._id}).forEach(function(m){addMsg(conv,m)});
   }
   $('#dmForm').addEventListener('submit',function(e){
@@ -2453,7 +2445,7 @@ dialog h3{padding-right:42px}
       var sc=0,em='';for(var i=0;i<9;i++){var v=st.c[i];sc+=(v&&v.ok)?1:0;em+=((v&&v.ok)?'🟩':'⬛')+(i%3===2?'\n':'')}
       var ex=el('div'),miss=[];for(var j=0;j<9;j++)if(!(st.c[j]&&st.c[j].ok)){var s=gr.cells[j].slice().sort(byRank).slice(0,3).map(function(p){return G.p[p][0]});miss.push('Casilla '+(j+1)+': '+s.join(', '))}
       if(miss.length)ex.appendChild(el('p','srcline','Posibles respuestas en las casillas falladas — '+miss.join(' · ')));
-      finishUI(box,sc,9,'TitoTenis · GameSetAndMatch ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/9\n'+em+location.origin+location.pathname,ex)}
+      finishUI(box,sc,9,'Time for Tennis · GameSetAndMatch ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/9\n'+em+location.origin+location.pathname,ex)}
   }
 
   /* --- Lista Relampago --- */
@@ -2483,7 +2475,7 @@ dialog h3{padding-right:42px}
       if(!st.e){st.e=Date.now();saveSt(st)}
       var ex=el('div'),miss=c.p.filter(function(i){return st.f.indexOf(i)<0}).sort(byRank).map(function(i){return G.p[i][0]});
       if(miss.length){ex.appendChild(el('p','srcline','Te faltaban ('+miss.length+'):'));ex.appendChild(chipRow(c.p.filter(function(i){return st.f.indexOf(i)<0}).sort(byRank),c))}
-      finishUI(box,st.f.length,total,'TitoTenis · Lluvia de Aces ('+DIFN[gDif]+') '+dayEs(day)+'\n'+c.t+': '+st.f.length+'/'+total+'\n'+location.origin+location.pathname,ex)}
+      finishUI(box,st.f.length,total,'Time for Tennis · Lluvia de Aces ('+DIFN[gDif]+') '+dayEs(day)+'\n'+c.t+': '+st.f.length+'/'+total+'\n'+location.origin+location.pathname,ex)}
   }
 
   /* --- Dobles Locos --- */
@@ -2529,7 +2521,7 @@ dialog h3{padding-right:42px}
         row.appendChild(ck);inner.appendChild(row)}
       else{
         if(!st.e){st.e=Date.now();saveSt(st)}
-        finishUI(inner,st.f.length,4,'TitoTenis · Dobles Locos ('+DIFN[gDif]+') '+dayEs(day)+' · '+st.f.length+'/4 grupos, '+st.m+' fallos\n'+location.origin+location.pathname)}
+        finishUI(inner,st.f.length,4,'Time for Tennis · Dobles Locos ('+DIFN[gDif]+') '+dayEs(day)+' · '+st.f.length+'/4 grupos, '+st.m+' fallos\n'+location.origin+location.pathname)}
     }
     draw();
   }
@@ -2552,7 +2544,7 @@ dialog h3{padding-right:42px}
     var i=st.p?st.a.length-1:st.a.length;
     if(i>=rs.length||(st.a.length>=rs.length&&!st.p)){
       var sc=st.a.filter(function(x){return x.ok}).length,em=st.a.map(function(x){return x.ok?'🟩':'🟥'}).join('');
-      finishUI(box,sc,6,'TitoTenis · Bola de Partido ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/6\n'+em+'\n'+location.origin+location.pathname);return}
+      finishUI(box,sc,6,'Time for Tennis · Bola de Partido ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/6\n'+em+'\n'+location.origin+location.pathname);return}
     var r=rs[i],t=r.t;
     box.appendChild(el('p',null,'Final '+(i+1)+' de '+rs.length));
     var q=el('div','gq',t.n+' '+t.a+' · '+(t.s==='tierra'?'tierra':t.s==='hierba'?'hierba':'pista dura')+' · '+({GS:'Grand Slam','1000':'Masters 1000','500':'ATP 500','250':'ATP 250',Finales:'Finales'}[t.nv]||''));box.appendChild(q);
@@ -2601,7 +2593,7 @@ dialog h3{padding-right:42px}
     var n=st.p?st.a.length-1:st.a.length;
     if(n>=rs.length&&!st.p){
       var sc=0,em='';rs.forEach(function(r,i){var win=(r.h.low?r.va<r.vb:r.va>r.vb)?0:1,ok=st.a[i]===win;sc+=ok?1:0;em+=ok?'🟩':'🟥'});
-      finishUI(box,sc,10,'TitoTenis · Duelo en la Red ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/10\n'+em+'\n'+location.origin+location.pathname);return}
+      finishUI(box,sc,10,'Time for Tennis · Duelo en la Red ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/10\n'+em+'\n'+location.origin+location.pathname);return}
     var i=st.p?st.a.length-1:st.a.length,r=rs[i];
     box.appendChild(el('p',null,'Duelo '+(i+1)+' de '+rs.length));
     box.appendChild(el('div','gq',r.h.q));
@@ -2650,7 +2642,7 @@ dialog h3{padding-right:42px}
       var sc=won?MA+1-st.g.length:0;
       box.appendChild(el('p',null,won?'¡Lo has adivinado en '+st.g.length+' intentos! Era '+tp[0]+'.':'No ha podido ser. Era '+tp[0]+'.'));
       var em=st.g.map(function(gi){var q=G.p[gi];return (q[1]===tp[1]?'🟩':'⬛')+(q[2]===tp[2]?'🟩':'⬛')+(q[3]===tp[3]?'🟩':'⬛')+(q[4]===tp[4]?'🟩':'⬛')+((q[5]||999)===(tp[5]||999)?'🟩':'⬛')}).join('\n');
-      finishUI(box,sc,MA,'TitoTenis · La Wildcard ('+DIFN[gDif]+') '+dayEs(day)+' · '+(won?st.g.length+'/'+MA:'X/'+MA)+'\n'+em+'\n'+location.origin+location.pathname)}
+      finishUI(box,sc,MA,'Time for Tennis · La Wildcard ('+DIFN[gDif]+') '+dayEs(day)+' · '+(won?st.g.length+'/'+MA:'X/'+MA)+'\n'+em+'\n'+location.origin+location.pathname)}
   }
 
 
@@ -2712,7 +2704,7 @@ dialog h3{padding-right:42px}
       var fin=by.F&&by.F[0];if(fin)ex.appendChild(el('p','srcline','Final: '+fin[1]+' '+fin[3]+' '+fin[2]+'.'));
       var rv=el('button','btn','Revelar ganador');rv.type='button';var rvb=el('div','trvb');
       rv.addEventListener('click',function(){rv.disabled=true;revealBracket(rvb,t)});ex.appendChild(rv);ex.appendChild(rvb);
-      finishUI(box,sc,S+1,'TitoTenis · Road to Glory ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/'+(S+1)+'\n'+st.log+'\n'+location.origin+location.pathname,ex)}
+      finishUI(box,sc,S+1,'Time for Tennis · Road to Glory ('+DIFN[gDif]+') '+dayEs(day)+' · '+sc+'/'+(S+1)+'\n'+st.log+'\n'+location.origin+location.pathname,ex)}
   }
 
   /* --- X de cierre en todas las ventanas --- */
@@ -2891,7 +2883,7 @@ dialog h3{padding-right:42px}
 })();
 </script>
 <div class="ckbar" id="ckbar" role="region" aria-label="Aviso de privacidad" hidden>
-  <p>TitoTenis no usa cookies de publicidad ni de seguimiento. Solo guarda en tu dispositivo tu nombre de usuario del foro y tus preferencias, para que funcione la página. Lo que publiques en el foro y en Sugerencias es público.</p>
+  <p>Time for Tennis no usa cookies de publicidad ni de seguimiento. Solo guarda en tu dispositivo tu nombre de usuario del foro y tus preferencias, para que funcione la página. Lo que publiques en el foro y en Sugerencias es público.</p>
   <button class="btn clay" type="button" id="ckOk">Entendido</button>
   <button class="btn" type="button" id="ckInfo">Más información</button>
 </div>
@@ -2901,7 +2893,7 @@ dialog h3{padding-right:42px}
     <p><b>Qué se guarda en tu dispositivo:</b> el nombre que escribes en el foro y la última vez que viste tus debates. Es almacenamiento técnico necesario; no hay analítica, publicidad ni cookies de terceros.</p>
     <p><b>Qué es público:</b> los mensajes y sugerencias que envíes, con el nombre que elijas. Escribe un apodo y no pongas datos personales (teléfono, dirección, correo).</p>
     <p><b>Grupo de WhatsApp:</b> si te unes, tu número lo ven los demás miembros del grupo, según las normas de WhatsApp.</p>
-    <p><b>Datos de los partidos y noticias:</b> proceden de fuentes de tenis citadas y se resumen con palabras propias. TitoTenis no está afiliada a la ATP ni a ningún torneo.</p>
+    <p><b>Datos de los partidos y noticias:</b> proceden de fuentes de tenis citadas y se resumen con palabras propias. Time for Tennis no está afiliada a la ATP ni a ningún torneo.</p>
     <p class="srcline">Antes de abrir la página al público habrá que añadir aviso legal con el titular, política de privacidad completa y, si se piden correos, consentimiento expreso.</p>
   </div>
   <div class="row"><button class="btn" type="button" id="privClose">Cerrar</button></div>

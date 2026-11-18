@@ -1,4 +1,4 @@
-# Construye juegos.json (datos para los juegos de TitoTenis) a partir de CSV de partidos ATP, jugadores.json,
+# Construye juegos.json (datos para los juegos de Time for Tennis) a partir de CSV de partidos ATP, jugadores.json,
 # ranking.json, torneos.json e historial_base.json.
 # Uso: python3 -I construir_juegos.py carpeta_repo salida.json a.csv b.csv ...
 import csv, json, sys, unicodedata, re, os, datetime
