@@ -1,5 +1,5 @@
 {
-  "updated": "17 nov 2026, 23:55 (Madrid)",
+  "updated": "18 nov 2026, 09:49 (Madrid)",
   "matches": [],
   "results": [
     {
@@ -321,7 +321,7 @@
         "Daniil Medvedev",
         "Carlos Alcaraz"
       ],
-      "time": "hora por publicar por el torneo",
+      "time": "no antes de las 14:00",
       "day": "2026-11-18",
       "prev": {
         "pista": [
@@ -352,7 +352,7 @@
         "Flavio Cobolli",
         "Frances Tiafoe"
       ],
-      "time": "hora por publicar por el torneo",
+      "time": "no antes de las 20:30",
       "day": "2026-11-18",
       "prev": {
         "pista": [
@@ -611,6 +611,6 @@
       ]
     }
   ],
-  "today": "2026-11-17",
+  "today": "2026-11-18",
   "whatsapp": "https://chat.whatsapp.com/B5FhCmECMzB2bAZQ2f7koi?s=cl&p=a&iam=2"
 }
