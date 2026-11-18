@@ -1,7 +1,15 @@
 {
-  "updated": "18 nov 2026, 17:55 (Madrid)",
+  "updated": "18 nov 2026, 23:55 (Madrid)",
   "matches": [],
   "results": [
+    {
+      "id": "atpf-tiafoe-cobolli",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
+      "text": "Frances Tiafoe gana a Flavio Cobolli",
+      "score": "7-6(6) 6-0",
+      "det": "Fase de grupos · pista dura cubierta · Tiafoe se impuso al tie-break y dominó el segundo set; lidera 5-1 el historial entre ambos"
+    },
     {
       "id": "atpf-zverev-shelton",
       "cat": "atp",
@@ -193,6 +201,22 @@
   ],
   "news": [
     {
+      "id": "atp-tiafoe-elimina-a-cobolli-y-alcaraz-primero-de-grupo",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "est",
+      "t": "Tiafoe elimina a Cobolli y Alcaraz se asegura el primer puesto del grupo",
+      "d": "Tiafoe ganó 7-6(6) 6-0 en Turín y dejó fuera a Cobolli. Alcaraz, con dos victorias, ya es semifinalista como primero del Grupo Ivan Lendl.",
+      "s": "Tennis Majors",
+      "u": "https://www.tennismajors.com/atp/nitto-atp-finals-atp/tiafoe-crushes-cobolli-in-front-on-italian-crowd-alcaraz-qualified-as-group-winner-at-the-atp-finals-867257.html",
+      "w": "18 nov",
+      "full": [
+        "Frances Tiafoe logró su primera victoria en las Finals con un 7-6(6) 6-0 sobre Flavio Cobolli, que queda eliminado sin ganar ningún set. Tiafoe lidera ahora 5-1 el historial entre ambos.",
+        "El segundo set fue un desplome del italiano: se adelantó 30-0 con su saque, perdió nueve puntos seguidos y cedió el saque tres veces antes del 5-0.",
+        "Con este resultado Alcaraz se clasifica como primero de grupo. La segunda plaza se decidirá el viernes entre Medvedev y Tiafoe."
+      ]
+    },
+    {
       "id": "atp-alcaraz-supera-a-medvedev-y-roza-semifinales",
       "cat": "atp",
       "tag": "ATP Finals",
@@ -305,23 +329,6 @@
       ]
     },
     {
-      "id": "atp-sorteo-de-tur-n-zverev-y-alcaraz-encabezan-los-dos",
-      "cat": "atp",
-      "tag": "ATP Finals",
-      "cls": "est",
-      "t": "Sorteo de Turín: Zverev y Alcaraz encabezan los dos grupos",
-      "d": "El Grupo John McEnroe lo forman Zverev, Shelton, Fils y Jódar; el Ivan Lendl, Alcaraz, Medvedev, Cobolli y Tiafoe. El lunes debutan Alcaraz-Tiafoe y Medvedev-Cobolli.",
-      "s": "TennisNerd",
-      "u": "https://www.tennisnerd.net/news/atp-finals-2026-preview-predictions-odds-my-pick-to-win-in-turin/70638",
-      "w": "12 nov",
-      "full": [
-        "El Nitto ATP Finals se juega en el Inalpi Arena del 15 al 22 de noviembre, en pista dura cubierta. Pasan a semifinales los dos primeros de cada grupo.",
-        "Grupo John McEnroe: Zverev (1), Shelton (3), Fils (6) y Jódar (8). Grupo Ivan Lendl: Alcaraz (2), Medvedev (4), Cobolli (5) y Tiafoe (7).",
-        "Solo Zverev (2018 y 2021) y Medvedev (2020) han ganado antes el torneo. Fils, Cobolli, Tiafoe y Jódar debutan.",
-        "El domingo 15 juegan Zverev-Jódar y Shelton-Fils, y el lunes 16 Alcaraz-Tiafoe y Medvedev-Cobolli. La final es el domingo 22."
-      ]
-    },
-    {
       "id": "atp-alcaraz-llega-a-tur-n-como-favorito-tras-ganar-el-",
       "cat": "atp",
       "tag": "ATP Finals",
@@ -335,22 +342,6 @@
         "Carlos Alcaraz afronta el torneo en plena racha, tras volver de una lesión de muñeca y ganar el Masters 1000 de París. Es el favorito de las casas de apuestas.",
         "Todavía no ha ganado este torneo: su única final fue la de 2025, que perdió contra Sinner por 7-6(4), 7-5.",
         "Debuta el lunes 16 contra Frances Tiafoe, que ganó Halle este año y alcanzó las semifinales del US Open."
-      ]
-    },
-    {
-      "id": "atp-shelton-busca-ser-el-primer-estadounidense-campe-n",
-      "cat": "atp",
-      "tag": "ATP Finals",
-      "cls": "cir",
-      "t": "Shelton busca ser el primer estadounidense campeón de las Finals desde Sampras",
-      "d": "Shelton llega tras ser finalista del US Open y ganar el Canadian Open. Un título sería el primero para EE. UU. desde Pete Sampras en 1999. Debuta el domingo ante Fils.",
-      "s": "ESPN",
-      "u": "https://www.espn.com/tennis/story/_/id/50473425/atp-finals-alcaraz-zverev-shelton-tiafoe-jodar-medvedev",
-      "w": "12 nov",
-      "full": [
-        "Ben Shelton, de 24 años, llega a Turín en el mejor momento de su carrera tras jugar su primera final de Grand Slam en el US Open y ganar el Canadian Open.",
-        "Si ganara el torneo sería el primer estadounidense campeón desde Pete Sampras en 1999. Es su segunda participación.",
-        "Abre el torneo el domingo 15, en la sesión nocturna, contra Arthur Fils."
       ]
     }
   ],
@@ -382,30 +373,127 @@
   ],
   "scheduled": [
     {
-      "id": "atpf-cobolli-tiafoe",
+      "id": "atpf-shelton-jodar",
       "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
+      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
       "names": [
-        "Flavio Cobolli",
-        "Frances Tiafoe"
+        "Ben Shelton",
+        "Rafael Jódar"
       ],
-      "time": "no antes de las 20:30",
-      "day": "2026-11-18",
+      "time": "no antes de las 14:00",
+      "day": "2026-11-19",
       "prev": {
         "pista": [
           "Inalpi Arena (Turín), pista dura cubierta."
         ],
         "h2h": [
-          "Historial entre ambos: dato no disponible."
+          "Primer enfrentamiento entre ambos."
         ],
         "forma": [
-          "Cobolli cayó ante Medvedev 7-6(4) 6-3; Tiafoe perdió ante Alcaraz 6-2 6-2. Ambos buscan su primera victoria del grupo."
+          "Shelton cayó ante Zverev 6-2 7-6(4) tras vencer a Fils; Jódar perdió ante Zverev y ante Fils y ya está eliminado."
         ],
         "saque": [
-          "Datos de saque en pista cubierta: dato no disponible."
+          "Shelton llegó a 15 aces ante Zverev; el saque es su gran arma en pista cubierta."
         ],
         "claves": [
-          "Lectura de TitoTenis: Alcaraz ya suma dos victorias y este partido define su clasificación; Cobolli y Tiafoe juegan para seguir vivos y el primer saque y las bolas de rotura marcarán el duelo."
+          "Lectura de TitoTenis: Shelton necesita ganar para seguir con opciones de semifinales; Jódar juega sin presión y con dudas físicas tras necesitar asistencia médica ante Fils."
+        ],
+        "faltan": [
+          "Estadísticas de saque de Jódar en el torneo: dato no disponible."
+        ]
+      }
+    },
+    {
+      "id": "atpf-zverev-fils",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
+      "names": [
+        "Alexander Zverev",
+        "Arthur Fils"
+      ],
+      "time": "no antes de las 20:30",
+      "day": "2026-11-19",
+      "prev": {
+        "pista": [
+          "Inalpi Arena (Turín), pista dura cubierta."
+        ],
+        "h2h": [
+          "Zverev lidera 5-2 el historial."
+        ],
+        "h2hScore": [
+          5,
+          2
+        ],
+        "forma": [
+          "Zverev ya está clasificado con dos victorias y sin ceder el saque; Fils ganó a Jódar y cayó ante Shelton, y se juega la plaza de semifinales."
+        ],
+        "saque": [
+          "Zverev no ha concedido roturas en el torneo."
+        ],
+        "claves": [
+          "Lectura de TitoTenis: Zverev ya está en semifinales y puede dosificarse; Fils depende de ganar, y de lo que haga Shelton, así que el partido le exige máxima agresividad."
+        ],
+        "faltan": [
+          "Dobles faltas y porcentajes de primer saque en el torneo: dato no disponible."
+        ]
+      }
+    },
+    {
+      "id": "atpf-alcaraz-cobolli",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
+      "names": [
+        "Carlos Alcaraz",
+        "Flavio Cobolli"
+      ],
+      "time": "hora por publicar por el torneo",
+      "day": "2026-11-20",
+      "prev": {
+        "pista": [
+          "Inalpi Arena (Turín), pista dura cubierta."
+        ],
+        "h2h": [
+          "Dato no disponible."
+        ],
+        "forma": [
+          "Alcaraz ya es primero de grupo con dos victorias; Cobolli perdió sus dos partidos y está eliminado."
+        ],
+        "saque": [
+          "Dato no disponible."
+        ],
+        "claves": [
+          "Lectura de TitoTenis: duelo sin consecuencias en la tabla; el interés está en cómo evoluciona la molestia en la pierna de Alcaraz antes de las semifinales."
+        ],
+        "faltan": [
+          "Historial directo y estadísticas de saque: dato no disponible."
+        ]
+      }
+    },
+    {
+      "id": "atpf-medvedev-tiafoe",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
+      "names": [
+        "Daniil Medvedev",
+        "Frances Tiafoe"
+      ],
+      "time": "hora por publicar por el torneo",
+      "day": "2026-11-20",
+      "prev": {
+        "pista": [
+          "Inalpi Arena (Turín), pista dura cubierta."
+        ],
+        "h2h": [
+          "Dato no disponible."
+        ],
+        "forma": [
+          "Ambos tienen una victoria y una derrota; Medvedev superó a Cobolli y cayó ante Alcaraz, Tiafoe perdió ante Alcaraz y arrasó a Cobolli."
+        ],
+        "saque": [
+          "Dato no disponible."
+        ],
+        "claves": [
+          "Lectura de TitoTenis: el ganador será segundo del grupo y avanzará a semifinales; Tiafoe llega con la confianza de un 6-0 en el último set y Medvedev con más oficio en partidos largos."
         ],
         "faltan": [
           "Historial directo y estadísticas de saque: dato no disponible."
