@@ -91,3 +91,6 @@ Solo sobre partidos con una fuente o en conflicto. Fuentes añadidas: ATP (serve
 Revisados los 131.042 partidos con reglas internas (ganador vs sets, detalle vs sets, sets imposibles, duplicados, jugador repetido en una ronda). Esto NO prueba que cada marcador sea real: solo detecta incoherencias.
 - Eliminados 187 duplicados (copia de clasificación de un partido ya presente en cuadro principal). Quedan 130.855 partidos.
 - Quedan señaladas en `auditoria/anomalias_coherencia.json` (sin corregir aún): ~395 walkovers/sin marcador, ~215 y ~109 partidos con marcador incompleto marcado "Finished" (casi todos retiradas), 43 ganador vs sets, 14 detalle vs sets (p. ej. Moya–Safin Barcelona 2003 final, Wimbledon 2016 Novak–Roger-Vasselin) y ~155 casos de un jugador con dos partidos en la misma ronda.
+
+## Archivo partido en dos (18-nov-2026)
+El JSON único (35 MB) supera el límite de 25 MB por archivo de Cloudflare, así que se guarda en dos partes: `..._parte1_1990-2007.json` (partidos 1990-2007 + campeones, jugadores y resúmenes de todos los años) y `..._parte2_2008-2026.json` (partidos 2008-2026). Mismas 23 columnas. Para volver a tener el archivo único (los scripts de `auditoria/` lo esperan): `python3 herramientas/unir_datos_unificados.py`. La carpeta sigue excluida de la web en `.assetsignore`; quien la quiera servir debe quitarla de ahí.
