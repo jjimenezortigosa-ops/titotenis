@@ -1,7 +1,59 @@
 {
-  "updated": "19 nov 2026, 09:55 (Madrid)",
+  "updated": "19 nov 2026, 18:15 (Madrid)",
   "matches": [],
   "results": [
+    {
+      "id": "atpf-shelton-jodar",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
+      "text": "Ben Shelton gana a Rafael Jódar",
+      "score": "7-6(8) 7-5",
+      "det": "Fase de grupos · pista dura cubierta · 14 aces por 9 y 94 puntos ganados por 81",
+      "stats": {
+        "names": [
+          "Shelton",
+          "Jódar"
+        ],
+        "src": "Tennis Majors",
+        "rows": [
+          [
+            "Aces",
+            "14",
+            "9",
+            14,
+            9
+          ],
+          [
+            "Dobles faltas",
+            "1",
+            "1",
+            1,
+            1
+          ],
+          [
+            "Puntos con 2.º saque",
+            "22/36 (61%)",
+            "10/29 (34%)",
+            22,
+            10
+          ],
+          [
+            "Bolas de rotura salvadas",
+            "5/6",
+            "dato no disponible",
+            5,
+            0
+          ],
+          [
+            "Puntos ganados",
+            "94",
+            "81",
+            94,
+            81
+          ]
+        ]
+      }
+    },
     {
       "id": "atpf-tiafoe-cobolli",
       "cat": "atp",
@@ -9,73 +61,6 @@
       "text": "Frances Tiafoe gana a Flavio Cobolli",
       "score": "7-6(6) 6-0",
       "det": "Fase de grupos · pista dura cubierta · Tiafoe se impuso al tie-break y dominó el segundo set; lidera 5-1 el historial entre ambos"
-    },
-    {
-      "id": "atpf-zverev-shelton",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
-      "text": "Alexander Zverev gana a Ben Shelton",
-      "score": "6-2 7-6(4)",
-      "det": "Fase de grupos · pista dura cubierta · 14 aces, ninguna doble falta y 38 de 43 puntos ganados con el primer saque",
-      "stats": {
-        "names": [
-          "Zverev",
-          "Shelton"
-        ],
-        "src": "Tennis Majors",
-        "rows": [
-          [
-            "Aces",
-            "14",
-            "15",
-            14,
-            15
-          ],
-          [
-            "Dobles faltas",
-            "0",
-            "—",
-            0,
-            0
-          ],
-          [
-            "Puntos con 1.er saque",
-            "38/43 (88%)",
-            "dato no disponible",
-            38,
-            0
-          ],
-          [
-            "Bolas de rotura convertidas",
-            "2/6",
-            "0/2",
-            2,
-            0
-          ],
-          [
-            "Errores no forzados",
-            "10",
-            "24",
-            10,
-            24
-          ],
-          [
-            "Puntos ganados",
-            "74",
-            "55",
-            74,
-            55
-          ]
-        ]
-      }
-    },
-    {
-      "id": "atpf-fils-jodar",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
-      "text": "Arthur Fils gana a Rafael Jódar",
-      "score": "4-6 6-2 6-2",
-      "det": "Fase de grupos · pista dura cubierta · convirtió 4 de 9 bolas de rotura y remontó tras perder el primer set; Jódar cometió 33 errores no forzados"
     },
     {
       "id": "atpf-alcaraz-medvedev",
@@ -131,6 +116,22 @@
     }
   ],
   "news": [
+    {
+      "id": "atp-shelton-vence-a-jodar-y-espera-a-zverev-fils",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "est",
+      "t": "Shelton vence a Jódar y deja las semifinales en manos de Zverev-Fils",
+      "d": "Shelton ganó 7-6(8) 7-5 y suma 2-1 en el Grupo John McEnroe. Fils solo le adelantaría ganando a Zverev en dos sets.",
+      "s": "ATP Tour",
+      "u": "https://www.atptour.com/en/news/shelton-jodar-nitto-atp-finals-2026-thursday",
+      "w": "19 nov",
+      "full": [
+        "Ben Shelton superó a Rafael Jódar por 7-6(8) 7-5 y llega a 2-1 en el Grupo John McEnroe. Salvó dos puntos de set en el tie-break del primer set y cerró el segundo con una rotura en el undécimo juego.",
+        "Firmó 14 aces frente a 9 del español, que ya estaba eliminado y recibió asistencia médica antes del último juego.",
+        "Esta noche Zverev, ya clasificado, se mide a Fils: si el francés gana en dos sets pasa él; en cualquier otro caso se clasifica Shelton. El segundo del grupo se enfrentará a Alcaraz en semifinales."
+      ]
+    },
     {
       "id": "atp-tiafoe-elimina-a-cobolli-y-alcaraz-primero-de-grupo",
       "cat": "atp",
@@ -258,22 +259,6 @@
         "En el segundo set Jódar salvó tres de cuatro bolas de rotura, pero Zverev encontró una rotura y no tuvo que defender ninguna con su saque.",
         "Zverev llegaba tras dos derrotas seguidas. En la segunda sesión del día, Shelton derrotó a Fils en el mismo grupo."
       ]
-    },
-    {
-      "id": "atp-alcaraz-llega-a-tur-n-como-favorito-tras-ganar-el-",
-      "cat": "atp",
-      "tag": "ATP Finals",
-      "cls": "est",
-      "t": "Alcaraz llega a Turín como favorito tras ganar el Masters de París",
-      "d": "Alcaraz regresó de una lesión de muñeca y llega con una racha de victorias y el título de París. Busca su primer ATP Finals y debuta el lunes ante Tiafoe.",
-      "s": "ESPN",
-      "u": "https://www.espn.com/tennis/story/_/id/50473425/atp-finals-alcaraz-zverev-shelton-tiafoe-jodar-medvedev",
-      "w": "12 nov",
-      "full": [
-        "Carlos Alcaraz afronta el torneo en plena racha, tras volver de una lesión de muñeca y ganar el Masters 1000 de París. Es el favorito de las casas de apuestas.",
-        "Todavía no ha ganado este torneo: su única final fue la de 2025, que perdió contra Sinner por 7-6(4), 7-5.",
-        "Debuta el lunes 16 contra Frances Tiafoe, que ganó Halle este año y alcanzó las semifinales del US Open."
-      ]
     }
   ],
   "guiones": [
@@ -304,37 +289,6 @@
   ],
   "scheduled": [
     {
-      "id": "atpf-shelton-jodar",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
-      "names": [
-        "Ben Shelton",
-        "Rafael Jódar"
-      ],
-      "time": "no antes de las 14:00",
-      "day": "2026-11-19",
-      "prev": {
-        "pista": [
-          "Inalpi Arena (Turín), pista dura cubierta."
-        ],
-        "h2h": [
-          "Primer enfrentamiento entre ambos."
-        ],
-        "forma": [
-          "Shelton cayó ante Zverev 6-2 7-6(4) tras vencer a Fils; Jódar perdió ante Zverev y ante Fils y ya está eliminado."
-        ],
-        "saque": [
-          "Shelton llegó a 15 aces ante Zverev; el saque es su gran arma en pista cubierta."
-        ],
-        "claves": [
-          "Lectura de TitoTenis: Shelton necesita ganar para seguir con opciones de semifinales; Jódar juega sin presión y con dudas físicas tras necesitar asistencia médica ante Fils."
-        ],
-        "faltan": [
-          "Estadísticas de saque de Jódar en el torneo: dato no disponible."
-        ]
-      }
-    },
-    {
       "id": "atpf-zverev-fils",
       "cat": "atp",
       "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
@@ -356,13 +310,13 @@
           2
         ],
         "forma": [
-          "Zverev ya está clasificado con dos victorias y sin ceder el saque; Fils ganó a Jódar y cayó ante Shelton, y se juega la plaza de semifinales."
+          "Zverev ya está clasificado con dos victorias; Fils ganó a Jódar y cayó ante Shelton, que ya suma 2-1 tras vencer a Jódar."
         ],
         "saque": [
           "Zverev no ha concedido roturas en el torneo."
         ],
         "claves": [
-          "Lectura de TitoTenis: Zverev ya está en semifinales y puede dosificarse; Fils depende de ganar, y de lo que haga Shelton, así que el partido le exige máxima agresividad."
+          "Lectura de TitoTenis: Fils solo pasa si gana en dos sets; si Zverev gana o el partido llega al tercer set, se clasifica Shelton. Zverev puede dosificarse, pero el alemán no suele regalar partidos."
         ],
         "faltan": [
           "Dobles faltas y porcentajes de primer saque en el torneo: dato no disponible."
@@ -434,6 +388,20 @@
   ],
   "analisis": [
     {
+      "id": "atpf-shelton-jodar",
+      "title": "Shelton 7-6(8) 7-5 Jódar: puntos de set salvados",
+      "tour": "Nitto ATP Finals · fase de grupos",
+      "surf": "dura cubierta",
+      "score": "7-6(8) 7-5",
+      "resumen": "Shelton ganó 94 puntos por 81 y ganó 22 de 36 con segundo saque, frente a 10 de 29 de Jódar. Salvó cinco de seis bolas de rotura y convirtió las dos que tuvo, ambas en el segundo set.",
+      "claves": [
+        "Patrón táctico: Shelton se apoyó en el saque (14 aces) y presionó el segundo servicio de Jódar.",
+        "Momento clave: en el tie-break del primer set salvó dos puntos de set y se llevó el desempate 10-8.",
+        "Ángulo mental: tras perder su saque con 4-4, remontó un 0-30 en el 4-5 y rompió en el undécimo juego."
+      ],
+      "cmp": "Solo hay 3 partidos comparables en pista dura cubierta en el archivo; con tan poca muestra la comparación es poco fiable."
+    },
+    {
       "id": "atpf-alcaraz-medvedev",
       "title": "Alcaraz 6-2 6-4 Medvedev: roturas y menos errores",
       "tour": "Nitto ATP Finals · fase de grupos",
@@ -446,20 +414,6 @@
         "Ángulo mental: la molestia en la pierna en el segundo set no alteró su control del marcador."
       ],
       "cmp": "Solo hay 4 partidos de pista dura cubierta en el archivo, pero no hay datos de saque completos de este; la comparación sería poco fiable."
-    },
-    {
-      "id": "atpf-zverev-shelton",
-      "title": "Zverev 6-2 7-6(4) Shelton: un saque sin fisuras",
-      "tour": "Nitto ATP Finals · fase de grupos",
-      "surf": "dura cubierta",
-      "score": "6-2 7-6(4)",
-      "resumen": "Zverev ganó 38 de 43 puntos con el primer saque, no cometió dobles faltas y salvó las dos bolas de rotura que afrontó. Shelton igualó en aces (15 por 14) pero cometió 24 errores no forzados por 10 del alemán.",
-      "claves": [
-        "Patrón táctico: Zverev neutralizó el saque de Shelton con restos profundos y dominó los intercambios largos.",
-        "Momento clave: el tie-break del segundo set, donde Zverev se impuso por 7-4 y cerró en su primer punto de partido.",
-        "Ángulo mental: con el 7-0 en el historial, Shelton llegó con poco margen para creer en la remontada."
-      ],
-      "cmp": "Solo hay 3 partidos comparables en pista dura cubierta en el archivo; el nivel de saque de Zverev (88% de puntos con primer servicio) queda por encima de los demás, pero la muestra es pequeña."
     }
   ],
   "archivo": [
@@ -671,6 +625,41 @@
       "pts": [
         54,
         41
+      ]
+    },
+    {
+      "id": "atpf-shelton-jodar",
+      "date": "2026-11-19",
+      "surf": "dura cubierta",
+      "tour": "Nitto ATP Finals",
+      "names": [
+        "Shelton",
+        "Jódar"
+      ],
+      "winner": 0,
+      "p1saque": [
+        null,
+        null
+      ],
+      "p2saque": [
+        61,
+        34
+      ],
+      "aces": [
+        14,
+        9
+      ],
+      "df": [
+        1,
+        1
+      ],
+      "bp": [
+        "2/2",
+        "0/1"
+      ],
+      "pts": [
+        94,
+        81
       ]
     }
   ],
