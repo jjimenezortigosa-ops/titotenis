@@ -1,7 +1,15 @@
 {
-  "updated": "19 nov 2026, 22:00 (Madrid)",
+  "updated": "20 nov 2026, 00:00 (Madrid)",
   "matches": [],
   "results": [
+    {
+      "id": "atpf-zverev-fils",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
+      "text": "Alexander Zverev gana a Arthur Fils",
+      "score": "6-4 7-6(6)",
+      "det": "Fase de grupos · pista dura cubierta · Zverev cierra el grupo con 3 victorias en 3 partidos y sin ceder un set; no concedió ninguna bola de rotura"
+    },
     {
       "id": "atpf-shelton-jodar",
       "cat": "atp",
@@ -116,6 +124,22 @@
     }
   ],
   "news": [
+    {
+      "id": "atp-zverev-cierra-grupo-perfecto",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "",
+      "t": "Zverev cierra el grupo McEnroe con pleno de victorias",
+      "d": "Zverev venció a Fils por 6-4 y 7-6(6) y terminó primero con tres victorias sin ceder un set. Shelton, segundo, también está en semifinales.",
+      "s": "Tennis Majors",
+      "u": "https://www.tennismajors.com/atp/nitto-atp-finals-atp/zverev-saves-his-best-for-the-tie-break-beats-fils-and-tops-group-mcenroe-unbeaten-867371.html",
+      "w": "19 nov",
+      "full": [
+        "Zverev ganó a Fils 6-4 y 7-6(6) y no concedió ninguna bola de rotura en el partido.",
+        "Con ese triunfo acabó el grupo John McEnroe con un 3-0 y sin perder ningún set; Shelton fue segundo y Fils quedó eliminado.",
+        "Las semifinales son el sábado: Zverev se medirá al segundo del grupo Ivan Lendl, que saldrá del Medvedev-Tiafoe del viernes, y Shelton se enfrentará al primero, Alcaraz, cuya participación depende de la evolución de una molestia en el isquiotibial."
+      ]
+    },
     {
       "id": "atp-fils-eliminado-shelton-semifinales",
       "cat": "atp",
@@ -258,23 +282,6 @@
         "Dominó el primer set con cinco juegos seguidos tras romper en el 3-2. Fils convirtió su primera bola de rotura del partido en el segundo set y empató.",
         "En el tercero, Shelton rompió para ponerse 2-0 y cerró con dos aces en un juego en el que había salvado una bola de rotura. Firmó 12 aces y salvó 3 de 4 bolas de rotura."
       ]
-    },
-    {
-      "id": "atp-zverev-estrena-las-finals-con-victoria-sobre-j-dar",
-      "cat": "atp",
-      "tag": "ATP Finals",
-      "cls": "est",
-      "t": "Zverev estrena las Finals con victoria sobre Jódar",
-      "d": "El número 1 ganó 6-4 6-4 con 10 aces, todos en el primer set, y no cedió ningún juego de saque. Shelton ganó después a Fils en el mismo grupo.",
-      "s": "Tennis Majors",
-      "u": "https://www.tennismajors.com/atp/nitto-atp-finals-atp/zverev-on-a-mission-as-he-opens-atp-finals-with-straight-sets-win-over-jodar-867040.html",
-      "w": "15 nov",
-      "full": [
-        "Alexander Zverev abrió el Grupo John McEnroe con un 6-4 6-4 sobre Rafael Jódar, debutante de 20 años.",
-        "El alemán sacó con mucha autoridad: 10 aces, todos en el primer set, y salvó las dos bolas de rotura que afrontó cuando sacaba para ganar la manga.",
-        "En el segundo set Jódar salvó tres de cuatro bolas de rotura, pero Zverev encontró una rotura y no tuvo que defender ninguna con su saque.",
-        "Zverev llegaba tras dos derrotas seguidas. En la segunda sesión del día, Shelton derrotó a Fils en el mismo grupo."
-      ]
     }
   ],
   "guiones": [
@@ -305,41 +312,6 @@
   ],
   "scheduled": [
     {
-      "id": "atpf-zverev-fils",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
-      "names": [
-        "Alexander Zverev",
-        "Arthur Fils"
-      ],
-      "time": "no antes de las 20:30",
-      "day": "2026-11-19",
-      "prev": {
-        "pista": [
-          "Inalpi Arena (Turín), pista dura cubierta."
-        ],
-        "h2h": [
-          "Zverev lidera 5-2 el historial."
-        ],
-        "h2hScore": [
-          5,
-          2
-        ],
-        "forma": [
-          "Zverev ya está clasificado con dos victorias y se adjudicó el primer set por 6-4; Shelton ya tiene billete a semifinales y Fils queda eliminado."
-        ],
-        "saque": [
-          "Zverev no ha concedido bolas de rotura en el primer set y ha ganado 17 de 19 puntos con el primer saque."
-        ],
-        "claves": [
-          "Lectura de TitoTenis: con el primer set para Zverev, Fils ya no puede clasificarse; el alemán ha pasado el set sin conceder bolas de rotura y con 6 aces."
-        ],
-        "faltan": [
-          "Dobles faltas y porcentajes de primer saque en el torneo: dato no disponible."
-        ]
-      }
-    },
-    {
       "id": "atpf-alcaraz-cobolli",
       "cat": "atp",
       "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
@@ -363,7 +335,7 @@
           "Dato no disponible."
         ],
         "claves": [
-          "Lectura de TitoTenis: duelo sin consecuencias en la tabla; el interés está en cómo evoluciona la molestia en la pierna de Alcaraz antes de las semifinales."
+          "Lectura de TitoTenis: duelo sin consecuencias en la tabla; el interés está en la evolución de la molestia en el isquiotibial de Alcaraz de cara a la semifinal."
         ],
         "faltan": [
           "Historial directo y estadísticas de saque: dato no disponible."
@@ -394,7 +366,7 @@
           "Dato no disponible."
         ],
         "claves": [
-          "Lectura de TitoTenis: el ganador será segundo del grupo y avanzará a semifinales; Tiafoe llega con la confianza de un 6-0 en el último set y Medvedev con más oficio en partidos largos."
+          "Lectura de TitoTenis: el ganador (sea cual sea el marcador, según el reglamento de grupos) se queda con la segunda plaza y se medirá a Zverev en semifinales."
         ],
         "faltan": [
           "Historial directo y estadísticas de saque: dato no disponible."
