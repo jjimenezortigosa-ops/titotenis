@@ -1,5 +1,5 @@
 {
-  "updated": "19 nov 2026, 18:15 (Madrid)",
+  "updated": "19 nov 2026, 22:00 (Madrid)",
   "matches": [],
   "results": [
     {
@@ -116,6 +116,22 @@
     }
   ],
   "news": [
+    {
+      "id": "atp-fils-eliminado-shelton-semifinales",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "",
+      "t": "Shelton se mete en semifinales y Fils queda eliminado en Turín",
+      "d": "Zverev ganó el primer set por 6-4 ante Fils, lo que deja fuera al francés y clasifica a Ben Shelton como segundo del grupo John McEnroe. Zverev ya era primero de grupo.",
+      "s": "Tennis Majors",
+      "u": "https://www.tennismajors.com/atp/nitto-atp-finals-atp/fils-eliminated-shelton-into-the-atp-finals-semi-finals-after-zverev-takes-the-first-set-867361.html",
+      "w": "19 nov",
+      "full": [
+        "Zverev se llevó el primer set por 6-4 en su duelo con Fils, con 6 aces y sin conceder bolas de rotura.",
+        "Con ese parcial, Fils ya no podía superar a Shelton en la clasificación del grupo John McEnroe, así que el estadounidense avanza a semifinales como segundo.",
+        "Zverev, primero de grupo, espera ahora al segundo del grupo Ivan Lendl, que se decide el viernes."
+      ]
+    },
     {
       "id": "atp-shelton-vence-a-jodar-y-espera-a-zverev-fils",
       "cat": "atp",
@@ -310,13 +326,13 @@
           2
         ],
         "forma": [
-          "Zverev ya está clasificado con dos victorias; Fils ganó a Jódar y cayó ante Shelton, que ya suma 2-1 tras vencer a Jódar."
+          "Zverev ya está clasificado con dos victorias y se adjudicó el primer set por 6-4; Shelton ya tiene billete a semifinales y Fils queda eliminado."
         ],
         "saque": [
-          "Zverev no ha concedido roturas en el torneo."
+          "Zverev no ha concedido bolas de rotura en el primer set y ha ganado 17 de 19 puntos con el primer saque."
         ],
         "claves": [
-          "Lectura de TitoTenis: Fils solo pasa si gana en dos sets; si Zverev gana o el partido llega al tercer set, se clasifica Shelton. Zverev puede dosificarse, pero el alemán no suele regalar partidos."
+          "Lectura de TitoTenis: con el primer set para Zverev, Fils ya no puede clasificarse; el alemán ha pasado el set sin conceder bolas de rotura y con 6 aces."
         ],
         "faltan": [
           "Dobles faltas y porcentajes de primer saque en el torneo: dato no disponible."
