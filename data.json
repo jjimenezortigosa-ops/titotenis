@@ -1,5 +1,5 @@
 {
-  "updated": "18 nov 2026, 23:55 (Madrid)",
+  "updated": "19 nov 2026, 09:55 (Madrid)",
   "matches": [],
   "results": [
     {
@@ -76,75 +76,6 @@
       "text": "Arthur Fils gana a Rafael Jódar",
       "score": "4-6 6-2 6-2",
       "det": "Fase de grupos · pista dura cubierta · convirtió 4 de 9 bolas de rotura y remontó tras perder el primer set; Jódar cometió 33 errores no forzados"
-    },
-    {
-      "id": "atpf-zverev-jodar",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
-      "text": "Alexander Zverev gana a Rafael Jódar",
-      "score": "6-4 6-4",
-      "det": "Fase de grupos · pista dura cubierta · 10 aces y 37 de 43 puntos ganados con el primer saque; no cedió ningún juego de saque"
-    },
-    {
-      "id": "atpf-shelton-fils",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
-      "text": "Ben Shelton gana a Arthur Fils",
-      "score": "6-2 3-6 6-3",
-      "det": "Fase de grupos · pista dura cubierta · 12 aces y 3 bolas de rotura salvadas de 4"
-    },
-    {
-      "id": "atpf-alcaraz-tiafoe",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
-      "text": "Carlos Alcaraz gana a Frances Tiafoe",
-      "score": "6-2 6-2",
-      "det": "Fase de grupos · pista dura cubierta · debut de Alcaraz en Turín con victoria en dos sets"
-    },
-    {
-      "id": "atpf-medvedev-cobolli",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
-      "text": "Daniil Medvedev gana a Flavio Cobolli",
-      "score": "7-6(4) 6-3",
-      "det": "Fase de grupos · pista dura cubierta · 9 aces y 34 de 41 puntos ganados con el primer saque; no concedió ninguna bola de rotura",
-      "stats": {
-        "names": [
-          "Daniil Medvedev",
-          "Flavio Cobolli"
-        ],
-        "src": "Tennis Majors",
-        "rows": [
-          [
-            "Aces",
-            "9",
-            "6",
-            9,
-            6
-          ],
-          [
-            "Puntos totales ganados",
-            "70",
-            "55",
-            70,
-            55
-          ],
-          [
-            "Winners",
-            "17",
-            "14",
-            17,
-            14
-          ],
-          [
-            "Errores no forzados",
-            "18",
-            "20",
-            18,
-            20
-          ]
-        ]
-      }
     },
     {
       "id": "atpf-alcaraz-medvedev",
@@ -529,48 +460,6 @@
         "Ángulo mental: con el 7-0 en el historial, Shelton llegó con poco margen para creer en la remontada."
       ],
       "cmp": "Solo hay 3 partidos comparables en pista dura cubierta en el archivo; el nivel de saque de Zverev (88% de puntos con primer servicio) queda por encima de los demás, pero la muestra es pequeña."
-    },
-    {
-      "id": "atpf-shelton-fils",
-      "title": "Shelton 6-2 3-6 6-3 Fils: el saque sacó a Shelton de los apuros",
-      "tour": "Nitto ATP Finals · fase de grupos",
-      "surf": "dura cubierta",
-      "score": "6-2 3-6 6-3",
-      "resumen": "Shelton firmó 12 aces y salvó 3 de 4 bolas de rotura. Tras un primer set muy cómodo, Fils reaccionó en el segundo, pero Shelton volvió a romper pronto en el tercero.",
-      "claves": [
-        "Patrón táctico: saque zurdo para abrir ángulos y derechas cruzadas para tomar la iniciativa; los aces aparecieron en los puntos de más presión.",
-        "Momento clave: la rotura para ponerse 2-0 en el tercer set, tras cuatro bolas de rotura en ese juego, marcó el tramo final.",
-        "Ángulo mental: Shelton aguantó la reacción de Fils sin perder la calma y cerró con dos aces cuando sacaba para ganar."
-      ],
-      "cmp": "Solo hay 2 partidos comparables en pista dura cubierta en el archivo (menos de 3), así que no hay comparación fiable todavía."
-    },
-    {
-      "id": "atpf-zverev-jodar",
-      "title": "Zverev 6-4 6-4 Jódar: el saque marcó la diferencia",
-      "tour": "Nitto ATP Finals · fase de grupos",
-      "surf": "dura cubierta",
-      "score": "6-4 6-4",
-      "resumen": "Zverev ganó 37 de 43 puntos con su primer saque y Jódar solo ganó 7 de 43 al resto sobre ese servicio. Las roturas fueron escasas y decidieron cada set.",
-      "claves": [
-        "Patrón táctico: saque agresivo y primer servicio dentro (84 %) para acortar los puntos y evitar que Jódar entrara en juego.",
-        "Momento clave: sacando para ganar el primer set, Zverev salvó dos bolas de rotura con ace, saque ganador y otro ace.",
-        "Ángulo mental: venía de dos derrotas y se sacudió la presión con un partido sólido, aunque dijo que no fue perfecto. Jódar, debutante, no encontró cómo hacer daño al resto."
-      ],
-      "cmp": "Solo hay 1 partido comparable en pista dura cubierta en el archivo, así que no hay comparación fiable todavía."
-    },
-    {
-      "id": "atpf-medvedev-cobolli",
-      "title": "Medvedev 7-6(4) 6-3 Cobolli: el saque de Medvedev no dio opciones",
-      "tour": "Nitto ATP Finals · fase de grupos",
-      "surf": "dura cubierta",
-      "score": "7-6(4) 6-3",
-      "resumen": "Medvedev no concedió ni una bola de rotura, ganó el tie-break del primer set y rompió dos veces en el segundo. Cobolli salvó varias bolas de rotura, pero no encontró hueco al resto.",
-      "claves": [
-        "Patrón táctico: Medvedev ganó 34 de 41 puntos con el primer saque y mantuvo a Cobolli lejos de la iniciativa.",
-        "Momento clave: el tie-break del primer set (7-4) abrió el camino; después Cobolli no logró romper.",
-        "Ángulo mental: Cobolli debutaba en Turín ante su público y cometió más errores no forzados (20 por 18)."
-      ],
-      "cmp": "Solo hay 3 partidos comparables en pista dura cubierta en el archivo como máximo; la muestra es corta y no permite una comparación sólida."
     }
   ],
   "archivo": [
@@ -785,6 +674,6 @@
       ]
     }
   ],
-  "today": "2026-11-18",
+  "today": "2026-11-19",
   "whatsapp": "https://chat.whatsapp.com/B5FhCmECMzB2bAZQ2f7koi?s=cl&p=a&iam=2"
 }
