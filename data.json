@@ -1,7 +1,45 @@
 {
-  "updated": "20 nov 2026, 21:55 (Madrid)",
+  "updated": "20 nov 2026, 23:49 (Madrid)",
   "matches": [],
   "results": [
+    {
+      "id": "atpf-medvedev-tiafoe",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
+      "text": "Daniil Medvedev gana a Frances Tiafoe",
+      "score": "6-3 6-4",
+      "det": "Fase de grupos · pista dura cubierta · Medvedev firmó 15 aces, salvó las 2 bolas de rotura que afrontó y pasa como segundo del grupo",
+      "stats": {
+        "names": [
+          "Medvedev",
+          "Tiafoe"
+        ],
+        "src": "Tennis Majors",
+        "rows": [
+          [
+            "Aces",
+            "15",
+            "dato no disponible",
+            15,
+            0
+          ],
+          [
+            "Bolas de rotura salvadas",
+            "2/2",
+            "dato no disponible",
+            2,
+            0
+          ],
+          [
+            "Puntos con 1.er saque (total)",
+            "34/44 (77%)",
+            "dato no disponible",
+            34,
+            0
+          ]
+        ]
+      }
+    },
     {
       "id": "atpf-zverev-fils",
       "cat": "atp",
@@ -109,6 +147,22 @@
     }
   ],
   "news": [
+    {
+      "id": "atp-medvedev-completa-semifinales-turin",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "",
+      "t": "Medvedev elimina a Tiafoe y completa las semifinales de Turín",
+      "d": "Medvedev ganó 6-3 6-4 a Tiafoe y se enfrentará a Zverev. Alcaraz y Shelton jugarán la otra semifinal.",
+      "s": "Tennis Majors",
+      "u": "https://www.tennismajors.com/atp/nitto-atp-finals-atp/medvedev-beats-tiafoe-to-complete-a-by-the-book-atp-finals-last-four-867503.html",
+      "w": "20 nov",
+      "full": [
+        "Daniil Medvedev derrotó a Frances Tiafoe por 6-3 y 6-4 en el partido que decidía la segunda plaza del Grupo Ivan Lendl y cierra el cuadro de semifinales.",
+        "Firmó 15 aces y salvó las dos bolas de rotura que afrontó, ambas en el primer set. En el segundo rompió con 4-4 tras salvar Tiafoe tres opciones previas.",
+        "El sábado, Zverev se medirá a Medvedev y Alcaraz a Shelton."
+      ]
+    },
     {
       "id": "atp-alcaraz-cierra-grupo-invicto-semis-definidas",
       "cat": "atp",
@@ -252,22 +306,6 @@
         "El ruso ganó el tie-break del primer set y rompió dos veces en el segundo. Firmó 9 aces y 34 de 41 puntos con el primer saque.",
         "El miércoles se medirá a Alcaraz, que también ganó en su debut, en un duelo que apunta a decidir el liderato del grupo."
       ]
-    },
-    {
-      "id": "atp-shelton-estrena-las-finals-ante-fils",
-      "cat": "atp",
-      "tag": "ATP Finals",
-      "cls": "est",
-      "t": "Shelton remonta un set y vence a Fils en su debut en las Finals",
-      "d": "El estadounidense ganó 6-2 3-6 6-3 con 12 aces y consiguió su primera victoria en las Nitto ATP Finals. Comparte grupo con Zverev, que ganó antes a Jódar.",
-      "s": "Tennis Now",
-      "u": "https://tennisnow.com/shelton-fends-off-fils-for-first-atp-finals-win/",
-      "w": "15 nov",
-      "full": [
-        "Ben Shelton estrenó su cuenta en las Nitto ATP Finals con un 6-2 3-6 6-3 sobre Arthur Fils, en el Grupo John McEnroe.",
-        "Dominó el primer set con cinco juegos seguidos tras romper en el 3-2. Fils convirtió su primera bola de rotura del partido en el segundo set y empató.",
-        "En el tercero, Shelton rompió para ponerse 2-0 y cerró con dos aces en un juego en el que había salvado una bola de rotura. Firmó 12 aces y salvó 3 de 4 bolas de rotura."
-      ]
     }
   ],
   "guiones": [
@@ -289,54 +327,18 @@
     },
     {
       "id": "g-medvedev-tiafoe",
-      "title": "Noche decisiva en Turín",
-      "hook": "Un partido, una plaza de semifinales.",
-      "body": "Medvedev y Tiafoe, cada uno con una victoria y una derrota, se juegan esta noche el pase para medirse a Zverev.",
-      "cta": "¿Quién pasa? Debátelo en TitoTenis y juega a los juegos diarios.",
-      "tags": "#tenis #ATPFinals #Medvedev #Tiafoe"
+      "title": "Medvedev, a semifinales",
+      "hook": "15 aces y cero roturas concedidas.",
+      "body": "Medvedev ganó 6-3 6-4 a Tiafoe, salvó las dos bolas de rotura que afrontó y se medirá a Zverev en semifinales.",
+      "cta": "¿Quién llega a la final? Debátelo en TitoTenis y juega a los juegos diarios.",
+      "tags": "#tenis #ATPFinals #Medvedev #Zverev"
     }
   ],
   "scheduled": [
     {
-      "id": "atpf-medvedev-tiafoe",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
-      "names": [
-        "Daniil Medvedev",
-        "Frances Tiafoe"
-      ],
-      "time": "no antes de las 20:30",
-      "day": "2026-11-20",
-      "prev": {
-        "pista": [
-          "Inalpi Arena (Turín), pista dura cubierta."
-        ],
-        "h2h": [
-          "Medvedev gana 6-2 el historial directo."
-        ],
-        "forma": [
-          "Ambos tienen una victoria y una derrota; Medvedev superó a Cobolli y cayó ante Alcaraz, Tiafoe perdió ante Alcaraz y arrasó a Cobolli."
-        ],
-        "saque": [
-          "Dato no disponible."
-        ],
-        "claves": [
-          "Lectura de TitoTenis: el ganador se queda con la segunda plaza del grupo y se medirá a Zverev en semifinales; el perdedor se despide de Turín."
-        ],
-        "faltan": [
-          "Estadísticas de saque: dato no disponible."
-        ],
-        "h2hScore": [
-          6,
-          2
-        ]
-      }
-    },
-    {
       "id": "atpf-sf-zverev",
       "cat": "atp",
       "tour": "Nitto ATP Finals · semifinales",
-      "text": "Alexander Zverev vs ganador del Medvedev-Tiafoe",
       "time": "no antes de las 20:30",
       "day": "2026-11-21",
       "prev": {
@@ -344,21 +346,25 @@
           "Inalpi Arena (Turín), pista dura cubierta."
         ],
         "h2h": [
-          "Rival por definir tras el partido del viernes."
+          "Historial directo: dato no disponible."
         ],
         "forma": [
-          "Zverev llega con 3 victorias en 3 partidos y sin ceder un set."
+          "Zverev llega con 3 victorias en 3 partidos y sin ceder un set; Medvedev se clasificó como segundo del Grupo Ivan Lendl tras ganar 6-3 6-4 a Tiafoe."
         ],
         "saque": [
-          "No concedió ninguna bola de rotura ante Fils."
+          "Zverev no concedió ninguna bola de rotura ante Fils; Medvedev firmó 15 aces ante Tiafoe."
         ],
         "claves": [
-          "Lectura de TitoTenis: llega más descansado y con el saque en racha; el rival saldrá de un partido decisivo la noche anterior."
+          "Lectura de TitoTenis: duelo de saques; Zverev llega más descansado, pero Medvedev entra en racha tras salvar todas sus bolas de rotura en el partido decisivo."
         ],
         "faltan": [
-          "Historial y estadísticas del rival: dato no disponible hasta que se conozca."
+          "Historial directo y estadísticas completas de saque: dato no disponible."
         ]
-      }
+      },
+      "names": [
+        "Alexander Zverev",
+        "Daniil Medvedev"
+      ]
     },
     {
       "id": "atpf-sf-alcaraz-shelton",
@@ -390,9 +396,31 @@
           "Historial directo y estadísticas de saque de Alcaraz: dato no disponible."
         ]
       }
+    },
+    {
+      "id": "atpf-final",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · final",
+      "text": "Final: ganador de Zverev-Medvedev vs ganador de Alcaraz-Shelton",
+      "time": "hora por publicar por el torneo",
+      "day": "2026-11-22"
     }
   ],
   "analisis": [
+    {
+      "id": "atpf-medvedev-tiafoe",
+      "title": "Medvedev 6-3 6-4 Tiafoe: el saque en los puntos grandes",
+      "tour": "Nitto ATP Finals · fase de grupos",
+      "surf": "dura cubierta",
+      "score": "6-3 6-4",
+      "resumen": "Medvedev ganó 34 de 44 puntos con primer saque y salvó las 2 bolas de rotura que afrontó, ambas en el primer set. Convirtió 2 de 6 opciones de rotura.",
+      "claves": [
+        "Patrón táctico: Medvedev se apoyó en el saque (15 aces) y ganó 15 de 20 puntos de fondo en el primer set.",
+        "Momento clave: con 2-2 en el primero salvó dos bolas de rotura y rompió después para ponerse 4-2; en el segundo, Tiafoe salvó tres bolas de rotura con 4-4 pero cedió la cuarta.",
+        "Ángulo mental: se jugaban el pase a semifinales y Medvedev cerró a la primera ocasión de partido."
+      ],
+      "cmp": "Solo hay 3 partidos comparables en pista dura cubierta en el archivo, con pocos datos de saque; la comparación no es concluyente."
+    },
     {
       "id": "atpf-shelton-jodar",
       "title": "Shelton 7-6(8) 7-5 Jódar: puntos de set salvados",
@@ -696,6 +724,41 @@
       ],
       "bp": [
         null,
+        null
+      ],
+      "pts": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "atpf-medvedev-tiafoe",
+      "date": "2026-11-20",
+      "surf": "dura cubierta",
+      "tour": "Nitto ATP Finals",
+      "names": [
+        "Medvedev",
+        "Tiafoe"
+      ],
+      "winner": 0,
+      "p1saque": [
+        null,
+        null
+      ],
+      "p2saque": [
+        null,
+        null
+      ],
+      "aces": [
+        15,
+        null
+      ],
+      "df": [
+        null,
+        null
+      ],
+      "bp": [
+        "2/6",
         null
       ],
       "pts": [
