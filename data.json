@@ -1,5 +1,5 @@
 {
-  "updated": "20 nov 2026, 00:00 (Madrid)",
+  "updated": "20 nov 2026, 09:50 (Madrid)",
   "matches": [],
   "results": [
     {
@@ -319,14 +319,14 @@
         "Carlos Alcaraz",
         "Flavio Cobolli"
       ],
-      "time": "hora por publicar por el torneo",
+      "time": "no antes de las 14:00",
       "day": "2026-11-20",
       "prev": {
         "pista": [
           "Inalpi Arena (Turín), pista dura cubierta."
         ],
         "h2h": [
-          "Dato no disponible."
+          "Alcaraz gana 1-0 el historial directo."
         ],
         "forma": [
           "Alcaraz ya es primero de grupo con dos victorias; Cobolli perdió sus dos partidos y está eliminado."
@@ -338,7 +338,11 @@
           "Lectura de TitoTenis: duelo sin consecuencias en la tabla; el interés está en la evolución de la molestia en el isquiotibial de Alcaraz de cara a la semifinal."
         ],
         "faltan": [
-          "Historial directo y estadísticas de saque: dato no disponible."
+          "Estadísticas de saque: dato no disponible."
+        ],
+        "h2hScore": [
+          1,
+          0
         ]
       }
     },
@@ -350,14 +354,14 @@
         "Daniil Medvedev",
         "Frances Tiafoe"
       ],
-      "time": "hora por publicar por el torneo",
+      "time": "no antes de las 20:30",
       "day": "2026-11-20",
       "prev": {
         "pista": [
           "Inalpi Arena (Turín), pista dura cubierta."
         ],
         "h2h": [
-          "Dato no disponible."
+          "Medvedev gana 6-2 el historial directo."
         ],
         "forma": [
           "Ambos tienen una victoria y una derrota; Medvedev superó a Cobolli y cayó ante Alcaraz, Tiafoe perdió ante Alcaraz y arrasó a Cobolli."
@@ -369,7 +373,11 @@
           "Lectura de TitoTenis: el ganador (sea cual sea el marcador, según el reglamento de grupos) se queda con la segunda plaza y se medirá a Zverev en semifinales."
         ],
         "faltan": [
-          "Historial directo y estadísticas de saque: dato no disponible."
+          "Estadísticas de saque: dato no disponible."
+        ],
+        "h2hScore": [
+          6,
+          2
         ]
       }
     }
@@ -651,6 +659,6 @@
       ]
     }
   ],
-  "today": "2026-11-19",
+  "today": "2026-11-20",
   "whatsapp": "https://chat.whatsapp.com/B5FhCmECMzB2bAZQ2f7koi?s=cl&p=a&iam=2"
 }
