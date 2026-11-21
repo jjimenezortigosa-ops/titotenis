@@ -1,7 +1,45 @@
 {
-  "updated": "21 nov 2026, 13:48 (Madrid)",
+  "updated": "21 nov 2026, 17:55 (Madrid)",
   "matches": [],
   "results": [
+    {
+      "id": "atpf-sf-alcaraz-shelton",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · semifinales",
+      "text": "Carlos Alcaraz gana a Ben Shelton",
+      "score": "3-6 6-3 7-6(1)",
+      "det": "Semifinal · pista dura cubierta · Alcaraz remontó tras ceder el primer set y se impuso en el tie-break decisivo; firmó 12 aces y 33 golpes ganadores por 21 errores no forzados",
+      "stats": {
+        "names": [
+          "Carlos Alcaraz",
+          "Ben Shelton"
+        ],
+        "src": "Puntodebreak (solo datos de Alcaraz)",
+        "rows": [
+          [
+            "Aces",
+            "12",
+            "dato no disponible",
+            12,
+            null
+          ],
+          [
+            "Golpes ganadores",
+            "33",
+            "dato no disponible",
+            33,
+            null
+          ],
+          [
+            "Errores no forzados",
+            "21",
+            "dato no disponible",
+            21,
+            null
+          ]
+        ]
+      }
+    },
     {
       "id": "atpf-medvedev-tiafoe",
       "cat": "atp",
@@ -36,66 +74,6 @@
             "dato no disponible",
             34,
             0
-          ]
-        ]
-      }
-    },
-    {
-      "id": "atpf-zverev-fils",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
-      "text": "Alexander Zverev gana a Arthur Fils",
-      "score": "6-4 7-6(6)",
-      "det": "Fase de grupos · pista dura cubierta · Zverev cierra el grupo con 3 victorias en 3 partidos y sin ceder un set; no concedió ninguna bola de rotura"
-    },
-    {
-      "id": "atpf-shelton-jodar",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo John McEnroe · fase de grupos",
-      "text": "Ben Shelton gana a Rafael Jódar",
-      "score": "7-6(8) 7-5",
-      "det": "Fase de grupos · pista dura cubierta · 14 aces por 9 y 94 puntos ganados por 81",
-      "stats": {
-        "names": [
-          "Shelton",
-          "Jódar"
-        ],
-        "src": "Tennis Majors",
-        "rows": [
-          [
-            "Aces",
-            "14",
-            "9",
-            14,
-            9
-          ],
-          [
-            "Dobles faltas",
-            "1",
-            "1",
-            1,
-            1
-          ],
-          [
-            "Puntos con 2.º saque",
-            "22/36 (61%)",
-            "10/29 (34%)",
-            22,
-            10
-          ],
-          [
-            "Bolas de rotura salvadas",
-            "5/6",
-            "dato no disponible",
-            5,
-            0
-          ],
-          [
-            "Puntos ganados",
-            "94",
-            "81",
-            94,
-            81
           ]
         ]
       }
@@ -147,6 +125,22 @@
     }
   ],
   "news": [
+    {
+      "id": "atp-alcaraz-remonta-shelton-final-turin",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "",
+      "t": "Alcaraz remonta a Shelton y alcanza la final de las Nitto ATP Finals",
+      "d": "Alcaraz ganó 3-6 6-3 7-6(1) a Shelton tras ir 0-3 abajo en el primer set. Espera rival en la final: el ganador del Zverev-Medvedev de esta noche.",
+      "s": "Puntodebreak",
+      "u": "https://www.puntodebreak.com/2026/11/21/alcaraz-gana-shelton-atp-finals-2026",
+      "w": "21 nov",
+      "full": [
+        "Carlos Alcaraz se clasificó para la final de Turín al vencer a Ben Shelton por 3-6, 6-3 y 7-6(1). Llegó con molestias en el isquiotibial izquierdo y comenzó el partido por detrás: perdió el primer set tras llegar a ir 0-3.",
+        "En el segundo set rompió en el octavo juego acercándose a la línea de fondo en la resta, y en el tie-break decisivo Shelton cometió dos errores no forzados. Alcaraz firmó 12 aces y 33 golpes ganadores.",
+        "Su rival en la final, el domingo, saldrá del Zverev-Medvedev, previsto esta noche."
+      ]
+    },
     {
       "id": "atp-medvedev-completa-semifinales-turin",
       "cat": "atp",
@@ -258,63 +252,15 @@
         "En el segundo set pidió asistencia médica por una molestia en la pierna izquierda. Dijo que era un pequeño problema y que las próximas horas serán importantes para evaluarlo.",
         "Su clasificación para semifinales se decide con el Cobolli-Tiafoe de esta noche y la última jornada del grupo."
       ]
-    },
-    {
-      "id": "atp-zverev-a-semifinales-en-turin",
-      "cat": "atp",
-      "tag": "ATP Finals",
-      "cls": "est",
-      "t": "Zverev, primer semifinalista de las Finals tras ganar a Shelton",
-      "d": "El número 1 venció 6-2 7-6(4) y, con 2-0 en el Grupo John McEnroe, ya está en semifinales. Extiende a 7-0 su balance ante el estadounidense.",
-      "s": "Tennis Majors",
-      "u": "https://www.tennismajors.com/atp/nitto-atp-finals-atp/untouchable-on-serve-zverev-beats-shelton-to-reach-the-atp-finals-semi-finals-867214.html",
-      "w": "17 nov",
-      "full": [
-        "Alexander Zverev derrotó a Ben Shelton por 6-2 7-6(4) y se aseguró su plaza en las semifinales de las Nitto ATP Finals con dos victorias en dos partidos.",
-        "Firmó 14 aces sin ninguna doble falta, ganó 38 de 43 puntos con el primer saque y salvó las dos bolas de rotura que afrontó. Es su séptima victoria seguida ante Shelton, a quien ya había ganado la final del US Open.",
-        "La segunda plaza del grupo se decidirá el jueves: Zverev se mide a Fils y Shelton a Jódar."
-      ]
-    },
-    {
-      "id": "atp-fils-remonta-a-jodar-en-turin",
-      "cat": "atp",
-      "tag": "ATP Finals",
-      "cls": "est",
-      "t": "Fils remonta ante Jódar y mantiene vivo su sueño en Turín",
-      "d": "El francés ganó 4-6 6-2 6-2 y logró su primera victoria en las Nitto ATP Finals. Jódar queda 0-2 en el Grupo John McEnroe.",
-      "s": "ATP Tour",
-      "u": "https://www.atptour.com/en/news/fils-jodar-nitto-atp-finals-2026-tuesday",
-      "w": "17 nov",
-      "full": [
-        "Arthur Fils perdió el primer set pero se impuso 4-6 6-2 6-2 a Rafael Jódar y consiguió su primera victoria en las Nitto ATP Finals.",
-        "Convirtió 4 de 9 bolas de rotura y rompió en dos ocasiones en cada uno de los dos últimos sets. Jódar cometió 33 errores no forzados y necesitó atención médica durante el partido.",
-        "Fils jugará su último partido de grupo ante Zverev el jueves; Jódar se despide sin victorias."
-      ]
-    },
-    {
-      "id": "atp-medvedev-supera-a-cobolli-en-turin",
-      "cat": "atp",
-      "tag": "ATP Finals",
-      "cls": "est",
-      "t": "Medvedev arruina el debut de Cobolli en Turín",
-      "d": "Medvedev ganó 7-6(4) 6-3 sin conceder ninguna bola de rotura y se coloca líder del Grupo Ivan Lendl junto a Alcaraz.",
-      "s": "Tennis Majors",
-      "u": "https://www.tennismajors.com/atp/nitto-atp-finals-atp/unbreakable-medvedev-spoils-cobollis-atp-finals-debut-in-turin-867159.html",
-      "w": "16 nov",
-      "full": [
-        "Daniil Medvedev derrotó a Flavio Cobolli por 7-6(4) 6-3 en la sesión nocturna de Turín y no cedió ninguna bola de rotura.",
-        "El ruso ganó el tie-break del primer set y rompió dos veces en el segundo. Firmó 9 aces y 34 de 41 puntos con el primer saque.",
-        "El miércoles se medirá a Alcaraz, que también ganó en su debut, en un duelo que apunta a decidir el liderato del grupo."
-      ]
     }
   ],
   "guiones": [
     {
-      "id": "g-alcaraz-cobolli",
-      "title": "Alcaraz cierra Turín 3-0",
-      "hook": "Alcaraz no cede ni un set en el grupo.",
-      "body": "Ganó 6-4 6-1 a Cobolli, con la pierna vendada, y en el segundo set convirtió las tres roturas que tuvo. Ahora le espera Shelton en semifinales.",
-      "cta": "¿Quién gana esa semifinal? Debátelo en TitoTenis y juega a los juegos diarios.",
+      "id": "g-alcaraz-shelton-sf",
+      "title": "Alcaraz, a la final de Turín",
+      "hook": "Alcaraz estaba 0-3 abajo y se metió en la final.",
+      "body": "Remontó a Shelton por 3-6 6-3 7-6(1) en la semifinal de las Nitto ATP Finals con 12 aces. Ahora espera al ganador del Zverev-Medvedev.",
+      "cta": "¿Quién será su rival? Debátelo en TitoTenis y juega a los juegos diarios.",
       "tags": "#tenis #ATPFinals #Alcaraz #Turin"
     },
     {
@@ -346,7 +292,7 @@
           "Inalpi Arena (Turín), pista dura cubierta."
         ],
         "h2h": [
-          "Historial directo: dato no disponible."
+          "Desde 2022, Medvedev gana 8-3 en los duelos directos."
         ],
         "forma": [
           "Zverev llega con 3 victorias en 3 partidos y sin ceder un set; Medvedev se clasificó como segundo del Grupo Ivan Lendl tras ganar 6-3 6-4 a Tiafoe."
@@ -358,7 +304,11 @@
           "Lectura de TitoTenis: duelo de saques; Zverev llega más descansado, pero Medvedev entra en racha tras salvar todas sus bolas de rotura en el partido decisivo."
         ],
         "faltan": [
-          "Historial directo y estadísticas completas de saque: dato no disponible."
+          "Estadísticas completas de saque: dato no disponible."
+        ],
+        "h2hScore": [
+          3,
+          8
         ]
       },
       "names": [
@@ -367,46 +317,52 @@
       ]
     },
     {
-      "id": "atpf-sf-alcaraz-shelton",
+      "id": "atpf-final",
       "cat": "atp",
-      "tour": "Nitto ATP Finals · semifinales",
+      "tour": "Nitto ATP Finals · final",
+      "time": "hora por publicar por el torneo",
+      "day": "2026-11-22",
       "names": [
         "Carlos Alcaraz",
-        "Ben Shelton"
+        "Ganador de Zverev-Medvedev"
       ],
-      "time": "no antes de las 14:30",
-      "day": "2026-11-21",
       "prev": {
         "pista": [
           "Inalpi Arena (Turín), pista dura cubierta."
         ],
         "h2h": [
-          "Historial directo: dato no disponible."
+          "Alcaraz ya está en la final; el rival saldrá del Zverev-Medvedev de esta noche."
         ],
         "forma": [
-          "Alcaraz terminó el grupo con 3-0 y sin perder sets; Shelton fue segundo del grupo McEnroe tras ganar a Fils y a Jódar."
+          "Alcaraz llega tras remontar a Shelton en tres sets (3-6 6-3 7-6(1)), con molestias en el isquiotibial izquierdo en los últimos días."
         ],
         "saque": [
-          "Shelton firmó 14 aces ante Jódar."
+          "Alcaraz firmó 12 aces en la semifinal."
         ],
         "claves": [
-          "Lectura de TitoTenis: el saque de Shelton contra la devolución de Alcaraz; el estado de la pierna izquierda del español puede pesar si el partido se alarga."
+          "Lectura de TitoTenis: el desgaste físico de Alcaraz tras una semifinal de tres sets y su molestia en la pierna serán el gran asunto; el rival llegará con otro perfil según se resuelva el Zverev-Medvedev."
         ],
         "faltan": [
-          "Historial directo y estadísticas de saque de Alcaraz: dato no disponible."
+          "Rival, hora e historial directo: dato no disponible hasta que termine la otra semifinal."
         ]
       }
-    },
-    {
-      "id": "atpf-final",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · final",
-      "text": "Final: ganador de Zverev-Medvedev vs ganador de Alcaraz-Shelton",
-      "time": "hora por publicar por el torneo",
-      "day": "2026-11-22"
     }
   ],
   "analisis": [
+    {
+      "id": "atpf-sf-alcaraz-shelton",
+      "title": "Alcaraz 3-6 6-3 7-6(1) Shelton: la remontada que decidió el tie-break",
+      "tour": "Nitto ATP Finals · semifinales",
+      "surf": "dura cubierta",
+      "score": "3-6 6-3 7-6(1)",
+      "resumen": "Alcaraz firmó 12 aces y 33 golpes ganadores (21 errores no forzados) y remontó tras perder el primer set 3-6 y llegar a ir 0-3 abajo.",
+      "claves": [
+        "Patrón táctico: en la resta pasó a colocarse más cerca de la línea de fondo, y con ello rompió en el octavo juego del segundo set.",
+        "Momento clave: en el tie-break decisivo Shelton cometió dos errores no forzados y Alcaraz ganó el desempate 7-1.",
+        "Ángulo mental: Alcaraz levantó un partido que empezó perdiendo 0-3 y con molestias en la pierna, y llegó más entero al desempate."
+      ],
+      "cmp": "Solo hay 3 partidos comparables en pista dura cubierta en el archivo, con pocos datos de saque; la comparación no es concluyente."
+    },
     {
       "id": "atpf-medvedev-tiafoe",
       "title": "Medvedev 6-3 6-4 Tiafoe: el saque en los puntos grandes",
@@ -420,20 +376,6 @@
         "Ángulo mental: se jugaban el pase a semifinales y Medvedev cerró a la primera ocasión de partido."
       ],
       "cmp": "Solo hay 3 partidos comparables en pista dura cubierta en el archivo, con pocos datos de saque; la comparación no es concluyente."
-    },
-    {
-      "id": "atpf-shelton-jodar",
-      "title": "Shelton 7-6(8) 7-5 Jódar: puntos de set salvados",
-      "tour": "Nitto ATP Finals · fase de grupos",
-      "surf": "dura cubierta",
-      "score": "7-6(8) 7-5",
-      "resumen": "Shelton ganó 94 puntos por 81 y ganó 22 de 36 con segundo saque, frente a 10 de 29 de Jódar. Salvó cinco de seis bolas de rotura y convirtió las dos que tuvo, ambas en el segundo set.",
-      "claves": [
-        "Patrón táctico: Shelton se apoyó en el saque (14 aces) y presionó el segundo servicio de Jódar.",
-        "Momento clave: en el tie-break del primer set salvó dos puntos de set y se llevó el desempate 10-8.",
-        "Ángulo mental: tras perder su saque con 4-4, remontó un 0-30 en el 4-5 y rompió en el undécimo juego."
-      ],
-      "cmp": "Solo hay 3 partidos comparables en pista dura cubierta en el archivo; con tan poca muestra la comparación es poco fiable."
     },
     {
       "id": "atpf-alcaraz-cobolli",
@@ -759,6 +701,41 @@
       ],
       "bp": [
         "2/6",
+        null
+      ],
+      "pts": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": "atpf-sf-alcaraz-shelton",
+      "date": "2026-11-21",
+      "surf": "dura cubierta",
+      "tour": "Nitto ATP Finals",
+      "names": [
+        "Alcaraz",
+        "Shelton"
+      ],
+      "winner": 0,
+      "p1saque": [
+        null,
+        null
+      ],
+      "p2saque": [
+        null,
+        null
+      ],
+      "aces": [
+        12,
+        null
+      ],
+      "df": [
+        null,
+        null
+      ],
+      "bp": [
+        null,
         null
       ],
       "pts": [
