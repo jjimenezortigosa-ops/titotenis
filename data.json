@@ -1,7 +1,59 @@
 {
-  "updated": "22 nov 2026, 19:55 (Madrid)",
+  "updated": "22 nov 2026, 21:55 (Madrid)",
   "matches": [],
   "results": [
+    {
+      "id": "atpf-final",
+      "cat": "atp",
+      "tour": "Nitto ATP Finals · final",
+      "text": "Carlos Alcaraz gana a Alexander Zverev",
+      "score": "6-2 7-6(7)",
+      "det": "Final · pista dura cubierta · Alcaraz salvó tres bolas de set en el tie-break, convirtió 4 de 7 bolas de rotura y ganó 80 de 144 puntos",
+      "stats": {
+        "names": [
+          "Carlos Alcaraz",
+          "Alexander Zverev"
+        ],
+        "src": "Tennis Majors",
+        "rows": [
+          [
+            "Golpes ganadores",
+            "28",
+            "12",
+            28,
+            12
+          ],
+          [
+            "Errores no forzados",
+            "25",
+            "31",
+            25,
+            31
+          ],
+          [
+            "Bolas de rotura convertidas",
+            "4 de 7",
+            "—",
+            4,
+            0
+          ],
+          [
+            "Puntos ganados",
+            "80",
+            "64",
+            80,
+            64
+          ],
+          [
+            "Puntos ganados al resto con 1.er saque rival",
+            "23 de 50 (46%)",
+            "—",
+            46,
+            0
+          ]
+        ]
+      }
+    },
     {
       "id": "atpf-sf-zverev",
       "cat": "atp",
@@ -47,92 +99,25 @@
           ]
         ]
       }
-    },
-    {
-      "id": "atpf-medvedev-tiafoe",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
-      "text": "Daniil Medvedev gana a Frances Tiafoe",
-      "score": "6-3 6-4",
-      "det": "Fase de grupos · pista dura cubierta · Medvedev firmó 15 aces, salvó las 2 bolas de rotura que afrontó y pasa como segundo del grupo",
-      "stats": {
-        "names": [
-          "Medvedev",
-          "Tiafoe"
-        ],
-        "src": "Tennis Majors",
-        "rows": [
-          [
-            "Aces",
-            "15",
-            "dato no disponible",
-            15,
-            0
-          ],
-          [
-            "Bolas de rotura salvadas",
-            "2/2",
-            "dato no disponible",
-            2,
-            0
-          ],
-          [
-            "Puntos con 1.er saque (total)",
-            "34/44 (77%)",
-            "dato no disponible",
-            34,
-            0
-          ]
-        ]
-      }
-    },
-    {
-      "id": "atpf-alcaraz-cobolli",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · Grupo Ivan Lendl · fase de grupos",
-      "text": "Carlos Alcaraz gana a Flavio Cobolli",
-      "score": "6-4 6-1",
-      "det": "Fase de grupos · pista dura cubierta · Alcaraz cierra el grupo con 3 victorias en 3 partidos sin perder ningún set; en el segundo set convirtió las 3 bolas de rotura que tuvo y no afrontó ninguna",
-      "stats": {
-        "names": [
-          "Carlos Alcaraz",
-          "Flavio Cobolli"
-        ],
-        "src": "Tennis Majors (solo 2.º set)",
-        "rows": [
-          [
-            "Bolas de rotura convertidas (2.º set)",
-            "3 de 3",
-            "0 de 0",
-            3,
-            0
-          ],
-          [
-            "Golpes ganadores (2.º set)",
-            "12",
-            "1",
-            12,
-            1
-          ],
-          [
-            "Errores no forzados (2.º set)",
-            "5",
-            "5",
-            5,
-            5
-          ],
-          [
-            "Puntos ganados (2.º set)",
-            "24 de 34",
-            "10 de 34",
-            24,
-            10
-          ]
-        ]
-      }
     }
   ],
   "news": [
+    {
+      "id": "atp-alcaraz-campeon-atp-finals-zverev",
+      "cat": "atp",
+      "tag": "ATP Finals",
+      "cls": "",
+      "t": "Alcaraz conquista por primera vez las Nitto ATP Finals ante Zverev",
+      "d": "Alcaraz ganó 6-2 7-6(7) en la final de Turín tras salvar tres bolas de set en el tie-break. Es su sexto título de 2026 y su 30.º en total.",
+      "s": "Tennis Majors",
+      "u": "https://www.tennismajors.com/atp/nitto-atp-finals-atp/alcaraz-saves-three-set-points-holds-off-zverev-and-finally-conquers-the-atp-finals-867708.html",
+      "w": "22 nov",
+      "full": [
+        "Carlos Alcaraz se proclamó campeón de las Nitto ATP Finals al derrotar a Alexander Zverev por 6-2 y 7-6(7). Rompió tres veces en el primer set y dominó con 28 golpes ganadores frente a 12.",
+        "En el segundo set, Zverev se puso 6-3 en el tie-break, pero Alcaraz salvó tres bolas de set, ganó seis de los siete puntos siguientes y cerró con un revés paralelo.",
+        "Es su título número 30, el sexto de 2026, y suma 14 victorias consecutivas tras completar el triplete indoor de Viena, París y Turín. Alcaraz lidera ahora el historial directo con Zverev 8-6."
+      ]
+    },
     {
       "id": "atp-zverev-gana-medvedev-final-alcaraz",
       "cat": "atp",
@@ -280,12 +265,12 @@
   ],
   "guiones": [
     {
-      "id": "g-zverev-final",
-      "title": "Zverev vs Alcaraz, final en Turín",
-      "hook": "Zverev no ha sido roto en toda la semana.",
-      "body": "Ganó a Medvedev 7-6(0) 6-4 y se medirá a Alcaraz en la final de las Nitto ATP Finals. Los dos llegan invictos: 4-0.",
-      "cta": "¿Quién se lleva el título? Debátelo en TitoTenis y juega a los juegos diarios.",
-      "tags": "#tenis #ATPFinals #Zverev #Alcaraz"
+      "id": "g-alcaraz-campeon",
+      "title": "Alcaraz, campeón en Turín",
+      "hook": "Salvó tres bolas de set y se llevó las ATP Finals.",
+      "body": "Alcaraz ganó 6-2 7-6(7) a Zverev, suma 14 victorias seguidas y consigue su sexto título de 2026.",
+      "cta": "¿Es el mejor final de temporada posible? Debátelo en TitoTenis y juega a los juegos diarios.",
+      "tags": "#tenis #ATPFinals #Alcaraz #Zverev"
     },
     {
       "id": "g-zverev-grupo",
@@ -304,57 +289,21 @@
       "tags": "#tenis #ATPFinals #Medvedev #Zverev"
     }
   ],
-  "scheduled": [
-    {
-      "id": "atpf-final",
-      "cat": "atp",
-      "tour": "Nitto ATP Finals · final",
-      "time": "no antes de las 18:00",
-      "day": "2026-11-22",
-      "names": [
-        "Carlos Alcaraz",
-        "Alexander Zverev"
-      ],
-      "prev": {
-        "pista": [
-          "Inalpi Arena (Turín), pista dura cubierta."
-        ],
-        "h2h": [
-          "Alcaraz lidera el historial directo 7-6."
-        ],
-        "forma": [
-          "Ambos llegan invictos a la final: 4 victorias en 4 partidos en Turín. Alcaraz remontó a Shelton (3-6 6-3 7-6(1)); Zverev ganó a Medvedev 7-6(0) 6-4 sin ser roto en toda la semana."
-        ],
-        "saque": [
-          "Zverev no ha sido roto en todo el torneo; Alcaraz firmó 12 aces en la semifinal."
-        ],
-        "claves": [
-          "Lectura de TitoTenis: el saque de Zverev contra la capacidad de Alcaraz de arriesgar en la resta; el estado físico de Alcaraz tras una semifinal de tres sets y su molestia en la pierna pueden ser decisivos, y Zverev llega más descansado."
-        ],
-        "faltan": [
-          "Estadísticas completas de saque de la semifinal de Zverev: dato no disponible."
-        ],
-        "h2hScore": [
-          7,
-          6
-        ]
-      }
-    }
-  ],
+  "scheduled": [],
   "analisis": [
     {
-      "id": "atpf-sf-zverev",
-      "title": "Zverev 7-6(0) 6-4 Medvedev: un saque que no se dejó romper",
-      "tour": "Nitto ATP Finals · semifinales",
+      "id": "atpf-final",
+      "title": "Alcaraz 6-2 7-6(7) Zverev: un primer set sin discusión y un tie-break salvado",
+      "tour": "Nitto ATP Finals · final",
       "surf": "dura cubierta",
-      "score": "7-6(0) 6-4",
-      "resumen": "Zverev ganó el tie-break del primer set por 7-0 y rompió una sola vez, en el 3-3 del segundo, tras una doble falta de Medvedev en la segunda bola de rotura. Medvedev no tuvo ninguna bola de rotura.",
+      "score": "6-2 7-6(7)",
+      "resumen": "Alcaraz rompió tres veces en el primer set (3-1, 4-1 y 5-2) y Zverev cometió 19 errores no forzados en esa manga. En el segundo set, Alcaraz salvó tres bolas de set en el tie-break tras ir 3-6 abajo y ganó seis de los siete puntos siguientes.",
       "claves": [
-        "Patrón táctico: partido de saque dominado por Zverev, que no cedió ninguna oportunidad de rotura.",
-        "Momento clave: el 7-0 del tie-break dejó el primer set cerrado y la rotura del 3-3 decidió el segundo.",
-        "Ángulo mental: Zverev llega a la final sin haber sido roto en toda la semana."
+        "Patrón táctico: Alcaraz castigó el segundo saque de Zverev (9 de 10 puntos en el primer set) y ganó 28 golpes ganadores por 12.",
+        "Momento clave: el tie-break, con Zverev a tres puntos de forzar el tercer set; Alcaraz cerró con un revés paralelo en su primera bola de partido tras salvar tres bolas de set.",
+        "Ángulo mental: tras un primer juego de cuatro iguales en el que Zverev salvó tres bolas de rotura, Alcaraz siguió insistiendo y sumó su 14.ª victoria seguida."
       ],
-      "cmp": "Solo hay pocos partidos comparables en pista dura cubierta en el archivo, con pocos datos de saque; la comparación no es concluyente."
+      "cmp": "Hay pocos partidos comparables en pista dura cubierta en el archivo, con pocos datos de saque; la comparación no es concluyente."
     },
     {
       "id": "atpf-sf-alcaraz-shelton",
@@ -371,32 +320,18 @@
       "cmp": "Solo hay 3 partidos comparables en pista dura cubierta en el archivo, con pocos datos de saque; la comparación no es concluyente."
     },
     {
-      "id": "atpf-medvedev-tiafoe",
-      "title": "Medvedev 6-3 6-4 Tiafoe: el saque en los puntos grandes",
-      "tour": "Nitto ATP Finals · fase de grupos",
+      "id": "atpf-sf-zverev",
+      "title": "Zverev 7-6(0) 6-4 Medvedev: un saque que no se dejó romper",
+      "tour": "Nitto ATP Finals · semifinales",
       "surf": "dura cubierta",
-      "score": "6-3 6-4",
-      "resumen": "Medvedev ganó 34 de 44 puntos con primer saque y salvó las 2 bolas de rotura que afrontó, ambas en el primer set. Convirtió 2 de 6 opciones de rotura.",
+      "score": "7-6(0) 6-4",
+      "resumen": "Zverev ganó el tie-break del primer set por 7-0 y rompió una sola vez, en el 3-3 del segundo, tras una doble falta de Medvedev en la segunda bola de rotura. Medvedev no tuvo ninguna bola de rotura.",
       "claves": [
-        "Patrón táctico: Medvedev se apoyó en el saque (15 aces) y ganó 15 de 20 puntos de fondo en el primer set.",
-        "Momento clave: con 2-2 en el primero salvó dos bolas de rotura y rompió después para ponerse 4-2; en el segundo, Tiafoe salvó tres bolas de rotura con 4-4 pero cedió la cuarta.",
-        "Ángulo mental: se jugaban el pase a semifinales y Medvedev cerró a la primera ocasión de partido."
+        "Patrón táctico: partido de saque dominado por Zverev, que no cedió ninguna oportunidad de rotura.",
+        "Momento clave: el 7-0 del tie-break dejó el primer set cerrado y la rotura del 3-3 decidió el segundo.",
+        "Ángulo mental: Zverev llega a la final sin haber sido roto en toda la semana."
       ],
-      "cmp": "Solo hay 3 partidos comparables en pista dura cubierta en el archivo, con pocos datos de saque; la comparación no es concluyente."
-    },
-    {
-      "id": "atpf-alcaraz-cobolli",
-      "title": "Alcaraz 6-4 6-1 Cobolli: segundo set sin respuesta",
-      "tour": "Nitto ATP Finals · fase de grupos",
-      "surf": "dura cubierta",
-      "score": "6-4 6-1",
-      "resumen": "Alcaraz selló el partido en un segundo set casi perfecto: convirtió las 3 bolas de rotura, no afrontó ninguna y ganó 24 de 34 puntos. Firmó 12 golpes ganadores por 1 de Cobolli.",
-      "claves": [
-        "Patrón táctico: Alcaraz presionó el servicio de Cobolli, de quien ganó 12 de 18 puntos en el segundo set.",
-        "Momento clave: la secuencia de roturas al inicio del segundo set, que le dio la ventaja definitiva.",
-        "Ángulo mental: con el muslo vendado, no mostró molestias y mandó desde el primer punto."
-      ],
-      "cmp": "No hay datos de saque completos de este partido (solo el segundo set); con menos de 3 comparables fiables, la comparación no es concluyente."
+      "cmp": "Solo hay pocos partidos comparables en pista dura cubierta en el archivo, con pocos datos de saque; la comparación no es concluyente."
     }
   ],
   "archivo": [
@@ -783,6 +718,41 @@
       "pts": [
         null,
         null
+      ]
+    },
+    {
+      "id": "atpf-final",
+      "date": "2026-11-22",
+      "surf": "dura cubierta",
+      "tour": "Nitto ATP Finals",
+      "names": [
+        "Alcaraz",
+        "Zverev"
+      ],
+      "winner": 0,
+      "p1saque": [
+        null,
+        null
+      ],
+      "p2saque": [
+        null,
+        null
+      ],
+      "aces": [
+        null,
+        null
+      ],
+      "df": [
+        null,
+        null
+      ],
+      "bp": [
+        null,
+        null
+      ],
+      "pts": [
+        80,
+        64
       ]
     }
   ],
